@@ -6,6 +6,13 @@
 #include <wfdb/ecgmap.h>
 #include <queue>
 
+/*
+ * CLASS: SigPrep
+ * Class loads a signal (record) from wfdb database). It records
+ * important attributes of the record, (and also partial signals) which
+ * will be needed for reconstruction of the compressed signals.  
+*/
+
 class SigPrep {
 	protected:
 		Eigen::MatrixXd* entire_signal;

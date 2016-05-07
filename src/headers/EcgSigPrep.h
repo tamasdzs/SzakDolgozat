@@ -5,6 +5,14 @@
 #include <wfdb/wfdb.h>
 #include "SigPrep.h"
 	
+/*
+ *	CLASS: EcgSigPrep 
+ * 	Class responsible for handling database records, we wish to compress
+ * 	using the approach relying on orthonormal systems. It is able to dissect
+ *  the record into independent heartbeats, and set the dilatation and translation
+ *  parameters of the signal.
+*/
+
 class EcgSigPrep: public SigPrep {
 	protected:
 		

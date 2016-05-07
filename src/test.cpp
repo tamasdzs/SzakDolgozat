@@ -11,10 +11,7 @@ int main () {
 	OrtCompresser OC("103", 2, 900);
 	Hermite H(OC.getSignal()->cols());
 	Eigen::MatrixXd Hsys = H.get_ort_fun_sys()->block(0, 0, OC.getSignal()->cols(), 20);
-	
-     
-     
-     
+	 
     OrtCompressed result;
     
     std::vector<int> rounds;
