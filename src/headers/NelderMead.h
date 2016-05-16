@@ -18,9 +18,8 @@
 
 class NelderMead: public Optimizer {
 	protected:
-		void IterStep();
 		std::multimap<double, Coord> population;
-		std::vector<std::multimap<double, Coord>::reverse_iterator> set_pointers(std::multimap<double, Coord> &population);
+		std::vector<std::multimap<double, Coord>::reverse_iterator> set_pointers();
 		
 	public:
 		NelderMead( const unsigned int gen, const double merr, std::vector<Coord> pop);

@@ -8,13 +8,12 @@ NelderMead::NelderMead(const unsigned int gen, const double merr, std::vector<Co
 		std::cout<<"WARNING: NELDER-MEAD OPTIMIZATION STARTED WITHOUT THREE POINTS"<<std::endl;
 	} 
 	
-	Coord init_pos;
 	for (unsigned int i = 0; i < pop.size(); ++i) {
-		 population.insert(std::pair<double, Coord>(std::numeric_limits<double>::max(), init_pos));
+		 population.insert(std::pair<double, Coord>(std::numeric_limits<double>::max(), pop[i]));
 	}	
 }
 
-std::vector<std::multimap<double, Coord>::reverse_iterator> NelderMead::set_pointers(std::multimap<double, Coord> &population) {
+std::vector<std::multimap<double, Coord>::reverse_iterator> NelderMead::set_pointers() {
 	std::vector<std::multimap<double, Coord>::reverse_iterator> ret;
 	std::multimap<double, Coord>::reverse_iterator access_x = population.rend();
 	
@@ -29,10 +28,8 @@ std::vector<std::multimap<double, Coord>::reverse_iterator> NelderMead::set_poin
 
 Coord NelderMead::Optimize( std::function<double (Coord &)> costfun ) {
 	
-	Coord ret;
-	
 	std::multimap<double, Coord> sort_pop;
-	std::vector<std::multimap<double, Coord>::reverse_iterator> access_x = set_pointers(population);
+	std::vector<std::multimap<double, Coord>::reverse_iterator> access_x = set_pointers();
 	
 	bool over = false;
 	unsigned int curr_round = 0;
@@ -47,7 +44,6 @@ Coord NelderMead::Optimize( std::function<double (Coord &)> costfun ) {
 		err = costfun(it->second);
 		sort_pop.insert(std::pair<double, Coord>(err, it->second));
 		
-		//gain access to particles by index
 	}
 	
 	population = sort_pop;
@@ -57,8 +53,8 @@ Coord NelderMead::Optimize( std::function<double (Coord &)> costfun ) {
 	//Main loop begins
 	while ( !over && curr_round < generations ) {	
 		curr_round++;
+		access_x = set_pointers();		
 		
-		access_x = set_pointers(population);		
 		Coord x4 = access_x[0]->second + ((access_x[0]->second + access_x[1]->second)/2.0 - access_x[0]->second)*2.0;
 		double y4 = costfun(x4);
 		
@@ -106,6 +102,18 @@ Coord NelderMead::Optimize( std::function<double (Coord &)> costfun ) {
 				}
 				else {
 					//ITER_STEP
+					Coord x0 = (access_x[0]->second + access_x[2]->second)*0.5;
+					Coord x1 = (access_x[1]->second + access_x[2]->second)*0.5;
+					
+					double y0 = costfun(x0);
+					double y1 = costfun(x1);
+					
+					sort_pop.insert(std::pair<double, Coord>(access_x[2]->first, access_x[2]->second));
+					sort_pop.insert(std::pair<double, Coord>(y0, x0));
+					sort_pop.insert(std::pair<double, Coord>(y1, x1));
+					
+					population = sort_pop;
+					sort_pop.clear();
 				}
 			}
 			else if ( y4 >= access_x[0]->first ) {
@@ -122,6 +130,18 @@ Coord NelderMead::Optimize( std::function<double (Coord &)> costfun ) {
 				}
 				else {
 					//ITER_STEP
+					Coord x0 = (access_x[0]->second + access_x[2]->second)*0.5;
+					Coord x1 = (access_x[1]->second + access_x[2]->second)*0.5;
+		
+					double y0 = costfun(x0);
+					double y1 = costfun(x1);
+		
+					sort_pop.insert(std::pair<double, Coord>(access_x[2]->first, access_x[2]->second));
+					sort_pop.insert(std::pair<double, Coord>(y0, x0));
+					sort_pop.insert(std::pair<double, Coord>(y1, x1));
+		
+					population = sort_pop;
+					sort_pop.clear();
 				}
 			} 
 		}
@@ -129,8 +149,6 @@ Coord NelderMead::Optimize( std::function<double (Coord &)> costfun ) {
 	
 	return access_x[2]->second;
 }
-
-
 
 int main() {
 	
