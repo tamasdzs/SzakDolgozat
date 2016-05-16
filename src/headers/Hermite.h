@@ -3,6 +3,13 @@
 
 #include "OrtFunSys.h"
 
+/*
+ *	CLASS: Hermite
+ * 	This class generates an orthonormal Hermite function system. The roots of the 
+ * 	functions can also be accessed in order to make use of Gauss type quadrature 
+ * 	formulae.  
+*/
+ 
 class Hermite : public OrtFunSys {
 	protected:
 		

@@ -3,8 +3,8 @@
 
 #include <limits>
 #include <vector>
-#include <functional>
-
+#include <Eigen/Dense>
+#include "OrtCompresser.h"
 
 /* 
  *	STRUCT: Coord 
@@ -53,34 +53,12 @@ struct Coord{
  * 	algorithms. 
 */
 
-/*
 struct Particle{
 	double PRD;
 	double velocity;
 	Coord location;
 	Eigen::MatrixXd co; 
 	Particle(): PRD(std::numeric_limits<double>::max()), velocity(0.0) {}
-};
-*/
-
-/*
- *  CLASS: Optimizer:
- * 	Parent class of all optimization classes. Pure virtual function optimize 
- * 	is responsible of the execution of the desired optimization algorithm.
- * 	It returns a Coord, and takes as a parameter an anonymus function.
- *  The class also includes protected member generations, which determines the 
- * 	number of times the optimization algorithm runs. In addition the maximum error 
- * 	can be given.
-*/
-
-class Optimizer {
-	protected:
-		const unsigned int generations;
-		const double max_err;
-	public:
-		Optimizer( const unsigned int gen, const double merr ) : generations(gen), max_err(merr) {}
-		~Optimizer() {}
-		virtual Coord Optimize( std::function<double (Coord &)> costfun ) = 0;
 };
 
 #endif

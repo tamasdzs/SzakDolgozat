@@ -3,6 +3,14 @@
 
 #include <Eigen/Dense>
 
+/*
+ * CLASS: OrtFunSys
+ * This class defines orthonormal function systems used for signal compression.
+ * The class is abstract and makes use of only pure virtual functions. Different
+ * orthonormal specialised systems can be derived from it. For further use, refer
+ * to OrtCompresser.h
+*/
+
 class OrtFunSys {
 	protected:
 		int rootNum;

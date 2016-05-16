@@ -46,9 +46,7 @@ OrtCompressed OrtCompresser::compressBeat(const std::vector<int>& rounds) {
 		H = BH->block(0, 0, BH->rows(), rounds[i]);
 
 		//Calculate best dilat/trans here
-		
-		
-		
+	
 		result.FCOEFFS.push_back(calcFourier(H, sig, lambda, trans));
 		
 		result.dilat = 1;

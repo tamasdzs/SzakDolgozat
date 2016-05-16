@@ -1,114 +1,151 @@
 #include "NelderMead.h"
 #include <algorithm>
+#include <random>
 
-NelderMead::NelderMead(const double beg_dilat, const double beg_trans, unsigned int r): rounds(r) {
-	Particle initpart;
-	initpart.location.l = beg_dilat;
-	initpart.location.t = beg_trans;
-	population.push_back(initpart);
+NelderMead::NelderMead(const unsigned int gen, const double merr, std::vector<Coord> pop): Optimizer(gen, merr) {
+	if ( pop.size() != 3 ) {
+		//handle error
+		std::cout<<"WARNING: NELDER-MEAD OPTIMIZATION STARTED WITHOUT THREE POINTS"<<std::endl;
+	} 
 	
-	initpart.location.l = beg_dilat+0.5;
-	initpart.location.t = beg_trans+1;
-	population.push_back(initpart);
-	
-	initpart.location.l = beg_dilat+1;
-	initpart.location.t = beg_trans+2;
-	population.push_back(initpart);
+	Coord init_pos;
+	for (unsigned int i = 0; i < pop.size(); ++i) {
+		 population.insert(std::pair<double, Coord>(std::numeric_limits<double>::max(), init_pos));
+	}	
 }
 
-bool lt(Particle i, Particle j) {
-		return (i.PRD < j.PRD);
+std::vector<std::multimap<double, Coord>::reverse_iterator> NelderMead::set_pointers(std::multimap<double, Coord> &population) {
+	std::vector<std::multimap<double, Coord>::reverse_iterator> ret;
+	std::multimap<double, Coord>::reverse_iterator access_x = population.rend();
+	
+	ret.push_back(access_x);
+	std::advance(access_x, 1);
+	ret.push_back(access_x);
+	std::advance(access_x, 1);
+	ret.push_back(access_x);
+	
+	return ret;
 }
 
-Coord NelderMead::Optimize(Eigen::MatrixXd &H, Eigen::MatrixXd &sig, OrtCompresser* compr) {
-	//init population
-	const double maxErr = 0.3;
+Coord NelderMead::Optimize( std::function<double (Coord &)> costfun ) {
 	
-	for(unsigned int i = 0; i < population.size(); ++i) {
-		population[i].co = compr->calcFourier(H, sig, population[i].location.l, population[i].location.t);
-		population[i].PRD = compr->getErr(population[i].co);
-	}
+	Coord ret;
 	
-	std::sort(population.begin(), population.end(), lt);
+	std::multimap<double, Coord> sort_pop;
+	std::vector<std::multimap<double, Coord>::reverse_iterator> access_x = set_pointers(population);
 	
-	bool over = population[0].PRD < maxErr;
+	bool over = false;
 	unsigned int curr_round = 0;
 	
-	while(!over && curr_round < rounds) {
-		
-		Coord x4 = population[0].location + ((population[0].location + population[1].location)/2.0 - population[0].location) * 2.0;
-		Eigen::MatrixXd co = compr->calcFourier(H, sig, x4.l, x4.t);
-		double y4 = compr->getErr(co); 
-		
-		if( population[2].PRD <= y4 && y4 < population[1].PRD ) {
-			population[0].location = x4;
-			population[0].co = co;
-			population[0].PRD = y4;
-		}
-		else if( y4 < population[2].PRD ) {
-			Coord x5 = population[0].location +((population[1].location + population[2].location)/2.0 - population[0].location)*2.5;
-			co = compr->calcFourier(H, sig, x5.l, x5.t);
-			double y5 = compr->getErr(co);
-			
-			if( y5 < y4 ) {
-				population[0].location = x5;
-				population[0].co = co;
-				population[0].PRD = y5;	
-			}
-			else {
-				population[0].location = x4; 			
-				population[0].co = compr->calcFourier(H, sig, population[0].location.l, population[0].location.t);
-				population[0].PRD = y4;
-			}
-		}
-		else if( y4 >= population[1].PRD ) {
-				if ( y4 < population[0].PRD ) {
-					Coord x6 = population[0].location + ((population[0].location + population[1].location)/2.0 - population[0].location)*1.5;
-					Eigen::MatrixXd co = compr->calcFourier(H, sig, x6.l, x6.t);
-					double y6 = compr->getErr(co); 
-					
-					if( y6 <= y4 ) {
-						population[0].location = x6;
-						population[0].co = co;
-						population[0].PRD = y6;
-					}
-					else {
-						IterStep(H, sig, compr);
-					}
-				}
-				else if( y4 >= population[0].PRD ) {
-					Coord x7 = population[0].location - ((population[0].location + population[1].location)/2.0 - population[0].location)*0.5;
-					Eigen::MatrixXd co = compr->calcFourier(H, sig, x7.l, x7.t);
-					double y7 = compr->getErr(co);
-					
-					if( y7 < population[2].PRD ) {
-						population[0].location = x7;
-						population[0].co = co;
-						population[0].PRD = y7;
-					}
-					else {
-						IterStep(H, sig, compr);
-					} 
-				}		
-		} 
-		
-		std::sort(population.begin(), population.end(), lt);
-		curr_round++;
-		over = population[0].PRD < maxErr;
+	if (!costfun) {
+		//handle error
 	}
 	
-	return population[0].location;
+	//Get initial values of positions. (Y1, Y2, Y3)
+	double err;
+	for (std::multimap<double, Coord>::iterator it = population.begin(); it != population.end(); ++it ) {
+		err = costfun(it->second);
+		sort_pop.insert(std::pair<double, Coord>(err, it->second));
+		
+		//gain access to particles by index
+	}
+	
+	population = sort_pop;
+	sort_pop.clear();
+	over = population.begin()->first < max_err;
+
+	//Main loop begins
+	while ( !over && curr_round < generations ) {	
+		curr_round++;
+		
+		access_x = set_pointers(population);		
+		Coord x4 = access_x[0]->second + ((access_x[0]->second + access_x[1]->second)/2.0 - access_x[0]->second)*2.0;
+		double y4 = costfun(x4);
+		
+		if ( access_x[2]->first <= y4 && access_x[1]->first <= y4) {
+			sort_pop.insert(std::pair<double, Coord>(y4, x4));
+			sort_pop.insert(std::pair<double, Coord>(access_x[1]->first, access_x[1]->second));
+			sort_pop.insert(std::pair<double, Coord>(access_x[2]->first, access_x[2]->second));
+			
+			population = sort_pop;
+			sort_pop.clear();
+		}
+		else if ( y4 < access_x[2]->first ) {
+			Coord x5 = access_x[0]->second +((access_x[1]->second + access_x[2]->second)/2.0 - access_x[0]->second)*2.5;
+			double y5 = costfun(x5);
+			
+			if ( y4 < y5 ) {
+				sort_pop.insert(std::pair<double, Coord>(y5, x5));
+				sort_pop.insert(std::pair<double, Coord>(access_x[1]->first, access_x[1]->second));
+				sort_pop.insert(std::pair<double, Coord>(access_x[2]->first, access_x[2]->second));
+				
+				population = sort_pop;
+				sort_pop.clear();
+			}
+			else {
+				sort_pop.insert(std::pair<double, Coord>(y4, x4));
+				sort_pop.insert(std::pair<double, Coord>(access_x[1]->first, access_x[1]->second));
+				sort_pop.insert(std::pair<double, Coord>(access_x[2]->first, access_x[2]->second));
+				
+				population = sort_pop;
+				sort_pop.clear();
+			}
+		}
+		else if ( y4 >= access_x[1]->first ) {
+			if ( y4 < access_x[0]->first ) {
+				Coord x6 = access_x[0]->second + ((access_x[0]->second + access_x[1]->second)/2.0 - access_x[0]->second)*1.5;
+				double y6 = costfun(x6);
+				
+				if ( y6 <= y4 ) {
+					sort_pop.insert(std::pair<double, Coord>(y6, x6));
+					sort_pop.insert(std::pair<double, Coord>(access_x[1]->first, access_x[1]->second));
+					sort_pop.insert(std::pair<double, Coord>(access_x[2]->first, access_x[2]->second));
+					
+					population = sort_pop;
+					sort_pop.clear();
+				}
+				else {
+					//ITER_STEP
+				}
+			}
+			else if ( y4 >= access_x[0]->first ) {
+				Coord x7 = access_x[0]->second - ((access_x[0]->second + access_x[1]->second)/2.0 - access_x[0]->second)*0.5;
+				double y7 = costfun(x7);
+				
+				if ( y7 < access_x[2]->first ) {
+					sort_pop.insert(std::pair<double, Coord>(y7, x7));
+					sort_pop.insert(std::pair<double, Coord>(access_x[1]->first, access_x[1]->second));
+					sort_pop.insert(std::pair<double, Coord>(access_x[2]->first, access_x[2]->second));
+					
+					population = sort_pop;
+					sort_pop.clear();
+				}
+				else {
+					//ITER_STEP
+				}
+			} 
+		}
+	}	
+	
+	return access_x[2]->second;
 }
 
-void NelderMead::IterStep(Eigen::MatrixXd &H, Eigen::MatrixXd &sig, OrtCompresser* compr) {
+
+
+int main() {
 	
-	std::sort(population.begin(), population.end(), lt);
+	std::vector<Coord> X;
+	Coord t;
+	X.resize(3);
+	X[0] = t;
+	X[1] = t;
+	X[2] = t; 
+	NelderMead a(3, 4.0, X);
 	
-	population[0].location = (population[0].location + population[2].location)*0.5;
-	population[0].co = compr->calcFourier(H, sig, population[0].location.l, population[0].location.t);
-	population[0].PRD = compr->getErr(population[0].co);
-		
-	population[1].location = (population[1].location + population[2].location)*0.5;
-	population[1].co = compr->calcFourier(H, sig, population[1].location.l, population[1].location.t);
-	population[1].PRD = compr->getErr(population[1].co);
+	auto cfunc = [] (Coord &t) { double f = (double)rand() / RAND_MAX;
+								 return 1.0 + f * (10.0 - 1.0);};
+	
+	a.Optimize(cfunc);
+	
+	return 0;
 }
