@@ -17,9 +17,12 @@ std::vector<std::multimap<double, Coord>::reverse_iterator> NelderMead::set_poin
 	std::vector<std::multimap<double, Coord>::reverse_iterator> ret;
 	std::multimap<double, Coord>::reverse_iterator access_x = population.rend();
 	
-	ret.push_back(access_x);
 	std::advance(access_x, 1);
 	ret.push_back(access_x);
+
+	std::advance(access_x, 1);
+	ret.push_back(access_x);
+
 	std::advance(access_x, 1);
 	ret.push_back(access_x);
 	
@@ -31,7 +34,6 @@ Coord NelderMead::Optimize( std::function<double (Coord &)> costfun ) {
 	std::multimap<double, Coord> sort_pop;
 	std::vector<std::multimap<double, Coord>::reverse_iterator> access_x = set_pointers();
 	
-	bool over = false;
 	unsigned int curr_round = 0;
 	
 	if (!costfun) {
@@ -48,17 +50,19 @@ Coord NelderMead::Optimize( std::function<double (Coord &)> costfun ) {
 	
 	population = sort_pop;
 	sort_pop.clear();
-	over = population.begin()->first < max_err;
-
+	access_x=set_pointers();
+	
+	
 	//Main loop begins
-	while ( !over && curr_round < generations ) {	
+	while ( access_x[2]->first > max_err && curr_round < generations ) {	
+		
 		curr_round++;
 		access_x = set_pointers();		
 		
-		Coord x4 = access_x[0]->second + ((access_x[0]->second + access_x[1]->second)/2.0 - access_x[0]->second)*2.0;
+		Coord x4 = access_x[0]->second + ((access_x[1]->second + access_x[2]->second)/2.0 - access_x[0]->second)*2.0;
 		double y4 = costfun(x4);
 		
-		if ( access_x[2]->first <= y4 && access_x[1]->first <= y4) {
+		if ( access_x[2]->first <= y4 && access_x[1]->first >= y4) {
 			sort_pop.insert(std::pair<double, Coord>(y4, x4));
 			sort_pop.insert(std::pair<double, Coord>(access_x[1]->first, access_x[1]->second));
 			sort_pop.insert(std::pair<double, Coord>(access_x[2]->first, access_x[2]->second));
@@ -69,7 +73,6 @@ Coord NelderMead::Optimize( std::function<double (Coord &)> costfun ) {
 		else if ( y4 < access_x[2]->first ) {
 			Coord x5 = access_x[0]->second +((access_x[1]->second + access_x[2]->second)/2.0 - access_x[0]->second)*2.5;
 			double y5 = costfun(x5);
-			
 			if ( y4 < y5 ) {
 				sort_pop.insert(std::pair<double, Coord>(y5, x5));
 				sort_pop.insert(std::pair<double, Coord>(access_x[1]->first, access_x[1]->second));
@@ -89,7 +92,7 @@ Coord NelderMead::Optimize( std::function<double (Coord &)> costfun ) {
 		}
 		else if ( y4 >= access_x[1]->first ) {
 			if ( y4 < access_x[0]->first ) {
-				Coord x6 = access_x[0]->second + ((access_x[0]->second + access_x[1]->second)/2.0 - access_x[0]->second)*1.5;
+				Coord x6 = access_x[0]->second + ((access_x[1]->second + access_x[2]->second)/2.0 - access_x[0]->second)*1.5;
 				double y6 = costfun(x6);
 				
 				if ( y6 <= y4 ) {
@@ -117,7 +120,7 @@ Coord NelderMead::Optimize( std::function<double (Coord &)> costfun ) {
 				}
 			}
 			else if ( y4 >= access_x[0]->first ) {
-				Coord x7 = access_x[0]->second - ((access_x[0]->second + access_x[1]->second)/2.0 - access_x[0]->second)*0.5;
+				Coord x7 = access_x[0]->second - ((access_x[1]->second + access_x[2]->second)/2.0 - access_x[0]->second)*0.5;
 				double y7 = costfun(x7);
 				
 				if ( y7 < access_x[2]->first ) {
@@ -145,25 +148,38 @@ Coord NelderMead::Optimize( std::function<double (Coord &)> costfun ) {
 				}
 			} 
 		}
+		access_x = set_pointers();
 	}	
 	
+	std::cout<<"FINAL ERR: "<<access_x[2]->first<<std::endl;
 	return access_x[2]->second;
 }
 
+//MAIN FUNC FOR TESTING ONLY
+//In this particular case, the test subject function is x^2 + y^2, with different starting points
+/*
 int main() {
 	
 	std::vector<Coord> X;
-	Coord t;
+	Coord m;
 	X.resize(3);
-	X[0] = t;
-	X[1] = t;
-	X[2] = t; 
-	NelderMead a(3, 4.0, X);
+	X[0] = m;
+	X[0].l = 10.0;
+	X[0].t = 1.0;
+	X[1] = m;
+	X[1].l = 2.0;
+	X[1].t = 2.0;
+	X[2] = m;
+	X[2].l = 3.0;
+	X[2].t = 1.0; 
+	NelderMead a(100, 0.001, X);
 	
-	auto cfunc = [] (Coord &t) { double f = (double)rand() / RAND_MAX;
-								 return 1.0 + f * (10.0 - 1.0);};
+	auto cfunc = [] (Coord &m) { return (m.l*m.l) + (m.t*m.t);};
 	
-	a.Optimize(cfunc);
+	Coord ans = a.Optimize(cfunc);
+	
+	std::cout<<ans.l<<" "<<ans.t<<std::endl;
 	
 	return 0;
 }
+*/
