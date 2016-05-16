@@ -1,6 +1,4 @@
 #include "NelderMead.h"
-#include <algorithm>
-#include <random>
 
 NelderMead::NelderMead(const unsigned int gen, const double merr, std::vector<Coord> pop): Optimizer(gen, merr) {
 	if ( pop.size() != 3 ) {
@@ -182,4 +180,5 @@ int main() {
 	
 	return 0;
 }
+
 */
