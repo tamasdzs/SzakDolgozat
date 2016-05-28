@@ -4,64 +4,73 @@
 #include <limits>
 #include <vector>
 #include <functional>
-
+#include <Eigen/Dense>
 
 /* 
- *	STRUCT: Coord 
- * 	This struct defines the coordinate of a given particle.
- * 	These coordinates will be used to locate particles in the search
- * 	space for optimization algorithms. (Nelder-Mead, PSO, steepest descent)
+ *	Class: Coord 
+ * 	This class inherits from Eigen::MatrixXd, and serves as
+ * 	a parameter of the function to be optimized. If the dimension of
+ *  the vector is not given, it initaliaizes itself to 2.
 */
-struct Coord{
-	double l;
-	double t;
-	Coord(): l(0.0), t(0.0) {}
-	Coord operator+(const Coord a){
-		Coord ans;
-		ans.l = this->l + a.l;
-		ans.t = this->t + a.t;
-		return ans;
-	}
-	Coord operator-(const Coord a){
-		Coord ans;
-		ans.l = this->l - a.l;
-		ans.t = this->t - a.t;
-		return ans;
-	}
-	Coord operator*(const double a){
-		Coord ans;
-		ans.l = this->l*a;
-		ans.t = this->t*a;
-		return ans;
-	}
-	Coord operator/(const double a){
+class Coord: public std::vector<double> {
+	private:
 		
-		Coord ans;
-		ans.l = this->l/a;
-		ans.t = this->t/a;
-		return ans;
-	}
-	void operator=(const Coord a) {
-		this->l = a.l;
-		this->t = a.t;
-	}
+	public:
+		Coord() {
+			this->resize(2);
+		}
+
+		Coord(int n) {
+			this->resize(n);
+		}
+		~Coord() {}
+		
+		Coord operator+(const Coord a) {
+			Coord ret(this->size());
+			
+			if ( this->size() != a.size() ) {
+				//HANDLE ERROR
+			}
+			
+			for ( unsigned int i = 0; i < ret.size(); ++i ) {
+				ret[i] = (*this)[i] + a[i];
+			}
+			
+			return ret;
+		}
+		Coord operator-(const Coord a) {
+			Coord ret(this->size());
+			
+			if ( this->size() != a.size() ) {
+				//HANDLE ERROR
+			}
+			
+			for ( unsigned int i = 0; i < ret.size(); ++i ) {
+				ret[i] = (*this)[i] - a[i];
+			}
+			
+			return ret;
+		}
+		Coord operator*(const double a) {
+			Coord ret(this->size());
+			
+			for ( unsigned int i = 0; i < ret.size(); ++i ) {
+				ret[i] = (*this)[i] * a;
+			}
+			
+			return ret;
+		}
+		Coord operator/(const double a) {
+			Coord ret(this->size());
+			
+			for ( unsigned int i = 0; i < ret.size(); ++i ) {
+				ret[i] = (*this)[i] / a;
+			}
+			
+			return ret;
+		}
 };
 
-/*
- *	STRUCT: Particle 
- * 	This struct defines a particle, which are used by the optimization
- * 	algorithms. 
-*/
-
-/*
-struct Particle{
-	double PRD;
-	double velocity;
-	Coord location;
-	Eigen::MatrixXd co; 
-	Particle(): PRD(std::numeric_limits<double>::max()), velocity(0.0) {}
-};
-*/
 
 /*
  *  CLASS: Optimizer:

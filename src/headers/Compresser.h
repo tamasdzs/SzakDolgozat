@@ -39,23 +39,20 @@ struct OrtCompressed: public Compressed {
  * a single heatbeat (orthonormal).
  * 
  * TODO: 
- * 	- Compression method for entire record
  * 	- Decompression method for non orthonormal 
  */
 
 class Compresser {
 	protected:
-		EcgSigPrep* signal_handler;
+		
 		
 	public:
-		Compresser(char* RECORD, const int n_of_leads, const int n_of_samples);
-		virtual ~Compresser();
+		Compresser() {}
+		virtual ~Compresser() {}
 		
-		virtual OrtCompressed compressBeat(const std::vector<int>& rounds) = 0;
+		virtual OrtCompressed compressBeat(Eigen::MatrixXd& signal) = 0;
 		virtual const Eigen::MatrixXd decompress(const OrtCompressed compr) = 0;
-		virtual const double getPRD(const Eigen::MatrixXd& APR) = 0;
-		
-		const Eigen::MatrixXd* getSignal();
+		virtual const double costfun(const Eigen::MatrixXd& APR) = 0; //std::function 
 };
 
 #endif

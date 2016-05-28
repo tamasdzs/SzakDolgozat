@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-c -Wall -I ./eigen -I ./headers
+CFLAGS=-c -Wall -std=c++0x -I ./eigen -I ./headers
 LDFLAGS=
 LIBS=-lwfdb -lcurl
 SOURCES=test.cpp OrtFunSys.cpp Hermite.cpp SigPrep.cpp EcgSigPrep.cpp Compresser.cpp OrtCompresser.cpp NelderMead.cpp

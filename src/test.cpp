@@ -14,11 +14,6 @@ int main () {
 	 
     OrtCompressed result;
     
-    std::vector<int> rounds;
-    rounds.push_back(7);
-    rounds.push_back(10);
-    rounds.push_back(17);
-    
     result = OC.compressBeat(rounds); 
      
 	const Eigen::MatrixXd res = OC.decompress(result);
