@@ -14,6 +14,7 @@
 class OrtFunSys {
 	protected:
 		int rootNum;
+		int degNum;
 		Eigen::MatrixXd* domain;
 		Eigen::MatrixXd* bigSys;
 		Eigen::MatrixXd* lambda;
@@ -23,7 +24,7 @@ class OrtFunSys {
 		virtual void ort_fun_sys_lamb() = 0;
 		
 	public:
-		OrtFunSys(int N);
+		OrtFunSys(int N, int M);
 		virtual ~OrtFunSys();
 		
 		const virtual Eigen::MatrixXd* get_ort_fun_lamb() = 0;

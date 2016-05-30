@@ -15,12 +15,12 @@ class OrtCompresser: public Compresser {
 		unsigned int n;
 		
 	public:
-		OrtCompresser(OrtFunSys &H, const int dim);
+		OrtCompresser(OrtFunSys& H, const int dim);
 		~OrtCompresser();
 		
 		double get_err( Eigen::MatrixXd& signal );
 		Compressed* compressBeat( Eigen::MatrixXd& signal );
-		const Eigen::MatrixXd decompress(const OrtCompressed compr);
+		const Eigen::MatrixXd decompress(const Compressed* compr);
 };
 
 #endif

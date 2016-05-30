@@ -36,9 +36,6 @@ class SigPrep {
 		const Eigen::MatrixXd* getSignal();
 		const Eigen::MatrixXd* getEntireSignal();
 		
-		virtual void setDilatTrans(const double l, const double t, const Eigen::MatrixXd* alpha, Eigen::MatrixXd& sig) = 0;
-		const virtual Eigen::MatrixXd* getNextSegment() = 0;
-		
 		const double getSigFirstVal();
 		const double getSigLastVal();
 		const double getSigMaxVal();

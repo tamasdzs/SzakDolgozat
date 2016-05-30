@@ -14,11 +14,10 @@ const Eigen::MatrixXd* EcgSigPrep::getNextSegment() {
 	
 	if( annotations.empty() || curr_pos >= entire_signal->cols()) {
 			//Hibakezeles
+			
 			std::cout<<"Nincs tobb QRS! "<<std::endl;
 			return signal;
 	} 
-	
-	
 	
 	WFDB_Annotation Curr_annot = annotations.front();
 	annotations.pop();
@@ -28,6 +27,8 @@ const Eigen::MatrixXd* EcgSigPrep::getNextSegment() {
 	if(end_of_segment >= entire_signal->cols()) end_of_segment = entire_signal->cols()-1;
 	
 	*signal = entire_signal->block(0, curr_pos, 1, abs(end_of_segment-curr_pos));
+	
+	
 	
 	curr_pos += end_of_segment;
 	
