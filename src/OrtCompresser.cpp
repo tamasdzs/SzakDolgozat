@@ -3,8 +3,9 @@
 #include <math.h>
 
 OrtCompresser::OrtCompresser(OrtFunSys& H, const int dim) {
-			n = dim;
-			ort_sys = &H;
+			const int rows = H.get_ort_fun_sys()->rows();
+			const int cols = dim;
+			ort_sys = &(H.get_ort_fun_sys()->block<rows, cols>(0,0));
 }
 
 OrtCompresser::~OrtCompresser() {

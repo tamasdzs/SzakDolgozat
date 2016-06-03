@@ -1,5 +1,6 @@
 #include "Hermite.h"
 #include <math.h>
+#include <iostream>
 
 /* /////////////////////////////////////////////////////////////////////
  * Hermite::ort_fun_sys_roots()
@@ -66,6 +67,7 @@ void Hermite::ort_fun_sys_gen() {
  */	
 	PHI.col(0) = w;
 	PHI.col(1) = 2*(x*w)/sqrt(2);
+	
 
 /*
  * Recursion for higher order Hermite functions.
@@ -76,12 +78,12 @@ void Hermite::ort_fun_sys_gen() {
 		ni_1 = 1.0/sqrt(2.0*(double(i) - 1)) * ni;
 		PHI.col(i) = 2.0*(x*PHI.col(i-1)*ni - (double(i)-1)*PHI.col(i-2)*ni_1);
 	}
-
 /*
  * Normalize the function system.
  */
 	PHI *= pow(4.0*atan(1.0), -1.0/4.0);
 	*bigSys = PHI.matrix();	
+	
 }
 
 /*

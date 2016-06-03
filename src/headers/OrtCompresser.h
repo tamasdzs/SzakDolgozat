@@ -12,7 +12,6 @@
 class OrtCompresser: public Compresser {
 	protected:
 		OrtFunSys* ort_sys;
-		unsigned int n;
 		
 	public:
 		OrtCompresser(OrtFunSys& H, const int dim);

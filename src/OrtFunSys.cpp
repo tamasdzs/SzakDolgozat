@@ -1,8 +1,7 @@
 #include "OrtFunSys.h"
 
-OrtFunSys::OrtFunSys(int N, int M) {
+OrtFunSys::OrtFunSys(int N) {
 	rootNum = N;
-	degNum = M;
 	domain = new Eigen::MatrixXd;
 	bigSys = new Eigen::MatrixXd;
 	lambda = new Eigen::MatrixXd;
