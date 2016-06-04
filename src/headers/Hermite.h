@@ -18,7 +18,7 @@ class Hermite : public OrtFunSys {
 		void ort_fun_sys_lamb();
 		
 	public:
-		Hermite(int N, int M) : OrtFunSys(N) {
+		Hermite(int N) : OrtFunSys(N) {
 			ort_fun_sys_roots();
 			ort_fun_sys_gen();
 			ort_fun_sys_lamb();
