@@ -1,4 +1,4 @@
-#infndef __MATCHING_PURSUIT_INCLUDED__
+#ifndef __MATCHING_PURSUIT_INCLUDED__
 #define __MATHCING_PURSUIT_INCLUDED__
 
 #include <functional>
@@ -9,7 +9,7 @@
 #include "OrtCompresser.h"
 #include "EcgSigPrep.h"
 
-class MatchinPursuit {
+class MatchingPursuit {
 	private:
 		 EcgSigPrep* sig_handler;
 		 OrtFunSys* ort_sys;
@@ -21,7 +21,7 @@ class MatchinPursuit {
 		 void set_costfun(std::function<double (Coord &)> cfun);
 		 void get_next_beat();
 	public:
-		MatchingPursuit();
+		MatchingPursuit(char* REC);
 		~MatchingPursuit();
 		
 		OrtCompressed CompressBeat();

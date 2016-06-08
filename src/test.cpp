@@ -8,7 +8,10 @@
 #include "OrtCompresser.h"
 #include "NelderMead.h"
 
+#include "MatchingPursuit.h"
+
 int main () {
+	/*
 	EcgSigPrep signal_handler("103", 2, 950);
 	
 	Eigen::MatrixXd sig = *signal_handler.getNextSegment();
@@ -27,7 +30,7 @@ int main () {
 	std::cout<<"apr:"<<std::endl;
 	std::cout<<apr.transpose()<<std::endl;
 	std::cout<<"****************"<<std::endl;
-	
+	*/
 	
 	
 	

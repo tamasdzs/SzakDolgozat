@@ -5,7 +5,7 @@ MatchingPursuit::MatchingPursuit(char* REC) {
 	 ort_sys = new Hermite(signal_handler->get_ort_fun_sys()->rows);
 }
 
-~MatchingPursuit::MatchingPursuit() {
+MatchingPursuit::~MatchingPursuit() {
 	delete signal_handler;
 	delete ort_sys;
 	delete compresser;
@@ -45,7 +45,6 @@ OrtCompressed MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 		}
 		
 		Eigen::MatrixXd apr = compresser->decompress(curr);
-		
 		sig = sig - apr;
 	}
 	
