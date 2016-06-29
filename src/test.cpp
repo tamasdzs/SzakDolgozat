@@ -29,6 +29,10 @@ int main () {
 	
 	OrtCompressed* p;
 	
+	std::cout<<"untempered sig:"<<std::endl;
+	std::cout<<sig.transpose()<<std::endl;
+	std::cout<<"****************"<<std::endl;
+	
 	sig = signal_handler.setDilatTrans(0.1, 0, Herm.get_ort_fun_roots(), sig); 
 	
 	char c;

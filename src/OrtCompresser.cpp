@@ -18,7 +18,7 @@ OrtCompresser::~OrtCompresser() {
 	delete Herm_sys;
 }
 
-Compressed* OrtCompresser::compressBeat( Eigen::MatrixXd& signal ) {
+OrtCompressed* OrtCompresser::compressBeat( Eigen::MatrixXd& signal ) {
 	OrtCompressed *ret = new OrtCompressed;
 	ret->compressed_sig = (Herm_sys->transpose()*(big_ort_sys->get_ort_fun_lamb()->inverse()*signal.transpose()));
 	return ret;
