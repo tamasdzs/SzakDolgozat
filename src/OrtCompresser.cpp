@@ -25,7 +25,12 @@ Compressed* OrtCompresser::compressBeat( Eigen::MatrixXd& signal ) {
 }
 
 const Eigen::MatrixXd OrtCompresser::decompress(const Compressed* compr) {
-	return compr->compressed_sig.transpose() * Herm_sys->transpose();
+	
+	Eigen::ArrayXd x;
+	x = Eigen::ArrayXd::LinSpaced(Herm_sys->rows(), round(-1.0*Herm_sys->rows()/2.0 ), round(Herm_sys->rows() / 2.0) );
+	Eigen::MatrixXd H = big_ort_sys->OrtSysGen(x, Herm_sys->cols() );
+	
+	return H * compr->compressed_sig;
 }
 
 double OrtCompresser::get_err( Eigen::MatrixXd& signal ) {

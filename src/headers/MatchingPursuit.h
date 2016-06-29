@@ -11,10 +11,10 @@
 
 class MatchingPursuit {
 	private:
-		 EcgSigPrep* sig_handler;
 		 OrtFunSys* ort_sys;
 		 Compresser* compresser;
 		 Optimizer* opter;
+		 EcgSigPrep* signal_handler;
 		 
 		 std::function<double (Coord &)> costfun;
 		 
@@ -24,7 +24,7 @@ class MatchingPursuit {
 		MatchingPursuit(char* REC);
 		~MatchingPursuit();
 		
-		OrtCompressed CompressBeat();
+		Compressed* CompressBeat(std::vector<int> rounds_deg);
 		
 		
 };

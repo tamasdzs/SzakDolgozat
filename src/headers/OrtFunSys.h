@@ -26,6 +26,7 @@ class OrtFunSys {
 		OrtFunSys(int N);
 		virtual ~OrtFunSys();
 		
+		const virtual Eigen::MatrixXd OrtSysGen(const Eigen::ArrayXd& x, int deg) = 0;
 		const virtual Eigen::MatrixXd* get_ort_fun_lamb() = 0;
 		const virtual Eigen::MatrixXd* get_ort_fun_sys() = 0;
 		const virtual Eigen::MatrixXd* get_ort_fun_roots() = 0;

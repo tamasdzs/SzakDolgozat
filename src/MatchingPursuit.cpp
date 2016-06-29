@@ -1,51 +1,58 @@
 #include "MatchingPursuit.h"
 
 MatchingPursuit::MatchingPursuit(char* REC) {
-	 signal_handler = new EcgSigPrep(REC, 2, 950);
-	 ort_sys = new Hermite(signal_handler->get_ort_fun_sys()->rows);
+	 signal_handler = new EcgSigPrep("103", 2, 950);
+	 ort_sys = new Hermite(signal_handler->getSignal()->cols());
+	 //std::cout<<signal_handler->getSignal()->cols()<<std::endl;
+	 compresser = nullptr;
+	 opter = nullptr;
+	 
 }
 
 MatchingPursuit::~MatchingPursuit() {
-	delete signal_handler;
-	delete ort_sys;
-	delete compresser;
-	delete opter;
+	if ( signal_handler != nullptr ) delete signal_handler;
+	if ( ort_sys != nullptr )delete ort_sys;
+	if ( compresser != nullptr ) delete compresser;
+	if ( opter != nullptr ) delete opter;
 }
 
-void MatchingPursuit::set_costfun(std::function<double (Coord &)>) {
+void MatchingPursuit::set_costfun(std::function<double (Coord &)> cfun) {
 	costfun = cfun;
 }
 
-OrtCompressed MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
+Compressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
+	Compressed* ret;
 	
-	OrtCompressed* next;
-	OrtCompressed* curr;
-	OrtCompressed* ret;
-	Eigen::MatrixXd sig = signal_handler->getSignal();
+	EcgSigPrep sig_handler("103", 2, 950);
+	Eigen::MatrixXd sig = *sig_handler.getNextSegment();
+	Hermite Herm(sig.cols());
+	std::cout<<"HERM INIT DONE"<<std::endl;
 	
-	for ( unsigned int i = 0; i < rounds_deg.size(); ++i ) {
-		compresser = new OrtCompresser(sig.cols(), rounds_deg[i]);
+	
+	for (int i = 0; i < 3; ++i) {
 		
-		//OPTIMIZATION HERE
+		OrtCompresser OC(Herm, 50);
 		
-		if ( i == 0 ) {
-			
-			//set pointers
-			next = compreser->compressBeat(sig);
-			curr = next;
-			curr->next = nullptr;
-			ret = curr;
-		} else {
-			
-			//set pointers
-			next = compreser->compressBeat(sig);
-			curr->next = next;
-			curr = next;
-			curr->next = nullptr; 
-		}
+		Compressed* p;
 		
-		Eigen::MatrixXd apr = compresser->decompress(curr);
+		p = OC.compressBeat(sig);
+		
+		Eigen::MatrixXd apr = OC.decompress( p );
+		
+		std::cout<<"sig:"<<std::endl;
+		std::cout<<sig.transpose()<<std::endl;
+		std::cout<<"***************"<<std::endl;
+		
+		char c; std::cin>>c;
+		
+		std::cout<<"apr:"<<std::endl;
+		std::cout<<apr.transpose()<<std::endl;
+		std::cout<<"****************"<<std::endl;
+		
+		std::cin>>c;
+		
 		sig = sig - apr;
+	
 	}
 	
 	return ret;

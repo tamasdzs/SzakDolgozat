@@ -26,6 +26,7 @@ class Hermite : public OrtFunSys {
 		
 		~Hermite() {};
 		
+		const Eigen::MatrixXd OrtSysGen(const Eigen::ArrayXd& x, int deg);
 		const Eigen::MatrixXd* get_ort_fun_lamb();
 		const Eigen::MatrixXd* get_ort_fun_sys();
 		const Eigen::MatrixXd* get_ort_fun_roots();

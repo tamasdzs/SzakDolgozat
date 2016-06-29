@@ -86,6 +86,32 @@ void Hermite::ort_fun_sys_gen() {
 	
 }
 
+const Eigen::MatrixXd Hermite::OrtSysGen(const Eigen::ArrayXd& x, int deg) {
+	
+	Eigen::ArrayXXd PHI;
+	
+	PHI = Eigen::ArrayXXd::Zero(x.rows(), deg);
+	
+	Eigen::ArrayXXd w = (-1*(x*x)/2.0).exp();
+		
+	PHI.col(0) = w;
+	PHI.col(1) = 2*(x*w)/sqrt(2);
+	
+	double ni, ni_1;
+	
+	for(int i = 2; i < deg; ++i) {
+		ni = 1.0/sqrt(2.0*double(i));
+		ni_1 = 1.0/sqrt(2.0*(double(i) - 1)) * ni;
+		PHI.col(i) = 2.0*(x*PHI.col(i-1)*ni - (double(i)-1)*PHI.col(i-2)*ni_1);
+		
+	}
+	
+	PHI *= pow(4.0*atan(1.0), -1.0/4.0);
+	
+	return PHI.matrix();
+}
+
+
 /*
  * Hermite::ort_fun_sys_lamb()
  * This function sets up the lamb matrix, which stores the coefficients

@@ -38,19 +38,22 @@ const Eigen::MatrixXd* EcgSigPrep::getNextSegment() {
 	
 }
 
-void EcgSigPrep::setDilatTrans(const double l, const double t, const Eigen::MatrixXd* alpha, Eigen::MatrixXd& sig) {
+Eigen::MatrixXd EcgSigPrep::setDilatTrans(const double l, const double t, const Eigen::MatrixXd* alpha, Eigen::MatrixXd& sig) {
 	
 	dilat = l;
 	trans = t;
 	
 	std::vector<double> X(signal->cols()), Y(signal->cols());
 	
-	Eigen::MatrixXd domain = dilat*(*alpha);
+	Eigen::ArrayXd domain;
+	domain = Eigen::ArrayXd::LinSpaced(sig.cols(), round(-1.0*sig.cols()/2.0 ), round(sig.cols() / 2.0) );
 	
-	for(int i = 0; i < signal->cols(); ++i) {
-		X[i] = domain(i, 0) - trans;
+	for(int i = 0; i < sig.cols(); ++i) {
+		X[i] = domain(i);
 		Y[i] = sig(0, i);
 	}
+	
+	std::cout<<"Sig cols(): "<<sig.cols()<<" Sig rows(): "<<sig.rows()<<std::endl; 
 	
 	tk::spline s;
 	s.set_points(X,Y);
@@ -58,13 +61,15 @@ void EcgSigPrep::setDilatTrans(const double l, const double t, const Eigen::Matr
 	
 	for(int j = 0; j < signal->cols(); ++j) {
 		
-		if ((*alpha)(j, 0) < X[0] ||
-			(*alpha)(j, 0) > X[signal->cols()-1] ) {
-			sig(0,j) = 0.0;
+		if ((*alpha)(0, 0) <= X[j] &&
+			(*alpha)(signal->cols(), 0) >= X[j] ) {
+			sig(0,j) = s((*alpha)(j, 0));
 		}
 		else {
-			sig(0,j) = s((*alpha)(j, 0));
+			sig(0,j) = 0.0;
 		}
 		
 	}
+	
+	return sig;
 } 

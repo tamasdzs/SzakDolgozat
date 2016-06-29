@@ -23,7 +23,7 @@ class EcgSigPrep: public SigPrep {
 		~EcgSigPrep() {}
 		
 		const Eigen::MatrixXd* getNextSegment();
-		void setDilatTrans(const double l, const double t, const Eigen::MatrixXd* alpha, Eigen::MatrixXd& sig);
+		Eigen::MatrixXd setDilatTrans(const double l, const double t, const Eigen::MatrixXd* alpha, Eigen::MatrixXd& sig);
 };
 
 #endif
