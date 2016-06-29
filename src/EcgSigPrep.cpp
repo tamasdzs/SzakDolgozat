@@ -56,8 +56,11 @@ Eigen::MatrixXd EcgSigPrep::setDilatTrans(const double l, const double t, const 
 	
 	//Set up dilatation
 	for(int i = 0; i < sig.cols(); ++i) {
-		X[i] = domain(i)*dilat;
+		X[i] = domain(i)*dilat; 
 		Y[i] = sig(0, i);
+		
+		std::cout<<Y[i]<<std::endl;
+		
 	}
 	
 	//Circshift translation

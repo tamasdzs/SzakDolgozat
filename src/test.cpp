@@ -29,8 +29,16 @@ int main () {
 	
 	OrtCompressed* p;
 	
-	sig = signal_handler.setDilatTrans(0.90, 0.0, Herm.get_ort_fun_roots(), sig); 
+	sig = signal_handler.setDilatTrans(0.1, 0, Herm.get_ort_fun_roots(), sig); 
 	
+	char c;
+	std::cin>>c;
+	
+	std::cout<<"sig:"<<std::endl;
+	std::cout<<sig.transpose()<<std::endl;
+	std::cout<<"****************"<<std::endl;
+	
+	/*
 	std::cout<<"SIG READY FOR COMPRESSION"<<std::endl;
 	
 	p = OC.compressBeat(sig);
@@ -49,6 +57,6 @@ int main () {
 	std::cout<<"sig:"<<std::endl;
 	std::cout<<sig.transpose()<<std::endl;
 	std::cout<<"****************"<<std::endl;
-	
+	*/
 	return 0;
 }
