@@ -41,28 +41,36 @@ const Eigen::MatrixXd* EcgSigPrep::getNextSegment() {
 Eigen::MatrixXd EcgSigPrep::setDilatTrans(const double l, const double t, const Eigen::MatrixXd* alpha, Eigen::MatrixXd& sig) {
 	
 	dilat = l;
-	trans = t;
+
+	//MAP THE TRANSLATION
+	if ( t < 0 || sig.rows() < t ) {
+		trans = round(abs(t/(t+1.0))*sig.rows());
+	} else {
+		trans = round(t);
+	}
 	
 	std::vector<double> X(signal->cols()), Y(signal->cols());
 	
 	Eigen::ArrayXd domain;
 	domain = Eigen::ArrayXd::LinSpaced(sig.cols(), round(-1.0*sig.cols()/2.0 ), round(sig.cols() / 2.0) );
 	
+	//Set up dilatation
 	for(int i = 0; i < sig.cols(); ++i) {
-		X[i] = domain(i);
+		X[i] = domain(i)*dilat;
 		Y[i] = sig(0, i);
 	}
 	
-	std::cout<<"Sig cols(): "<<sig.cols()<<" Sig rows(): "<<sig.rows()<<std::endl; 
+	//Circshift translation
+	std::rotate(Y.begin(), Y.begin()+trans, Y.end());
 	
+	//Subsample
 	tk::spline s;
 	s.set_points(X,Y);
-	
-	
-	for(int j = 0; j < signal->cols(); ++j) {
+
+	for(int j = 0; j < sig.cols(); ++j) {
 		
 		if ((*alpha)(0, 0) <= X[j] &&
-			(*alpha)(signal->cols(), 0) >= X[j] ) {
+			(*alpha)(sig.cols()-1, 0) >= X[j] ) {
 			sig(0,j) = s((*alpha)(j, 0));
 		}
 		else {

@@ -43,8 +43,8 @@ class Compresser {
 		Compresser() {}
 		virtual ~Compresser() {}
 		
-		virtual Compressed* compressBeat(Eigen::MatrixXd& signal) = 0;
-		virtual const Eigen::MatrixXd decompress(const Compressed* compr) = 0;
+		virtual OrtCompressed* compressBeat(Eigen::MatrixXd& signal) = 0;
+		virtual const Eigen::MatrixXd decompress(const OrtCompressed* compr) = 0;
 };
 
 #endif

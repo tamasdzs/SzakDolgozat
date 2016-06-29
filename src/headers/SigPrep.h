@@ -20,7 +20,7 @@ class SigPrep {
 		
 		std::queue<WFDB_Annotation> annotations;
 		
-		double dilat;
+		int dilat;
 		double trans;
 		
 		double sig_first_val;
