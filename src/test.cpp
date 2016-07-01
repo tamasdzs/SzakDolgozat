@@ -13,11 +13,9 @@
 
 int main () {
 	
-	
 	EcgSigPrep signal_handler("103", 2, 950);
 	
 	Eigen::MatrixXd sig = *signal_handler.getNextSegment();
-	
 	
 	Hermite Herm(sig.cols());
 	
@@ -28,19 +26,12 @@ int main () {
 	std::cout<<"OC INIT DONE"<<std::endl;
 	
 	OrtCompressed* p;
-	
+	/*
 	std::cout<<"untempered sig:"<<std::endl;
 	std::cout<<sig.transpose()<<std::endl;
 	std::cout<<"****************"<<std::endl;
-	
-	sig = signal_handler.setDilatTrans(0.1, 0, Herm.get_ort_fun_roots(), sig); 
-	
-	char c;
-	std::cin>>c;
-	
-	std::cout<<"sig:"<<std::endl;
-	std::cout<<sig.transpose()<<std::endl;
-	std::cout<<"****************"<<std::endl;
+	*/
+	sig = signal_handler.setDilatTrans(0.1, 50, Herm.get_ort_fun_roots(), sig); 
 	
 	/*
 	std::cout<<"SIG READY FOR COMPRESSION"<<std::endl;

@@ -43,8 +43,8 @@ Eigen::MatrixXd EcgSigPrep::setDilatTrans(const double l, const double t, const 
 	dilat = l;
 
 	//MAP THE TRANSLATION
-	if ( t < 0 || sig.rows() < t ) {
-		trans = round(abs(t/(t+1.0))*sig.rows());
+	if ( t < 0 || sig.cols() < t ) {
+		trans = round(fabs(t/(t+1.0))*sig.cols());
 	} else {
 		trans = round(t);
 	}
@@ -54,15 +54,25 @@ Eigen::MatrixXd EcgSigPrep::setDilatTrans(const double l, const double t, const 
 	Eigen::ArrayXd domain;
 	domain = Eigen::ArrayXd::LinSpaced(sig.cols(), round(-1.0*sig.cols()/2.0 ), round(sig.cols() / 2.0) );
 	
+	
+	std::cout<<"SIG WITHOUT TRANSLATION: \n";
+	
 	//Set up dilatation
 	for(int i = 0; i < sig.cols(); ++i) {
 		X[i] = domain(i)*dilat; 
 		Y[i] = sig(0, i);
-		
+		std::cout<<Y[i]<<std::endl;
 	}
 	
 	//Circshift translation
 	std::rotate(Y.begin(), Y.begin()+trans, Y.end());
+	
+	std::cout<<"SIG WITH TRANSLATION \n";
+	for(int i = 0; i < sig.cols(); ++i) {
+		std::cout<<Y[i]<<std::endl;
+	}
+	
+	std::cout<<"TRANS: "<<trans<<std::endl;
 	
 	//Subsample
 	tk::spline s;
