@@ -21,37 +21,28 @@ int main () {
 	
 	std::cout<<"HERM INIT DONE"<<std::endl;
 	
-	OrtCompresser OC(Herm, 20);
+	OrtCompresser OC(Herm, 50);
 	
 	std::cout<<"OC INIT DONE"<<std::endl;
 	
 	OrtCompressed* p;
-	/*
-	std::cout<<"untempered sig:"<<std::endl;
-	std::cout<<sig.transpose()<<std::endl;
-	std::cout<<"****************"<<std::endl;
-	*/
-	sig = signal_handler.setDilatTrans(0.1, 50, Herm.get_ort_fun_roots(), sig); 
 	
-	/*
-	std::cout<<"SIG READY FOR COMPRESSION"<<std::endl;
+	
+	std::cout<<sig.transpose()<<std::endl;
+	
+	std::cout<<" "<<std::endl;
+	
+	sig = signal_handler.setDilatTrans(0.1, 155.0, Herm.get_ort_fun_roots(), sig); 
 	
 	p = OC.compressBeat(sig);
 	
-	std::cout<<"READY FOR DECOMPRESSION"<<std::endl;
+	p->trans = 155.0;
+	p->dilat = 0.1;
 	
 	Eigen::MatrixXd apr = OC.decompress( p );
 	
-	std::cout<<"apr:"<<std::endl;
-	std::cout<<apr<<std::endl;
-	std::cout<<"****************"<<std::endl;
+	std::cout<<apr.transpose()<<std::endl;
 	
-	char c;
-	std::cin>>c;
 	
-	std::cout<<"sig:"<<std::endl;
-	std::cout<<sig.transpose()<<std::endl;
-	std::cout<<"****************"<<std::endl;
-	*/
 	return 0;
 }

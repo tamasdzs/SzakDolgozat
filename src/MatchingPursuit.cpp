@@ -1,19 +1,12 @@
 #include "MatchingPursuit.h"
 
-MatchingPursuit::MatchingPursuit(char* REC) {
-	 signal_handler = new EcgSigPrep("103", 2, 950);
-	 ort_sys = new Hermite(signal_handler->getSignal()->cols());
-	 //std::cout<<signal_handler->getSignal()->cols()<<std::endl;
-	 compresser = nullptr;
-	 opter = nullptr;
-	 
+MatchingPursuit::MatchingPursuit(char* REC, OrtFunSys& OS, EcgSigPrep &SH) {
+	 signal_handler = SH;
+	 ort_sys = OS;
 }
 
 MatchingPursuit::~MatchingPursuit() {
-	if ( signal_handler != nullptr ) delete signal_handler;
-	if ( ort_sys != nullptr )delete ort_sys;
-	if ( compresser != nullptr ) delete compresser;
-	if ( opter != nullptr ) delete opter;
+	
 }
 
 void MatchingPursuit::set_costfun(std::function<double (Coord &)> cfun) {
@@ -23,23 +16,37 @@ void MatchingPursuit::set_costfun(std::function<double (Coord &)> cfun) {
 Compressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 	Compressed* ret;
 	
-	EcgSigPrep sig_handler("103", 2, 950);
-	Eigen::MatrixXd sig = *sig_handler.getNextSegment();
+	Eigen::MatrixXd sig = sig_handler.getNextSegment();
 	Hermite Herm(sig.cols());
 	std::cout<<"HERM INIT DONE"<<std::endl;
 	
-	
-	for (int i = 0; i < 3; ++i) {
+	for (unsigned int i = 0; i < rounds_deg.size(); ++i) {
 		
-		OrtCompresser OC(Herm, 50);
-		
+		OrtCompresser OC(Herm, rounds_deg[i]);
 		Compressed* p;
 		
+		//OPTIMIZATION
+		// 1. Set anonymus function
+		
+		set_costfun( //-> o legyen jo -> masodik kor
+			[] (Coord & pos) {
+				Eigen::MatrixXd s = sig;
+				s = sig_handler.SetDilatTrans( pos[0], pos[1], Herm.get_ort_fun_roots(), s );
+				a_compression = OC.compressBeat( s );
+				return OC.getPRD( a_compression ); //o legyen jo ->elso kor
+			}
+		);
+		
+		//2. NelderMead (vagy mas) -->o legyen jo -> harmadik kor
+		
+		
+		
+		//3. Csinald meg a jokkal
 		p = OC.compressBeat(sig);
 		
 		Eigen::MatrixXd apr = OC.decompress( p );
 		
-		std::cout<<"sig:"<<std::endl;
+		std::cout<<"sig round "<<i<<":"<<std::endl;
 		std::cout<<sig.transpose()<<std::endl;
 		std::cout<<"***************"<<std::endl;
 		
@@ -58,6 +65,3 @@ Compressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 	return ret;
 }
 
-void MatchingPursuit::get_next_beat() {
-	signal_handler->getNextSegment();
-}
