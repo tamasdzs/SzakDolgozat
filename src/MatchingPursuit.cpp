@@ -21,7 +21,12 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 	
 	for (unsigned int i = 0; i < rounds_deg.size(); ++i) {
 		
+		std::cout<<"MP HERE, round: "<<i<<std::endl;
+		
 		OrtCompresser OC(Herm, rounds_deg[i]);
+		
+		std::cout<<"OC init done \n";
+		
 		OrtCompressed* p = new OrtCompressed;
 		
 		//OPTIMIZATION
@@ -38,10 +43,13 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 			}
 		);
 		
+		std::cout<<"costfun set \n";
+		
 		//2. NelderMead (vagy mas) -->o legyen jo -> harmadik kor
 		
 		//Initial values for NM optimization
 		std::vector<Coord> pop;
+		pop.resize(3);
 		pop[0][0] = 1; pop[0][1] = sig.cols()/2.0;
 		pop[1][0] = 0.5; pop[1][1] = 100.0;
 		pop[2][0] = 1.0/4.5; 
@@ -58,25 +66,42 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 		
 		pop[2][2] = (double)(maxCol);
 		
+		std::cout<<"Starting positions for population initaliazed \n";
+		
+		
 		Coord optimized_coords;
 		
-		NelderMead opter(20, 0.2, pop);
+		NelderMead opter(50, 0.2, pop);
+		
+		std::cout<<"Nelder Mead optimizer init done \n";
+		
 		optimized_coords = opter.Optimize(costfun);
+		
+		std::cout<<"Optimization done \n";
+		std::cout<<"D: "<<optimized_coords[0]<<" T: "<<optimized_coords[1]<<std::endl;
 		
 		sig = sig_handler->setDilatTrans(optimized_coords[0], optimized_coords[1], Herm.get_ort_fun_roots(), sig);
 		
+		char c; std::cin>>c;
+		
+		std::cout<<"signal set up \n";
 		
 		//3. Csinald meg a jokkal
 		
 		p = OC.compressBeat(sig);
+		p->dilat = optimized_coords[0];
+		p->trans = optimized_coords[1];
+		std::cout<<"Final compression done \n";
 		
 		Eigen::MatrixXd apr = OC.decompress( p );
 		
-		std::cout<<"sig round "<<i<<":"<<std::endl;
+		std::cout<<"Apprixmation acquired \n";
+		
+		std::cout<<"sig: "<<std::endl;
 		std::cout<<sig.transpose()<<std::endl;
 		std::cout<<"***************"<<std::endl;
 		
-		char c; std::cin>>c;
+		std::cin>>c;
 		
 		std::cout<<"apr:"<<std::endl;
 		std::cout<<apr.transpose()<<std::endl;
@@ -86,6 +111,7 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 		
 		sig = sig - apr;
 		ret = p;
+		delete p;
 	}
 	
 	return ret;

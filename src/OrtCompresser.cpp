@@ -19,10 +19,7 @@ OrtCompresser::~OrtCompresser() {
 }
 
 OrtCompressed* OrtCompresser::compressBeat( Eigen::MatrixXd& signal ) {
-	std::cout<<"R: "<<signal.rows()<<" C: "<<signal.cols()<<std::endl;
 	OrtCompressed *ret = new OrtCompressed;
-
-	std::cout<<"H dims \n"<<"H rows: "<<Herm_sys->rows()<<" H cols: "<<Herm_sys->cols()<<std::endl;
 	 
 	ret->compressed_sig = (Herm_sys->transpose()*(big_ort_sys->get_ort_fun_lamb()->inverse()*signal.transpose()));
 	return ret;
@@ -52,6 +49,11 @@ const Eigen::MatrixXd OrtCompresser::decompress(const OrtCompressed* compr) {
 }
 
 double OrtCompresser::getPRD( const OrtCompressed* compr, Eigen::MatrixXd & signal ) {
+	
+	if ( compr->trans < 0 || compr->dilat < 0 ) {
+		return 10.0;
+	}
+	
 	Eigen::MatrixXd APR = decompress( compr );
 	return ((signal - APR).norm() / (signal.array() - signal.mean()).matrix().norm());
 }

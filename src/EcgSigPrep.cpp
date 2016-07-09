@@ -40,7 +40,7 @@ const Eigen::MatrixXd* EcgSigPrep::getNextSegment() {
 
 Eigen::MatrixXd EcgSigPrep::setDilatTrans(const double &l, const double &t, const Eigen::MatrixXd* alpha, Eigen::MatrixXd& sig) {
 	
-	dilat = l;
+	dilat = fabs(l);
 	
 	//MAP THE TRANSLATION
 	if ( t < 0 || sig.cols() < t ) {
@@ -49,7 +49,7 @@ Eigen::MatrixXd EcgSigPrep::setDilatTrans(const double &l, const double &t, cons
 		trans = round(t);
 	}
 	
-	trans = round(sig.cols()/2.0) - trans;
+	trans = abs(round(sig.cols()/2.0) - trans);
 	
 	std::vector<double> X(sig.cols()), Y(sig.cols());
 	
