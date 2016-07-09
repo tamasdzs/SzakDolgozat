@@ -38,7 +38,7 @@ const Eigen::MatrixXd* EcgSigPrep::getNextSegment() {
 	
 }
 
-Eigen::MatrixXd EcgSigPrep::setDilatTrans(const double l, const double t, const Eigen::MatrixXd* alpha, Eigen::MatrixXd& sig) {
+Eigen::MatrixXd EcgSigPrep::setDilatTrans(const double &l, const double &t, const Eigen::MatrixXd* alpha, Eigen::MatrixXd& sig) {
 	
 	dilat = l;
 	

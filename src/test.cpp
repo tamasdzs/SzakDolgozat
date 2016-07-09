@@ -9,10 +9,8 @@
 #include "NelderMead.h"
 #include <math.h>
 
-#include "MatchingPursuit.h"
-
 int main () {
-	
+	/*
 	EcgSigPrep signal_handler("103", 2, 950);
 	
 	Eigen::MatrixXd sig = *signal_handler.getNextSegment();
@@ -42,7 +40,24 @@ int main () {
 	Eigen::MatrixXd apr = OC.decompress( p );
 	
 	std::cout<<apr.transpose()<<std::endl;
+	*/
 	
+	  Eigen::MatrixXf m(2,2);
+  
+	  m << 1, 2, 3, 4;
+	//get location of maximum
+	Eigen::MatrixXf::Index maxRow;
+	Eigen::MatrixXf::Index maxCol;
+	
+	float max = m.maxCoeff(&maxRow, &maxCol);
+	
+	
+	
+	int a = (int)maxRow;
+	int b = (int)maxCol;
+	
+	std::cout<<a<<"\n"<<std::endl;
+	std::cout<<b<<"\n"<<std::endl;
 	
 	return 0;
 }
