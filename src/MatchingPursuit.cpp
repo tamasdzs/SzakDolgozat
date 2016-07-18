@@ -39,7 +39,10 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 				Eigen::MatrixXd s = sig;
 				s = sig_handler->setDilatTrans( dilat, trans, Herm.get_ort_fun_roots(), s );
 				OrtCompressed* a_compression = OC.compressBeat( s );
-				return OC.getPRD( a_compression, s ); 
+				a_compression->dilat = dilat; a_compression->trans = trans;
+				double ret = OC.getPRD( a_compression, s ); 
+				delete a_compression;
+				return ret;
 			}
 		);
 		
@@ -50,9 +53,9 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 		//Initial values for NM optimization
 		std::vector<Coord> pop;
 		pop.resize(3);
-		pop[0][0] = 1; pop[0][1] = sig.cols()/2.0;
-		pop[1][0] = 0.5; pop[1][1] = 100.0;
-		pop[2][0] = 1.0/4.5; 
+		pop[0][0] = 0.05; pop[0][1] = sig.cols()/2.0;
+		pop[1][0] = 0.2; pop[1][1] = 100.0;
+		pop[2][0] = 0.1; 
 		
 		Eigen::MatrixXd::Index maxRow;
 		Eigen::MatrixXd::Index maxCol; 

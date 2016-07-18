@@ -28,7 +28,7 @@ OrtCompressed* OrtCompresser::compressBeat( Eigen::MatrixXd& signal ) {
 const Eigen::MatrixXd OrtCompresser::decompress(const OrtCompressed* compr) {
 	
 	int trans;
-	double dilat = compr->dilat;
+	double dilat = fabs(compr->dilat);
 	
 	if ( compr->trans < 0 || Herm_sys->rows() < compr->trans ) {
 		trans = round(fabs(compr->trans/(compr->trans+1.0))*Herm_sys->rows());
@@ -36,7 +36,7 @@ const Eigen::MatrixXd OrtCompresser::decompress(const OrtCompressed* compr) {
 		trans = round(compr->trans);
 	}
 	
-	trans = round(Herm_sys->rows()/2.0) - trans;
+	trans = abs(round(Herm_sys->rows()/2.0) - trans);
 	
 	Eigen::ArrayXd x;
 	x = Eigen::ArrayXd::LinSpaced(Herm_sys->rows(), round(-1.0*Herm_sys->rows()/2.0 ), round(Herm_sys->rows() / 2.0) );
