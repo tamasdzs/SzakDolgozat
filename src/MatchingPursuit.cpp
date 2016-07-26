@@ -16,8 +16,10 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 	OrtCompressed* ret;
 	
 	Eigen::MatrixXd sig = *(sig_handler->getNextSegment());
+	Eigen::MatrixXd osig = sig;
 	Hermite Herm(sig.cols());
 	std::cout<<"HERM INIT DONE"<<std::endl;
+	
 	
 	for (unsigned int i = 0; i < rounds_deg.size(); ++i) {
 		
@@ -33,14 +35,14 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 		// 1. Set anonymus function
 		
 		set_costfun( 
-			[&sig, &OC, &Herm, this ] (Coord & pos) -> double {
+			[&osig, &OC, &Herm, this ] (Coord & pos) -> double {
 				double dilat = pos[0];
 				double trans = pos[1];
-				Eigen::MatrixXd s = sig;
+				Eigen::MatrixXd s = osig;
 				s = sig_handler->setDilatTrans( dilat, trans, Herm.get_ort_fun_roots(), s );
 				OrtCompressed* a_compression = OC.compressBeat( s );
 				a_compression->dilat = dilat; a_compression->trans = trans;
-				double ret = OC.getPRD( a_compression, s ); 
+				double ret = OC.getPRD( a_compression, osig ); 
 				delete a_compression;
 				return ret;
 			}
@@ -60,7 +62,7 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 		Eigen::MatrixXd::Index maxRow;
 		Eigen::MatrixXd::Index maxCol; 
 		
-		Eigen::MatrixXd absSig = sig;
+		Eigen::MatrixXd absSig = osig;
 		for( unsigned int i = 0; i < absSig.cols(); ++i ) {
 				absSig(0, i) = abs(absSig(0, i));
 		}
@@ -74,7 +76,7 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 		
 		Coord optimized_coords;
 		
-		NelderMead opter(50, 0.2, pop);
+		NelderMead opter(200, 0.2, pop);
 		
 		std::cout<<"Nelder Mead optimizer init done \n";
 		
@@ -89,7 +91,6 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 		
 		std::cout<<"signal set up \n";
 		
-		//3. Csinald meg a jokkal
 		
 		p = OC.compressBeat(sig);
 		p->dilat = optimized_coords[0];
@@ -101,7 +102,7 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 		std::cout<<"Apprixmation acquired \n";
 		
 		std::cout<<"sig: "<<std::endl;
-		std::cout<<sig.transpose()<<std::endl;
+		std::cout<<osig.transpose()<<std::endl;
 		std::cout<<"***************"<<std::endl;
 		
 		std::cin>>c;
@@ -112,9 +113,10 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 		
 		std::cin>>c;
 		
-		sig = sig - apr;
+		osig = osig - apr;
 		ret = p;
 		delete p;
+		sig = osig;
 	}
 	
 	return ret;

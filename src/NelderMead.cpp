@@ -54,7 +54,6 @@ Coord NelderMead::Optimize( std::function<double (Coord &)> costfun ) {
 	
 	//Main loop begins
 	while ( access_x[2]->first > max_err && curr_round < generations ) {	
-		
 		curr_round++;
 		access_x = set_pointers();		
 		

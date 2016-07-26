@@ -49,10 +49,11 @@ const Eigen::MatrixXd OrtCompresser::decompress(const OrtCompressed* compr) {
 }
 
 double OrtCompresser::getPRD( const OrtCompressed* compr, Eigen::MatrixXd & signal ) {
-	
+	/*
 	if ( compr->trans < 0 || compr->dilat < 0 ) {
 		return 10.0;
 	}
+	*/
 	
 	Eigen::MatrixXd APR = decompress( compr );
 	return ((signal - APR).norm() / (signal.array() - signal.mean()).matrix().norm());
