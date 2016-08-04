@@ -38,12 +38,16 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 			[&osig, &OC, &Herm, this ] (Coord & pos) -> double {
 				double dilat = pos[0];
 				double trans = pos[1];
+				
+				std::cout<<"COSTFUN: dilat: "<<dilat<<" trans: "<<trans<<std::endl;
+				
 				Eigen::MatrixXd s = osig;
 				s = sig_handler->setDilatTrans( dilat, trans, Herm.get_ort_fun_roots(), s );
 				OrtCompressed* a_compression = OC.compressBeat( s );
 				a_compression->dilat = dilat; a_compression->trans = trans;
 				double ret = OC.getPRD( a_compression, osig ); 
 				delete a_compression;
+				std::cout<<"COSTFUN: RET VAL: "<<ret<<std::endl;
 				return ret;
 			}
 		);
@@ -55,28 +59,34 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 		//Initial values for NM optimization
 		std::vector<Coord> pop;
 		pop.resize(3);
-		pop[0][0] = 0.05; pop[0][1] = sig.cols()/2.0;
-		pop[1][0] = 0.2; pop[1][1] = 100.0;
-		pop[2][0] = 0.1; 
+	
+		pop[0][0] = 0.16; 
+		pop[1][0] = 0.14; 
+		pop[2][0] = 0.154; 
 		
 		Eigen::MatrixXd::Index maxRow;
 		Eigen::MatrixXd::Index maxCol; 
 		
 		Eigen::MatrixXd absSig = osig;
 		for( unsigned int i = 0; i < absSig.cols(); ++i ) {
-				absSig(0, i) = abs(absSig(0, i));
+				absSig(0, i) = fabs(absSig(0, i));
 		}
 		
 		absSig.maxCoeff(&maxRow, &maxCol);
 		
-		pop[2][2] = (double)(maxCol);
+		pop[0][1] = maxCol - 5;
+		pop[1][1] = maxCol + 5;
+		pop[2][1] = (double)(maxCol);
+		
+		
+		std::cout<<"MAX COL NOW IS: "<<maxCol<<std::endl;
 		
 		std::cout<<"Starting positions for population initaliazed \n";
 		
 		
 		Coord optimized_coords;
 		
-		NelderMead opter(200, 0.2, pop);
+		NelderMead opter(20, 0.2, pop);
 		
 		std::cout<<"Nelder Mead optimizer init done \n";
 		
