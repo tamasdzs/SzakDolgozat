@@ -31,7 +31,7 @@ int main () {
 	
 	//COMPRESS WITHOUT MP TEST
 	
-	
+/*
 	EcgSigPrep signal_handler("103", 2, 950);
 	Eigen::MatrixXd sig = *signal_handler.getNextSegment();
 	
@@ -73,16 +73,17 @@ int main () {
 	p->dilat = 0.154;
 	
 	apr = OC.decompress( p );
+	
 	std::cout<<apr.transpose()<<std::endl;
 	
 	std::cout<<"PRD: "<<OC.getPRD( p, osig)<<std::endl;
 	
 	delete p;
-	
+*/	
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////	
 	
 	//MP TEST
-	/*
+	
 	EcgSigPrep* signal_handler = new EcgSigPrep("103", 2, 950);
 	
 	MatchingPursuit MP(signal_handler);
@@ -95,7 +96,7 @@ int main () {
 	MP.CompressBeat(rounds_deg);
 	
 	delete signal_handler;
-	*/
+	
 	return 0;
 	 
 }
