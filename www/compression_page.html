@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head id="h">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="./javascript/plot_functions.js"></script>
+	</head>
+	<body id="main">
+		<form action="/medical/sigstuff.php" method="POST">
+			Record: <input type="text" name="rec"><br>
+			<input type="submit" value="Submit">
+		</form>
+		<div id="in_build_chart" style="width: 900px; height: 500px"></div>
+		<div id="QRS_chart" style="width: 90px; height: 50px"></div>
+		<div id="T_chart" style="width: 90px; height: 50px"></div>
+		<div id="P_chart" style="width: 90px; height: 50px"></div>
+		<div id="segmented_chart" style="width: 90px; height: 50px"></div>
+	</body>
+</html>

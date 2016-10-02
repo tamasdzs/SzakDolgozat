@@ -10,8 +10,7 @@ OrtCompresser::OrtCompresser(OrtFunSys& H, const int dim) {
 			
 			for ( int i = 0; i < dim; ++i ) {
 				Herm_sys->col(i) = H.get_ort_fun_sys()->col(i);
-			}
-				
+			}				
 }
 
 OrtCompresser::~OrtCompresser() {
@@ -25,7 +24,7 @@ OrtCompressed* OrtCompresser::compressBeat( Eigen::MatrixXd& signal ) {
 	return ret;
 }
 
-const Eigen::MatrixXd OrtCompresser::decompress(const OrtCompressed* compr) {
+const Eigen::MatrixXd OrtCompresser::decompress( const OrtCompressed* compr ) {
 	
 	int trans;
 	double dilat = fabs(compr->dilat);
@@ -48,10 +47,18 @@ const Eigen::MatrixXd OrtCompresser::decompress(const OrtCompressed* compr) {
 	return (H * compr->compressed_sig).transpose();
 }
 
-double OrtCompresser::getPRD( const OrtCompressed* compr, Eigen::MatrixXd & signal ) {
-	
+double OrtCompresser::getPRD( const OrtCompressed* compr, Eigen::MatrixXd & signal, std::string fout ) {
 	Eigen::MatrixXd APR = decompress( compr );
+	std::ofstream result;
+	result.open(fout);
+	result<<APR.transpose();
+	result.close();
+	std::cout<<"writng to file now"<<std::endl;
 	return ((signal - APR).norm() / (signal.array() - signal.mean()).matrix().norm());
 }
 
+double OrtCompresser::getPRD( const OrtCompressed* compr, Eigen::MatrixXd & signal ) {
+	Eigen::MatrixXd APR = decompress( compr );
+	return ((signal - APR).norm() / (signal.array() - signal.mean()).matrix().norm());
+}
 

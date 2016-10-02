@@ -83,10 +83,9 @@ int main () {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////	
 	
 	//MP TEST
-	
 	EcgSigPrep* signal_handler = new EcgSigPrep("103", 2, 950);
 	
-	MatchingPursuit MP(signal_handler);
+	MatchingPursuit MP(signal_handler, "/var/www/html/medical/results/s.csv", "/var/www/html/medical/results/a.csv", "/var/www/html/medical/results/a.csv");
 	
 	std::vector<int> rounds_deg;
 	rounds_deg.push_back(7);
@@ -98,5 +97,4 @@ int main () {
 	delete signal_handler;
 	
 	return 0;
-	 
 }

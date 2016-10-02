@@ -146,11 +146,12 @@ Coord NelderMead::Optimize( std::function<double (Coord &)> costfun ) {
 				}
 			} 
 		}
+		
 		access_x = set_pointers();
-		std::cout<<"PRD: "<<access_x[2]->first<<std::endl;
+		//std::cout<<"PRD: "<<access_x[2]->first<<std::endl;
 	}	
 	
-	std::cout<<"FINAL ERR: "<<access_x[2]->first<<std::endl;
+	//std::cout<<"FINAL ERR: "<<access_x[2]->first<<std::endl;
 	return access_x[2]->second;
 }
 

@@ -6,6 +6,8 @@
 #include <limits>
 #include <functional>
 #include <iostream>
+#include <fstream>
+#include <string>
 #include "Optimizer.h"
 
 /* 
@@ -19,6 +21,7 @@
 class NelderMead: public Optimizer {
 	protected:
 		std::multimap<double, Coord> population;
+		
 		std::vector<std::multimap<double, Coord>::reverse_iterator> set_pointers();
 		
 	public:

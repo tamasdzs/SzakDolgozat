@@ -3,6 +3,8 @@
 
 #include "Compresser.h"
 #include "Hermite.h"
+#include <fstream>
+#include <string>
 
 /* 
  * CLASS: OrtCompresser
@@ -18,6 +20,7 @@ class OrtCompresser: public Compresser {
 		OrtCompresser(OrtFunSys& H, const int dim);
 		~OrtCompresser();
 		
+		double getPRD( const OrtCompressed* compr, Eigen::MatrixXd& signal, std::string fout );
 		double getPRD( const OrtCompressed* compr, Eigen::MatrixXd& signal );
 		OrtCompressed* compressBeat( Eigen::MatrixXd& signal );
 		const Eigen::MatrixXd decompress(const OrtCompressed* compr);
