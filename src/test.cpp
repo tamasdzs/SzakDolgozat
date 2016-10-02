@@ -3,6 +3,7 @@
 #include <typeinfo>
 #include <string>
 #include <vector>
+#include <map>
 #include "Hermite.h"
 #include "EcgSigPrep.h"
 #include "OrtCompresser.h"
@@ -85,7 +86,19 @@ int main () {
 	//MP TEST
 	EcgSigPrep* signal_handler = new EcgSigPrep("103", 2, 950);
 	
-	MatchingPursuit MP(signal_handler, "/var/www/html/medical/results/s.csv", "/var/www/html/medical/results/a.csv", "/var/www/html/medical/results/a.csv");
+	std::map<std::string, std::string> files_dirs;
+	files_dirs.insert( std::pair<std::string, std::string>("in_action_sig", "/var/www/html/medical/results/in_action/s.csv") );
+	files_dirs.insert( std::pair<std::string, std::string>("in_action_apr", "/var/www/html/medical/results/in_action/a.csv") );
+	files_dirs.insert( std::pair<std::string, std::string>("QRS_sig", "/var/www/html/medical/results/qrs/s.csv") );
+	files_dirs.insert( std::pair<std::string, std::string>("QRS_apr", "/var/www/html/medical/results/qrs/a.csv") );
+	files_dirs.insert( std::pair<std::string, std::string>("T_sig", "/var/www/html/medical/results/t/s.csv") );
+	files_dirs.insert( std::pair<std::string, std::string>("T_apr", "/var/www/html/medical/results/t/a.csv") );
+	files_dirs.insert( std::pair<std::string, std::string>("P_sig", "/var/www/html/medical/results/p/s.csv") );
+	files_dirs.insert( std::pair<std::string, std::string>("P_apr", "/var/www/html/medical/results/p/a.csvl") );
+	files_dirs.insert( std::pair<std::string, std::string>("combined_sig", "/var/www/html/medical/results/combined/s.csv") );
+	files_dirs.insert( std::pair<std::string, std::string>("combined_apr", "/var/www/html/medical/results/combined/a.csv") );
+	
+	MatchingPursuit MP(signal_handler, files_dirs);
 	
 	std::vector<int> rounds_deg;
 	rounds_deg.push_back(7);

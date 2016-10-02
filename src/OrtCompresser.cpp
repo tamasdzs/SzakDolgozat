@@ -53,7 +53,6 @@ double OrtCompresser::getPRD( const OrtCompressed* compr, Eigen::MatrixXd & sign
 	result.open(fout);
 	result<<APR.transpose();
 	result.close();
-	std::cout<<"writng to file now"<<std::endl;
 	return ((signal - APR).norm() / (signal.array() - signal.mean()).matrix().norm());
 }
 

@@ -1,9 +1,7 @@
 #include "MatchingPursuit.h"
 
-MatchingPursuit::MatchingPursuit( EcgSigPrep *SH, std::string s, std::string nm, std::string apr): sig_handler(SH) {
-	sig_out = s;
-	nm_out = nm;
-	apr_out = apr;
+MatchingPursuit::MatchingPursuit( EcgSigPrep *SH, std::map<std::string, std::string> fdirs): sig_handler(SH) {
+	file_dirs = fdirs;
 }
 
 MatchingPursuit::MatchingPursuit( EcgSigPrep*SH ) {
@@ -28,7 +26,7 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 	for (unsigned int i = 0; i < rounds_deg.size(); ++i) {
 		
 		std::ofstream fout; 
-		fout.open(sig_out);
+		fout.open(file_dirs["in_action_sig"]);
 		fout<<osig.transpose();
 		fout.close();
 		
@@ -43,21 +41,16 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 			[&osig, &OC, &Herm, this ] (Coord & pos) -> double {
 				double dilat = pos[0];
 				double trans = pos[1];
-				
-				//std::cout<<"COSTFUN: dilat: "<<dilat<<" trans: "<<trans<<std::endl;
-				
+						
 				Eigen::MatrixXd s = osig;
 				s = sig_handler->setDilatTrans( dilat, trans, Herm.get_ort_fun_roots(), s );
 				OrtCompressed* a_compression = OC.compressBeat( s );
 				a_compression->dilat = dilat; a_compression->trans = trans;
-				double ret = OC.getPRD( a_compression, osig, nm_out );  
+				double ret = OC.getPRD( a_compression, osig, this->file_dirs["in_action_apr"] );  
 				delete a_compression;
 				return ret;
 			}
 		);
-		
-		//std::cout<<"costfun set \n";
-		
 		//2. NelderMead (vagy mas) -->o legyen jo -> harmadik kor
 		
 		//Initial values for NM optimization
@@ -82,32 +75,22 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 		pop[1][1] = maxCol + 5;
 		pop[2][1] = (double)(maxCol);
 				
-		//std::cout<<"Starting positions for population initaliazed \n";
-		
 		Coord optimized_coords;
 		
 		NelderMead opter(20, 0.2, pop);
 		
-		//std::cout<<"Nelder Mead optimizer init done \n";
-		
 		optimized_coords = opter.Optimize(costfun);
 		
-		
 		sig = sig_handler->setDilatTrans(optimized_coords[0], optimized_coords[1], Herm.get_ort_fun_roots(), sig);
-		
-		//std::cout<<"signal set up \n";
 			
 		p = OC.compressBeat(sig);
 		p->dilat = optimized_coords[0];
 		p->trans = optimized_coords[1];
-		//std::cout<<"Final compression done \n";
 		
 		Eigen::MatrixXd apr = OC.decompress( p );
 		
-		//std::cout<<"Apprixmation acquired \n";
-		
 		fout.clear();
-		fout.open(apr_out);
+		fout.open(file_dirs["in_action_apr"]);
 		fout<<apr.transpose();
 		fout.close();
 				
