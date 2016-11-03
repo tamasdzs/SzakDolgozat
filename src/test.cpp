@@ -86,6 +86,7 @@ int main () {
 	//MP TEST
 	EcgSigPrep* signal_handler = new EcgSigPrep("103", 2, 950);
 	
+	// MAP helyett define
 	std::map<std::string, std::string> files_dirs;
 	files_dirs.insert( std::pair<std::string, std::string>("in_action_sig", "/var/www/html/medical/results/in_action/s.csv") );
 	files_dirs.insert( std::pair<std::string, std::string>("in_action_apr", "/var/www/html/medical/results/in_action/a.csv") );
@@ -94,7 +95,7 @@ int main () {
 	files_dirs.insert( std::pair<std::string, std::string>("T_sig", "/var/www/html/medical/results/t/s.csv") );
 	files_dirs.insert( std::pair<std::string, std::string>("T_apr", "/var/www/html/medical/results/t/a.csv") );
 	files_dirs.insert( std::pair<std::string, std::string>("P_sig", "/var/www/html/medical/results/p/s.csv") );
-	files_dirs.insert( std::pair<std::string, std::string>("P_apr", "/var/www/html/medical/results/p/a.csvl") );
+	files_dirs.insert( std::pair<std::string, std::string>("P_apr", "/var/www/html/medical/results/p/a.csv") );
 	files_dirs.insert( std::pair<std::string, std::string>("combined_sig", "/var/www/html/medical/results/combined/s.csv") );
 	files_dirs.insert( std::pair<std::string, std::string>("combined_apr", "/var/www/html/medical/results/combined/a.csv") );
 	

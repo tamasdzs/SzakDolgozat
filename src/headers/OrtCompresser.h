@@ -10,6 +10,10 @@
  * CLASS: OrtCompresser
  * Child class of compresser, the puropose of this class is to compress
  * a single signal using some orthonormal function system.
+ * 
+ * 
+ *  - TODO: Function compressBeat should return compressed*, the dilat and trans values should be private and returned separetaly. 
+ * 			This way class Compresser can get rid of OrtCOmpressed*s in virtual methods.
  */
 class OrtCompresser: public Compresser {
 	protected:

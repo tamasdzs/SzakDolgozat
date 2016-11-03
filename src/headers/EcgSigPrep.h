@@ -15,7 +15,6 @@
 
 class EcgSigPrep: public SigPrep {
 	protected:
-		
 		int curr_pos;
 	public:
 		

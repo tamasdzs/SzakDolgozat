@@ -11,6 +11,7 @@
  * 
  * 	TODO:
  * 	 - rename FCOEFFS to fourier_coefficients
+ *   - own class for Compressed and OrtCompressed!
  * */
 struct Compressed {
 	Compressed* next;
@@ -34,6 +35,8 @@ struct OrtCompressed: public Compressed {
  * Class contains basic methods for signal compression. Contains as a member, 
  * a signal handler. Methods include compression of a single heartbeat, decompression of 
  * a single heatbeat (orthonormal).  
+ * 
+ *  - TODO: Make class truly abstract (get rid of OrtCompressed*s)
  */
 
 class Compresser {

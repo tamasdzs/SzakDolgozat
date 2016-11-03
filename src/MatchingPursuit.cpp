@@ -25,6 +25,32 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 	
 	for (unsigned int i = 0; i < rounds_deg.size(); ++i) {
 		
+		std::ofstream sigout;
+		sigout.clear();
+		switch(i) {
+			case 0:
+				sigout.open(file_dirs["QRS_sig"]);
+				sigout<<osig.transpose();
+				sigout.close();
+				sigout.clear();
+				sigout.open(file_dirs["combined_sig"]);
+				sigout<<osig.transpose();
+				sigout.close();
+				break;
+			case 1:	
+				sigout.open(file_dirs["T_sig"]);
+				sigout<<osig.transpose();
+				sigout.close();
+				break;
+			case 2:
+				sigout.open(file_dirs["P_sig"]);
+				sigout<<osig.transpose();
+				sigout.close();
+				break;
+		}
+		
+		
+		//Fileokat egyszer nyissuk meg es zarjuk be
 		std::ofstream fout; 
 		fout.open(file_dirs["in_action_sig"]);
 		fout<<osig.transpose();
@@ -36,6 +62,9 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 		
 		//OPTIMIZATION
 		// 1. Set anonymus function
+		
+		
+		//TODO: FILE MEGNYITAS MENJEN A MAINBEN, itt mar csak FD-kbe irjunk (FIGYELNI A FLUSH-ra)
 		
 		set_costfun( 
 			[&osig, &OC, &Herm, this ] (Coord & pos) -> double {
@@ -53,7 +82,7 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 		);
 		//2. NelderMead (vagy mas) -->o legyen jo -> harmadik kor
 		
-		//Initial values for NM optimization
+		//Initial values for NM optimization -->> TODO: constant or define, dont shit the code here.
 		std::vector<Coord> pop;
 		pop.resize(3);
 	
@@ -93,6 +122,27 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 		fout.open(file_dirs["in_action_apr"]);
 		fout<<apr.transpose();
 		fout.close();
+		
+		std::ofstream aprout;
+		aprout.clear();
+		
+		switch(i) {
+			case 0:
+				aprout.open(file_dirs["QRS_apr"]);
+				aprout<<apr.transpose();
+				aprout.close();
+				break;
+			case 1:	
+				aprout.open(file_dirs["T_apr"]);
+				aprout<<apr.transpose();
+				aprout.close();
+				break;
+			case 2:
+				aprout.open(file_dirs["P_apr"]);
+				aprout<<apr.transpose();
+				aprout.close();
+				break;
+		}
 				
 		osig = osig - apr;
 		ret = p;

@@ -18,6 +18,8 @@ class Hermite : public OrtFunSys {
 		void ort_fun_sys_lamb();
 		
 	public:
+	
+		//Parent class konstruktora csinalja meg!
 		Hermite(int N) : OrtFunSys(N) {
 			ort_fun_sys_roots();
 			ort_fun_sys_gen();
@@ -26,7 +28,9 @@ class Hermite : public OrtFunSys {
 		
 		~Hermite() {};
 		
+		//Parent class-ba virtualiskent!
 		const Eigen::MatrixXd OrtSysGen(const Eigen::ArrayXd& x, int deg);
+		//TODO: OK FOLOSLEGESEK, az ortFunSys osztalyban legyen definialva
 		const Eigen::MatrixXd* get_ort_fun_lamb();
 		const Eigen::MatrixXd* get_ort_fun_sys();
 		const Eigen::MatrixXd* get_ort_fun_roots();

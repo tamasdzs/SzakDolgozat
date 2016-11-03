@@ -7,14 +7,12 @@
 		<script src="./javascript/plot_functions.js"></script>
 	</head>
 	<body id="main">
-		<form action="/medical/sigstuff.php" method="POST">
-			Record: <input type="text" name="rec"><br>
-			<input type="submit" value="Submit">
+		<form action="launch_app.php" method="post">
+			<input type="submit" value="Magic!">
 		</form>
 		<div id="in_build_chart" style="width: 900px; height: 500px"></div>
-		<div id="QRS_chart" style="width: 90px; height: 50px"></div>
-		<div id="T_chart" style="width: 90px; height: 50px"></div>
-		<div id="P_chart" style="width: 90px; height: 50px"></div>
-		<div id="segmented_chart" style="width: 90px; height: 50px"></div>
+		<div id="QRS_chart" style="width: 400px; height: 175px"></div>
+		<div id="T_chart" style="width: 400px; height: 175px"></div>
+		<div id="P_chart" style="width: 400px; height: 175px"></div>
 	</body>
 </html>
