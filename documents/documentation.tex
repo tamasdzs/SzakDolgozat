@@ -100,6 +100,7 @@
 \chapter{Bevezetés}
 \label{intro}
 
+\section{A modell ismertetése}
 A modern orvostudományban nagy jelentőséggel bírnak 
 a valamely élő szervezet által kibocsátott úgynevezett $biológiai jelek$. Ezek k\"oz\'e sorolható az $Elektro$ $Kardio$ $Gram$, vagy $EKG$,
 amely a szív állapotáról képes információt adni. B\'ar ennek a dolgozatnak nem c\'elja az $EKG$ jelek pontos elemz\'ese, fontos n\'eh\'any sorban ismertetni egy \'atlagos $EKG$ jel meghat\'aroz\'o hull\'amait. Egyetlen sz\'\i v\"ut\'es  $EKG$ reprezent\'aci\'oja h\'arom f\H o r\'eszre bonthat\'o: a sz\'\i v\"ut\'es elej\'en megjelen\H o $P$ hull\'amra, az ezt k\"ovet\H o $QRS$ komplexumra, \'es az \"ut\'es v\'eg\'en tal\'alhat\'o $T$ hull\'amra. Ezek rendre a pitvari összehűzódást, a kamrák depolarizációját és elektromos újratöltődését reprezentálják. Diagnosztikai szempontb\'ol a $QRS$ komplexus a legfontosabb, ezért ezt nagy pontossággal kell tárolni. Általánosságban elmondható, hogy ezeknek a hullámoknak kezd\H o \'es v\'egpontjai, valamint maximum \'es minimum \'ert\'ekei vesznek részt az orvosi diagnosztikában. Az említett paraméterek az \ref{fig:ekg} ábrán láthatóak.
@@ -117,22 +118,20 @@ Az irodalomban ismert tömörítő algoritmusokat \cite{unifiedReview} alapján 
 A tömörítő eljárást egy c++ nyelven megírt, objektum elvű alkalmazás implementálja, melyet egy webes felületen keresztül érhetünk el. A felület lehetőséget biztosít a dolgozatban jelölt tesztek újrafuttatására, valamint a teszteléskor felhasznált adatbázis további jeleinek a tömörítésére. Szintén a webes felületen keresztül nyílik alkamunk a már tömörített EKG jelek helyreállítására. 
 
 \section{Matematikai háttér}
-
 \subsection{Jelek approximációja}
 
-EKG jelek feldolgozásakor sok esetben szembesülünk gyakorlati kihívásokkal. Két sűrűn előforduló példa a hosszú mérések tárolása, valamint a zajjal terhelt mérések elemzése.  Mindk\'et probl\'em\'ara egyszerre ad kiel\'eg\'\i t\H o megold\'ast, ha a jeleket  valamely $\mathcal H$ Hilbert-t\'er  sima f\"uggv\'enyeib\H ol \'all\'o $(\Phi_n, n\in\Bbb N)$ ortogon\'alis b\'azis\'aban reprezent\'aljuk \'es a jelet v\'eges sok $\Phi_0,\Phi_1,\cdots,\Phi_n$ b\'azisbeli elem line\'aris kombin\'aci\'oj\'aval k\"ozel\'\i tj\"uk. Az $f\in\mathcal H$ jel
-legjobb k\"ozel\'\i t\'es\'et a t\'er $\|\cdot\|$ norm\'aj\'aban az
+EKG jelek feldolgozásakor sok esetben szembesülünk gyakorlati kihívásokkal. Két sűrűn előforduló példa a hosszú mérések tárolása, valamint a zajjal terhelt mérések elemzése.  Ezekre a nehézségekre egyszerre ad kielégítő megoldást, ha a jeleket  valamely $\mathcal H$ Hilbert-tér  sima függvényeiből álló $(\Phi_n, n\in\Bbb N)$ ortogonális bázisában reprezentáljuk és a jelet véges sok $\Phi_0,\Phi_1,\cdots,\Phi_n$ bázisbeli elem lineáris kombinációjával közelítjük. Az $f\in\mathcal H$ jel
+legjobb közelítését a tér $\|\cdot\|$ normájában az
 $$
 S_nf:=\sum_{k=0}^n\langle f,\Phi_k\rangle \Phi_k
 $$
-projekci\'o szolg\'altatja, ahol $\langle\cdot,\cdot\rangle$ az $\mathcal  H$ t\'er
-skal\'aris szorzat\'at jel\"oli. A jel \'es a k\"ozel\'\i t\'es elt\'er\'es\'enek n\'egyzete  a
+projekció szolgáltatja, ahol $\langle\cdot,\cdot\rangle$ az $\mathcal  H$ tér
+skaláris szorzatát jelöli. A jel és a közelítés eltérésének négyzete  a
 $$
 \|f-S_nf\|^2=\|f\|^2-\sum_{k=0}^n|\langle f,\Phi_k\rangle|^2
 $$
-k\'epplettel adhat\'o meg. Adott hib\'an bel\"uli k\"ozel\'\i t\'est v\'eve a jel helyett  el\'eg az
-$S_nf$ approxim\'aci\'ot reprezent\'al\'o  $\langle f,\Phi_k\rangle\ (k=0,1,\cdots, n)$ Fourier-egy\"utthat\'okat t\'arolni.  Ezzel  a  k\"ozel\'\i t\'essel a zaj is minimaliz\'alhat\'o.  A k\"ozel\'\i t\'es megval\'os\'\i t\'as\'ahoz a klasszikus ortogon\'alis rendszerek k\"oz\"ul  EKG g\"orb\'ek k\"ozel\'\i t\'es\'ere  az Hermite-f\'ele f\"uggv\'enyek bizonyultak haszn\'alhat\'onak. Ezt t\'amsztj\'ak al\'a a [...] dolgozatok. A Az  Hermite f\"uggv\'enyek alkalmaz\'asa azzal is indikolhat\'o, hogy grafikonjuk hasonl\'\i t az EKG g\"orb\'ekre (l\'asd a F\"uggel\'eket).
-
+képplettel adható meg. Adott hibán belüli közelítést véve a jel helyett  elég az
+$S_nf$ approximációt reprezentáló  $\langle f,\Phi_k\rangle\ (k=0,1,\cdots, n)$ Fourier-együtthatókat tárolni.  Ezzel  a  közelítéssel a zaj is minimalizálható.  A közelítés megvalósításához a klasszikus ortogonális rendszerek közül  EKG görbék közelítésére  az Hermite-féle függvények bizonyultak használhatónak. Ezt támasztják alá a [...] dolgozatok. Az  Hermite függvények alkalmazása azzal is indikolható, hogy grafikonjuk hasonlí t az EKG görbékre (lásd a Függeléket).
 
 \section{Az approximáció optimalizálása}
 

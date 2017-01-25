@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  21 NOV 2016 02:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  25 JAN 2017 19:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -769,95 +769,128 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Info: Redefining \cal on input line 591.
 LaTeX Info: Redefining \mit on input line 592.
 )
-<./Abrak/Egyeb/elte_logo.jpg, id=1, 147.55125pt x 147.55125pt>
-File: ./Abrak/Egyeb/elte_logo.jpg Graphic file (type jpg)
 
-<use ./Abrak/Egyeb/elte_logo.jpg>
-Package pdftex.def Info: ./Abrak/Egyeb/elte_logo.jpg used on input line 89.
-(pdftex.def)             Requested size: 103.28516pt x 103.28516pt.
- [1
+LaTeX Warning: File `./Abrak/Egyeb/elte_logo.jpg' not found on input line 89.
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Abrak/Egyeb/elte_logo.jp
-g>] [2] (./documentation.toc)
+! Package pdftex.def Error: File `./Abrak/Egyeb/elte_logo.jpg' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.89 ...cs[scale=0.7]{./Abrak/Egyeb/elte_logo.jpg}
+                                                  \\[1cm]
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 89.
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./documentation.toc
+LaTeX Font Info:    Try loading font information for U+eur on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueur.fd
+File: ueur.fd 2013/01/14 v3.01 Euler Roman
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+euf on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+LaTeX Font Info:    Try loading font information for U+eus on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
+File: ueus.fd 2013/01/14 v3.01 Euler Script
+)
+LaTeX Font Info:    Try loading font information for U+euex on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuex.fd
+File: ueuex.fd 2013/01/14 v3.01 Euler extra symbols
+))
 \tf@toc=\write3
 \openout3 = `documentation.toc'.
 
  [1
 
+
+
+pdfTeX warning: pdflatex: pop empty color page stack 0
 ]
 1. fejezet.
-LaTeX Font Info:    Try loading font information for U+eur on input line 106.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueur.fd
-File: ueur.fd 2013/01/14 v3.01 Euler Roman
-)
-LaTeX Font Info:    Try loading font information for U+msa on input line 106.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 106.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Try loading font information for U+lasy on input line 106.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-LaTeX Font Info:    Try loading font information for U+euf on input line 106.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-LaTeX Font Info:    Try loading font information for U+eus on input line 106.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
-File: ueus.fd 2013/01/14 v3.01 Euler Script
-)
-LaTeX Font Info:    Try loading font information for U+euex on input line 106.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuex.fd
-File: ueuex.fd 2013/01/14 v3.01 Euler extra symbols
-)
-<./Abrak/Egyeb/ecg_wiki.png, id=19, 610.28pt x 602.25pt>
-File: ./Abrak/Egyeb/ecg_wiki.png Graphic file (type png)
-
-<use ./Abrak/Egyeb/ecg_wiki.png>
-Package pdftex.def Info: ./Abrak/Egyeb/ecg_wiki.png used on input line 111.
-(pdftex.def)             Requested size: 225.80006pt x 222.82901pt.
+LaTeX Warning: Command \' invalid in math mode on input line 105.
 
 
-LaTeX Warning: Citation `unifiedReview' on page 2 undefined on input line 119.
+LaTeX Warning: File `./Abrak/Egyeb/ecg_wiki.png' not found on input line 110.
 
 
-LaTeX Warning: Citation `hexp3' on page 2 undefined on input line 119.
+! Package pdftex.def Error: File `./Abrak/Egyeb/ecg_wiki.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.110 ...s[scale=0.37]{./Abrak/Egyeb/ecg_wiki.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: Citation `hexp2' on page 2 undefined on input line 119.
+LaTeX Warning: Citation `unifiedReview' on page 2 undefined on input line 116.
 
 
-LaTeX Warning: Citation `hexp1' on page 2 undefined on input line 119.
+LaTeX Warning: Citation `hexp3' on page 2 undefined on input line 116.
 
 
-LaTeX Warning: Citation `hexp4' on page 2 undefined on input line 119.
+LaTeX Warning: Citation `hexp2' on page 2 undefined on input line 116.
 
 
-LaTeX Warning: Citation `hexp5' on page 2 undefined on input line 119.
+LaTeX Warning: Citation `hexp1' on page 2 undefined on input line 116.
 
 
-LaTeX Warning: Citation `jpeg2000ECG' on page 2 undefined on input line 119.
+LaTeX Warning: Citation `hexp4' on page 2 undefined on input line 116.
+
+
+LaTeX Warning: Citation `hexp5' on page 2 undefined on input line 116.
+
+
+LaTeX Warning: Citation `jpeg2000ECG' on page 2 undefined on input line 116.
 
 [2
 
-] [3 <./Abrak/Egyeb/ecg_wiki.png>]
+]
+
+Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
+ on input line 123.
+
+[3] [4]
 2. fejezet.
-[4
+[5
 
 ]
 3. fejezet.
-[5
+[6
 
 ] (./documentation.aux)
 
@@ -865,24 +898,31 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4846 strings out of 493029
- 69189 string characters out of 6136234
- 142371 words of memory out of 5000000
- 8233 multiletter control sequences out of 15000+600000
- 19071 words of font info for 56 fonts, out of 8000000 for 9000
+ 4858 strings out of 493029
+ 69545 string characters out of 6136234
+ 141371 words of memory out of 5000000
+ 8240 multiletter control sequences out of 15000+600000
+ 20159 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,7n,27p,1926b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,6n,27p,1890b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></
-usr/share/texmf/fonts/type1/public/cm-super/sfcc1440.pfb></usr/share/texmf/font
-s/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-su
-per/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on documentation.pdf (7 pages, 140071 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/euler/euex10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/euler/eusm10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/
+cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pf
+b></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/
+fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/c
+m-super/sfcc1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb
+></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/f
+onts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm
+-super/sftt1200.pfb>
+Output written on documentation.pdf (7 pages, 177197 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 89 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
