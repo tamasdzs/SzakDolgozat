@@ -2,6 +2,7 @@
 \select@language {magyar} \contentsline {section}{\numberline {1.1}A modell ismertet\IeC {\'e}se}{2}
 \select@language {magyar} \contentsline {section}{\numberline {1.2}Matematikai h\IeC {\'a}tt\IeC {\'e}r}{3}
 \select@language {magyar} \contentsline {subsection}{\numberline {1.2.1}Jelek approxim\IeC {\'a}ci\IeC {\'o}ja}{3}
-\select@language {magyar} \contentsline {section}{\numberline {1.3}Az approxim\IeC {\'a}ci\IeC {\'o} optimaliz\IeC {\'a}l\IeC {\'a}sa}{4}
-\select@language {magyar} \contentsline {chapter}{\numberline {2}Felhaszn\IeC {\'a}l\IeC {\'o}i dokument\IeC {\'a}ci\IeC {\'o}}{5}
-\select@language {magyar} \contentsline {chapter}{\numberline {3}Fejleszt\IeC {\H o}i dokument\IeC {\'a}ci\IeC {\'o}}{6}
+\select@language {magyar} \contentsline {subsection}{\numberline {1.2.2}Hermite-f\IeC {\"u}ggv\IeC {\'e}nyek}{4}
+\select@language {magyar} \contentsline {section}{\numberline {1.3}Az approxim\IeC {\'a}ci\IeC {\'o} optimaliz\IeC {\'a}l\IeC {\'a}sa}{5}
+\select@language {magyar} \contentsline {chapter}{\numberline {2}Felhaszn\IeC {\'a}l\IeC {\'o}i dokument\IeC {\'a}ci\IeC {\'o}}{6}
+\select@language {magyar} \contentsline {chapter}{\numberline {3}Fejleszt\IeC {\H o}i dokument\IeC {\'a}ci\IeC {\'o}}{7}

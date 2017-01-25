@@ -133,9 +133,58 @@ $$
 \|f-S_nf\|^2=\|f\|^2-\sum_{k=0}^n|\langle f,\Phi_k\rangle|^2
 $$
 képplettel adható meg. Adott hibán belüli közelítést véve a jel helyett  elég az
-$S_nf$ approximációt reprezentáló  $\langle f,\Phi_k\rangle\ (k=0,1,\cdots, n)$ Fourier-együtthatókat tárolni.  Zajos jel esetén az ilyen típusú approximáció szűrőként is szolgál.  A közelítés megvalósításához a klasszikus ortogonális rendszerek közül  EKG görbék közelítésére  az Hermite-féle függvények bizonyultak használhatónak. Ezt támasztják alá a [...] dolgozatok. Az  Hermite függvények alkalmazása azzal is indikolható, hogy grafikonjuk hasonlí t az EKG görbékre (lásd a Függeléket).
+$S_nf$ approximációt reprezentáló  $\langle f,\Phi_k\rangle\ (k=0,1,\cdots, n)$ Fourier-együtthatókat tárolni.  Zajos jel esetén az ilyen típusú approximáció szűrőként is szolgál.  A közelítés megvalósításához a klasszikus ortogonális rendszerek közül  EKG görbék közelítésére  az Hermite-féle függvények bizonyultak használhatónak. Ezt támasztják alá a [...] dolgozatok. Az  Hermite függvények alkalmazása azzal is indikolható, hogy grafikonjuk hasonlít az EKG görbékre. Ezt a tulajdonságot a \ref{fig:phi0-3} ábra szemlélteti.
 
+%\begin{figure}
+%  \centering
+%\subfigure[$\Phi_{0}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi0.pdf}} 
+%\subfigure[$\Phi_{1}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi1.pdf}}
+%\subfigure[$\Phi_{2}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi2.pdf}} 
+%\subfigure[$\Phi_{3}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi3.pdf}}
+%\caption{A Hermite-f\"uggv\'enyrendszer első négy tagja.}
+%\label{fig:phi0-3}
+%\end{figure}
 
+\subsection{Hermite-függvények}
+A dolgozatban  az $\Bbb R$ számegyenesen (Lebesgue-mérték szerint) négyzetesen integrálható függvények $\mathcal H$ Hilbert-tere helyett elegendő a szakaszonként folytonos, az $\Bbb R$-en  négyzetesen integrálható függvények $\mathcal F$ euklideszi terét használni. Ebben a térben a skaláris szorzat és a norma a következő alakban írható fel:
+\begin{equation}
+ \langle f,g\rangle:=\int_{-\infty}^\infty f(t)g(t)\, dt,\ \ \|f\|:=\sqrt{\langle f,f\rangle}\ \ (f,g\in\mathcal F)\,.
+\label{eq:dotprod}
+\end{equation}
+Továbbá, a
+ \begin{equation*}
+ \Phi_n(x):=H_n(x)e^{-x^2/2}/\sqrt{\pi^{1/2}2^n n!}\quad \ (n\in\Bbb N)
+ \end{equation*}
+normált Hermite-függvények (teljes) ortonormált rendszert alkotnak az $\mathcal F$ téren:
+  \begin{equation*}
+   \langle \Phi_n,\Phi_m\rangle=\delta_{nm}\ \ (m,n\in\Bbb N),\quad
+  \|f-S_nf\|\to 0\ (n\to\infty)\,.
+   \end{equation*}
+Itt $H_n\ (n\in\Bbb N)$ jelöli az Hermite-féle polinomokat.
+\\
+\\
+Az Hermite-függvények alkalmazásának számos előnye van: \\
+\\
+i) A $\Phi_n\ (n\in\Bbb N)$ rendszer zárt (teljes) az $\mathcal F$ téren. \\
+\\
+ii) A $\Phi_n(x)$ függvények gyorsan tartanak $0$-hoz, ha $|x|\to \infty$: \\
+$$
+|\Phi_n(x)|\le M_n e^{-x^2/4}\le M_n\ \ (x\in\Bbb R, n\in\Bbb N).
+$$
+\\
+iii) A $\Phi_n$ függvények (stabil) másodrendű rekurzióval számíthatók: \\
+\begin{equation}
+\begin{split}
+&\Phi_0(x):=e^{-x^2/2}/\pi^{1/4},\ \Phi_1(x):=\sqrt{2}\, x e^{-x^2/2}/\pi^{1/4}\\
+&\Phi_n(x)=\sqrt{\frac 2 n} x \Phi_{n-1}(x)-\sqrt{\frac{n-1}n}\Phi_{n-2}(x)\ \ (x\in\Bbb R, n\ge 2)
+\end{split}
+\end{equation} 
+\\
+\\
+iv) A $\Phi_n'$ deriváltak kifejezhetők a $\Phi_n, \Phi_{n-1} $ függvényekkel: \\
+\begin{equation}
+\Phi_n'(x)=\sqrt{2n}\Phi_{n-1}(x)-x\Phi_n(x)\ \ (x\in\Bbb R, n\in\Bbb N,\Phi_{-1}=0)
+\end{equation}
 
 \section{Az approximáció optimalizálása}
 
