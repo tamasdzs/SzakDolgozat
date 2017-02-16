@@ -100,18 +100,22 @@
 \chapter{Bevezetés}
 \label{intro}
 
-Az információ ábrázolásának módja az informatika tudomány fontos kérdése. Természetesen annak eldöntése, hogy egy adott adat halmazt milyen módon kerül ábrázolásra erősen függ annak jellegétől. Az adatábrázolás felel az adatok hatékony felhasználhatóságáért (például egy internetes video hívásnál az adatokat gyorsan kell egymás után továbbítani), ugyanakkor biztosítania kell, hogy az adatokból kinyerhető információ nem veszik el (ha túl rossz mindőségű képeket továbbítunk, a fogadó oldal nem tudja értelmezni azokat). 
-	A szakdolgozat célja egy speciális adatábrázolás, nevezetesen EKG jelek egy ábrázolásának bemutatása. Mivel jellemzően ezeket az adatokat, későbbiekben \textit{jelek}-et, általában nagyobb memória felhasználásával szokás ábrázolni, ezért a dolgozat az adat ábrázolásra EKG jelek \textit{tömörítéseként} hivatkozik. EKG jelek esetén az ábrázolás minősége sok szemponttól függ. Mivel ezek a jelek fontos információkat hordoznak a szív állapotáról, különösen fontos, hogy a tömörítés során ne vesszen el fontos információ. Egy ilyen jel rögzítése során azonban sok olyan adat is tárolásra kerül (például a végtagok mérés közbeni mozgatása miatt), amelyek nem hordoznak fontos információt. Az ilyen adatokra a dolgozat \textit{zaj}-ként hivatkozik. Egy jó EKG ábrázolás sikeresen szűri a mérés során keletkezett zajt, miközben az orvosi szempontból fontosnak nevezhető információt megtartja. Mivel a dolgozatban egy tömörítési eljárás kerül bemutatásra, fontos szempont az EKG jelek memória takarékos ábrázolása. Gyakorlati szempontból minél kevesebb memórián történik meg a jelek ábrázolása, annál könnyebb azokat tárolni (hosszú mérések esetén fontos lehet), illetve egyszerűbb és biztonságosabb azok hálózaton törtenő továbbítása. EKG jeleknek egy igazán jónak nevezhető ábrázolása pedig az eddig említettek mellett az orvosok munkáját közvetlenül segítő információt is kódol magában. Ilyen lehet például egy olyan ábrázolás amely hatékony bemenetéül szolgál valamilyen osztályozó algoritmusnak, lehetővé téve az abnormális jelek automatikus felismerését.        
-	A dolgozat
+\paragraph{}
+Az információ ábrázolásának módja az informatika tudomány fontos kérdése. Természetesen annak eldöntése, hogy egy adott adat halmaz milyen módon kerül ábrázolásra erősen függ annak jellegétől. Az adatábrázolás felel az adatok hatékony felhasználhatóságáért (például egy internetes video hívásnál az adatokat gyorsan kell egymás után továbbítani), ugyanakkor biztosítania kell, hogy az adatokból kinyerhető információ nem veszik el (ha túl rossz mindőségű képeket továbbítunk, a fogadó fél nem tudja értelmezni azokat). 
+\paragraph{}	A szakdolgozat célja egy speciális adatábrázolás, nevezetesen EKG jelek egy ábrázolásának bemutatása. Mivel jellemzően ezeket az adatokat, későbbiekben \textit{jelek}-et, általában nagyobb memória felhasználásával szokás ábrázolni, ezért a dolgozat az eljárásra EKG jelek \textit{tömörítéseként} hivatkozik. EKG jelek esetén az ábrázolás minősége sok szemponttól függ. Mivel ezek a jelek fontos információkat hordoznak a szív állapotáról, különösen fontos, hogy a tömörítés során ne vesszen el fontos információ. Egy ilyen jel rögzítésekor azonban sok olyan adat is tárolásra kerül (például a végtagok mérés közbeni mozgatása miatt), amelyek nem hordoznak fontos információt. Az ilyen adatokra a dolgozat \textit{zaj}-ként hivatkozik. Egy jó EKG ábrázolás sikeresen szűri a mérés során keletkezett zajt, miközben az orvosi szempontból fontosnak nevezhető információt megtartja. Mivel a dolgozatban egy tömörítési eljárás kerül bemutatásra, fontos szempont az EKG jelek memória takarékos ábrázolása. Gyakorlati szempontból minél kevesebb memórián történik meg a jelek ábrázolása, annál könnyebb azokat tárolni (hosszú mérések esetén fontos lehet), illetve egyszerűbb és biztonságosabb a jelek hálózaton törtenő továbbítása. EKG jeleknek egy igazán jónak nevezhető ábrázolása pedig az eddig említettek mellett az orvosok munkáját közvetlenül segítő információt is kódol magában. Ilyen lehet például egy olyan ábrázolás amely hatékony bemenetéül szolgál valamilyen osztályozó algoritmusnak, lehetővé téve az abnormális jelek automatikus felismerését. 
+	\paragraph{} A dolgozat három fő fejezetre tagolható. A Bevezetés című fejezetben található a dolgozatban bemutatott eljárás specifikációja, a jel reprezentáció matematikai modelljének ismertetése, valamint a bemutatott módszer egyéb jellemzőit ismertető alfejezetek. Ezek közé tartozik például a jel közelítésének optimalizációjához szükséges Nelder-Mead algoritmus elméleti bemutatása, illetve az EKG jel szegmentációját elősegítő Matching-Pursuit algoritmust részletező alfejezet. 
+\paragraph{}	A dolgozat második fejezete az eljárás mellékelt implementációjának a fejlesztői dokumentációja. Ebben a fejezetben találhatóak a tömörítő eljárást implementáló c++ osztályok jellemzői, illetve az elérést segítő webes felület implementációjának részletes ismertetése. A fejlesztői dokumentáció fejezet tartalmazza továbbá a program logikai jellemzését elősegítő UML és egyéb osztálydiagrammokat. A fejezet igyekszik pragmatikusan és érthetően jellemezni a program felépítését, illetve kellően megindokolni az egyes implementációk mellett szóló döntéseket. 
+\paragraph{}	A Felhasználói dokumentáció fejezetbe, a program használatával kapcsolatos információk kerültek. Ebben a fejezetben található a felhasználói felület funkcióinak pontos ismertetése, valamint hasznos példák annak használatára. Bemutatásra kerülnek továbbá a program használatához szükséges előkészületi lépések, és az ismert rendszerkövetelmények. 
+\paragraph{}	A dolgozat utolsó része a függelék, melyben a Bevezetés fejezetben található matematikai állítások bizonyításai, egyéb kapcsolódó matematikai fogalmak leírásai, illetve felhasznált algoritmusok pszeudo-kódja található. 
 		
 \section{A feladat specifikációja}
 
-A dolgozat célja egy olyan tömörítési eljárás bemutatása, amely lehetővé teszi az EKG jelek hatékony (memória takarékos) ábrázolását, a mérések zaj szűrését, illetve az EKG hullámszegmenseinek szeparációját. Az utóbbi jellemző orvosi szempontból lehet hasznos, ugyanis sok kóros elváltozás kimutatásához szükséges az egyes hullámszegmensek széleinek ismerete. A tömörítési eljárás
+A dolgozat célja egy olyan tömörítési eljárás bemutatása, amely lehetővé teszi az EKG jelek hatékony (memória takarékos) ábrázolását, a mérések zaj szűrését, illetve az EKG hullámszegmenseinek szeparációját. Az utóbbi jellemző orvosi szempontból lehet hasznos, ugyanis sok kóros elváltozás kimutatásához szükséges az egyes hullámszegmensek széleinek ismerete. A dolgozatban bemutatott módszer hatékonysága, az irodalomban fellelhető más tömörítési eljárások \cite{} hatékonyságának összehasonlításával igazolandó. A dolgozatban bemutatott tömörítési eljárás implementációjának feladata, hogy az MIT-BIH adatbázisban található EKG jelek tömörítésére alkalmas legyen, ehhez pedig egy könnyen használható webes felületet biztosítson. A bemutatott tömörítési eljárás implementációjának két féle bemente megengedett: tömörítés esetén az MIT-BIH adatbázisban megtalálható EKG jelek, illetve a tömörítés következtében létrejött számsorozat, melyet a tömörített jel helyreállításához használ.  
 
 \section{A modell ismertetése}
 A modern orvostudományban nagy jelentőséggel bírnak 
-a valamely élő szervezet által kibocsátott úgynevezett $biológiai jelek$. Ezek k\"oz\'e sorolható az $Elektro$ $Kardio$ $Gram$, vagy $EKG$,
-amely a szív állapotáról képes információt adni. B\'ar ennek a dolgozatnak nem c\'elja az $EKG$ jelek pontos elemz\'ese, fontos n\'eh\'any sorban ismertetni egy \'atlagos $EKG$ jel meghat\'aroz\'o hull\'amait. Egyetlen sz\'\i v\"ut\'es  $EKG$ reprezent\'aci\'oja h\'arom f\H o r\'eszre bonthat\'o: a sz\'\i v\"ut\'es elej\'en megjelen\H o $P$ hull\'amra, az ezt k\"ovet\H o $QRS$ komplexumra, \'es az \"ut\'es v\'eg\'en tal\'alhat\'o $T$ hull\'amra. Ezek rendre a pitvari összehűzódást, a kamrák depolarizációját és elektromos újratöltődését reprezentálják. Diagnosztikai szempontb\'ol a $QRS$ komplexus a legfontosabb, ezért ezt nagy pontossággal kell tárolni. Általánosságban elmondható, hogy ezeknek a hullámoknak kezd\H o \'es v\'egpontjai, valamint maximum \'es minimum \'ert\'ekei vesznek részt az orvosi diagnosztikában. Az említett paraméterek az \ref{fig:ekg} ábrán láthatóak.
+a valamely élő szervezet által kibocsátott úgynevezett $biológiai jelek$. Ezek közé sorolható az $Elektro$ $Kardio$ $Gram$, vagy $EKG$,
+amely a szív állapotáról képes információt adni. B\'ar ennek a dolgozatnak nem célja az $EKG$ jelek pontos elemzése, fontos néh\'any sorban ismertetni egy \'atlagos $EKG$ jel meghat\'arozó hull\'amait. Egyetlen szí vütés  $EKG$ reprezent\'aciója h\'arom fő részre bontható: a szí vütés elején megjelenő $P$ hull\'amra, az ezt követő $QRS$ komplexumra, és az ütés végén tal\'alható $T$ hull\'amra. Ezek rendre a pitvari összehűzódást, a kamrák depolarizációját és elektromos újratöltődését reprezentálják. Diagnosztikai szempontból a $QRS$ komplexus a legfontosabb, ezért ezt nagy pontossággal kell tárolni. Általánosságban elmondható, hogy ezeknek a hullámoknak kezdő és végpontjai, valamint maximum és minimum értékei vesznek részt az orvosi diagnosztikában. Az említett paraméterek az \ref{fig:ekg} ábrán láthatóak.
 
 \begin{figure}[htb!]
 \begin{center}
@@ -149,7 +153,7 @@ $S_nf$ approximációt reprezentáló  $\langle f,\Phi_k\rangle\ (k=0,1,\cdots, 
 %\subfigure[$\Phi_{1}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi1.pdf}}
 %\subfigure[$\Phi_{2}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi2.pdf}} 
 %\subfigure[$\Phi_{3}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi3.pdf}}
-%\caption{A Hermite-f\"uggv\'enyrendszer első négy tagja.}
+%\caption{A Hermite-függvényrendszer első négy tagja.}
 %\label{fig:phi0-3}
 %\end{figure}
 
@@ -195,6 +199,54 @@ iv) A $\Phi_n'$ deriváltak kifejezhetők a $\Phi_n, \Phi_{n-1} $ függvényekke
 \end{equation}
 
 \section{Az approximáció optimalizálása}
+
+A jelek reprezentációja  függ az időskála $0$ pontjának és az egység
+megválasztásától. Ezeket a paramétereket  a gyakorlatban önkényesen szoktuk
+ megválasztani. Ezzel összefüggében felvethető a kérdés, hogyan lehet optimálisan megválaszthatani  ezeket a paramétereket.
+Az  approximáció pontosságát javí thatjuk azonos együttható szám mellett, amennyiben az  Hermite-függvények helyett azok
+\begin{equation}
+\Phi_n^{a,\lambda}(x):=\Phi_n(\lambda x+a)\ \  (x,a\in\Bbb R, \lambda>0)
+\end{equation}
+affin transzformáltjait használjuk. A $\sqrt{\lambda}\Phi_n^{a,\lambda}\ (n\in\Bbb N)$ rendszer is ortonormált és teljes az $\mathcal F$ téren. Ebben az esetben
+az $f$ legjobb approximációja az
+\begin{equation}
+S_n^{a,\lambda}f:=\sum_{k=0}^n\langle f,\Phi_k^{a,\lambda}\rangle\Phi_k^{a,\lambda}\ \
+(n\in\Bbb N, a\in\Bbb R,\lambda>0)
+\end{equation}
+projekció és a közelí tés hibája az $a$ transzlációs és a $\lambda$ dilatációs paraméter függvénye:
+\begin{equation}
+D^2_n(a,\lambda):=\|f\|^2-\sum_{k=0}^n|\langle f,\Phi_k^{a,\lambda}\rangle|^2.
+\end{equation}
+            E két szabad paraméter optimalizálásával azonos együtthatószám mellett, az eredeti Hermite polinomokkal törtánő  approximációhoz képest pontosabb közelí tést érhetünk el. A $D_n$ függvény minimalizálása ekvivalens  az
+ $$
+ F_n(a,\lambda):=\sum_{k=0}^n|\langle f,\Phi_k^{a,\lambda}\rangle|^2
+ $$
+ függvény maximumának meghatározásával. A paraméteres integrálok tulajdonságaiból következik, hogy az
+ $$
+ A_n(a,\lambda):=\langle f,\Phi_k^{a,\lambda}\rangle \ \  ((a,\lambda)\in T:=\Bbb R\times (0,\infty))
+ $$
+ Fourier-együtthatók a $T$ tartományon a paraméterek sima függvényei. Bebizonyí tható, hogy $\lambda\to 0$ és $|a|+\lambda\to \infty$ esetén
+ $F_k(a,\lambda)\to 0$, következésképpen az $F_n$ függvénynek létezik a
+ maximuma és a $D_n$ függvénynek létezik a minimuma. A részleteket a Függelékben találhatók.
+
+ Az alábbi ábrák az $F_n(a,\lambda)$ függvényeket szemléltetik fényintenzitás és perspektivikus ábrázolást használva. A harmadik ablakon
+a jel közelí tését szemlélteti a maximum helynek megfelelő, ill.  egyéb
+paraméter esetén.
+
+\begin{figure}[H]
+\begin{center}
+   \includegraphics[width=100mm]{./Abrak/Ereszkedo1/F_2sz.png}
+  \caption{Az $F_n$ szí nkódos ábrázolása}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+   \includegraphics[width=140mm]{./Abrak/Ereszkedo1/Er36.png}
+  \caption{Az $F_n$ által meghatározott felület, és approximáció}
+\end{center}
+\end{figure}
+
 
 \chapter{Felhasználói dokumentáció}
 
