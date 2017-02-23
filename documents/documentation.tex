@@ -285,28 +285,26 @@ Megjegyezendő, hogy a $Nelder-Mead$ szimplex módszer egy determinisztikus algo
 
 \section{Kvadratúra formulák}
 
-Mivel a $Nelder-Mead$, illetve a $PSO$ algoritmusok
-csak a függvényértékekre támaszkodnak, a hibafüggvény értékeinek kiszámításához elegendő az Hermite-függvényeket valamilyen felosztás pontjaiban egyszer meghatatározni. Ez implementációs szempontból is fontos, hiszen nem kell minden $(\lambda,a)$ paraméterhez kiszámolni az ettől függő, rekurzióval adott Hermite-féle függvényrendszer tagjait. Ehelyett elég az eredeti diszkrét adatsorozatot dilatálni, illetve eltolni, ami lényegesen kevesebb számítást igényel. Továbbá, az említett felosztás pontjainak valamely Hermite-függvény zérushelyeit választva, a hibafüggvényben  szereplő integrálok kiszámításához
-a \cite{waveletECG} dolgozatban használt eljáráshoz hasonlóan kvadratúra formulát is alkalmazhatunk. Ennek előnye, hogy az alappontokban a módszer interpolál, így itt lehetséges a jel mintáinak pontos rekonstrukciója. Ugyanakkor, a kapott approximáció is pontosabb, amit a \cite{waveletECG}-ben közölt numerikus tesztek is alátámasztanak.
-	\par Mivel a leggyosrabb ereszkedés módszerének az alkalmazásához 
-szükségünk van a függvény parciális deriváltjaira, így ezek előállításával
+Mivel a $Nelder-Mead$ algoritmus
+kizárólag a függvényértékekre támaszkodik, a hibafüggvény értékeinek kiszámításához elegendő az Hermite-függvényeket valamilyen felosztás pontjaiban egyszer meghatatározni. Ez implementációs szempontból is fontos, hiszen nem kell minden $(\lambda,a)$ paraméterhez kiszámolni az ettől függő, rekurzióval adott Hermite-féle függvényrendszer tagjait. Ehelyett elég az eredeti diszkrét adatsorozatot dilatálni, illetve eltolni, ami lényegesen kevesebb számítást igényel. Továbbá, az említett felosztás pontjainak valamely Hermite-függvény zérushelyeit választva, a hibafüggvényben  szereplő integrálok kiszámításához
+a \cite{} dolgozatban használt eljáráshoz hasonlóan kvadratúra formulát is alkalmazhatunk. Ennek előnye, hogy az alappontokban a módszer interpolál, így itt lehetséges a jel mintáinak pontos rekonstrukciója. Ugyanakkor, a kapott approximáció is pontosabb, amit a \cite{}-ben közölt numerikus tesztek is alátámasztanak.
+	\par Ahogyan ez a \cite{} dolgozatban látható, további optimalizációs algoritmusok is alkalmazhatóak a probléma megoldásához. Egy ezek közül a leggyosrabb ereszkedés módszere, melynek az alkalmazásához 
+szükségünk van a függvény parciális deriváltjaira. Ezek előállításával ilyen esetben
 külön  kell foglalkozni. Az Hermite-függvények deriváltjaira vonatkozó formulák alapján a
-parciális deriváltakra a hibafüggvényhez hasonló ellőállítás adható. Ebben az esetben az \eqref{eq:dotprod} egyenletben szereplő integrálok kiszámításához ekvidisztans felosztást alkalmaztunk.
+parciális deriváltakra a hibafüggvényhez hasonló ellőállítás adható. Ebben az esetben az \eqref{eq:dotprod} egyenletben szereplő integrálok kiszámításához ekvidisztans felosztása alkalmazandó.
 
 
 \section{A tömörítő eljárás jellemzése}
 
-	Mindhárom optimalizáció esetén, a tömörítő
-eljárás előkészítése megegyezik. A program indításakor az első feladat,
-hogy a teljes EKG jelet szívütésekre bontsunk, majd
-minden szívütést paraméterként adjunk tovább a tömörítő eljárásnak. Inicializálni kell továbbá
+A tömörítés kezdetekor az első feladat a teljes EKG mérést szívütésekre bontása. Ezt követően
+az egyes szívütések a tömörítő eljárás bemeneti paramétereként válnak értelmezhetővé. Inicializálni kell továbbá
 a tömörítő függvények által visszaadott, az aktuális szívütésre vonatkozó Fourier-együtthatókat, 
 az approximáció hibáját, illetve az optimalizációs eljárások által meghatározott dilatációs és 
-transzlációs paramétereket tároló tömböket. \par
+transzlációs paramétereket. \par
 	
-A tömörítés előkészítése nem ér véget a jel szívütésekre történő felbontásakor. A szívütéseket normalizáljuk is. Ez azt jelenti, hogy az első és utolsó helyen felvett értékeket összekötő egyenest kivonjuk a jelből. Ezt az eljárást az irodalomban az alapvonal eliminálásnak nevezik. Ennek eredményeként a jel tartója a kezdő és a végpont által meghatározott intervallum. Végül, a szívütést normáljuk, vagyis az egyes értékeket 
+A tömörítés előkészítése nem ér véget a jel szívütésekre történő felbontásakor. A szívütéseket normalizálása is szükséges. Ez azt jelenti, hogy az első és utolsó helyen felvett értékeket összekötő egyenes, és az eredeti EKG különbségét tekinti az eljárás tömörítendő jelnek. Ezt az eljárást az irodalomban az alapvonal eliminálásnak nevezik. Ennek eredményeként a jel tartója a kezdő és a végpont által meghatározott intervallum. Végül, a szívütést normálásra kerül, vagyis az egyes értékeket 
 elosztjuk az abszolút maximummal. \par
-	A tömörítés megkezdése előtt inicializáljuk a függvényrendszert, 
+	A tömörítés megkezdése előtt inicializálni kell a függvényrendszert, 
 melynek során az egyes bázisfüggvények által felvett értékek egy mátrix soraiba kerülnek: 
 \begin{equation*}
 	\Phi:=\left[\Phi_n(\alpha_m)\right]_{0\leq n < N,\;0\leq m < M}\,.
@@ -317,15 +315,15 @@ A $\Phi\in\mathbb{R}^{N\times M}$ mátrix segítségével az $f\in\mathbb{R}^M$ 
 	c_n:=\left\langle f, \Phi_n \right\rangle=\frac{1}{M} \Lambda^{-1} \Phi f \quad (0\leq n < N)\,,
 	\label{eq:phi_coeffs}
 \end{equation*}
-ahol $\mathbb{R}^{N\times N}\ni\Lambda=\Phi \Phi^T$ Cristoffel-Darboux számokat tartalmazza. Az előállításban szereplő $\alpha_n\in\mathbb{R}\, (0\leq n < N)$ számokat a \ref{sec:kvad} fejezetnek megfelelően kétféleképpen határoztuk meg. Egyrészt a $PSO$ és $Nelder-Mead$ algoritmusokban a $\Phi_N$ függvény gyökeit véve kvadratúra formulákat definiáltunk. Másrészt a gradiens módszerhez $f$ tartóján egyenletes alapponterndszert használtunk. Felhívjuk a figyelmet arra, hogy az előbbi esetben a gyökök pontos meghatározása kritikus a feladat szempontjából. A probléma megoldásához a \cite{gautschi} könyv által javasolt numerikus eljárást követjük. Nevezetesen, a $H_n$ Hermite-polinom \eqref{eq:identities} rekurziójában szereplő együtthatókat egy tridiagonális mátrixba rendezzük. Könnyen belátható, hogy az $\alpha_n$ gyökök megegyeznek ezen tridiagonális mátrix sajátértékeivel.  \par
+ahol $\mathbb{R}^{N\times N}\ni\Lambda=\Phi \Phi^T$ Cristoffel-Darboux számokat tartalmazza. Az előállításban szereplő $\alpha_n\in\mathbb{R}\, (0\leq n < N)$ számok a \ref{sec:kvad} fejezetnek megfelelően kétféleképpen határozhatóak meg. Egyrészt a $Nelder-Mead$ algoritmusban a $\Phi_N$ függvény gyökeit véve kvadratúra formulákat definiáltunk. Más optimalizációs algoritmus, például a gradiens módszer esetén $f$ tartóján egyenletes alapponterndszert alkalmazandó. Figyelmet érdemel, hogy az előbbi esetben a gyökök pontos meghatározása kritikus a feladat szempontjából. A probléma megoldásához a \cite{gautschi} könyv által javasolt numerikus eljárás található az implementációban. Nevezetesen, a $H_n$ Hermite-polinom \eqref{eq:identities} rekurziójában szereplő együtthatókat egy tridiagonális mátrixba rendezzük. Könnyen belátható, hogy az $\alpha_n$ gyökök megegyeznek ezen tridiagonális mátrix sajátértékeivel.  \par
 
-Hátra van még a megfelelő $(a,\lambda)$ paraméterek beállítása. Annak érdekében, hogy a reprezentáció minél adaptívabb legyen, több  optimális transzlációt, illetve dilatációt fogunk meghatározni. Az eredeti $f\in\mathcal{F}$ jelet tehát a következő alakban közelítjük:
+Hátra van még a megfelelő $(a,\lambda)$ paraméterek beállítása. Annak érdekében, hogy a reprezentáció minél adaptívabb legyen, több  optimális transzlációt, illetve dilatáció meghatározása szükséges. Az eredeti $f\in\mathcal{F}$ jelet tehát a következő alakban közelíti a módszer:
 \begin{equation*}
 	S_{\mathbf{n}}^{\mathbf{a},\boldsymbol{\lambda}}f:=\sum_{i=1}^N\sum_{k=0}^{n_i} \langle f^{a_i,\lambda_i},\Phi_{k}\rangle\Phi_{k} \quad
 	(a_k \in \Bbb R,\lambda_k>0)\,,
 \end{equation*}
-ahol $\mathbf{a}=a_1, a_2, \ldots, a_N$ az alkalmazott transzlációk, $\boldsymbol{\lambda}=\lambda_1, \lambda_2, \ldots, \lambda_N$ pedig a dilatációk sorozata. Az egyes sorfejtésekhez tartozó együtthatók számát az $\mathbf{n}=n_1, n_2, \ldots, n_N$ vektor jelöli. Mivel az EKG jel alapvetően három fő hullámból áll ezért esetünkben $N=3.$ Továbbá a \cite{hexp3} dolgozat eredményei alapján
-a QRS komplexumot egy heted, a T hullámot hatod, a P hullámot pedig egy másodfokú ortogonális rendszer segítségével approximáljuk azaz $\mathbf{n}=7,6,2\,.$ Felhívjuk a figyelmet, hogy a legjobb approximáció előállításához a \eqref{eq:hilaprx} egyenlettel ellentétben már az eredeti függvény $f^{a_i,\lambda_i}$ transzformáltját használjuk. Ez nem jelent megszorítást az eredeti problémára nézve, implementációs szempontból viszont $f^{a_i,\lambda_i}$ kiszámítása gyorsabb, mint a $\Phi_n^{a_i,\lambda_i}$ rendszer előállítása.
+ahol $\mathbf{a}=a_1, a_2, \ldots, a_N$ az alkalmazott transzlációk, $\boldsymbol{\lambda}=\lambda_1, \lambda_2, \ldots, \lambda_N$ pedig a dilatációk sorozata. Az egyes sorfejtésekhez tartozó együtthatók számát az $\mathbf{n}=n_1, n_2, \ldots, n_N$ vektor jelöli. Mivel az EKG jel alapvetően három fő hullámból áll ezért jelen probléma megoldásakor $N=3.$ Továbbá a \cite{hexp3} dolgozat eredményei alapján
+a QRS komplexumot egy heted, a T hullámot hatod, a P hullámot pedig egy másodfokú ortogonális rendszer segítségével approximálja az eljárás azaz $\mathbf{n}=7,6,2\,.$ Felhívjuk a figyelmet, hogy a legjobb approximáció előállításához a \eqref{eq:hilaprx} egyenlettel ellentétben már az eredeti függvény $f^{a_i,\lambda_i}$ transzformáltját használjuk. Ez nem jelent megszorítást az eredeti problémára nézve, implementációs szempontból viszont $f^{a_i,\lambda_i}$ kiszámítása gyorsabb, mint a $\Phi_n^{a_i,\lambda_i}$ rendszer előállítása.
 
 A $(a_i,\lambda_i)$ paraméter párok optimalizációját egymástól függetlenül végezzük. Így azonban nem garantált, hogy az algoritmus a P, QRS, T hullámokat külön-külön approximálja. A probléma megoldására az irodalomban jól ismert ún. $Matching\ Pursuit$ $(MP)$ konstrukciót \cite{mpurs} alkalmazzuk. Ez egy mohó algoritmus, mely minden lépésben a \eqref{eq:Fnfuggv} egyenletben definiált $F_n(a_i,\lambda_i)$ függvény maximalizálására törekszik. Az iteráció $i.$ lépése a következő alakban írható fel:
 \begin{equation}
