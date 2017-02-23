@@ -147,15 +147,15 @@ $$
 képplettel adható meg. Adott hibán belüli közelítést véve a jel helyett  elég az
 $S_nf$ approximációt reprezentáló  $\langle f,\Phi_k\rangle\ (k=0,1,\cdots, n)$ Fourier-együtthatókat tárolni.  Zajos jel esetén az ilyen típusú approximáció szűrőként is szolgál.  A közelítés megvalósításához a klasszikus ortogonális rendszerek közül  EKG görbék közelítésére  az Hermite-féle függvények bizonyultak használhatónak. Ezt támasztják alá a [...] dolgozatok. Az  Hermite függvények alkalmazása azzal is indikolható, hogy grafikonjuk hasonlít az EKG görbékre. Ezt a tulajdonságot a \ref{fig:phi0-3} ábra szemlélteti.
 
-%\begin{figure}
-%  \centering
-%\subfigure[$\Phi_{0}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi0.pdf}} 
-%\subfigure[$\Phi_{1}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi1.pdf}}
-%\subfigure[$\Phi_{2}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi2.pdf}} 
-%\subfigure[$\Phi_{3}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi3.pdf}}
-%\caption{A Hermite-függvényrendszer első négy tagja.}
-%\label{fig:phi0-3}
-%\end{figure}
+\begin{figure}
+  \centering
+\subfigure[$\Phi_{0}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi0.pdf}} 
+\subfigure[$\Phi_{1}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi1.pdf}}
+\subfigure[$\Phi_{2}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi2.pdf}} 
+\subfigure[$\Phi_{3}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi3.pdf}}
+\caption{A Hermite-függvényrendszer első négy tagja.}
+\label{fig:phi0-3}
+\end{figure}
 
 \subsection{Hermite-függvények}
 A dolgozatban  az $\Bbb R$ számegyenesen (Lebesgue-mérték szerint) négyzetesen integrálható függvények $\mathcal H$ Hilbert-tere helyett elegendő a szakaszonként folytonos, az $\Bbb R$-en  négyzetesen integrálható függvények $\mathcal F$ euklideszi terét használni. Ebben a térben a skaláris szorzat és a norma a következő alakban írható fel:
@@ -251,23 +251,25 @@ paraméter esetén.
 
 A $Nelder-Mead$ szimplex algoritmust \cite{} eredetileg 1965-ben
 fejlesztették ki azzal céllal, hogy létrehozzanak egy eljárást, amely
-képes meghatározni egy $f : \Bbb R^n \to \Bbb R$ nemlineáris függvény minimum (maximum) helyét a  gradiens felhasználása  nélkül, pusztán a függvényértékekre  támszkodva.
-Mivel az algoritmust kétváltozós függvényekre alkalmazzuk, ezért ebben a speciális esetben szemléltetjük, megjegyezve, hogy hasonló elvek szerint
- működik az általános $n$ dimenziós eset is. A minimum meghatározásához az $f(x_1), f(x_2), f(x_3)$  függvényértékekből indulunk ki, melyek közül egyet lecserélünk az adott lépésben. Nevezetesen, 
+képes meghatározni egy $f : \Bbb R^n \to \Bbb R$ nemlineáris függvény minimum (maximum) helyét a  gradiens felhasználása  nélkül,
+ pusztán a függvényértékekre  támszkodva. 
+Mivel az algoritmust a bemutatott tömörítési eljárás során kétváltozós függvényekre kerül aklalmazásra, ezért ebben a speciális esetben szemléltetjük, megjegyezve, hogy hasonló 
+elvek szerint
+ működik az általános $n$ dimenziós eset is. Említendő továbbá, hogy Fejlesztői dokumentáció fejezetben bemutatott Nelder-Mead algoritmus implementációja képes kezelni az n-dimenziós esetet.  A minimum meghatározásához az $f(x_1), f(x_2), f(x_3)$  adnak kiindulási pontot, melyek közül egyet lecserélendő az adott lépésben. Nevezetesen, az algoritmus
 \begin{equation*}
 f(x_3)\le f(x_2)\le f(x_1)
 \end{equation*}
- esetén olyan $x'$ helyet keresünk, amelyre $f(x')\le  f(x_3)\le f(x_2)$ teljesül és az $x_3, x_2, x_1$ ponthármasról az $x_1$-et elhagyva áttérünk az $x',x_3, x_2$ hármasra. Az $x'$ pontot az előzőekből geometriai transzformációkkal származtatjuk, felhasználva az  $x_2x_3$ szakasz $x=(x_2+x_3)/2$ felezéspontját: 
+ esetén olyan $x'$ helyet keres, amelyre $f(x')\le  f(x_3)\le f(x_2)$ teljesül és az $x_3, x_2, x_1$ ponthármasról az $x_1$-et elhagyva áttérünk az $x',x_3, x_2$ hármasra. Az $x'$ pontot az előzőekből geometriai transzformációkkal származtatjuk, felhasználva az  $x_2x_3$ szakasz $x=(x_2+x_3)/2$ felezéspontját: 
 \begin{equation*}
 x'=x_1+\alpha (x-x_1) \quad (\alpha\in\Bbb R)\,.
 \end{equation*}
- Az alábbi ábrákon szemléltetjük az algoritmusban  használt transzformációkat. Vegyük észre, hogy $\alpha=2$ esetén $x'$ éppen az $x_1$ pont $x$-re vonatkozó középpontos tükrözése $(T_1).$ Továbbá $\alpha>2$ az eredeti háromszög tükrÖzése + nyújtása $(T_2),$ az $1<\alpha<2$ pedig tükrÖzéses + zsugorításnak felel meg $(T_3).$ A $-1<\alpha<0$ paraméterrel egyszerű zsugorítást kapunk. Végül az 5. transzformáció $(T_5)$ az $x_3$ pontból történő
- kicsinyítésnek feleltethető meg. Az $x_1$ képét ezekben a transzformációkban és a hozzá tartozó függvényértékeket a következő alakban adjuk meg:
+ Az alábbi ábrák szemléltetik az algoritmusban  használt transzformációkat. Látható, hogy $\alpha=2$ esetén $x'$ éppen az $x_1$ pont $x$-re vonatkozó középpontos tükrözése $(T_1).$ Továbbá $\alpha>2$ az eredeti háromszög tükrözése + nyújtása $(T_2),$ az $1<\alpha<2$ pedig tükrözéses + zsugorításnak felel meg $(T_3).$ A $-1<\alpha<0$ paraméterrel egyszerű zsugorítás adódik. Végül az 5. transzformáció $(T_5)$ az $x_3$ pontból történő
+ kicsinyítésnek feleltethető meg. Az $x_1$ képe ezekben a transzformációkban és a hozzá tartozó függvényértékek a következő alakban adottak:
 \begin{equation*}
 x':=x_{3+i}=T_i(x_1)\quad (i=1,2,3,4), \qquad y_j=f(x_j)\quad (j=1,2,\cdots,7)\,.
 \end{equation*}
-Azt, hogy mikor melyik transzformációt használjuk a Függelékben
-található  folyamatábrából látható. Az említett műveleteket a \ref{fig:nmtrf} ábrán szemléltettük.
+Azt, hogy mikor melyik transzformáció használandó, a Függelékben, illetve a Fejlesztői dokumentáció Nelder-Mead algoritmus implementációjával foglalkozó fejezetben
+található  folyamatábrából látható. Az említett műveleteket a \ref{fig:nmtrf} ábra szemlélteti.
 \begin{figure}[htb!]
   \centering
 \subfigure[Tükrözés\ $(T_1: \alpha=2).$]{\includegraphics[scale=0.26,trim=10 0 10 53,clip]{./Abrak/Egyeb/NMT1.PNG}} 
@@ -279,8 +281,7 @@ található  folyamatábrából látható. Az említett műveleteket a \ref{fig:
 \label{fig:nmtrf}
 \end{figure}
 
-Megjegyezendő, hogy a $Nelder-Mead$ szimplex módszer is egy determinisztikus algoritmus. Az algoritmus gyors, hiszen minden lépésben csak néhány függvénykiértékelést kell végezni. Továbbá, a gradiens módszerrel ellentétben az olyan patologikus függvények optimumát is képes gyorsan megtalálni, mint amilyen a Rosenbrock függvény. 
-
+Megjegyezendő, hogy a $Nelder-Mead$ szimplex módszer egy determinisztikus algoritmus. Az algoritmus gyors, hiszen minden lépésben csak néhány függvénykiértékelést kell végezni. Továbbá, egyes módszerek, például a gradiens módszerrel ellentétben az olyan patologikus függvények optimumát is képes gyorsan megtalálni, mint amilyen a Rosenbrock függvény. 
 
 \section{Kvadratúra formulák}
 
