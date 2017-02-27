@@ -100,6 +100,8 @@
 \chapter{Bevezetés}
 \label{intro}
 
+
+
 \par
 Az információ ábrázolásának módja az informatika tudomány fontos kérdése. Természetesen annak eldöntése, hogy egy adott adat halmaz milyen módon kerül ábrázolásra erősen függ annak jellegétől. Az adatábrázolás felel az adatok hatékony felhasználhatóságáért (például egy internetes video hívásnál az adatokat gyorsan kell egymás után továbbítani), ugyanakkor biztosítania kell, hogy az adatokból kinyerhető információ nem veszik el (ha túl rossz mindőségű képeket továbbítunk, a fogadó fél nem tudja értelmezni azokat). 
 \par	A szakdolgozat célja egy speciális adatábrázolás, nevezetesen EKG jelek egy ábrázolásának bemutatása. Mivel jellemzően ezeket az adatokat, későbbiekben \textit{jelek}-et, általában nagyobb memória felhasználásával szokás ábrázolni, ezért a dolgozat az eljárásra EKG jelek \textit{tömörítéseként} hivatkozik. EKG jelek esetén az ábrázolás minősége sok szemponttól függ. Mivel ezek a jelek fontos információkat hordoznak a szív állapotáról, különösen fontos, hogy a tömörítés során ne vesszen el fontos információ. Egy ilyen jel rögzítésekor azonban sok olyan adat is tárolásra kerül (például a végtagok mérés közbeni mozgatása miatt), amelyek nem hordoznak fontos információt. Az ilyen adatokra a dolgozat \textit{zaj}-ként hivatkozik. Egy jó EKG ábrázolás sikeresen szűri a mérés során keletkezett zajt, miközben az orvosi szempontból fontosnak nevezhető információt megtartja. Mivel a dolgozatban egy tömörítési eljárás kerül bemutatásra, fontos szempont az EKG jelek memória takarékos ábrázolása. Gyakorlati szempontból minél kevesebb memórián történik meg a jelek ábrázolása, annál könnyebb azokat tárolni (hosszú mérések esetén fontos lehet), illetve egyszerűbb és biztonságosabb a jelek hálózaton törtenő továbbítása. EKG jeleknek egy igazán jónak nevezhető ábrázolása pedig az eddig említettek mellett az orvosok munkáját közvetlenül segítő információt is kódol magában. Ilyen lehet például egy olyan ábrázolás amely hatékony bemenetéül szolgál valamilyen osztályozó algoritmusnak, lehetővé téve az abnormális jelek automatikus felismerését. 
@@ -147,8 +149,10 @@ $$
 képplettel adható meg. Adott hibán belüli közelítést véve a jel helyett  elég az
 $S_nf$ approximációt reprezentáló  $\langle f,\Phi_k\rangle\ (k=0,1,\cdots, n)$ Fourier-együtthatókat tárolni.  Zajos jel esetén az ilyen típusú approximáció szűrőként is szolgál.  A közelítés megvalósításához a klasszikus ortogonális rendszerek közül  EKG görbék közelítésére  az Hermite-féle függvények bizonyultak használhatónak. Ezt támasztják alá a [...] dolgozatok. Az  Hermite függvények alkalmazása azzal is indikolható, hogy grafikonjuk hasonlít az EKG görbékre. Ezt a tulajdonságot a \ref{fig:phi0-3} ábra szemlélteti.
 
+\iffalse
+
 \begin{figure}
-  \centering
+\centering
 \subfigure[$\Phi_{0}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi0.pdf}} 
 \subfigure[$\Phi_{1}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi1.pdf}}
 \subfigure[$\Phi_{2}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi2.pdf}} 
@@ -156,6 +160,8 @@ $S_nf$ approximációt reprezentáló  $\langle f,\Phi_k\rangle\ (k=0,1,\cdots, 
 \caption{A Hermite-függvényrendszer első négy tagja.}
 \label{fig:phi0-3}
 \end{figure}
+\fi
+
 
 \subsection{Hermite-függvények}
 A dolgozatban  az $\Bbb R$ számegyenesen (Lebesgue-mérték szerint) négyzetesen integrálható függvények $\mathcal H$ Hilbert-tere helyett elegendő a szakaszonként folytonos, az $\Bbb R$-en  négyzetesen integrálható függvények $\mathcal F$ euklideszi terét használni. Ebben a térben a skaláris szorzat és a norma a következő alakban írható fel:
@@ -249,6 +255,8 @@ paraméter esetén.
 
 \section{A Nelder-Mead algoritmus}
 
+
+
 A $Nelder-Mead$ szimplex algoritmust \cite{} eredetileg 1965-ben
 fejlesztették ki azzal céllal, hogy létrehozzanak egy eljárást, amely
 képes meghatározni egy $f : \Bbb R^n \to \Bbb R$ nemlineáris függvény minimum (maximum) helyét a  gradiens felhasználása  nélkül,
@@ -285,6 +293,7 @@ Megjegyezendő, hogy a $Nelder-Mead$ szimplex módszer egy determinisztikus algo
 
 \section{Kvadratúra formulák}
 
+
 Mivel a $Nelder-Mead$ algoritmus
 kizárólag a függvényértékekre támaszkodik, a hibafüggvény értékeinek kiszámításához elegendő az Hermite-függvényeket valamilyen felosztás pontjaiban egyszer meghatatározni. Ez implementációs szempontból is fontos, hiszen nem kell minden $(\lambda,a)$ paraméterhez kiszámolni az ettől függő, rekurzióval adott Hermite-féle függvényrendszer tagjait. Ehelyett elég az eredeti diszkrét adatsorozatot dilatálni, illetve eltolni, ami lényegesen kevesebb számítást igényel. Továbbá, az említett felosztás pontjainak valamely Hermite-függvény zérushelyeit választva, a hibafüggvényben  szereplő integrálok kiszámításához
 a \cite{} dolgozatban használt eljáráshoz hasonlóan kvadratúra formulát is alkalmazhatunk. Ennek előnye, hogy az alappontokban a módszer interpolál, így itt lehetséges a jel mintáinak pontos rekonstrukciója. Ugyanakkor, a kapott approximáció is pontosabb, amit a \cite{}-ben közölt numerikus tesztek is alátámasztanak.
@@ -295,6 +304,8 @@ parciális deriváltakra a hibafüggvényhez hasonló ellőállítás adható. E
 
 
 \section{A tömörítő eljárás jellemzése}
+
+
 
 A tömörítés kezdetekor az első feladat a teljes EKG mérést szívütésekre bontása. Ezt követően
 az egyes szívütések a tömörítő eljárás bemeneti paramétereként válnak értelmezhetővé. Inicializálni kell továbbá
@@ -341,10 +352,48 @@ ahol $R^{(i)}=f-s^{(i)}$ a rezidum függvényt jelöli. Röviden tehát az $s^{(
 \label{fig:mpstep}
 \end{figure}
 
+
 \chapter{Felhasználói dokumentáció}
 
 \chapter{Fejlesztői dokumentáció}
 
+Ebben a fejezetben található a Bevezetés-ben bemutatott eljárás implementációjának pontos (modul szintű) leírása, valamint az alkalmazott tesztek jellemzése illetve ezek eredményei. A tesztelés eredményeit a tapasztalok összegzése és néhány lehetséges jövőbeli fejlesztés jellemzése követi. \par A fejlesztői dokumentáció első részében a tömörítési módszer implementációjának leírása található. Ez az alfejezet két fő részre tagolható: a webes felhasználói felület és az ehhez felhasznált könyvtárakat leíró, valamint a háttérben a konkrét tömörítést elvégző c++ program modulonkénti jellemzését. Mivel a webes felület megvalósítása rövid, és specializált scriptek összessége, ezért ezek jellemzését minden esetben egyedi módon érdemes kezelni. Ellentétben ezzel a szemlélettel, a c++ program nagyban épít a nyelv által támogatott objektum orientált megközelítésre. Ez lehetővé teszi és indokolja is egyben, hogy az implementációt jellemző dokumentáció is hasonlóan jól strukturált legyen. Az egyes modulok dokumentációja ugyanazon három szempont szerint közelíti meg a jellemzésüket: a modul feladatának, a modul interfészének (hogyan és mely egyéb modulokhoz kapcsolódik), valamint a modult felépítő osztályok implementációjának pontos megfogalmazása. A modulok leírásánál találhatóak továbbá a szemléltetést segítő UML és egyéb hasznos diagrammok. 
+\par  A teszteléssel foglalkozó alfejezet szintén több részre tagolható. Az első alfelejezetben található a webes felhasználói felület funkcióinak tesztelési terve, illetve az egyes tesztek eredményeinek leírása. Ezt követi a c++ program moduljainak részletes tesztelési terve. A modulok tesztelését minden esetben egy külön tesztfájl végezte. Ennek leírása, az eredmények értékelése, illetve a tesztállomány elérési útja szintén megtalálható az alfejezetben. A  tesztelés alfejezet utolsó része a bemutatott tömörítési eljárást hivatott tesztelni. Ez több szempont alapján, egyéb EKG tömörítő módszerekkel történő összehasonlítás útján valósul meg. A tesztek eredményeinek jellemzését az egyes elfajuló, különleges esetek közelebbi vizsgálata, majd egy rövid kitekintés követi.
 
+\section{A felhasználói felület implementációja}
+
+\section{A tömörítő eljárás implementációja}
+
+A felhasználói dokumentáció bevezetésében leírtakkal összhangban, a tömörítő eljárás implementációjával foglalkozó fejezet minden pontja három részre tagolható. Minden alfejezet az aktuális modul feladatának pontos megfogalmazásával kezdődik. Ezt követi a modul interfészének definiálása, melynek segítségével átlátható a modul kapcsolata a program többi részével. Végül a modult alkotó osztályok és strukturák fő metódusainak, illetve adattagjainak leírása következik. A program robosztussága indokolja, hogy minden egyes metódus és függvény ne kerüljön itt jellemzésre, azonban a program forráskódjában minden metódus előtt megtalálható annak rövid jellemzése, elvárt bemenete, és esetleges visszaadott értékének típusa. Az egyes modulok dokumentációja tartalmazza ezen kívűl az ezeket leíró UML, és egyéb diagrammokat. Az egyes modulok imlpementációja külön .h, és .cpp kiterjesztésű állományokban található, ezért az egyes alfejezetek címei megegyeznek ezen állományok elnevezésével. A fejezet utolsó alfejezete leírást biztosít az implementáció által felhasznált külső könyvtárakhoz, illetve indokolja ezek választását.
+
+\subsection{A SigPrep modul implementációja}
+
+Az implementációt tartalmazó repository gyökerét /-vel jelölve, a SigPrep modult  az /src/headers/SigPrep.h, illetve az src/SigPrep.cpp állományok implementálják. \par A modul feladata, hogy absztrakt és azonos struktúrát biztosítson 
+
+\subsection{Az EcgSigPrep modul implementációja}
+
+\subsection{Az OrtFunSys modul implementációja}
+
+\subsection{A Hermite modul implementációja}
+
+\subsection{A Compresser modul implementációja}
+
+\subsection{Az OrtCompresser modul implementációja}
+
+\subsection{A NelderMead modul implementációja}
+
+\subsection{A MatchingPursuit modul implementációja}
+
+\subsection{Felhasznált könyvtárak, és jellemzésük}
+
+\section{A felhasználói felület tesztelése}
+
+\section{A tömörítő eljárás modul szintű tesztelése}
+
+\section{A tömörítő eljárás hatékonyságának tesztelése}
+
+\section{Tapasztalatok és kitekintés}
+
+\chapter{Függelék}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  18 FEB 2017 15:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  27 FEB 2017 21:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -829,76 +829,76 @@ pdfTeX warning: pdflatex: pop empty color page stack 0
 
 ]
 
-LaTeX Warning: Command \' invalid in math mode on input line 117.
+LaTeX Warning: Command \' invalid in math mode on input line 119.
 
 [3] <./Abrak/Egyeb/ecg_wiki.png, id=28, 610.28pt x 602.25pt>
 File: ./Abrak/Egyeb/ecg_wiki.png Graphic file (type png)
 
 <use ./Abrak/Egyeb/ecg_wiki.png>
-Package pdftex.def Info: ./Abrak/Egyeb/ecg_wiki.png used on input line 122.
+Package pdftex.def Info: ./Abrak/Egyeb/ecg_wiki.png used on input line 124.
 (pdftex.def)             Requested size: 225.80006pt x 222.82901pt.
 
 
-LaTeX Warning: Citation `unifiedReview' on page 4 undefined on input line 128.
+LaTeX Warning: Citation `unifiedReview' on page 4 undefined on input line 130.
 
 
-LaTeX Warning: Citation `hexp3' on page 4 undefined on input line 128.
+LaTeX Warning: Citation `hexp3' on page 4 undefined on input line 130.
 
 
-LaTeX Warning: Citation `hexp2' on page 4 undefined on input line 128.
+LaTeX Warning: Citation `hexp2' on page 4 undefined on input line 130.
 
 
-LaTeX Warning: Citation `hexp1' on page 4 undefined on input line 128.
+LaTeX Warning: Citation `hexp1' on page 4 undefined on input line 130.
 
 
-LaTeX Warning: Citation `hexp4' on page 4 undefined on input line 128.
+LaTeX Warning: Citation `hexp4' on page 4 undefined on input line 130.
 
 
-LaTeX Warning: Citation `hexp5' on page 4 undefined on input line 128.
+LaTeX Warning: Citation `hexp5' on page 4 undefined on input line 130.
 
 
-LaTeX Warning: Citation `jpeg2000ECG' on page 4 undefined on input line 128.
+LaTeX Warning: Citation `jpeg2000ECG' on page 4 undefined on input line 130.
 
 [4 <./Abrak/Egyeb/ecg_wiki.png>]
 
 Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
- on input line 137.
+ on input line 139.
 
 
-LaTeX Warning: Reference `fig:phi0-3' on page 5 undefined on input line 148.
+LaTeX Warning: Reference `fig:phi0-3' on page 5 undefined on input line 150.
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 174--183
+Underfull \hbox (badness 10000) in paragraph at lines 180--189
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--183
+Underfull \hbox (badness 10000) in paragraph at lines 180--189
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--183
+Underfull \hbox (badness 10000) in paragraph at lines 180--189
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--183
+Underfull \hbox (badness 10000) in paragraph at lines 180--189
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--188
+Underfull \hbox (badness 10000) in paragraph at lines 191--194
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--197
+Underfull \hbox (badness 10000) in paragraph at lines 199--203
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--197
+Underfull \hbox (badness 10000) in paragraph at lines 199--203
 
  []
 
@@ -906,101 +906,93 @@ Underfull \hbox (badness 10000) in paragraph at lines 193--197
 File: ./Abrak/Ereszkedo1/F_2sz.png Graphic file (type png)
 
 <use ./Abrak/Ereszkedo1/F_2sz.png>
-Package pdftex.def Info: ./Abrak/Ereszkedo1/F_2sz.png used on input line 238.
+Package pdftex.def Info: ./Abrak/Ereszkedo1/F_2sz.png used on input line 244.
 (pdftex.def)             Requested size: 284.52756pt x 287.83429pt.
  [7]
 <./Abrak/Ereszkedo1/Er36.png, id=55, 1313.90875pt x 441.65pt>
 File: ./Abrak/Ereszkedo1/Er36.png Graphic file (type png)
 
 <use ./Abrak/Ereszkedo1/Er36.png>
-Package pdftex.def Info: ./Abrak/Ereszkedo1/Er36.png used on input line 245.
+Package pdftex.def Info: ./Abrak/Ereszkedo1/Er36.png used on input line 251.
 (pdftex.def)             Requested size: 398.33858pt x 133.89774pt.
  [8 <./Abrak/Ereszkedo1/F_2sz.png> <./Abrak/Ereszkedo1/Er36.png>] <./Abrak/Egye
 b/NMT1.PNG, id=59, 501.875pt x 451.6875pt>
 File: ./Abrak/Egyeb/NMT1.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT1.PNG>
-Package pdftex.def Info: ./Abrak/Egyeb/NMT1.PNG used on input line 273.
+Package pdftex.def Info: ./Abrak/Egyeb/NMT1.PNG used on input line 283.
 (pdftex.def)             Requested size: 125.26503pt x 103.60458pt.
 
 <./Abrak/Egyeb/NMT2.PNG, id=61, 552.0625pt x 451.6875pt>
 File: ./Abrak/Egyeb/NMT2.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT2.PNG>
-Package pdftex.def Info: ./Abrak/Egyeb/NMT2.PNG used on input line 274.
+Package pdftex.def Info: ./Abrak/Egyeb/NMT2.PNG used on input line 284.
 (pdftex.def)             Requested size: 138.31348pt x 103.60458pt.
 
 <./Abrak/Egyeb/NMT3.PNG, id=63, 602.25pt x 451.6875pt>
 File: ./Abrak/Egyeb/NMT3.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT3.PNG>
-Package pdftex.def Info: ./Abrak/Egyeb/NMT3.PNG used on input line 275.
+Package pdftex.def Info: ./Abrak/Egyeb/NMT3.PNG used on input line 285.
 (pdftex.def)             Requested size: 151.36191pt x 103.60458pt.
 
 <./Abrak/Egyeb/NMT4.PNG, id=65, 702.625pt x 437.635pt>
 File: ./Abrak/Egyeb/NMT4.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT4.PNG>
-Package pdftex.def Info: ./Abrak/Egyeb/NMT4.PNG used on input line 276.
+Package pdftex.def Info: ./Abrak/Egyeb/NMT4.PNG used on input line 286.
 (pdftex.def)             Requested size: 177.4588pt x 65.50305pt.
 
 <./Abrak/Egyeb/NMT5.PNG, id=67, 702.625pt x 435.6275pt>
 File: ./Abrak/Egyeb/NMT5.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT5.PNG>
-Package pdftex.def Info: ./Abrak/Egyeb/NMT5.PNG used on input line 277.
+Package pdftex.def Info: ./Abrak/Egyeb/NMT5.PNG used on input line 287.
 (pdftex.def)             Requested size: 177.4588pt x 64.98111pt.
+ [9 <./Abrak/Egyeb/NMT1.PNG> <./Abrak/Egyeb/NMT2.PNG> <./Abrak/Egyeb/NMT3.PNG> 
+<./Abrak/Egyeb/NMT4.PNG> <./Abrak/Egyeb/NMT5.PNG>]
+[10]
+
+LaTeX Warning: Reference `sec:kvad' on page 11 undefined on input line 329.
 
 
-LaTeX Warning: Citation `waveletECG' on page 9 undefined on input line 291.
+LaTeX Warning: Citation `gautschi' on page 11 undefined on input line 329.
 
 
-LaTeX Warning: Citation `waveletECG' on page 9 undefined on input line 291.
-
-[9 <./Abrak/Egyeb/NMT1.PNG> <./Abrak/Egyeb/NMT2.PNG> <./Abrak/Egyeb/NMT3.PNG> <
-./Abrak/Egyeb/NMT4.PNG> <./Abrak/Egyeb/NMT5.PNG>]
-
-LaTeX Warning: Reference `sec:kvad' on page 10 undefined on input line 321.
-
-
-LaTeX Warning: Citation `gautschi' on page 10 undefined on input line 321.
-
-
-LaTeX Warning: Reference `eq:identities' on page 10 undefined on input line 321
+LaTeX Warning: Reference `eq:identities' on page 11 undefined on input line 329
 .
 
-[10]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 325.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 333.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 325.
-
-
-LaTeX Warning: Citation `hexp3' on page 11 undefined on input line 328.
-
-
-LaTeX Warning: Reference `eq:hilaprx' on page 11 undefined on input line 329.
-
-
-LaTeX Warning: Citation `mpurs' on page 11 undefined on input line 331.
-
-
-LaTeX Warning: Reference `eq:Fnfuggv' on page 11 undefined on input line 331.
-
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 333.
 
 LaTeX Warning: Citation `hexp3' on page 11 undefined on input line 336.
 
 
-LaTeX Warning: Reference `sec:test' on page 11 undefined on input line 336.
+LaTeX Warning: Reference `eq:hilaprx' on page 11 undefined on input line 337.
 
 
-LaTeX Warning: Citation `hexp3' on page 11 undefined on input line 336.
+LaTeX Warning: Citation `mpurs' on page 11 undefined on input line 339.
+
+
+LaTeX Warning: Reference `eq:Fnfuggv' on page 11 undefined on input line 339.
+
+
+LaTeX Warning: Citation `hexp3' on page 11 undefined on input line 344.
+
+
+LaTeX Warning: Reference `sec:test' on page 11 undefined on input line 344.
+
+
+LaTeX Warning: Citation `hexp3' on page 11 undefined on input line 344.
 
 <./Abrak/Lepesek/abra_lepes0.pdf, id=81, 597.23125pt x 845.1575pt>
 File: ./Abrak/Lepesek/abra_lepes0.pdf Graphic file (type pdf)
 
 <use ./Abrak/Lepesek/abra_lepes0.pdf>
-Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes0.pdf used on input line 339
+Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes0.pdf used on input line 347
 .
 (pdftex.def)             Requested size: 188.2024pt x 141.52773pt.
 
@@ -1008,7 +1000,7 @@ Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes0.pdf used on input line 339
 File: ./Abrak/Lepesek/abra_lepes1.pdf Graphic file (type pdf)
 
 <use ./Abrak/Lepesek/abra_lepes1.pdf>
-Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes1.pdf used on input line 340
+Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes1.pdf used on input line 348
 .
 (pdftex.def)             Requested size: 188.2024pt x 141.52773pt.
 
@@ -1016,7 +1008,7 @@ Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes1.pdf used on input line 340
 File: ./Abrak/Lepesek/abra_lepes2.pdf Graphic file (type pdf)
 
 <use ./Abrak/Lepesek/abra_lepes2.pdf>
-Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes2.pdf used on input line 341
+Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes2.pdf used on input line 349
 .
 (pdftex.def)             Requested size: 188.2024pt x 141.52773pt.
 
@@ -1024,7 +1016,7 @@ Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes2.pdf used on input line 341
 File: ./Abrak/Lepesek/abra_lepes3.pdf Graphic file (type pdf)
 
 <use ./Abrak/Lepesek/abra_lepes3.pdf>
-Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes3.pdf used on input line 342
+Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes3.pdf used on input line 350
 .
 (pdftex.def)             Requested size: 188.2024pt x 141.52773pt.
  [11] [12 <./Abrak/Lepesek/abra_lepes0.pdf> <./Abrak/Lepesek/abra_lepes1.pdf> <
@@ -1036,16 +1028,20 @@ Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes3.pdf used on input line 342
 3. fejezet.
 [14
 
+] [15] [16]
+4. fejezet.
+[17
+
 ] (./documentation.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4995 strings out of 493029
- 71654 string characters out of 6136234
+ 4994 strings out of 493029
+ 71642 string characters out of 6136234
  145435 words of memory out of 5000000
- 8341 multiletter control sequences out of 15000+600000
+ 8340 multiletter control sequences out of 15000+600000
  33163 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,16n,27p,1890b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1069,10 +1065,10 @@ sr/share/texmf/fonts/type1/public/cm-super/sfcc1440.pfb></usr/share/texmf/fonts
 er/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></us
 r/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/
 type1/public/cm-super/sfti1200.pfb>
-Output written on documentation.pdf (16 pages, 393361 bytes).
+Output written on documentation.pdf (19 pages, 405636 bytes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
- 130 compressed objects within 2 object streams
+ 205 PDF objects out of 1000 (max. 8388607)
+ 137 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  120 words of extra memory for PDF output out of 10000 (max. 10000000)
 
