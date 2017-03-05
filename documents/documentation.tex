@@ -368,11 +368,35 @@ A felhasználói dokumentáció bevezetésében leírtakkal összhangban, a töm
 
 \subsection{A SigPrep modul implementációja}
 
-Az implementációt tartalmazó repository gyökerét /-vel jelölve, a SigPrep modult  az /src/headers/SigPrep.h, illetve az src/SigPrep.cpp állományok implementálják. \par A modul feladata, hogy absztrakt és azonos struktúrát biztosítson 
+Az implementációt tartalmazó repository gyökerét /-vel jelölve, a SigPrep modult  az /src/headers/SigPrep.h, illetve az /src/SigPrep.cpp állományok implementálják. \par A modul feladata, hogy absztrakt módszert biztosítson a bemeneti jelek kezeléséhez. 
+Mivel az eljárás EKG jelek tömörítésével foglalkozik, illetve speciálisan az MIT-BIH adatbázisban megtalálható egyedi formátumú jelek feldolgozásával, 
+ezért egy általános jel kezelő modul implementációja nem volt szükséges a módszer megvalósításához. Annak érdekében azonban, hogy 
+hogy a bemutatott jel tömörítő eljárást jövőbeli vizsgálódások során könnyen ki lehessen próbálni egyéb jel típusokon, fontos hogy az ehhez szükséges metódusok absztrakt módon legyenek definiálva.
+A SigPrep modul feladata tehát, hogy definiálja azokat az egységes metódusokat amelyek elengedhetetlenek a bemeneti jelek programon belül történő kezeléséhez. Ezen kezelési módszerek pontos megvalósítását a
+/src/headers/SigPrep.h állományban található SigPrep osztályból származtatatott osztályok írják le. \par 
+
 
 \subsection{Az EcgSigPrep modul implementációja}
 
 \subsection{Az OrtFunSys modul implementációja}
+
+Az implementációt tartalmazó repository gyökerét /-vel jelölve, az OrtFunSys modult  az /src/headers/OrtFunSys.h, illetve az /src/OrtFunSys.cpp állományok implementálják. \par A modul feladata, hogy definiálja azokat a konténereket illetve absztrakt metódusokat amelyek segítségével 
+megadható egy a program által felhasználható függvényrendszer. A Bevezetés fejezetben leírt eljárás speciálisan az ott bemutatott Hermite függvényrendszert 
+alkalmazza az EKG jelek tömörítéséhez. A bemutatott algoritmusokat azonban további, különböző tulajdonságú ortogonális (vagy akár csak lineárisan független) 
+függvényrendszerek segítségével is érdemes lehet kipróbálni. Annak érdekében, hogy ez könnyedén implementálható legyen, fontos hogy az egyes függvényrendszereket kezelő metódusok absztrak módon legyenek definiálva.
+Az OrtFunSys modul feladata tehát, hogy megadja azokat az adatszerkezeteket és absztrakt metódusokat, amelyek segítségével a program képes függvényrendszerek kezelésére. Az egyes függvényrendszerek, példaul az Hermite függvények pontos implementációja
+a /src/headers/OrtFunSys.h állományban definiált OrtFunSys osztályból származtatatott osztályokban található.  \par
+A modul az absztrakt OrtFunSys osztályból áll, amely tartalmaz úgynevezett pure virtual (tisztán virtuális) függvényeket. Ennek következtében az osztály által definiált típusból objektumokat példányosítani nem lehet. A példányosítható objektumok hiányában
+az OrtFunSys modulhoz nem határozható meg konkrét interfész, melynek segítségével az OrtFunSys típusú objektumok szolgáltatásokat nyújthatnának a program többi részének. Megjegyezendő azonban, hogy az OrtFunSys osztályból származtatott osztályok objektumainak szolgáltatásait az OrtCompresser
+modul használja fel. 
+\par  
+A modult alkotó OrtFunSys osztály definíciója a /src/headers/OrtFunSys.h állományban található. A bemutatott tömörítő eljárás egyik legköltségesebb művelete
+a felhasznált függvényrendszer értékeinek kiszámítása. Mivel a függvényértékek meghatározása bármely függvényrendszer esetében szükséges, ezért a kiszámított értékek
+tárolásának logikáját illetve a felhasznált adatszerkezeteket az OrtFunSys osztály határozza meg. Egyes függvényrendszerek (például az Hermite függvényrendszer) tulajdonságai
+lehetővé teszik, hogy a rendszert jellemző paraméterek (Hermite rendszer esetében a dilatáció illetve a transzláció) közvetlenül a jelben történő változtatását. 
+Ilyen esetben a tömörítő eljárás során elegendő a felhasznált függvényrendszer értékeinek egyszeri meghatározása, hiszen a közelítést optimalizáló algoritmusok 
+a rendszer paramétereit közvetlenül a bemeneti jelre alkalmazhatják. Ennek következményeként az OrtFunSys osztály a függvényrendszer értékeit a heap-en, dinamikus memóriában tárolja.
+\par Az osztály négy protected láthatóságú adattaggal rendelkezik.    
 
 \subsection{A Hermite modul implementációja}
 

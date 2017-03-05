@@ -13,16 +13,16 @@
 \select@language {magyar} \contentsline {section}{\numberline {3.1}A felhaszn\IeC {\'a}l\IeC {\'o}i fel\IeC {\"u}let implement\IeC {\'a}ci\IeC {\'o}ja}{15}
 \select@language {magyar} \contentsline {section}{\numberline {3.2}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s implement\IeC {\'a}ci\IeC {\'o}ja}{15}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.2.1}A SigPrep modul implement\IeC {\'a}ci\IeC {\'o}ja}{15}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.2}Az EcgSigPrep modul implement\IeC {\'a}ci\IeC {\'o}ja}{16}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.3}Az OrtFunSys modul implement\IeC {\'a}ci\IeC {\'o}ja}{16}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.4}A Hermite modul implement\IeC {\'a}ci\IeC {\'o}ja}{16}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.5}A Compresser modul implement\IeC {\'a}ci\IeC {\'o}ja}{16}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.6}Az OrtCompresser modul implement\IeC {\'a}ci\IeC {\'o}ja}{16}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.7}A NelderMead modul implement\IeC {\'a}ci\IeC {\'o}ja}{16}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.8}A MatchingPursuit modul implement\IeC {\'a}ci\IeC {\'o}ja}{16}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.9}Felhaszn\IeC {\'a}lt k\IeC {\"o}nyvt\IeC {\'a}rak, \IeC {\'e}s jellemz\IeC {\'e}s\IeC {\"u}k}{16}
-\select@language {magyar} \contentsline {section}{\numberline {3.3}A felhaszn\IeC {\'a}l\IeC {\'o}i fel\IeC {\"u}let tesztel\IeC {\'e}se}{16}
-\select@language {magyar} \contentsline {section}{\numberline {3.4}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s modul szint\IeC {\H u} tesztel\IeC {\'e}se}{16}
-\select@language {magyar} \contentsline {section}{\numberline {3.5}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s hat\IeC {\'e}konys\IeC {\'a}g\IeC {\'a}nak tesztel\IeC {\'e}se}{16}
-\select@language {magyar} \contentsline {section}{\numberline {3.6}Tapasztalatok \IeC {\'e}s kitekint\IeC {\'e}s}{16}
-\select@language {magyar} \contentsline {chapter}{\numberline {4}F\IeC {\"u}ggel\IeC {\'e}k}{17}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.2}Az EcgSigPrep modul implement\IeC {\'a}ci\IeC {\'o}ja}{15}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.3}Az OrtFunSys modul implement\IeC {\'a}ci\IeC {\'o}ja}{15}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.4}A Hermite modul implement\IeC {\'a}ci\IeC {\'o}ja}{17}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.5}A Compresser modul implement\IeC {\'a}ci\IeC {\'o}ja}{17}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.6}Az OrtCompresser modul implement\IeC {\'a}ci\IeC {\'o}ja}{17}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.7}A NelderMead modul implement\IeC {\'a}ci\IeC {\'o}ja}{17}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.8}A MatchingPursuit modul implement\IeC {\'a}ci\IeC {\'o}ja}{17}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.9}Felhaszn\IeC {\'a}lt k\IeC {\"o}nyvt\IeC {\'a}rak, \IeC {\'e}s jellemz\IeC {\'e}s\IeC {\"u}k}{17}
+\select@language {magyar} \contentsline {section}{\numberline {3.3}A felhaszn\IeC {\'a}l\IeC {\'o}i fel\IeC {\"u}let tesztel\IeC {\'e}se}{17}
+\select@language {magyar} \contentsline {section}{\numberline {3.4}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s modul szint\IeC {\H u} tesztel\IeC {\'e}se}{17}
+\select@language {magyar} \contentsline {section}{\numberline {3.5}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s hat\IeC {\'e}konys\IeC {\'a}g\IeC {\'a}nak tesztel\IeC {\'e}se}{17}
+\select@language {magyar} \contentsline {section}{\numberline {3.6}Tapasztalatok \IeC {\'e}s kitekint\IeC {\'e}s}{17}
+\select@language {magyar} \contentsline {chapter}{\numberline {4}F\IeC {\"u}ggel\IeC {\'e}k}{18}
