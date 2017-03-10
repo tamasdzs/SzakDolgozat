@@ -396,7 +396,8 @@ tárolásának logikáját illetve a felhasznált adatszerkezeteket az OrtFunSys
 lehetővé teszik, hogy a rendszert jellemző paraméterek (Hermite rendszer esetében a dilatáció illetve a transzláció) közvetlenül a jelben történő változtatását. 
 Ilyen esetben a tömörítő eljárás során elegendő a felhasznált függvényrendszer értékeinek egyszeri meghatározása, hiszen a közelítést optimalizáló algoritmusok 
 a rendszer paramétereit közvetlenül a bemeneti jelre alkalmazhatják. Ennek következményeként az OrtFunSys osztály a függvényrendszer értékeit a heap-en, dinamikus memóriában tárolja.
-\par Az osztály négy protected láthatóságú adattaggal rendelkezik.    
+\par Az osztály négy protected láthatóságú adattaggal rendelkezik. A rootNum egész típusú adattag határozza meg a legmagasabb fokszámú függvény zérushelyeinek számát. Ezen zérushelyek kiszámítása fontos az 1.5 fejezetben bemutatott kvadratúra alkalmazásához. Ugyanez az adattag határozza meg az alkalmazott függvényrendszer fokszámát is. Az adattag elnevezése elfogadható, mivel egy n-ed fokú polimomnak amely egy ortogonális polinomrendszer tagja, pontosan n darab különböző és valós gyöke létezik.
+\par 
 
 \subsection{A Hermite modul implementációja}
 
