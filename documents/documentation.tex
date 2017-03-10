@@ -404,6 +404,11 @@ a rendszer paramétereit közvetlenül a bemeneti jelre alkalmazhatják. Ennek k
 
 \subsection{A Hermite modul implementációja}
 
+Az implementációt tartalmazó repository gyökerét /-vel jelölve, az OrtFunSys modult  az /src/headers/Hermite.h, illetve az /src/Hermite.cpp állományok implementálják.
+\par Az Hermite modul feladata, hogy meghatározza a tömörítő eljárás által felhasznált Hermite függvényeket, illetve a felhasználásukhoz szükséges egyéb értékeket. Az Herimte modul a /src/headers/Hermite.h állományban található Hermite osztályból áll. Az Hermite osztály felelős az Hermite függvények értékeinek kiszámításáért. További feladata, hogy kiszámítsa az 1.5-ben alkalmazott kvadratúra formulához szükséges Cristoffel-Darboux számokat, valamint implementáljon a protected elérhetőségű adattagjaihoz biztonságos getter metódusokat.
+\par Az Hermite modul interfésze két részre bontható. Az Hermite osztály bemenetét a tömöríteni kívánt jel méréseinek száma jelenti. Ez az információ az EcgSigPrep modul által ismert, és biztosított. Az Hermite osztályból létrehozott objektum adattagként a MatchingPursuit modul ugyanilyen nevű osztályában található. Szolgáltatásait a Matching Pursuit modulon kívül az OrtCompresser modul veszi igénybe, amely a jel a függvényrendszer által kifeszített altérre vett ortogonális projekcióját hivatott kiszámítani. 
+\par Az Hermite osztály rendelkezik az OrtFunSys osztálytól megörökölt négy protected hozzáférésű adattaggal. 
+
 \subsection{A Compresser modul implementációja}
 
 \subsection{Az OrtCompresser modul implementációja}
