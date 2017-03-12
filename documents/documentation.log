@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  12 MAR 2017 14:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  12 MAR 2017 16:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -605,11 +605,20 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \@float@every@algorithm=\toks30
 \c@algorithm=\count105
 )
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count106
+\c@ALC@line=\count107
+\c@ALC@rem=\count108
+\c@ALC@depth=\count109
+\ALC@tlm=\skip49
+\algorithmicindent=\skip50
+)
 (/usr/share/texlive/texmf-dist/tex/latex/rotating/rotating.sty
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
-\c@r@tfl@t=\count106
-\rotFPtop=\skip49
-\rotFPbot=\skip50
+\c@r@tfl@t=\count110
+\rotFPtop=\skip51
+\rotFPbot=\skip52
 \rot@float@box=\box30
 \rot@mess@toks=\toks31
 )
@@ -618,68 +627,68 @@ Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 )
 (/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
-\subfigtopskip=\skip51
-\subfigcapskip=\skip52
+\subfigtopskip=\skip53
+\subfigcapskip=\skip54
 \subfigcaptopadj=\dimen116
-\subfigbottomskip=\skip53
+\subfigbottomskip=\skip55
 \subfigcapmargin=\dimen117
-\subfiglabelskip=\skip54
-\c@subfigure=\count107
-\c@lofdepth=\count108
-\c@subtable=\count109
-\c@lotdepth=\count110
+\subfiglabelskip=\skip56
+\c@subfigure=\count111
+\c@lofdepth=\count112
+\c@subtable=\count113
+\c@lotdepth=\count114
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
 (/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
-\subfig@top=\skip55
-\subfig@bottom=\skip56
+\subfig@top=\skip57
+\subfig@bottom=\skip58
 )
 (/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count111
-\c@@ppsavesec=\count112
-\c@@ppsaveapp=\count113
+\c@@pps=\count115
+\c@@ppsavesec=\count116
+\c@@ppsaveapp=\count117
 )
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-\c@theorem=\count114
-\c@corollary=\count115
-\c@lemma=\count116
-\c@proposition=\count117
-\c@definition=\count118
-\c@notation=\count119
+\c@theorem=\count118
+\c@corollary=\count119
+\c@lemma=\count120
+\c@proposition=\count121
+\c@definition=\count122
+\c@notation=\count123
 
 (./documentation.aux)
 \openout1 = `documentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count120
+\scratchcounter=\count124
 \scratchdimen=\dimen118
 \scratchbox=\box31
-\nofMPsegments=\count121
-\nofMParguments=\count122
+\nofMPsegments=\count125
+\nofMParguments=\count126
 \everyMPshowfont=\toks32
-\MPscratchCnt=\count123
+\MPscratchCnt=\count127
 \MPscratchDim=\dimen119
-\MPnumerator=\count124
-\makeMPintoPDFobject=\count125
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
 \everyMPtoPDFconversion=\toks33
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -729,41 +738,41 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 54.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 55.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 54.
+(Font)              `operators' in the math version `normal' on input line 55.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> T1/cmr/m/n on input line 54.
+(Font)                  OT1/cmr/m/n --> T1/cmr/m/n on input line 55.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 54.
+(Font)              `operators' in the math version `bold' on input line 55.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/cmr/m/n on input line 54.
+(Font)                  OT1/cmr/bx/n --> T1/cmr/m/n on input line 55.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  T1/cmr/m/n --> T1/cmr/bx/n on input line 54.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 54.
+(Font)                  T1/cmr/m/n --> T1/cmr/bx/n on input line 55.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 55.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> T1/cmr/bx/n on input line 54.
+(Font)                  OT1/cmr/bx/n --> T1/cmr/bx/n on input line 55.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/cmr/bx/n on input line 54.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 54.
+(Font)                  OT1/cmr/bx/n --> T1/cmr/bx/n on input line 55.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 55.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 54.
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 55.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 54.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 54.
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 55.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 55.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> T1/cmr/m/it on input line 54.
+(Font)                  OT1/cmr/m/it --> T1/cmr/m/it on input line 55.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> T1/cmr/m/it on input line 54.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 54.
+(Font)                  OT1/cmr/bx/it --> T1/cmr/m/it on input line 55.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 55.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 54.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 55.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 54.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 55.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 54.
+(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 55.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/cmr/m/it --> T1/cmr/bx/it on input line 54.
+(Font)                  T1/cmr/m/it --> T1/cmr/bx/it on input line 55.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 LaTeX Info: Redefining \cal on input line 591.
@@ -773,7 +782,7 @@ LaTeX Info: Redefining \mit on input line 592.
 File: ./Abrak/Egyeb/elte_logo.jpg Graphic file (type jpg)
 
 <use ./Abrak/Egyeb/elte_logo.jpg>
-Package pdftex.def Info: ./Abrak/Egyeb/elte_logo.jpg used on input line 89.
+Package pdftex.def Info: ./Abrak/Egyeb/elte_logo.jpg used on input line 90.
 (pdftex.def)             Requested size: 103.28516pt x 103.28516pt.
  [1
 
@@ -814,278 +823,282 @@ LaTeX Font Info:    Try loading font information for U+euex on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuex.fd
 File: ueuex.fd 2013/01/14 v3.01 Euler extra symbols
-))
-\tf@toc=\write3
-\openout3 = `documentation.toc'.
-
- [1
+) [1
 
 
 
 pdfTeX warning: pdflatex: pop empty color page stack 0
-]
+])
+\tf@toc=\write3
+\openout3 = `documentation.toc'.
+
+ [2]
 1. fejezet.
-[2
+[3
 
 ]
 
-LaTeX Warning: Command \' invalid in math mode on input line 119.
+LaTeX Warning: Command \' invalid in math mode on input line 120.
 
-[3] <./Abrak/Egyeb/ecg_wiki.png, id=28, 610.28pt x 602.25pt>
+[4] <./Abrak/Egyeb/ecg_wiki.png, id=31, 610.28pt x 602.25pt>
 File: ./Abrak/Egyeb/ecg_wiki.png Graphic file (type png)
 
 <use ./Abrak/Egyeb/ecg_wiki.png>
-Package pdftex.def Info: ./Abrak/Egyeb/ecg_wiki.png used on input line 124.
+Package pdftex.def Info: ./Abrak/Egyeb/ecg_wiki.png used on input line 125.
 (pdftex.def)             Requested size: 225.80006pt x 222.82901pt.
 
 
-LaTeX Warning: Citation `unifiedReview' on page 4 undefined on input line 130.
+LaTeX Warning: Citation `unifiedReview' on page 5 undefined on input line 131.
 
 
-LaTeX Warning: Citation `hexp3' on page 4 undefined on input line 130.
+LaTeX Warning: Citation `hexp3' on page 5 undefined on input line 131.
 
 
-LaTeX Warning: Citation `hexp2' on page 4 undefined on input line 130.
+LaTeX Warning: Citation `hexp2' on page 5 undefined on input line 131.
 
 
-LaTeX Warning: Citation `hexp1' on page 4 undefined on input line 130.
+LaTeX Warning: Citation `hexp1' on page 5 undefined on input line 131.
 
 
-LaTeX Warning: Citation `hexp4' on page 4 undefined on input line 130.
+LaTeX Warning: Citation `hexp4' on page 5 undefined on input line 131.
 
 
-LaTeX Warning: Citation `hexp5' on page 4 undefined on input line 130.
+LaTeX Warning: Citation `hexp5' on page 5 undefined on input line 131.
 
 
-LaTeX Warning: Citation `jpeg2000ECG' on page 4 undefined on input line 130.
+LaTeX Warning: Citation `jpeg2000ECG' on page 5 undefined on input line 131.
 
-[4 <./Abrak/Egyeb/ecg_wiki.png>]
+[5 <./Abrak/Egyeb/ecg_wiki.png>]
 
 Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
- on input line 139.
+ on input line 140.
 
 
-LaTeX Warning: Reference `fig:phi0-3' on page 5 undefined on input line 150.
+LaTeX Warning: Reference `fig:phi0-3' on page 6 undefined on input line 151.
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 180--189
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 180--189
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 181--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--189
+Underfull \hbox (badness 10000) in paragraph at lines 181--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--189
+Underfull \hbox (badness 10000) in paragraph at lines 181--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--194
+Underfull \hbox (badness 10000) in paragraph at lines 181--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--203
+Underfull \hbox (badness 10000) in paragraph at lines 192--195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--203
+Underfull \hbox (badness 10000) in paragraph at lines 200--204
 
  []
 
-[6] <./Abrak/Ereszkedo1/F_2sz.png, id=51, 259.56975pt x 262.581pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--204
+
+ []
+
+[7] <./Abrak/Ereszkedo1/F_2sz.png, id=54, 259.56975pt x 262.581pt>
 File: ./Abrak/Ereszkedo1/F_2sz.png Graphic file (type png)
 
 <use ./Abrak/Ereszkedo1/F_2sz.png>
-Package pdftex.def Info: ./Abrak/Ereszkedo1/F_2sz.png used on input line 244.
+Package pdftex.def Info: ./Abrak/Ereszkedo1/F_2sz.png used on input line 245.
 (pdftex.def)             Requested size: 284.52756pt x 287.83429pt.
- [7]
-<./Abrak/Ereszkedo1/Er36.png, id=55, 1313.90875pt x 441.65pt>
+ [8]
+<./Abrak/Ereszkedo1/Er36.png, id=58, 1313.90875pt x 441.65pt>
 File: ./Abrak/Ereszkedo1/Er36.png Graphic file (type png)
 
 <use ./Abrak/Ereszkedo1/Er36.png>
-Package pdftex.def Info: ./Abrak/Ereszkedo1/Er36.png used on input line 251.
+Package pdftex.def Info: ./Abrak/Ereszkedo1/Er36.png used on input line 252.
 (pdftex.def)             Requested size: 398.33858pt x 133.89774pt.
- [8 <./Abrak/Ereszkedo1/F_2sz.png> <./Abrak/Ereszkedo1/Er36.png>] <./Abrak/Egye
-b/NMT1.PNG, id=59, 501.875pt x 451.6875pt>
+ [9 <./Abrak/Ereszkedo1/F_2sz.png> <./Abrak/Ereszkedo1/Er36.png>] <./Abrak/Egye
+b/NMT1.PNG, id=62, 501.875pt x 451.6875pt>
 File: ./Abrak/Egyeb/NMT1.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT1.PNG>
-Package pdftex.def Info: ./Abrak/Egyeb/NMT1.PNG used on input line 283.
+Package pdftex.def Info: ./Abrak/Egyeb/NMT1.PNG used on input line 284.
 (pdftex.def)             Requested size: 125.26503pt x 103.60458pt.
 
-<./Abrak/Egyeb/NMT2.PNG, id=61, 552.0625pt x 451.6875pt>
+<./Abrak/Egyeb/NMT2.PNG, id=64, 552.0625pt x 451.6875pt>
 File: ./Abrak/Egyeb/NMT2.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT2.PNG>
-Package pdftex.def Info: ./Abrak/Egyeb/NMT2.PNG used on input line 284.
+Package pdftex.def Info: ./Abrak/Egyeb/NMT2.PNG used on input line 285.
 (pdftex.def)             Requested size: 138.31348pt x 103.60458pt.
 
-<./Abrak/Egyeb/NMT3.PNG, id=63, 602.25pt x 451.6875pt>
+<./Abrak/Egyeb/NMT3.PNG, id=66, 602.25pt x 451.6875pt>
 File: ./Abrak/Egyeb/NMT3.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT3.PNG>
-Package pdftex.def Info: ./Abrak/Egyeb/NMT3.PNG used on input line 285.
+Package pdftex.def Info: ./Abrak/Egyeb/NMT3.PNG used on input line 286.
 (pdftex.def)             Requested size: 151.36191pt x 103.60458pt.
 
-<./Abrak/Egyeb/NMT4.PNG, id=65, 702.625pt x 437.635pt>
+<./Abrak/Egyeb/NMT4.PNG, id=68, 702.625pt x 437.635pt>
 File: ./Abrak/Egyeb/NMT4.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT4.PNG>
-Package pdftex.def Info: ./Abrak/Egyeb/NMT4.PNG used on input line 286.
+Package pdftex.def Info: ./Abrak/Egyeb/NMT4.PNG used on input line 287.
 (pdftex.def)             Requested size: 177.4588pt x 65.50305pt.
 
-<./Abrak/Egyeb/NMT5.PNG, id=67, 702.625pt x 435.6275pt>
+<./Abrak/Egyeb/NMT5.PNG, id=70, 702.625pt x 435.6275pt>
 File: ./Abrak/Egyeb/NMT5.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT5.PNG>
-Package pdftex.def Info: ./Abrak/Egyeb/NMT5.PNG used on input line 287.
+Package pdftex.def Info: ./Abrak/Egyeb/NMT5.PNG used on input line 288.
 (pdftex.def)             Requested size: 177.4588pt x 64.98111pt.
- [9 <./Abrak/Egyeb/NMT1.PNG> <./Abrak/Egyeb/NMT2.PNG> <./Abrak/Egyeb/NMT3.PNG> 
-<./Abrak/Egyeb/NMT4.PNG> <./Abrak/Egyeb/NMT5.PNG>]
-[10]
+ [10 <./Abrak/Egyeb/NMT1.PNG> <./Abrak/Egyeb/NMT2.PNG> <./Abrak/Egyeb/NMT3.PNG>
+ <./Abrak/Egyeb/NMT4.PNG> <./Abrak/Egyeb/NMT5.PNG>] [11]
 
-LaTeX Warning: Reference `sec:kvad' on page 11 undefined on input line 329.
-
-
-LaTeX Warning: Citation `gautschi' on page 11 undefined on input line 329.
+LaTeX Warning: Reference `sec:kvad' on page 12 undefined on input line 330.
 
 
-LaTeX Warning: Reference `eq:identities' on page 11 undefined on input line 329
+LaTeX Warning: Citation `gautschi' on page 12 undefined on input line 330.
+
+
+LaTeX Warning: Reference `eq:identities' on page 12 undefined on input line 330
 .
 
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 333.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 334.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 333.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 334.
 
-LaTeX Warning: Citation `hexp3' on page 11 undefined on input line 336.
-
-
-LaTeX Warning: Reference `eq:hilaprx' on page 11 undefined on input line 337.
+LaTeX Warning: Citation `hexp3' on page 12 undefined on input line 337.
 
 
-LaTeX Warning: Citation `mpurs' on page 11 undefined on input line 339.
+LaTeX Warning: Reference `eq:hilaprx' on page 12 undefined on input line 338.
 
 
-LaTeX Warning: Reference `eq:Fnfuggv' on page 11 undefined on input line 339.
+LaTeX Warning: Citation `mpurs' on page 12 undefined on input line 340.
 
 
-LaTeX Warning: Citation `hexp3' on page 11 undefined on input line 344.
+LaTeX Warning: Reference `eq:Fnfuggv' on page 12 undefined on input line 340.
 
 
-LaTeX Warning: Reference `sec:test' on page 11 undefined on input line 344.
+LaTeX Warning: Citation `hexp3' on page 12 undefined on input line 345.
 
 
-LaTeX Warning: Citation `hexp3' on page 11 undefined on input line 344.
+LaTeX Warning: Reference `sec:test' on page 12 undefined on input line 345.
 
-<./Abrak/Lepesek/abra_lepes0.pdf, id=81, 597.23125pt x 845.1575pt>
+
+LaTeX Warning: Citation `hexp3' on page 12 undefined on input line 345.
+
+<./Abrak/Lepesek/abra_lepes0.pdf, id=85, 597.23125pt x 845.1575pt>
 File: ./Abrak/Lepesek/abra_lepes0.pdf Graphic file (type pdf)
 
 <use ./Abrak/Lepesek/abra_lepes0.pdf>
-Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes0.pdf used on input line 347
+Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes0.pdf used on input line 348
 .
 (pdftex.def)             Requested size: 188.2024pt x 141.52773pt.
 
-<./Abrak/Lepesek/abra_lepes1.pdf, id=83, 597.23125pt x 845.1575pt>
+<./Abrak/Lepesek/abra_lepes1.pdf, id=87, 597.23125pt x 845.1575pt>
 File: ./Abrak/Lepesek/abra_lepes1.pdf Graphic file (type pdf)
 
 <use ./Abrak/Lepesek/abra_lepes1.pdf>
-Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes1.pdf used on input line 348
+Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes1.pdf used on input line 349
 .
 (pdftex.def)             Requested size: 188.2024pt x 141.52773pt.
 
-<./Abrak/Lepesek/abra_lepes2.pdf, id=85, 597.23125pt x 845.1575pt>
+<./Abrak/Lepesek/abra_lepes2.pdf, id=89, 597.23125pt x 845.1575pt>
 File: ./Abrak/Lepesek/abra_lepes2.pdf Graphic file (type pdf)
 
 <use ./Abrak/Lepesek/abra_lepes2.pdf>
-Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes2.pdf used on input line 349
+Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes2.pdf used on input line 350
 .
 (pdftex.def)             Requested size: 188.2024pt x 141.52773pt.
 
-<./Abrak/Lepesek/abra_lepes3.pdf, id=87, 597.23125pt x 845.1575pt>
+<./Abrak/Lepesek/abra_lepes3.pdf, id=91, 597.23125pt x 845.1575pt>
 File: ./Abrak/Lepesek/abra_lepes3.pdf Graphic file (type pdf)
 
 <use ./Abrak/Lepesek/abra_lepes3.pdf>
-Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes3.pdf used on input line 350
+Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes3.pdf used on input line 351
 .
 (pdftex.def)             Requested size: 188.2024pt x 141.52773pt.
- [11] [12 <./Abrak/Lepesek/abra_lepes0.pdf> <./Abrak/Lepesek/abra_lepes1.pdf> <
+ [12] [13 <./Abrak/Lepesek/abra_lepes0.pdf> <./Abrak/Lepesek/abra_lepes1.pdf> <
 ./Abrak/Lepesek/abra_lepes2.pdf> <./Abrak/Lepesek/abra_lepes3.pdf>]
 2. fejezet.
-[13
-
-]
-3. fejezet.
 [14
 
 ]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 371.
+3. fejezet.
+[15
+
+]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 372.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [15] [16]
-Overfull \hbox (3.0288pt too wide) in paragraph at lines 402--403
+) [16] [17]
+Overfull \hbox (3.0288pt too wide) in paragraph at lines 403--404
 []\T1/cmr/m/n/12 A konst-ruk-tor, il-let-ve a vir-tu-á-lis dest-ruk-tor imp-le-
 men-tá-ci-ói a \T1/cmtt/m/n/12 /src/OrtFunSys.cpp
  []
 
 
-LaTeX Warning: Citation `Gautschi' on page 17 undefined on input line 414.
+LaTeX Warning: Citation `Gautschi' on page 18 undefined on input line 415.
 
-[17]
+[18]
 
-LaTeX Warning: Reference `bevezet\IeC {\'e}s->hermite' on page 18 undefined on 
-input line 415.
-
-
-LaTeX Warning: Citation `kvadratúra formulás cikk' on page 18 undefined on inpu
-t line 417.
+LaTeX Warning: Reference `bevezet\IeC {\'e}s->hermite' on page 19 undefined on 
+input line 416.
 
 
-Overfull \hbox (7.4265pt too wide) in paragraph at lines 419--420
+LaTeX Warning: Citation `kvadratúra formulás cikk' on page 19 undefined on inpu
+t line 418.
+
+
+Overfull \hbox (7.4265pt too wide) in paragraph at lines 420--421
 \T1/cmtt/m/n/12 referencia szerint van, csak valamiert ezzel nem fordul a latex
 ? x \T1/cmr/m/n/12 és \T1/cmtt/m/n/12 int
  []
 
-[18]
-
-LaTeX Warning: Reference `bevezetes->dilattransz' on page 19 undefined on input
- line 427.
-
 [19]
 
+LaTeX Warning: Reference `bevezetes->dilattransz' on page 20 undefined on input
+ line 428.
+
+[20]
+
 LaTeX Warning: Reference `bevezet\IeC {\'e}s->t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i
- }t\IeC {\'e}s' on page 20 undefined on input line 435.
+ }t\IeC {\'e}s' on page 21 undefined on input line 436.
 
 
-Overfull \hbox (29.24266pt too wide) in paragraph at lines 435--436
+Overfull \hbox (29.24266pt too wide) in paragraph at lines 436--437
 []\T1/cmr/m/n/12 Az osz-tály négy pub-li-kus függ-vénnyel ren-del-ke-zik. Az el
 -s® ezek kö-zül az \T1/cmtt/m/n/12 OrtCompressed*
  []
 
-[20]
+[21]
 
 LaTeX Warning: Reference `A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj
 \IeC {\'a}r\IeC {\'a}s hat\IeC {\'e}konys\IeC {\'a}g\IeC {\'a}nak tesztel\IeC {
-\'e}se' on page 21 undefined on input line 438.
+\'e}se' on page 22 undefined on input line 439.
 
 
-LaTeX Warning: Reference `Bevezet\IeC {\'e}s nelder mead' on page 21 undefined 
-on input line 443.
+LaTeX Warning: Reference `Bevezet\IeC {\'e}s nelder mead' on page 22 undefined 
+on input line 446.
 
-[21] [22]
+[22]
+
+LaTeX Warning: Reference `f\IeC {\"u}ggel\IeC {\'e}kben' on page 23 undefined o
+n input line 452.
+
+[23] [24]
 4. fejezet.
-[23
+[25
 
 ] (./documentation.aux)
 
@@ -1093,10 +1106,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5019 strings out of 493029
- 72404 string characters out of 6136234
- 145435 words of memory out of 5000000
- 8361 multiletter control sequences out of 15000+600000
+ 5126 strings out of 493029
+ 73712 string characters out of 6136234
+ 147615 words of memory out of 5000000
+ 8465 multiletter control sequences out of 15000+600000
  33476 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,16n,27p,1890b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1121,10 +1134,10 @@ er/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></us
 r/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/
 type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-supe
 r/sftt1200.pfb>
-Output written on documentation.pdf (25 pages, 460366 bytes).
+Output written on documentation.pdf (27 pages, 465589 bytes).
 PDF statistics:
- 228 PDF objects out of 1000 (max. 8388607)
- 153 compressed objects within 2 object streams
+ 234 PDF objects out of 1000 (max. 8388607)
+ 157 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  120 words of extra memory for PDF output out of 10000 (max. 10000000)
 

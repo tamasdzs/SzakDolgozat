@@ -1,28 +1,29 @@
-\select@language {magyar} \contentsline {chapter}{\numberline {1}Bevezet\IeC {\'e}s}{2}
-\select@language {magyar} \contentsline {section}{\numberline {1.1}A feladat specifik\IeC {\'a}ci\IeC {\'o}ja}{3}
-\select@language {magyar} \contentsline {section}{\numberline {1.2}A modell ismertet\IeC {\'e}se}{3}
-\select@language {magyar} \contentsline {section}{\numberline {1.3}Matematikai h\IeC {\'a}tt\IeC {\'e}r}{5}
-\select@language {magyar} \contentsline {subsection}{\numberline {1.3.1}Jelek approxim\IeC {\'a}ci\IeC {\'o}ja}{5}
-\select@language {magyar} \contentsline {subsection}{\numberline {1.3.2}Hermite-f\IeC {\"u}ggv\IeC {\'e}nyek}{6}
-\select@language {magyar} \contentsline {subsection}{\numberline {1.3.3}Az approxim\IeC {\'a}ci\IeC {\'o} optimaliz\IeC {\'a}l\IeC {\'a}sa}{6}
-\select@language {magyar} \contentsline {section}{\numberline {1.4}A Nelder-Mead algoritmus}{8}
-\select@language {magyar} \contentsline {section}{\numberline {1.5}Kvadrat\IeC {\'u}ra formul\IeC {\'a}k}{10}
-\select@language {magyar} \contentsline {section}{\numberline {1.6}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s jellemz\IeC {\'e}se}{10}
-\select@language {magyar} \contentsline {chapter}{\numberline {2}Felhaszn\IeC {\'a}l\IeC {\'o}i dokument\IeC {\'a}ci\IeC {\'o}}{13}
-\select@language {magyar} \contentsline {chapter}{\numberline {3}Fejleszt\IeC {\H o}i dokument\IeC {\'a}ci\IeC {\'o}}{14}
-\select@language {magyar} \contentsline {section}{\numberline {3.1}A felhaszn\IeC {\'a}l\IeC {\'o}i fel\IeC {\"u}let implement\IeC {\'a}ci\IeC {\'o}ja}{15}
-\select@language {magyar} \contentsline {section}{\numberline {3.2}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s implement\IeC {\'a}ci\IeC {\'o}ja}{15}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.1}A SigPrep modul implement\IeC {\'a}ci\IeC {\'o}ja}{15}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.2}Az EcgSigPrep modul implement\IeC {\'a}ci\IeC {\'o}ja}{15}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.3}Az OrtFunSys modul implement\IeC {\'a}ci\IeC {\'o}ja}{15}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.4}A Hermite modul implement\IeC {\'a}ci\IeC {\'o}ja}{17}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.5}A Compresser modul implement\IeC {\'a}ci\IeC {\'o}ja}{18}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.6}Az OrtCompresser modul implement\IeC {\'a}ci\IeC {\'o}ja}{19}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.7}A NelderMead modul implement\IeC {\'a}ci\IeC {\'o}ja}{21}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.8}A MatchingPursuit modul implement\IeC {\'a}ci\IeC {\'o}ja}{22}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.9}Felhaszn\IeC {\'a}lt k\IeC {\"o}nyvt\IeC {\'a}rak, \IeC {\'e}s jellemz\IeC {\'e}s\IeC {\"u}k}{22}
-\select@language {magyar} \contentsline {section}{\numberline {3.3}A felhaszn\IeC {\'a}l\IeC {\'o}i fel\IeC {\"u}let tesztel\IeC {\'e}se}{22}
-\select@language {magyar} \contentsline {section}{\numberline {3.4}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s modul szint\IeC {\H u} tesztel\IeC {\'e}se}{22}
-\select@language {magyar} \contentsline {section}{\numberline {3.5}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s hat\IeC {\'e}konys\IeC {\'a}g\IeC {\'a}nak tesztel\IeC {\'e}se}{22}
-\select@language {magyar} \contentsline {section}{\numberline {3.6}Tapasztalatok \IeC {\'e}s kitekint\IeC {\'e}s}{22}
-\select@language {magyar} \contentsline {chapter}{\numberline {4}F\IeC {\"u}ggel\IeC {\'e}k}{23}
+\select@language {magyar} \contentsline {chapter}{\numberline {1}Bevezet\IeC {\'e}s}{3}
+\select@language {magyar} \contentsline {section}{\numberline {1.1}A feladat specifik\IeC {\'a}ci\IeC {\'o}ja}{4}
+\select@language {magyar} \contentsline {section}{\numberline {1.2}A modell ismertet\IeC {\'e}se}{4}
+\select@language {magyar} \contentsline {section}{\numberline {1.3}Matematikai h\IeC {\'a}tt\IeC {\'e}r}{6}
+\select@language {magyar} \contentsline {subsection}{\numberline {1.3.1}Jelek approxim\IeC {\'a}ci\IeC {\'o}ja}{6}
+\select@language {magyar} \contentsline {subsection}{\numberline {1.3.2}Hermite-f\IeC {\"u}ggv\IeC {\'e}nyek}{7}
+\select@language {magyar} \contentsline {subsection}{\numberline {1.3.3}Az approxim\IeC {\'a}ci\IeC {\'o} optimaliz\IeC {\'a}l\IeC {\'a}sa}{7}
+\select@language {magyar} \contentsline {section}{\numberline {1.4}A Nelder-Mead algoritmus}{9}
+\select@language {magyar} \contentsline {section}{\numberline {1.5}Kvadrat\IeC {\'u}ra formul\IeC {\'a}k}{11}
+\select@language {magyar} \contentsline {section}{\numberline {1.6}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s jellemz\IeC {\'e}se}{11}
+\select@language {magyar} \contentsline {chapter}{\numberline {2}Felhaszn\IeC {\'a}l\IeC {\'o}i dokument\IeC {\'a}ci\IeC {\'o}}{14}
+\select@language {magyar} \contentsline {chapter}{\numberline {3}Fejleszt\IeC {\H o}i dokument\IeC {\'a}ci\IeC {\'o}}{15}
+\select@language {magyar} \contentsline {section}{\numberline {3.1}A felhaszn\IeC {\'a}l\IeC {\'o}i fel\IeC {\"u}let implement\IeC {\'a}ci\IeC {\'o}ja}{16}
+\select@language {magyar} \contentsline {section}{\numberline {3.2}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s implement\IeC {\'a}ci\IeC {\'o}ja}{16}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.1}A SigPrep modul implement\IeC {\'a}ci\IeC {\'o}ja}{16}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.2}Az EcgSigPrep modul implement\IeC {\'a}ci\IeC {\'o}ja}{16}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.3}Az OrtFunSys modul implement\IeC {\'a}ci\IeC {\'o}ja}{16}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.4}A Hermite modul implement\IeC {\'a}ci\IeC {\'o}ja}{18}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.5}A Compresser modul implement\IeC {\'a}ci\IeC {\'o}ja}{19}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.6}Az OrtCompresser modul implement\IeC {\'a}ci\IeC {\'o}ja}{20}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.7}Az Optimizer modul implement\IeC {\'a}ci\IeC {\'o}ja}{22}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.8}A NelderMead modul implement\IeC {\'a}ci\IeC {\'o}ja}{22}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.9}A MatchingPursuit modul implement\IeC {\'a}ci\IeC {\'o}ja}{24}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.10}Felhaszn\IeC {\'a}lt k\IeC {\"o}nyvt\IeC {\'a}rak, \IeC {\'e}s jellemz\IeC {\'e}s\IeC {\"u}k}{24}
+\select@language {magyar} \contentsline {section}{\numberline {3.3}A felhaszn\IeC {\'a}l\IeC {\'o}i fel\IeC {\"u}let tesztel\IeC {\'e}se}{24}
+\select@language {magyar} \contentsline {section}{\numberline {3.4}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s modul szint\IeC {\H u} tesztel\IeC {\'e}se}{24}
+\select@language {magyar} \contentsline {section}{\numberline {3.5}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s hat\IeC {\'e}konys\IeC {\'a}g\IeC {\'a}nak tesztel\IeC {\'e}se}{24}
+\select@language {magyar} \contentsline {section}{\numberline {3.6}Tapasztalatok \IeC {\'e}s kitekint\IeC {\'e}s}{24}
+\select@language {magyar} \contentsline {chapter}{\numberline {4}F\IeC {\"u}ggel\IeC {\'e}k}{25}

@@ -24,6 +24,7 @@
 \usepackage{graphics}
 \usepackage{algorithm} 
 %\usepackage{algpseudocode} %ezzel összeakadhat \usepackage{algorithmic} 
+\usepackage{algorithmic} 
 \usepackage{rotating}
 \usepackage{bigstrut}
 \usepackage{subfigure}
@@ -431,20 +432,58 @@ Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölv
 Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölve, az OrtCompresser modult  az \texttt{/src/headers/OrtCompresser.h}, és a \texttt{/src/OrtCompresser.cpp} állományok implementálják.
 Az OrtCompresser modul feladata, hogy megvalósítsa azokat a függvényeket és eljárásokat, amelyek képesek kiszámítani egy mátrix alakban megadott bementi jel, egy Hermite függvényrendszer által kifeszített altérre vett ortogonális projekcióját. Az OrtCompresser modul felel továbbá a jelet helyreállító  \texttt{decompress}, valamint a tömörítés minőségét jellemző különböző hiba függvények implementációjáért is.
 \par Az OrtCompresser modul, amely az OrtCompresser osztályból áll, igénybe veszi az OrtFunSys, és az ebből származtatott Hermite modulok által nyújtott szolgáltatásokat. A program által, az adott szívütés tömörítéséhez kiszámított ortogonális függvényrendszer elemeit, valamint az ehhez kapcsolódó kvadratúra formulához szükséges számokat egy \texttt{OrtFunSys} típusú objektumra mutató pointeren keresztül éri el. Az osztály adattagjai között szerepel továbbá egy \texttt{Eigen::MatrixXd} típusú objektumra mutató pointer. Az osztályból származtatott objektumok, ennek a pointernek a segítségével képesek a jel helyreállításához szükséges Hermite függvényrendszerek elérésére. Az OrtCompresser osztály szolgáltatásait a MatchingPursuit modul veszi igénybe a közelítés optimalizálásának időtartama alatt, illetve az optimális dilatációs és transzlációs paraméterek megtalálása után, az utolsó tömörítéskor.  
-\par Az osztály konstruktora két paramétert vár bemenetnek. Az első egy OrtFunSys típusú objektum referenciája, amelyen keresztül elérhető az összes kiszámított Hermite függvény. A második paraméter az egész típusú \texttt{dim}, amely a tömörítéshez felhasználandó Hermite függvények számát adja meg. A konstruktor először helyet foglal a \texttt{HermÜsys} adattag által mutatott mátrixnak a dinamikus memóriában. Ezt követően, a konstruktor átmásolja a felhasználni kívánt első \texttt{dim} Hermite függvényt az OrtFunSys objektum által kiszámított mátrixból a protected hozzáférhetőségű \texttt{HermÜSys} adattag által mutatott mátrixba. Az OrtCompresser osztály destruktora felszabadítja az \texttt{HermÜSys} adattag által mutatott memória területet. 
-\par Az osztály négy publikus függvénnyel rendelkezik. Az első ezek közül az \texttt{OrtCompressed*} értéket visszaadó \texttt{rtCompresser::compressBeat}. A függvény bemeneti paramétere \texttt{Eigen::MatrixXd} referencia, melyet a \texttt{signal} azonosító jelöl. A függvény feladata, hogy kiszámítsa a \texttt{signal}-hoz rendelt Fourier-együtthatókat. A függvény először a dinamikus memóriában helyet foglal egy \texttt{OrtCompressed} típusú objektumnak, majd a \ref{bevezetés->tömörítés} fejezetben található formula kerül alkalmazásra az együtthatók kiszámításához. A kiszámított Fourier együtthatók az \texttt{OrtCompressed} objektum \texttt{compressedÜsig} adattagjában kerülnek eltárolásra. A transzlációs illetve dilatációs együtthatók kiszámítása nem a \texttt{OrtCompresser::compressBeat} feladata, ezek a bementül kapott jelre (\texttt{sig}), már alkalmazásra kerültek. A függvény által visszaadott \texttt{OrtCompressed} típusú objektumra mutató pointer felszabadítása a hívó metódus felelőssége. 
-\par A \texttt{OrtCompresser::decompress} függvény feladata, hogy egy \texttt{OrtCompressed} típusú objektumot felhasználva, helyreállítsa az eredeti jelet. Bemeneti paraméterként a függvény egy \texttt{OrtCompressed} típusú objektumra mutató pointert vár. A függvény egy \texttt{ArrayXd} típusú, \texttt{x} azonosítójú konténerbe tárolja a jel helyreállításához szükséges alappontokat. Az alappontok meghatározásához először egy egész értéket rendel a bementen szereplő transzlációs paraméterhez. \textit{N/2}-vel jelölve az eredeti jelben szereplő pontok számának felét, az \texttt{OrtCompresser::decompress} függvény a \textit{[-N/2, N/2]} intervallum \textit{N} elemű egyenletes felosztását adja először értékül \texttt{x}-nek. Ezt követően a függvény \texttt{x} minden értékét a bemeneti paraméterben szereplő dilatációval megszorozza (az intervallum összehúzása), valamint minden értékéből az egész értékű transzlációt kivonja (az intervallum eltolása). Ezt követően az OrtCompresser osztály \texttt{bigÜortÜsys} adattagján keresztül elérhető \texttt{OrtSysGen} függvény segítségével, az  \texttt{OrtCompresser::decompress}
+\par Az osztály konstruktora két paramétert vár bemenetnek. Az első egy OrtFunSys típusú objektum referenciája, amelyen keresztül elérhető az összes kiszámított Hermite függvény. A második paraméter az egész típusú \texttt{dim}, amely a tömörítéshez felhasználandó Hermite függvények számát adja meg. A konstruktor először helyet foglal a \texttt{Herm\_sys} adattag által mutatott mátrixnak a dinamikus memóriában. Ezt követően, a konstruktor átmásolja a felhasználni kívánt első \texttt{dim} Hermite függvényt az OrtFunSys objektum által kiszámított mátrixból a protected hozzáférhetőségű \texttt{Herm\_Sys} adattag által mutatott mátrixba. Az OrtCompresser osztály destruktora felszabadítja az \texttt{Herm\_Sys} adattag által mutatott memória területet. 
+\par Az osztály négy publikus függvénnyel rendelkezik. Az első ezek közül az \texttt{OrtCompressed*} értéket visszaadó \texttt{rtCompresser::compressBeat}. A függvény bemeneti paramétere \texttt{Eigen::MatrixXd} referencia, melyet a \texttt{signal} azonosító jelöl. A függvény feladata, hogy kiszámítsa a \texttt{signal}-hoz rendelt Fourier-együtthatókat. A függvény először a dinamikus memóriában helyet foglal egy \texttt{OrtCompressed} típusú objektumnak, majd a \ref{bevezetés->tömörítés} fejezetben található formula kerül alkalmazásra az együtthatók kiszámításához. A kiszámított Fourier együtthatók az \texttt{OrtCompressed} objektum \texttt{compressed\_sig} adattagjában kerülnek eltárolásra. A transzlációs illetve dilatációs együtthatók kiszámítása nem a \texttt{OrtCompresser::compressBeat} feladata, ezek a bementül kapott jelre (\texttt{sig}), már alkalmazásra kerültek. A függvény által visszaadott \texttt{OrtCompressed} típusú objektumra mutató pointer felszabadítása a hívó metódus felelőssége. 
+\par A \texttt{OrtCompresser::decompress} függvény feladata, hogy egy \texttt{OrtCompressed} típusú objektumot felhasználva, helyreállítsa az eredeti jelet. Bemeneti paraméterként a függvény egy \texttt{OrtCompressed} típusú objektumra mutató pointert vár. A függvény egy \texttt{ArrayXd} típusú, \texttt{x} azonosítójú konténerbe tárolja a jel helyreállításához szükséges alappontokat. Az alappontok meghatározásához először egy egész értéket rendel a bementen szereplő transzlációs paraméterhez. \textit{N/2}-vel jelölve az eredeti jelben szereplő pontok számának felét, az \texttt{OrtCompresser::decompress} függvény a \textit{[-N/2, N/2]} intervallum \textit{N} elemű egyenletes felosztását adja először értékül \texttt{x}-nek. Ezt követően a függvény \texttt{x} minden értékét a bemeneti paraméterben szereplő dilatációval megszorozza (az intervallum összehúzása), valamint minden értékéből az egész értékű transzlációt kivonja (az intervallum eltolása). Ezt követően az OrtCompresser osztály \texttt{big\_ort\_sys} adattagján keresztül elérhető \texttt{OrtSysGen} függvény segítségével, az  \texttt{OrtCompresser::decompress}
  egy dilatált, és eltolt Hermite függvényrendszert generál az \texttt{x}-ben található pontok fölé. A függvény visszatérési értéke a kiszámított Hermite függvényrendszer és a bemeneti paraméterben található Fourier együtthatók szorzatának a transzponáltja, ami éppen az tömörített jel helyreállított alakja.
 \par A fejezet elején látottak alapján OrtCompresser osztály felelőssége a tömörítés hibájának a meghatározása is. Ahhoz hogy ennek eleget tegyen az OrtCompresser osztály a túlterhelt \texttt{getPRD} függvényt használja. Mindkét implementáció a közelítés hibájának egy százalékos alakját adja meg, ám az egyik implementáció egy addicionális \texttt{string} típusú paramétert is kap, amely egy kimeneti fájl nevét tartalmazza, és amelybe beleírja az általa kiszámított hibát. Erre a felhasználói felületen elérhető animáció megjelenítésekor van szükség azért, hogy a hibát a tömörítés minden szakaszában kiolvashassa a felhasználó. A getPRD függvény mindkét implementációja bemenetként kap egy \texttt{Eigen::MatrixXd} típusú, \texttt{signal} azonosítóval ellátott referenciát,  valamint egy \texttt{OrtCompressed} típusú objektumra mutató pointert. Első lépésként az utóbbi segítségével a függvény helyreállítja a jelet. Ezt követően az \texttt{OrtCompressed::getPRD} mindkét implementációja kiszámítja a helyreállított közelítés és az eredeti jel különbségét, továbbá az eredeti jel minden érékének és átlagos értékének a különbségét. Az így kapott vektorok kettes normáinak hányadosával, az úgy nevezett PRD-vel tér vissza. A PRD hiba részletesebb ismertetése a \ref{A tömörítő eljárás hatékonyságának tesztelése} fejezetben található.   
+
+\subsection{Az Optimizer modul implementációja}
   
 \subsection{A NelderMead modul implementációja}
 
 Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölve, a NelderMead modult  az \texttt{/src/headers/OrtCompresser.h}, és a \texttt{/src/OrtCompresser.cpp} állományok implementálják.
 \par A NelderMead modul feladata, hogy a \ref{Bevezetés nelder mead} fejezetben bemutatott Nelder-Mead optimalizációt implementálja. Ez a jelenlegi megvalósításban kizárólag az Hermite függvényrendszerek affin transzfolmáltjaihoz tartozó optimális dilatációs és transzlációs paraméterek meghatározására van felhasználva. Az osztály implementációja azonban lehetővé teszi, hogy egyéb optimalizációs feladatok megoldására is könnyen alkalmazható legyen.
+\par A NelderMead modul az Optimizer osztályból származtatott osztályból áll, és igénybe veszi szolgáltatásként az Optimizer modulban definiált \texttt{Coord} struktúrát. A NelderMead osztályból példányosított objektumok szolgáltatásait a MatchingPursuit modul veszi igénybe, az aktuális tömörítendő szívütés szegmenshez tartozó optimális dilatációs és transzlációs paraméterek megtalálásának érdekében.
+\par A NelderMead modult a NelderMead osztály alkotja, mely rendelkezik az Optimizer osztálytól megörökölt \texttt{const unsigned int generations}, illetve a \texttt{max\_err} adattagokkal. A NelderMead osztály definiál egy további \texttt{std::multimap<double, Coord>} típusú, \texttt{population} azonosítójú protected hozzáférhetőségű adattagot. Ennek az adattagak a feladata, hogy az optimalizáció során a mindenkori szimplex egyes pointjaihoz tartozó aktuális hibát tárolja. Külön indokolta a \texttt{std::multimap} konténer alkalmazását, hogy az elemek ebben az asszociatív konténerben automatikusan kulcs szerint kerülnek rendezésre. Ez azt jelenti, hogy az algoritmus minden lépésében (amikor az aktuális szimplex egy régi pontját lecseréli egy új, alacsonyabb hibával rendelkező pontra), az új szimplex pontjainak rendezését nem volt szükséges külön implementálni. 
+\par A NelderMead osztály rendelkezik egy protected hozzáférhetőségű, \texttt{std::vector} \texttt{<std::multimap<double, Coord>::reverse\_iterator>} típusú értéket visszaadó \linebreak \texttt{set\_pointers} azonosítójú függvénnyel. Az algoritmus által használt szimplex pointjait a \texttt{population} adattag tárolja, azonban az elérésük a \texttt{set\_pointers} függvény által visszaadott \texttt{std::vector} konténeren keresztül történik. Ez azért indokolt, mert ezzel a módszerrel a vektor első tagján keresztül elérhető a legkisebb hibájú, utolsó tagján keresztül pedig a legnagyobb hibájú pont, anélkül, hogy a hiba mértékének pontos ismerete szükséges lenne. Ennek eredménye képpen az aktuális szimplex egyes pontjai könnyen elérhetővé, és manipulálhatóvá válnak. 
 
+\par A NelderMead osztály konstruktora először ellenőrzi, hogy a bementként kapott \texttt{Coord} típusú objektumokat tartalmazó vektor mérete megegyezik-e hárommal. Ez azért fontos, mert a Nelder-Mead algoritmus egy hárompontú szimplex segítségével végzi az optimalizációt. Ezt követően feltölti a \texttt{population} adattagot a bement koordinátáival és "végtelen", pontosabban \texttt{std::numeric\_limits<double>::max()} hibát rendel az egyes értékekhez. A NelderMead osztály default destruktort használ. 
+\par Az osztálynak egyetlen publikus hozzáférhetőségű függvénye van. Ez az Optimizer osztálytól megörökölt \texttt{Optimize} azonosítójú függvény, amely egy \texttt{Coord} típusú objektumot ad vissza. A program jelenleg két dimenziós koordináták (dilatáció, és transzláció párok) feldolgozására használja a NelderMead modult, azonban mind a NelderMead osztály, mind a Coord struktúra felépítése lehetővé teszi az ennél több dimenziós pontokon történő keresést. A NelderMead osztály \texttt{Optimize} függvény implementációja az alábbi, a \ref{függelékben} is megtalálható algoritmus implementációja. 
 
-
-
+\iffalse
+\begin{algorithm}[htb!] 
+\begin{algorithmic}[1]
+	\Function{Nelder-Mead}{} 
+	\If{$y_3 \leq y_4 \wedge y_4 < y_2$}
+		\State $x_1 = x_4$
+	\ElsIf{$y_4 < y_3$}
+		\If{$y_5 < y_4$}
+			\State $x_1 = x_5$
+		\Else
+			\State $x_1 = x_4$
+		\EndIf
+	\ElsIf{$y_4 \geq y_2$}
+		\If{$y_4 < y_1$}
+			\If{$y_6 \leq y_4$}
+				\State $x_1 = x_6$
+			\Else
+				\State $IterLepes(5)$
+			\EndIf
+		\ElsIf{$y_4 \geq y_1$}
+			\If{$y_7 < y_3$}
+				\State $x_1 = x_7$
+			\Else
+				\State $IterLepes(5)$
+			\EndIf
+		\EndIf
+	\EndIf
+	\EndFunction
+\end{algorithmic}
+\caption{Nelder-Mead}
+\label{alg:NM}
+\end{algorithm}
+\fi
 
 \subsection{A MatchingPursuit modul implementációja}
 
