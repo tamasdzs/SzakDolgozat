@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  5 MAR 2017 21:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  12 MAR 2017 14:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -779,55 +779,59 @@ Package pdftex.def Info: ./Abrak/Egyeb/elte_logo.jpg used on input line 89.
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Abrak/Egyeb/elte_logo.jp
-g>] [2] (./documentation.toc)
+g>] [2] (./documentation.toc
+LaTeX Font Info:    Try loading font information for U+eur on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueur.fd
+File: ueur.fd 2013/01/14 v3.01 Euler Roman
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+euf on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+LaTeX Font Info:    Try loading font information for U+eus on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
+File: ueus.fd 2013/01/14 v3.01 Euler Script
+)
+LaTeX Font Info:    Try loading font information for U+euex on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuex.fd
+File: ueuex.fd 2013/01/14 v3.01 Euler extra symbols
+))
 \tf@toc=\write3
 \openout3 = `documentation.toc'.
 
  [1
 
+
+
+pdfTeX warning: pdflatex: pop empty color page stack 0
 ]
 1. fejezet.
 [2
 
 ]
-LaTeX Font Info:    Try loading font information for U+eur on input line 119.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueur.fd
-File: ueur.fd 2013/01/14 v3.01 Euler Roman
-)
-LaTeX Font Info:    Try loading font information for U+msa on input line 119.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 119.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Try loading font information for U+lasy on input line 119.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-LaTeX Font Info:    Try loading font information for U+euf on input line 119.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-LaTeX Font Info:    Try loading font information for U+eus on input line 119.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
-File: ueus.fd 2013/01/14 v3.01 Euler Script
-)
-LaTeX Font Info:    Try loading font information for U+euex on input line 119.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuex.fd
-File: ueuex.fd 2013/01/14 v3.01 Euler extra symbols
-)
 
 LaTeX Warning: Command \' invalid in math mode on input line 119.
 
-[3] <./Abrak/Egyeb/ecg_wiki.png, id=27, 610.28pt x 602.25pt>
+[3] <./Abrak/Egyeb/ecg_wiki.png, id=28, 610.28pt x 602.25pt>
 File: ./Abrak/Egyeb/ecg_wiki.png Graphic file (type png)
 
 <use ./Abrak/Egyeb/ecg_wiki.png>
@@ -911,11 +915,8 @@ File: ./Abrak/Ereszkedo1/Er36.png Graphic file (type png)
 <use ./Abrak/Ereszkedo1/Er36.png>
 Package pdftex.def Info: ./Abrak/Ereszkedo1/Er36.png used on input line 251.
 (pdftex.def)             Requested size: 398.33858pt x 133.89774pt.
- [8 <./Abrak/Ereszkedo1/F_2sz.png> <./Abrak/Ereszkedo1/Er36.png>]
-
-LaTeX Warning: Reference `fig:nmtrf' on page 9 undefined on input line 280.
-
-<./Abrak/Egyeb/NMT1.PNG, id=59, 501.875pt x 451.6875pt>
+ [8 <./Abrak/Ereszkedo1/F_2sz.png> <./Abrak/Ereszkedo1/Er36.png>] <./Abrak/Egye
+b/NMT1.PNG, id=59, 501.875pt x 451.6875pt>
 File: ./Abrak/Egyeb/NMT1.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT1.PNG>
@@ -951,9 +952,6 @@ Package pdftex.def Info: ./Abrak/Egyeb/NMT5.PNG used on input line 287.
 (pdftex.def)             Requested size: 177.4588pt x 64.98111pt.
  [9 <./Abrak/Egyeb/NMT1.PNG> <./Abrak/Egyeb/NMT2.PNG> <./Abrak/Egyeb/NMT3.PNG> 
 <./Abrak/Egyeb/NMT4.PNG> <./Abrak/Egyeb/NMT5.PNG>]
-
-LaTeX Warning: Reference `eq:dotprod' on page 10 undefined on input line 303.
-
 [10]
 
 LaTeX Warning: Reference `sec:kvad' on page 11 undefined on input line 329.
@@ -986,9 +984,6 @@ LaTeX Warning: Citation `hexp3' on page 11 undefined on input line 344.
 
 
 LaTeX Warning: Reference `sec:test' on page 11 undefined on input line 344.
-
-
-LaTeX Warning: Reference `fig:mpstep' on page 11 undefined on input line 344.
 
 
 LaTeX Warning: Citation `hexp3' on page 11 undefined on input line 344.
@@ -1033,24 +1028,76 @@ Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes3.pdf used on input line 350
 3. fejezet.
 [14
 
-] [15] [16] [17]
+]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 371.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) [15] [16]
+Overfull \hbox (3.0288pt too wide) in paragraph at lines 402--403
+[]\T1/cmr/m/n/12 A konst-ruk-tor, il-let-ve a vir-tu-á-lis dest-ruk-tor imp-le-
+men-tá-ci-ói a \T1/cmtt/m/n/12 /src/OrtFunSys.cpp
+ []
+
+
+LaTeX Warning: Citation `Gautschi' on page 17 undefined on input line 414.
+
+[17]
+
+LaTeX Warning: Reference `bevezet\IeC {\'e}s->hermite' on page 18 undefined on 
+input line 415.
+
+
+LaTeX Warning: Citation `kvadratúra formulás cikk' on page 18 undefined on inpu
+t line 417.
+
+
+Overfull \hbox (7.4265pt too wide) in paragraph at lines 419--420
+\T1/cmtt/m/n/12 referencia szerint van, csak valamiert ezzel nem fordul a latex
+? x \T1/cmr/m/n/12 és \T1/cmtt/m/n/12 int
+ []
+
+[18]
+
+LaTeX Warning: Reference `bevezetes->dilattransz' on page 19 undefined on input
+ line 427.
+
+[19]
+
+LaTeX Warning: Reference `bevezet\IeC {\'e}s->t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i
+ }t\IeC {\'e}s' on page 20 undefined on input line 435.
+
+
+Overfull \hbox (29.24266pt too wide) in paragraph at lines 435--436
+[]\T1/cmr/m/n/12 Az osz-tály négy pub-li-kus függ-vénnyel ren-del-ke-zik. Az el
+-s® ezek kö-zül az \T1/cmtt/m/n/12 OrtCompressed*
+ []
+
+[20]
+
+LaTeX Warning: Reference `A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj
+\IeC {\'a}r\IeC {\'a}s hat\IeC {\'e}konys\IeC {\'a}g\IeC {\'a}nak tesztel\IeC {
+\'e}se' on page 21 undefined on input line 438.
+
+
+LaTeX Warning: Reference `Bevezet\IeC {\'e}s nelder mead' on page 21 undefined 
+on input line 443.
+
+[21] [22]
 4. fejezet.
-[18
+[23
 
 ] (./documentation.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 4994 strings out of 493029
- 71642 string characters out of 6136234
- 145371 words of memory out of 5000000
- 8340 multiletter control sequences out of 15000+600000
- 33163 words of font info for 102 fonts, out of 8000000 for 9000
+ 5019 strings out of 493029
+ 72404 string characters out of 6136234
+ 145435 words of memory out of 5000000
+ 8361 multiletter control sequences out of 15000+600000
+ 33476 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,16n,27p,1890b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
@@ -1072,11 +1119,12 @@ sr/share/texmf/fonts/type1/public/cm-super/sfcc1440.pfb></usr/share/texmf/fonts
 /type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-sup
 er/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></us
 r/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/
-type1/public/cm-super/sfti1200.pfb>
-Output written on documentation.pdf (20 pages, 399896 bytes).
+type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-supe
+r/sftt1200.pfb>
+Output written on documentation.pdf (25 pages, 460366 bytes).
 PDF statistics:
- 208 PDF objects out of 1000 (max. 8388607)
- 139 compressed objects within 2 object streams
+ 228 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  120 words of extra memory for PDF output out of 10000 (max. 10000000)
 
