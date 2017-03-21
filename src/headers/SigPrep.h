@@ -18,19 +18,13 @@ class SigPrep {
 		Eigen::MatrixXd* entire_signal;
 		Eigen::MatrixXd* signal;
 		
-		std::queue<WFDB_Annotation> annotations;
-		
-		double dilat;
-		int trans;
-		
 		double sig_first_val;
 		double sig_last_val;
 		double sig_max_val;
 		
 		virtual void setSignal();
 	public:
-		SigPrep(char* sig_name, const int n_of_leads,
-				const int n_of_samples);
+		SigPrep();
 		virtual ~SigPrep();
 		
 		const Eigen::MatrixXd* getSignal();
@@ -39,8 +33,6 @@ class SigPrep {
 		const double getSigFirstVal();
 		const double getSigLastVal();
 		const double getSigMaxVal();
-		const double getDilat();
-		const double getTrans();
 };
 
 #endif

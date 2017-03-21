@@ -10,47 +10,11 @@
  * This vector stores WFDB_Annotations, but for this implementation only the
  * ones which mark the beginning of a QRS complex. 
 *//////////////////////////////////////////////////////////////////////
-SigPrep::SigPrep(char* sig_name, const int n_of_leads,
- const int n_of_samples): dilat(1.0), trans(0.0), sig_first_val(0.0),
-						  sig_last_val(0.0), sig_max_val(0.0){
-	
-	WFDB_Sample v[n_of_leads];
-	WFDB_Siginfo s[n_of_leads];
-
-	WFDB_Anninfo an[n_of_leads];
-	WFDB_Annotation annot; 
-	
-	an[0].name = "atr"; an[0].stat = WFDB_READ;
-    an[1].name = "aha"; an[1].stat = WFDB_AHA_WRITE;
+SigPrep::SigPrep(): sig_first_val(0.0), sig_last_val(0.0), sig_max_val(0.0){
 
 	entire_signal = new Eigen::MatrixXd;
 	signal = new Eigen::MatrixXd;
-	*entire_signal = Eigen::MatrixXd::Zero(n_of_leads, n_of_samples);
-	*signal = Eigen::MatrixXd::Zero(1, n_of_samples);
 	
-	if( isigopen(sig_name, s, n_of_leads) < n_of_leads) {
-		//std::cout<<"could not open record!"<<std::endl;
-	}
-	
-	for( int i = 0; i < n_of_samples; ++i ) {
-		if(getvec(v) < n_of_leads) break;
-		
-		(*signal)(0, i) = v[0];
-		for(int j = 0; j < n_of_leads; ++j) {
-			(*entire_signal)(j, i) = v[j];
-		} 
-		
-	}
-	
-	if (annopen(sig_name, an, n_of_leads) < 0) {
-		//std::cout<< annopen(sig_name, an, n_of_leads) <<" could not open annotation file"<<std::endl;
-	}
-	
-	while (getann(0, &annot) == 0) {
-		if (isqrs(annot.anntyp)) {
-			annotations.push(annot);
-		}
-	} 
 }
 
 /* Destructor
@@ -90,15 +54,6 @@ const double SigPrep::getSigLastVal() {
 const double SigPrep::getSigMaxVal() {
 	return sig_max_val;
 }
-
-const double SigPrep::getDilat() {
-	return dilat;
-}
-
-const double SigPrep::getTrans() {
-	return trans;
-}
-
 /* /////////////////////////////////////////////////////////////////////
  * void SigPrep::setSignal()
  * This function readies to signal for compression. It first 'pulls' the

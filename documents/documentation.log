@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  12 MAR 2017 16:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  19 MAR 2017 17:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1087,16 +1087,17 @@ LaTeX Warning: Reference `A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj
 \IeC {\'a}r\IeC {\'a}s hat\IeC {\'e}konys\IeC {\'a}g\IeC {\'a}nak tesztel\IeC {
 \'e}se' on page 22 undefined on input line 439.
 
-
-LaTeX Warning: Reference `Bevezet\IeC {\'e}s nelder mead' on page 22 undefined 
-on input line 446.
-
 [22]
 
-LaTeX Warning: Reference `f\IeC {\"u}ggel\IeC {\'e}kben' on page 23 undefined o
-n input line 452.
+LaTeX Warning: Reference `Bevezet\IeC {\'e}s nelder mead' on page 23 undefined 
+on input line 451.
 
-[23] [24]
+[23]
+
+LaTeX Warning: Reference `f\IeC {\"u}ggel\IeC {\'e}kben' on page 24 undefined o
+n input line 457.
+
+[24]
 4. fejezet.
 [25
 
@@ -1106,10 +1107,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5126 strings out of 493029
- 73712 string characters out of 6136234
- 147615 words of memory out of 5000000
- 8465 multiletter control sequences out of 15000+600000
+ 5125 strings out of 493029
+ 73704 string characters out of 6136234
+ 147606 words of memory out of 5000000
+ 8464 multiletter control sequences out of 15000+600000
  33476 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,16n,27p,1890b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1134,7 +1135,7 @@ er/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></us
 r/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/
 type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-supe
 r/sftt1200.pfb>
-Output written on documentation.pdf (27 pages, 465589 bytes).
+Output written on documentation.pdf (27 pages, 469085 bytes).
 PDF statistics:
  234 PDF objects out of 1000 (max. 8388607)
  157 compressed objects within 2 object streams

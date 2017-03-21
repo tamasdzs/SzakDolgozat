@@ -5,10 +5,48 @@
 #include <cmath>
 
 EcgSigPrep::EcgSigPrep(char* sig_name, const int n_of_leads, const int n_of_samples):
-													SigPrep(sig_name, n_of_leads, n_of_samples),
-													curr_pos(0) {
-					getNextSegment();
-			}
+													dilat(1.0), trans(0.0),curr_pos(0) {
+					
+	WFDB_Sample v[n_of_leads];
+	WFDB_Siginfo s[n_of_leads];
+
+	WFDB_Anninfo an[n_of_leads];
+	WFDB_Annotation annot; 
+	
+	an[0].name = "atr"; an[0].stat = WFDB_READ;
+    an[1].name = "aha"; an[1].stat = WFDB_AHA_WRITE;
+
+	
+	*entire_signal = Eigen::MatrixXd::Zero(n_of_leads, n_of_samples);
+	*signal = Eigen::MatrixXd::Zero(1, n_of_samples);
+	
+	if( isigopen(sig_name, s, n_of_leads) < n_of_leads) {
+		//std::cout<<"could not open record!"<<std::endl;
+	}
+	
+	for( int i = 0; i < n_of_samples; ++i ) {
+		if(getvec(v) < n_of_leads) break;
+		
+		(*signal)(0, i) = v[0];
+		for(int j = 0; j < n_of_leads; ++j) {
+			(*entire_signal)(j, i) = v[j];
+		} 
+		
+	}
+	
+	if (annopen(sig_name, an, n_of_leads) < 0) {
+		//std::cout<< annopen(sig_name, an, n_of_leads) <<" could not open annotation file"<<std::endl;
+	}
+	
+	while (getann(0, &annot) == 0) {
+		if (isqrs(annot.anntyp)) {
+			annotations.push(annot);
+		}
+	} 
+					
+					
+	getNextSegment();
+}
 
 const Eigen::MatrixXd* EcgSigPrep::getNextSegment() {
 	
@@ -90,3 +128,12 @@ Eigen::MatrixXd EcgSigPrep::setDilatTrans(const double &l, const double &t, cons
 	
 	return sig;
 } 
+
+
+const double EcgSigPrep::getDilat() {
+	return dilat;
+}
+
+const double EcgSigPrep::getTrans() {
+	return trans;
+}

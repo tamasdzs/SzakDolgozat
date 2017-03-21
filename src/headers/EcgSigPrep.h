@@ -3,6 +3,8 @@
 
 #include <Eigen/Dense>
 #include <wfdb/wfdb.h>
+#include <wfdb/ecgmap.h>
+#include <queue>
 #include "SigPrep.h"
 	
 /*
@@ -15,6 +17,11 @@
 
 class EcgSigPrep: public SigPrep {
 	protected:
+		
+		std::queue<WFDB_Annotation> annotations;
+		double dilat;
+		int trans;
+		
 		int curr_pos;
 	public:
 		
@@ -23,6 +30,10 @@ class EcgSigPrep: public SigPrep {
 		
 		const Eigen::MatrixXd* getNextSegment();
 		Eigen::MatrixXd setDilatTrans(const double &l, const double &t, const Eigen::MatrixXd* alpha, Eigen::MatrixXd& sig);
+		
+		
+		const double getDilat();
+		const double getTrans();
 };
 
 #endif
