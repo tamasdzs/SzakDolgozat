@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  19 MAR 2017 17:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  23 MAR 2017 14:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1042,25 +1042,25 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 372.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [16] [17]
-Overfull \hbox (3.0288pt too wide) in paragraph at lines 403--404
+Overfull \hbox (3.0288pt too wide) in paragraph at lines 402--403
 []\T1/cmr/m/n/12 A konst-ruk-tor, il-let-ve a vir-tu-á-lis dest-ruk-tor imp-le-
 men-tá-ci-ói a \T1/cmtt/m/n/12 /src/OrtFunSys.cpp
  []
 
-
-LaTeX Warning: Citation `Gautschi' on page 18 undefined on input line 415.
-
 [18]
 
+LaTeX Warning: Citation `Gautschi' on page 19 undefined on input line 414.
+
+
 LaTeX Warning: Reference `bevezet\IeC {\'e}s->hermite' on page 19 undefined on 
-input line 416.
+input line 415.
 
 
 LaTeX Warning: Citation `kvadratúra formulás cikk' on page 19 undefined on inpu
-t line 418.
+t line 417.
 
 
-Overfull \hbox (7.4265pt too wide) in paragraph at lines 420--421
+Overfull \hbox (7.4265pt too wide) in paragraph at lines 419--420
 \T1/cmtt/m/n/12 referencia szerint van, csak valamiert ezzel nem fordul a latex
 ? x \T1/cmr/m/n/12 és \T1/cmtt/m/n/12 int
  []
@@ -1068,15 +1068,15 @@ Overfull \hbox (7.4265pt too wide) in paragraph at lines 420--421
 [19]
 
 LaTeX Warning: Reference `bevezetes->dilattransz' on page 20 undefined on input
- line 428.
+ line 427.
 
 [20]
 
 LaTeX Warning: Reference `bevezet\IeC {\'e}s->t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i
- }t\IeC {\'e}s' on page 21 undefined on input line 436.
+ }t\IeC {\'e}s' on page 21 undefined on input line 435.
 
 
-Overfull \hbox (29.24266pt too wide) in paragraph at lines 436--437
+Overfull \hbox (29.24266pt too wide) in paragraph at lines 435--436
 []\T1/cmr/m/n/12 Az osz-tály négy pub-li-kus függ-vénnyel ren-del-ke-zik. Az el
 -s® ezek kö-zül az \T1/cmtt/m/n/12 OrtCompressed*
  []
@@ -1085,21 +1085,21 @@ Overfull \hbox (29.24266pt too wide) in paragraph at lines 436--437
 
 LaTeX Warning: Reference `A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj
 \IeC {\'a}r\IeC {\'a}s hat\IeC {\'e}konys\IeC {\'a}g\IeC {\'a}nak tesztel\IeC {
-\'e}se' on page 22 undefined on input line 439.
+\'e}se' on page 22 undefined on input line 438.
 
 [22]
 
 LaTeX Warning: Reference `Bevezet\IeC {\'e}s nelder mead' on page 23 undefined 
-on input line 451.
+on input line 450.
 
 [23]
 
 LaTeX Warning: Reference `f\IeC {\"u}ggel\IeC {\'e}kben' on page 24 undefined o
-n input line 457.
+n input line 456.
 
-[24]
+[24] [25]
 4. fejezet.
-[25
+[26
 
 ] (./documentation.aux)
 
@@ -1135,10 +1135,10 @@ er/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></us
 r/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/
 type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-supe
 r/sftt1200.pfb>
-Output written on documentation.pdf (27 pages, 469085 bytes).
+Output written on documentation.pdf (28 pages, 470256 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 157 compressed objects within 2 object streams
+ 237 PDF objects out of 1000 (max. 8388607)
+ 159 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  120 words of extra memory for PDF output out of 10000 (max. 10000000)
 
