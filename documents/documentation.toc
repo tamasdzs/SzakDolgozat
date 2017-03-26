@@ -21,9 +21,9 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {3.2.7}Az Optimizer modul implement\IeC {\'a}ci\IeC {\'o}ja}{26}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.2.8}A NelderMead modul implement\IeC {\'a}ci\IeC {\'o}ja}{27}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.2.9}A MatchingPursuit modul implement\IeC {\'a}ci\IeC {\'o}ja}{28}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.10}Felhaszn\IeC {\'a}lt k\IeC {\"o}nyvt\IeC {\'a}rak, \IeC {\'e}s jellemz\IeC {\'e}s\IeC {\"u}k}{28}
-\select@language {magyar} \contentsline {section}{\numberline {3.3}A felhaszn\IeC {\'a}l\IeC {\'o}i fel\IeC {\"u}let tesztel\IeC {\'e}se}{28}
-\select@language {magyar} \contentsline {section}{\numberline {3.4}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s modul szint\IeC {\H u} tesztel\IeC {\'e}se}{28}
-\select@language {magyar} \contentsline {section}{\numberline {3.5}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s hat\IeC {\'e}konys\IeC {\'a}g\IeC {\'a}nak tesztel\IeC {\'e}se}{28}
-\select@language {magyar} \contentsline {section}{\numberline {3.6}Tapasztalatok \IeC {\'e}s kitekint\IeC {\'e}s}{28}
-\select@language {magyar} \contentsline {chapter}{\numberline {4}F\IeC {\"u}ggel\IeC {\'e}k}{29}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.10}Felhaszn\IeC {\'a}lt k\IeC {\"o}nyvt\IeC {\'a}rak, \IeC {\'e}s jellemz\IeC {\'e}s\IeC {\"u}k}{29}
+\select@language {magyar} \contentsline {section}{\numberline {3.3}A felhaszn\IeC {\'a}l\IeC {\'o}i fel\IeC {\"u}let tesztel\IeC {\'e}se}{29}
+\select@language {magyar} \contentsline {section}{\numberline {3.4}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s modul szint\IeC {\H u} tesztel\IeC {\'e}se}{29}
+\select@language {magyar} \contentsline {section}{\numberline {3.5}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s hat\IeC {\'e}konys\IeC {\'a}g\IeC {\'a}nak tesztel\IeC {\'e}se}{29}
+\select@language {magyar} \contentsline {section}{\numberline {3.6}Tapasztalatok \IeC {\'e}s kitekint\IeC {\'e}s}{29}
+\select@language {magyar} \contentsline {chapter}{\numberline {4}F\IeC {\"u}ggel\IeC {\'e}k}{30}
