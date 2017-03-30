@@ -519,6 +519,15 @@ Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölv
 
 \par A MatchingPursuit modult a \texttt{/src/headers/MatchingPursuit.h} állományban deklarált \texttt{MatchingPursuit} osztály alkotja. Az osztálynak három privát hozzáférhetőségű adattagja van. Az első egy \texttt{EcgSigPrep} típusú objektumra mutató pointer, amely a feldolgozandó bemeneti jel kezeléséért felel. A két további adattag egy \texttt{std::map<std::string, std::string>} típusú, \texttt{files\_dir} azonosítóval ellátott asszociatív tömb, és egy \texttt{std::function<double (Coord \&)>} típusú, \texttt{costfun} azonosítójú c++ 11 szabványban bevezetett "függvénytípus". A típus lényege, hogy a hagyományos függvényekkel ellentétben egy eljárást mint objektumot képes kezelni a program. Ennek következtében lehetőség nyílik ezen függvények ad-hoc módon történő definiálására, valamint paraméterként szerepelhetnek egy másik függvényben. Ezt az adattagot kapja a meg bemenetként az optimalizációs eljárás. Az osztály egyetlen privát hozzáférhetőségű \texttt{void set\_costfun(std::function<double (Coord \&)> cfun)} szignatúrával ellátott metódust definiál. Ennek a metódusnak a feladata, hogy definícióval lássa el a \texttt{costfun} adattagot. 
 \par A \texttt{MatchingPursuit} osztályhoz két konstruktor és egy destruktor tartozik. Ezeken kívül csupán egy publikus hozzáférhetőségű függvényt definiál, amely \texttt{OrtCompressed*} értéket ad vissza és a \texttt{CompressBeat} azonosítóval van ellátva. 
+A \texttt{CompressBeat} függvény valósítja meg a Matching Pursuit algoritmust. Bemeneti paraméterként egy \texttt{std::vector<double>}
+típusú vektort kap, melynek elemei az egyes EKG hullámszegmensek tömörítésénél felhasznált Hermite rendszerek dimenzióját határozzák meg. 
+A bemutatott eljárás tesztelésének során ezek a fokszámok a 7, 6, 2 értékekben lettek megállapítva a \ref{mp rész a bevezetésben}-ben 
+található indoklás alapján. A függvény első lépésként betölti a tömörítendő szívütést. Ehhez a \texttt{sig\_handler} 
+adattag \texttt{getNextSegment()} metódusát használja fel. Az algoritmus inicializálásakor a \texttt{CompressBeat} függvény a jelet kért külön vektorban tárolja.
+Az első vektor \texttt{sig} azonosítóval van ellátva, és a Matching Pursuit algoritmus egyes lépései után hátramaradó reziduum jelet hivatott tárolni.
+A második vektor ezzel ellentétben végig az eredeti tömörítendő jelet tartalmazza, és \texttt{osig} vagyis original signal azonosítót kap. Ezt
+a tömörítés hibájának kiszámítására alkalmazza a függvény, az egyes approximációkhoz tartozó PRD értéket \ref{tesztelés, PRD} ehhez a jelhez
+viszonyítva adja meg.  
 
 \subsection{Felhasznált könyvtárak, és jellemzésük}
 
