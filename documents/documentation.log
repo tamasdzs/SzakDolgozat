@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.2.16)  30 MAR 2017 09:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  2 APR 2017 19:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **documentation.tex
 (./documentation.tex
-LaTeX2e <2014/05/01>
-Babel <3.9l> and hyphenation patterns for 2 languages loaded.
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
@@ -25,40 +25,40 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen102
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2013/01/14 v2.14 AMS math features
+Package: amsmath 2016/03/03 v2.15a AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01
+Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0
+File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks14
 \ex@=\dimen103
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen104
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count88
-LaTeX Info: Redefining \frac on input line 210.
+LaTeX Info: Redefining \frac on input line 199.
 \uproot@=\count89
 \leftroot@=\count90
-LaTeX Info: Redefining \overline on input line 306.
+LaTeX Info: Redefining \overline on input line 297.
 \classnum@=\count91
 \DOTSCASE@=\count92
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen105
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \macc@depth=\count93
 \c@MaxMatrixCols=\count94
 \dotsspace@=\muskip10
@@ -79,8 +79,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \multlinegap=\skip44
 \multlinetaggap=\skip45
 \mathdisplay@stack=\toks18
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
@@ -90,7 +90,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2009/07/02 v2.20.1
+Package: amsthm 2015/03/04 v2.20.2
 \thm@style=\toks19
 \thm@bodyfont=\toks20
 \thm@headfont=\toks21
@@ -103,56 +103,48 @@ Package: amsthm 2009/07/02 v2.20.1
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/newlfont.sty
 Package: newlfont 1998/08/17 v2.2m Standard LaTeX package
-LaTeX Info: Redefining \em on input line 67.
+LaTeX Info: Redefining \em on input line 72.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
-(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2014/09/25 3.9l The Babel package
+Package: babel 2016/02/24 3.9q The Babel package
 
+(/usr/share/texlive/texmf-dist/tex/generic/babel-hungarian/magyar.ldf
+Language: magyar 2015/11/24 v1.5c Magyar support from the babel v3.7 system
 
-! Package babel Error: Unknown option `magyar'. Either you misspelled it
-(babel)                or the language definition file magyar.ldf was not found
-.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.299 \ProcessOptions*
-                      
-? 
-
-! Package babel Error: You haven't specified a language option.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.332 ...ry to proceed from here, type x to quit.}
-                                                  
-? 
-) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2014/04/30 v1.2b Input encoding file
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2016/02/24 3.9q Babel common definitions
+\babel@savecnt=\count100
+\U@D=\dimen112
+)
+Package babel Info: Making ` an active character on input line 2735.
+\c@footnote@add=\count101
+\c@footnote@ch=\count102
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks25
 \inpenc@posthook=\toks26
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
+File: utf8.def 2015/12/03 v1.1r UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
-File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+File: t1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00BB (decimal 187)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C0 (decimal 192)
@@ -217,50 +209,94 @@ File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00FD (decimal 253)
    defining Unicode char U+00FE (decimal 254)
    defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0100 (decimal 256)
+   defining Unicode char U+0101 (decimal 257)
    defining Unicode char U+0102 (decimal 258)
    defining Unicode char U+0103 (decimal 259)
    defining Unicode char U+0104 (decimal 260)
    defining Unicode char U+0105 (decimal 261)
    defining Unicode char U+0106 (decimal 262)
    defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+0108 (decimal 264)
+   defining Unicode char U+0109 (decimal 265)
+   defining Unicode char U+010A (decimal 266)
+   defining Unicode char U+010B (decimal 267)
    defining Unicode char U+010C (decimal 268)
    defining Unicode char U+010D (decimal 269)
    defining Unicode char U+010E (decimal 270)
    defining Unicode char U+010F (decimal 271)
    defining Unicode char U+0110 (decimal 272)
    defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0112 (decimal 274)
+   defining Unicode char U+0113 (decimal 275)
+   defining Unicode char U+0114 (decimal 276)
+   defining Unicode char U+0115 (decimal 277)
+   defining Unicode char U+0116 (decimal 278)
+   defining Unicode char U+0117 (decimal 279)
    defining Unicode char U+0118 (decimal 280)
    defining Unicode char U+0119 (decimal 281)
    defining Unicode char U+011A (decimal 282)
    defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011C (decimal 284)
+   defining Unicode char U+011D (decimal 285)
    defining Unicode char U+011E (decimal 286)
    defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0120 (decimal 288)
+   defining Unicode char U+0121 (decimal 289)
+   defining Unicode char U+0122 (decimal 290)
+   defining Unicode char U+0123 (decimal 291)
+   defining Unicode char U+0124 (decimal 292)
+   defining Unicode char U+0125 (decimal 293)
+   defining Unicode char U+0128 (decimal 296)
+   defining Unicode char U+0129 (decimal 297)
+   defining Unicode char U+012A (decimal 298)
+   defining Unicode char U+012B (decimal 299)
+   defining Unicode char U+012C (decimal 300)
+   defining Unicode char U+012D (decimal 301)
+   defining Unicode char U+012E (decimal 302)
+   defining Unicode char U+012F (decimal 303)
    defining Unicode char U+0130 (decimal 304)
    defining Unicode char U+0131 (decimal 305)
    defining Unicode char U+0132 (decimal 306)
    defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0134 (decimal 308)
+   defining Unicode char U+0135 (decimal 309)
+   defining Unicode char U+0136 (decimal 310)
+   defining Unicode char U+0137 (decimal 311)
    defining Unicode char U+0139 (decimal 313)
    defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013B (decimal 315)
+   defining Unicode char U+013C (decimal 316)
    defining Unicode char U+013D (decimal 317)
    defining Unicode char U+013E (decimal 318)
    defining Unicode char U+0141 (decimal 321)
    defining Unicode char U+0142 (decimal 322)
    defining Unicode char U+0143 (decimal 323)
    defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0145 (decimal 325)
+   defining Unicode char U+0146 (decimal 326)
    defining Unicode char U+0147 (decimal 327)
    defining Unicode char U+0148 (decimal 328)
    defining Unicode char U+014A (decimal 330)
    defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+014C (decimal 332)
+   defining Unicode char U+014D (decimal 333)
+   defining Unicode char U+014E (decimal 334)
+   defining Unicode char U+014F (decimal 335)
    defining Unicode char U+0150 (decimal 336)
    defining Unicode char U+0151 (decimal 337)
    defining Unicode char U+0152 (decimal 338)
    defining Unicode char U+0153 (decimal 339)
    defining Unicode char U+0154 (decimal 340)
    defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0156 (decimal 342)
+   defining Unicode char U+0157 (decimal 343)
    defining Unicode char U+0158 (decimal 344)
    defining Unicode char U+0159 (decimal 345)
    defining Unicode char U+015A (decimal 346)
    defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015C (decimal 348)
+   defining Unicode char U+015D (decimal 349)
    defining Unicode char U+015E (decimal 350)
    defining Unicode char U+015F (decimal 351)
    defining Unicode char U+0160 (decimal 352)
@@ -269,10 +305,22 @@ File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+0163 (decimal 355)
    defining Unicode char U+0164 (decimal 356)
    defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+0168 (decimal 360)
+   defining Unicode char U+0169 (decimal 361)
+   defining Unicode char U+016A (decimal 362)
+   defining Unicode char U+016B (decimal 363)
+   defining Unicode char U+016C (decimal 364)
+   defining Unicode char U+016D (decimal 365)
    defining Unicode char U+016E (decimal 366)
    defining Unicode char U+016F (decimal 367)
    defining Unicode char U+0170 (decimal 368)
    defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0172 (decimal 370)
+   defining Unicode char U+0173 (decimal 371)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
    defining Unicode char U+0178 (decimal 376)
    defining Unicode char U+0179 (decimal 377)
    defining Unicode char U+017A (decimal 378)
@@ -280,6 +328,31 @@ File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+017C (decimal 380)
    defining Unicode char U+017D (decimal 381)
    defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+01CD (decimal 461)
+   defining Unicode char U+01CE (decimal 462)
+   defining Unicode char U+01CF (decimal 463)
+   defining Unicode char U+01D0 (decimal 464)
+   defining Unicode char U+01D1 (decimal 465)
+   defining Unicode char U+01D2 (decimal 466)
+   defining Unicode char U+01D3 (decimal 467)
+   defining Unicode char U+01D4 (decimal 468)
+   defining Unicode char U+01E2 (decimal 482)
+   defining Unicode char U+01E3 (decimal 483)
+   defining Unicode char U+01E6 (decimal 486)
+   defining Unicode char U+01E7 (decimal 487)
+   defining Unicode char U+01E8 (decimal 488)
+   defining Unicode char U+01E9 (decimal 489)
+   defining Unicode char U+01EA (decimal 490)
+   defining Unicode char U+01EB (decimal 491)
+   defining Unicode char U+01F0 (decimal 496)
+   defining Unicode char U+01F4 (decimal 500)
+   defining Unicode char U+01F5 (decimal 501)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+01E02 (decimal 7682)
+   defining Unicode char U+01E03 (decimal 7683)
    defining Unicode char U+200C (decimal 8204)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
@@ -299,9 +372,11 @@ Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
-File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+File: ot1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00B8 (decimal 184)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C5 (decimal 197)
@@ -319,6 +394,14 @@ File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+0142 (decimal 322)
    defining Unicode char U+0152 (decimal 338)
    defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
    defining Unicode char U+2018 (decimal 8216)
@@ -330,7 +413,7 @@ Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
-File: omsenc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+File: omsenc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -357,22 +440,22 @@ Now handling font encoding U ...
 Package: t1enc 1994/06/01 Standard LaTeX package
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks27
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 95.
 
 (/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
@@ -383,18 +466,18 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count100
+\Gread@gobject=\count103
 ))
-\Gin@req@height=\dimen112
-\Gin@req@width=\dimen113
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
+Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 137.
+Package color Info: Driver file: pdftex.def on input line 143.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/euler/euler.sty
 Package: euler 1995/03/05 v2.5
@@ -504,70 +587,79 @@ LaTeX Font Info:    Redeclaring math accent \hat on input line 254.
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
 
-! LaTeX Error: File `algorithm.sty' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
-
-Enter file name: 
-
-! LaTeX Error: File `algorithmic.sty' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
-
-Enter file name: 
-(/usr/share/texlive/texmf-dist/tex/latex/rotating/rotating.sty
-Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
-
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count104
+\float@exts=\toks28
+\float@box=\box28
+\@float@everytoks=\toks29
+\@floatcapt=\box29
+)
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count101
-\rotFPtop=\skip49
-\rotFPbot=\skip50
-\rot@float@box=\box28
-\rot@mess@toks=\toks28
+\@float@every@algorithm=\toks30
+\c@algorithm=\count105
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count106
+\c@ALC@line=\count107
+\c@ALC@rem=\count108
+\c@ALC@depth=\count109
+\ALC@tlm=\skip49
+\algorithmicindent=\skip50
+)
+(/usr/share/texlive/texmf-dist/tex/latex/rotating/rotating.sty
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+\c@r@tfl@t=\count110
+\rotFPtop=\skip51
+\rotFPbot=\skip52
+\rot@float@box=\box30
+\rot@mess@toks=\toks31
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/bigstrut.sty
-\bigstrutjot=\dimen114
+\bigstrutjot=\dimen115
 )
 (/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
-\subfigtopskip=\skip51
-\subfigcapskip=\skip52
-\subfigcaptopadj=\dimen115
-\subfigbottomskip=\skip53
-\subfigcapmargin=\dimen116
-\subfiglabelskip=\skip54
-\c@subfigure=\count102
-\c@lofdepth=\count103
-\c@subtable=\count104
-\c@lotdepth=\count105
+\subfigtopskip=\skip53
+\subfigcapskip=\skip54
+\subfigcaptopadj=\dimen116
+\subfigbottomskip=\skip55
+\subfigcapmargin=\dimen117
+\subfiglabelskip=\skip56
+\c@subfigure=\count111
+\c@lofdepth=\count112
+\c@subtable=\count113
+\c@lotdepth=\count114
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
 (/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
-\subfig@top=\skip55
-\subfig@bottom=\skip56
+\subfig@top=\skip57
+\subfig@bottom=\skip58
 )
 (/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count106
-\c@@ppsavesec=\count107
-\c@@ppsaveapp=\count108
+\c@@pps=\count115
+\c@@ppsavesec=\count116
+\c@@ppsaveapp=\count117
 )
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-\c@theorem=\count109
-\c@corollary=\count110
-\c@lemma=\count111
-\c@proposition=\count112
-\c@definition=\count113
-\c@notation=\count114
+\c@theorem=\count118
+\c@corollary=\count119
+\c@lemma=\count120
+\c@proposition=\count121
+\c@definition=\count122
+\c@notation=\count123
 
 (./documentation.aux)
 \openout1 = `documentation.aux'.
@@ -587,17 +679,17 @@ LaTeX Font Info:    ... okay on input line 55.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count115
-\scratchdimen=\dimen117
-\scratchbox=\box29
-\nofMPsegments=\count116
-\nofMParguments=\count117
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count118
-\MPscratchDim=\dimen118
-\MPnumerator=\count119
-\makeMPintoPDFobject=\count120
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count124
+\scratchdimen=\dimen118
+\scratchbox=\box31
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen119
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
+\everyMPtoPDFconversion=\toks33
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -682,6 +774,10 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  T1/cmr/m/it --> T1/cmr/bx/it on input line 55.
 
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+LaTeX Info: Redefining \cal on input line 591.
+LaTeX Info: Redefining \mit on input line 592.
+)
 <./Abrak/Egyeb/elte_logo.jpg, id=1, 147.55125pt x 147.55125pt>
 File: ./Abrak/Egyeb/elte_logo.jpg Graphic file (type jpg)
 
@@ -690,31 +786,11 @@ Package pdftex.def Info: ./Abrak/Egyeb/elte_logo.jpg used on input line 90.
 (pdftex.def)             Requested size: 103.28516pt x 103.28516pt.
  [1
 
+
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Abrak/Egyeb/elte_logo.jp
 g>] [2] (./documentation.toc
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \select@language {magyar}
-                              \contentsline {chapter}{\numberline {1}Bevezet...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2 \select@language {magyar}
-                              \contentsline {section}{\numberline {1.1}A fel...
-
-? 
 LaTeX Font Info:    Try loading font information for U+eur on input line 2.
+
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueur.fd
 File: ueur.fd 2013/01/14 v3.01 Euler Roman
 )
@@ -747,318 +823,17 @@ LaTeX Font Info:    Try loading font information for U+euex on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuex.fd
 File: ueuex.fd 2013/01/14 v3.01 Euler extra symbols
-)
+) [1
 
-! Package babel Error: You haven't defined the language magyar yet.
 
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.3 \select@language {magyar}
-                              \contentsline {section}{\numberline {1.2}A mod...
 
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 \select@language {magyar}
-                              \contentsline {section}{\numberline {1.3}Matem...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \select@language {magyar}
-                              \contentsline {subsection}{\numberline {1.3.1}...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 \select@language {magyar}
-                              \contentsline {subsection}{\numberline {1.3.2}...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 \select@language {magyar}
-                              \contentsline {subsection}{\numberline {1.3.3}...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 \select@language {magyar}
-                              \contentsline {section}{\numberline {1.4}A Nel...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 \select@language {magyar}
-                              \contentsline {section}{\numberline {1.5}Kvadr...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10 \select@language {magyar}
-                               \contentsline {section}{\numberline {1.6}A t\...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 \select@language {magyar}
-                               \contentsline {chapter}{\numberline {2}Felhas...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12 \select@language {magyar}
-                               \contentsline {chapter}{\numberline {3}Fejles...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 \select@language {magyar}
-                               \contentsline {section}{\numberline {3.1}A fe...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 \select@language {magyar}
-                               \contentsline {section}{\numberline {3.2}A t\...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 \select@language {magyar}
-                               \contentsline {subsection}{\numberline {3.2.1...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.16 \select@language {magyar}
-                               \contentsline {subsection}{\numberline {3.2.2...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 \select@language {magyar}
-                               \contentsline {subsection}{\numberline {3.2.3...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.18 \select@language {magyar}
-                               \contentsline {subsection}{\numberline {3.2.4...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 \select@language {magyar}
-                               \contentsline {subsection}{\numberline {3.2.5...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 \select@language {magyar}
-                               \contentsline {subsection}{\numberline {3.2.6...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.21 \select@language {magyar}
-                               \contentsline {subsection}{\numberline {3.2.7...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.22 \select@language {magyar}
-                               \contentsline {subsection}{\numberline {3.2.8...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 \select@language {magyar}
-                               \contentsline {subsection}{\numberline {3.2.9...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 \select@language {magyar}
-                               \contentsline {subsection}{\numberline {3.2.1...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 \select@language {magyar}
-                               \contentsline {section}{\numberline {3.3}A fe...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.26 \select@language {magyar}
-                               \contentsline {section}{\numberline {3.4}A t\...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.27 \select@language {magyar}
-                               \contentsline {section}{\numberline {3.5}A t\...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.28 \select@language {magyar}
-                               \contentsline {section}{\numberline {3.6}Tapa...
-
-? 
-
-! Package babel Error: You haven't defined the language magyar yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 \select@language {magyar}
-                               \contentsline {chapter}{\numberline {4}F\IeC ...
-
-? 
-[1
-
+pdfTeX warning: pdflatex: pop empty color page stack 0
 ])
 \tf@toc=\write3
 \openout3 = `documentation.toc'.
 
  [2]
-Chapter 1.
-
-Overfull \hbox (3.01326pt too wide) in paragraph at lines 108--109
-\T1/cmr/m/n/12 eljárásra EKG jelek \T1/cmr/m/it/12 tömörítéseként \T1/cmr/m/n/1
-2 hi-vatkozik. EKG jelek es-etén az ábrá-zolás min®sége
- []
-
+1. fejezet.
 [3
 
 ]
@@ -1136,115 +911,92 @@ Underfull \hbox (badness 10000) in paragraph at lines 200--204
 
  []
 
-[7]
-Overfull \hbox (2.85341pt too wide) in paragraph at lines 230--232
-\T1/cmr/m/n/12 függvény max-i-mumá-nak meghatározásá-val. A paraméteres in-te-g
-rálok tu-la-j-don-sá-gaiból
- []
-
-<./Abrak/Ereszkedo1/F_2sz.png, id=54, 259.56975pt x 262.581pt>
+[7] <./Abrak/Ereszkedo1/F_2sz.png, id=54, 259.56975pt x 262.581pt>
 File: ./Abrak/Ereszkedo1/F_2sz.png Graphic file (type png)
 
 <use ./Abrak/Ereszkedo1/F_2sz.png>
 Package pdftex.def Info: ./Abrak/Ereszkedo1/F_2sz.png used on input line 245.
 (pdftex.def)             Requested size: 284.52756pt x 287.83429pt.
-
-<./Abrak/Ereszkedo1/Er36.png, id=55, 1313.90875pt x 441.65pt>
+ [8]
+<./Abrak/Ereszkedo1/Er36.png, id=58, 1313.90875pt x 441.65pt>
 File: ./Abrak/Ereszkedo1/Er36.png Graphic file (type png)
 
 <use ./Abrak/Ereszkedo1/Er36.png>
 Package pdftex.def Info: ./Abrak/Ereszkedo1/Er36.png used on input line 252.
 (pdftex.def)             Requested size: 398.33858pt x 133.89774pt.
-
-Overfull \hbox (4.22522pt too wide) in paragraph at lines 261--268
-\T1/cmr/m/n/12 pusztán a füg-gvényértékekre tám-szkodva. Mivel az al-go-rit-mus
-t a be-mu-ta-tott tömörítési
- []
-
-[8] <./Abrak/Egyeb/NMT1.PNG, id=59, 501.875pt x 451.6875pt>
+ [9 <./Abrak/Ereszkedo1/F_2sz.png> <./Abrak/Ereszkedo1/Er36.png>] <./Abrak/Egye
+b/NMT1.PNG, id=62, 501.875pt x 451.6875pt>
 File: ./Abrak/Egyeb/NMT1.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT1.PNG>
 Package pdftex.def Info: ./Abrak/Egyeb/NMT1.PNG used on input line 284.
 (pdftex.def)             Requested size: 125.26503pt x 103.60458pt.
 
-<./Abrak/Egyeb/NMT2.PNG, id=61, 552.0625pt x 451.6875pt>
+<./Abrak/Egyeb/NMT2.PNG, id=64, 552.0625pt x 451.6875pt>
 File: ./Abrak/Egyeb/NMT2.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT2.PNG>
 Package pdftex.def Info: ./Abrak/Egyeb/NMT2.PNG used on input line 285.
 (pdftex.def)             Requested size: 138.31348pt x 103.60458pt.
 
-<./Abrak/Egyeb/NMT3.PNG, id=63, 602.25pt x 451.6875pt>
+<./Abrak/Egyeb/NMT3.PNG, id=66, 602.25pt x 451.6875pt>
 File: ./Abrak/Egyeb/NMT3.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT3.PNG>
 Package pdftex.def Info: ./Abrak/Egyeb/NMT3.PNG used on input line 286.
 (pdftex.def)             Requested size: 151.36191pt x 103.60458pt.
 
-<./Abrak/Egyeb/NMT4.PNG, id=65, 702.625pt x 437.635pt>
+<./Abrak/Egyeb/NMT4.PNG, id=68, 702.625pt x 437.635pt>
 File: ./Abrak/Egyeb/NMT4.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT4.PNG>
 Package pdftex.def Info: ./Abrak/Egyeb/NMT4.PNG used on input line 287.
 (pdftex.def)             Requested size: 177.4588pt x 65.50305pt.
 
-<./Abrak/Egyeb/NMT5.PNG, id=67, 702.625pt x 435.6275pt>
+<./Abrak/Egyeb/NMT5.PNG, id=70, 702.625pt x 435.6275pt>
 File: ./Abrak/Egyeb/NMT5.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT5.PNG>
 Package pdftex.def Info: ./Abrak/Egyeb/NMT5.PNG used on input line 288.
 (pdftex.def)             Requested size: 177.4588pt x 64.98111pt.
+ [10 <./Abrak/Egyeb/NMT1.PNG> <./Abrak/Egyeb/NMT2.PNG> <./Abrak/Egyeb/NMT3.PNG>
+ <./Abrak/Egyeb/NMT4.PNG> <./Abrak/Egyeb/NMT5.PNG>] [11]
 
-Overfull \hbox (8.97737pt too wide) in paragraph at lines 279--292
-\T1/cmr/m/n/12 jleszt®i doku-men-tá-ció Nelder-Mead al-go-rit-mus im-ple-men-tá
--ciójá-val foglalkozó fe-jezetben
- []
-
-[9]
-
-LaTeX Warning: Reference `sec:kvad' on page 10 undefined on input line 330.
+LaTeX Warning: Reference `sec:kvad' on page 12 undefined on input line 330.
 
 
-LaTeX Warning: Citation `gautschi' on page 10 undefined on input line 330.
+LaTeX Warning: Citation `gautschi' on page 12 undefined on input line 330.
 
 
-LaTeX Warning: Reference `eq:identities' on page 10 undefined on input line 330
+LaTeX Warning: Reference `eq:identities' on page 12 undefined on input line 330
 .
-
-
-Overfull \hbox (15.85123pt too wide) in paragraph at lines 329--330
-\T1/cmr/m/n/12 nyen belátható, hogy az $\U/eur/m/n/12 []$ \T1/cmr/m/n/12 gyökö
-k meg-e-gyeznek ezen tridi-agonális mátrix sajátértékeivel. 
- []
 
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 334.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 334.
 
-LaTeX Warning: Citation `hexp3' on page 10 undefined on input line 337.
+LaTeX Warning: Citation `hexp3' on page 12 undefined on input line 337.
 
 
-LaTeX Warning: Reference `eq:hilaprx' on page 10 undefined on input line 338.
-
-[10]
-
-LaTeX Warning: Citation `mpurs' on page 11 undefined on input line 340.
+LaTeX Warning: Reference `eq:hilaprx' on page 12 undefined on input line 338.
 
 
-LaTeX Warning: Reference `eq:Fnfuggv' on page 11 undefined on input line 340.
+LaTeX Warning: Citation `mpurs' on page 12 undefined on input line 340.
 
 
-LaTeX Warning: Citation `hexp3' on page 11 undefined on input line 345.
+LaTeX Warning: Reference `eq:Fnfuggv' on page 12 undefined on input line 340.
 
 
-LaTeX Warning: Reference `sec:test' on page 11 undefined on input line 345.
+LaTeX Warning: Citation `hexp3' on page 12 undefined on input line 345.
 
 
-LaTeX Warning: Citation `hexp3' on page 11 undefined on input line 345.
+LaTeX Warning: Reference `sec:test' on page 12 undefined on input line 345.
 
-<./Abrak/Lepesek/abra_lepes0.pdf, id=77, 597.23125pt x 845.1575pt>
+
+LaTeX Warning: Citation `hexp3' on page 12 undefined on input line 345.
+
+<./Abrak/Lepesek/abra_lepes0.pdf, id=85, 597.23125pt x 845.1575pt>
 File: ./Abrak/Lepesek/abra_lepes0.pdf Graphic file (type pdf)
 
 <use ./Abrak/Lepesek/abra_lepes0.pdf>
@@ -1252,7 +1004,7 @@ Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes0.pdf used on input line 348
 .
 (pdftex.def)             Requested size: 188.2024pt x 141.52773pt.
 
-<./Abrak/Lepesek/abra_lepes1.pdf, id=79, 597.23125pt x 845.1575pt>
+<./Abrak/Lepesek/abra_lepes1.pdf, id=87, 597.23125pt x 845.1575pt>
 File: ./Abrak/Lepesek/abra_lepes1.pdf Graphic file (type pdf)
 
 <use ./Abrak/Lepesek/abra_lepes1.pdf>
@@ -1260,7 +1012,7 @@ Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes1.pdf used on input line 349
 .
 (pdftex.def)             Requested size: 188.2024pt x 141.52773pt.
 
-<./Abrak/Lepesek/abra_lepes2.pdf, id=81, 597.23125pt x 845.1575pt>
+<./Abrak/Lepesek/abra_lepes2.pdf, id=89, 597.23125pt x 845.1575pt>
 File: ./Abrak/Lepesek/abra_lepes2.pdf Graphic file (type pdf)
 
 <use ./Abrak/Lepesek/abra_lepes2.pdf>
@@ -1268,23 +1020,20 @@ Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes2.pdf used on input line 350
 .
 (pdftex.def)             Requested size: 188.2024pt x 141.52773pt.
 
-<./Abrak/Lepesek/abra_lepes3.pdf, id=83, 597.23125pt x 845.1575pt>
+<./Abrak/Lepesek/abra_lepes3.pdf, id=91, 597.23125pt x 845.1575pt>
 File: ./Abrak/Lepesek/abra_lepes3.pdf Graphic file (type pdf)
 
 <use ./Abrak/Lepesek/abra_lepes3.pdf>
 Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes3.pdf used on input line 351
 .
 (pdftex.def)             Requested size: 188.2024pt x 141.52773pt.
- [11] [12 <./Abrak/Ereszkedo1/F_2sz.png> <./Abrak/Ereszkedo1/Er36.png>] [13 <./
-Abrak/Egyeb/NMT1.PNG> <./Abrak/Egyeb/NMT2.PNG> <./Abrak/Egyeb/NMT3.PNG> <./Abra
-k/Egyeb/NMT4.PNG> <./Abrak/Egyeb/NMT5.PNG> <./Abrak/Lepesek/abra_lepes0.pdf> <.
-/Abrak/Lepesek/abra_lepes1.pdf> <./Abrak/Lepesek/abra_lepes2.pdf> <./Abrak/Lepe
-sek/abra_lepes3.pdf>]
-Chapter 2.
+ [12] [13 <./Abrak/Lepesek/abra_lepes0.pdf> <./Abrak/Lepesek/abra_lepes1.pdf> <
+./Abrak/Lepesek/abra_lepes2.pdf> <./Abrak/Lepesek/abra_lepes3.pdf>]
+2. fejezet.
 [14
 
 ]
-Chapter 3.
+3. fejezet.
 [15
 
 ]
@@ -1292,38 +1041,19 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 372.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-Overfull \hbox (0.43646pt too wide) in paragraph at lines 372--376
-[]\T1/cmr/m/n/12 A modul fe-la-data, hogy egységes mód-sz-ert biz-tosít-son a b
-e-meneti jelek kezeléséhez.
- []
-
-[16]
+) [16]
 
 LaTeX Warning: Reference `ekg konyv' on page 17 undefined on input line 377.
 
 
-Overfull \hbox (11.47678pt too wide) in paragraph at lines 378--379
-[]\T1/cmr/m/n/12 A \T1/cmtt/m/n/12 SigPrep \T1/cmr/m/n/12 os-ztály kon-struk-to
-rá-nak egyetlen fe-la-data, hogy a di-namikus memóriában
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 378--379
-\T1/cmr/m/n/12 likus hoz-záférhet®ség¶ füg-gvényt definiál.
+\T1/cmr/m/n/12 pub-li-kus hoz-zá-fér-he-t®-sé-g¶ függ-vényt de-fi-ni-ál.
  []
 
 
 Underfull \hbox (badness 1845) in paragraph at lines 378--379
 \T1/cmr/m/n/12 A \T1/cmtt/m/n/12 const Eigen::MatrixXd* getSignal()\T1/cmr/m/n/
-12 , il-letve a \T1/cmtt/m/n/12 const Eigen::MatrixXd*
- []
-
-
-Overfull \hbox (4.75891pt too wide) in paragraph at lines 384--385
-\T1/cmr/m/n/12 mod-ult az \T1/cmtt/m/n/12 /src/headers/EcgSigPrep.h\T1/cmr/m/n/
-12 , il-letve az \T1/cmtt/m/n/12 /src/EcgSigPrep.cpp \T1/cmr/m/n/12 ál-lományok
-
+12 , il-let-ve a \T1/cmtt/m/n/12 const Eigen::MatrixXd*
  []
 
 [17]
@@ -1342,8 +1072,8 @@ undefined on input line 397.
 
 
 Underfull \hbox (badness 1859) in paragraph at lines 398--399
-[]\T1/cmr/m/n/12 Az \T1/cmtt/m/n/12 EcgSigPrep \T1/cmr/m/n/12 os-ztály pub-liku
-s füg-gvényeként definiált \T1/cmtt/m/n/12 Eigen::MatrixXd
+[]\T1/cmr/m/n/12 Az \T1/cmtt/m/n/12 EcgSigPrep \T1/cmr/m/n/12 osz-tály pub-li-k
+us függ-vé-nye-ként de-fi-ni-ált \T1/cmtt/m/n/12 Eigen::MatrixXd
  []
 
 
@@ -1352,46 +1082,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 398--399
 trixXd*
  []
 
-
-Overfull \hbox (3.35246pt too wide) in paragraph at lines 398--399
-\T1/cmtt/m/n/12 alpha, Eigen::MatrixXd& sig) \T1/cmr/m/n/12 szig-natúrá-val el-
-lá-tott metó-dus felel a paraméterként
- []
-
-[19]
-Overfull \hbox (33.33202pt too wide) in paragraph at lines 413--419
-\T1/cmr/m/n/12 fel-használt füg-gvényrend-szer értékeinek kiszámítása. Mivel a 
-füg-gvényértékek meghatározása
- []
-
-[20]
-Overfull \hbox (14.21034pt too wide) in paragraph at lines 420--421
-\T1/cmr/m/n/12 méret¶ mátrixokra mu-tató pointer tí-pusú. Az ál-taluk mu-ta-tot
-t mátrixokat a tömörítésért
- []
-
-
-Overfull \hbox (12.80505pt too wide) in paragraph at lines 420--421
-\T1/cmr/m/n/12 Darboux számokat tar-tal-maz-zák. Az os-ztály nem ren-delkezik p
-ro-tected hoz-záférhet®ség¶
- []
-
-
+[19] [20]
 Overfull \hbox (3.0288pt too wide) in paragraph at lines 422--423
-[]\T1/cmr/m/n/12 A kon-struk-tor, il-letve a vir-tuális de-struk-tor im-ple-men
--tá-ciói a \T1/cmtt/m/n/12 /src/OrtFunSys.cpp
- []
-
-
-Overfull \hbox (8.79301pt too wide) in paragraph at lines 428--429
-\T1/cmr/m/n/12 áll. Az Her-mite os-ztály felel®s az Her-mite füg-gvények értéke
-inek kiszámításáért. További
- []
-
-
-Overfull \hbox (14.10803pt too wide) in paragraph at lines 428--429
-\T1/cmr/m/n/12 Cristoffel-Darboux számokat, valamint im-ple-men-táljon a pro-te
-cted elérhet®ség¶ adattag-
+[]\T1/cmr/m/n/12 A konst-ruk-tor, il-let-ve a vir-tu-á-lis dest-ruk-tor imp-le-
+men-tá-ci-ói a \T1/cmtt/m/n/12 /src/OrtFunSys.cpp
  []
 
 [21]
@@ -1402,15 +1096,10 @@ LaTeX Warning: Citation `Gautschi' on page 22 undefined on input line 434.
 LaTeX Warning: Reference `bevezet\IeC {\'e}s->hermite' on page 22 undefined on 
 input line 435.
 
-
-LaTeX Warning: Citation `kvadratúra formulás cikk' on page 22 undefined on inpu
-t line 437.
-
 [22]
-Overfull \hbox (22.11665pt too wide) in paragraph at lines 446--447
-\T1/cmr/m/n/12 ztá-lytól (az ál-tala fel-használt al-go-rit-mustól függetlenül)
- elvárható. Az els® a \T1/cmtt/m/n/12 compressBeat
- []
+
+LaTeX Warning: Citation `kvadratúra formulás cikk' on page 23 undefined on inpu
+t line 437.
 
 [23]
 
@@ -1424,14 +1113,8 @@ LaTeX Warning: Reference `bevezet\IeC {\'e}s->t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i
 
 
 Overfull \hbox (29.24266pt too wide) in paragraph at lines 455--456
-[]\T1/cmr/m/n/12 Az os-ztály négy pub-likus füg-gvén-nyel ren-delkezik. Az els®
- ezek közül az \T1/cmtt/m/n/12 OrtCompressed*
- []
-
-
-Overfull \hbox (23.93285pt too wide) in paragraph at lines 455--456
-\T1/cmr/m/n/12 adattagjában kerül-nek eltárolásra. A tran-s-zlá-ciós il-letve d
-i-latá-ciós együt-thatók kiszámítása
+[]\T1/cmr/m/n/12 Az osz-tály négy pub-li-kus függ-vénnyel ren-del-ke-zik. Az el
+-s® ezek kö-zül az \T1/cmtt/m/n/12 OrtCompressed*
  []
 
 
@@ -1439,118 +1122,108 @@ LaTeX Warning: Reference `A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj
 \IeC {\'a}r\IeC {\'a}s hat\IeC {\'e}konys\IeC {\'a}g\IeC {\'a}nak tesztel\IeC {
 \'e}se' on page 25 undefined on input line 458.
 
-
-Overfull \hbox (44.82098pt too wide) in paragraph at lines 458--459
-\T1/cmr/m/n/12 az utóbbi segít-ségével a füg-gvény helyreál-lítja a jelet. Ezt 
-követ®en az \T1/cmtt/m/n/12 OrtCompressed::getPRD
- []
-
-[25]
-Overfull \hbox (15.76044pt too wide) in paragraph at lines 469--470
-\T1/cmr/m/n/12 mod-ult az \T1/cmtt/m/n/12 /src/headers/OrtCompresser.h\T1/cmr/m
-/n/12 , és a \T1/cmtt/m/n/12 /src/OrtCompresser.cpp \T1/cmr/m/n/12 ál-lományok
- []
-
-[26]
+[25] [26]
 
 LaTeX Warning: Reference `Bevezet\IeC {\'e}s nelder mead' on page 27 undefined 
 on input line 470.
 
+[27]
 
-LaTeX Warning: Reference `f\IeC {\"u}ggel\IeC {\'e}kben' on page 27 undefined o
+LaTeX Warning: Reference `f\IeC {\"u}ggel\IeC {\'e}kben' on page 28 undefined o
 n input line 476.
 
-[27]
 
 LaTeX Warning: Reference `bevezet\IeC {\'e}s, mp' on page 28 undefined on input
  line 516.
 
 
-Overfull \hbox (16.81654pt too wide) in paragraph at lines 520--521
-\T1/cmr/m/n/12 deklarált \T1/cmtt/m/n/12 MatchingPursuit \T1/cmr/m/n/12 os-ztál
-y alkotja. Az os-ztá-ly-nak három privát hoz-záférhet®ség¶
+Overfull \hbox (9.61462pt too wide) in paragraph at lines 520--521
+\T1/cmtt/m/n/12 std::map<std::string, std::string> \T1/cmr/m/n/12 tí-pu-sú, \T1
+/cmtt/m/n/12 files_dir \T1/cmr/m/n/12 azo-no-sí-tó-val el-lá-tott asszo-
+ []
+
+[28]
+
+LaTeX Warning: Reference `mp r\IeC {\'e}sz a bevezet\IeC {\'e}sben' on page 29 
+undefined on input line 524.
+
+
+LaTeX Warning: Reference `tesztel\IeC {\'e}s, PRD' on page 29 undefined on inpu
+t line 529.
+
+
+Overfull \hbox (2.64621pt too wide) in paragraph at lines 521--531
+\T1/cmr/m/n/12 kí-vül csu-pán egy pub-li-kus hoz-zá-fér-he-t®-sé-g¶ függ-vényt 
+de-fi-ni-ál, amely \T1/cmtt/m/n/12 OrtCompressed*
  []
 
 
-Overfull \hbox (47.36288pt too wide) in paragraph at lines 520--521
-\T1/cmr/m/n/12 fel-dol-go-zandó be-meneti jel kezeléséért felel. A két további 
-adattag egy \T1/cmtt/m/n/12 std::map<std::string,
+LaTeX Warning: Reference `optimizer fejezet' on page 29 undefined on input line
+ 533.
+
+[29]
+
+LaTeX Warning: Reference `tesztel\IeC {\H o}s r\IeC {\'e}sz, PRD defin\IeC {\'\
+i }ci\IeC {\'o}' on page 30 undefined on input line 535.
+
+
+LaTeX Warning: Reference `ecgsigprep fejezet' on page 30 undefined on input lin
+e 536.
+
+
+Overfull \hbox (7.26189pt too wide) in paragraph at lines 536--537
+\T1/cmr/m/n/12 Az \T1/cmtt/m/n/12 OC.compressBeat \T1/cmr/m/n/12 me-tó-dus a ki
+-szá-mí-tott Fo-u-ri-er együtt-ha-tó-kat egy \T1/cmtt/m/n/12 OrtCompressed
  []
 
 
-Overfull \hbox (89.51653pt too wide) in paragraph at lines 520--521
-\T1/cmtt/m/n/12 std::string> \T1/cmr/m/n/12 tí-pusú, \T1/cmtt/m/n/12 files_dir 
-\T1/cmr/m/n/12 azonosító-val el-lá-tott as-s-zo-ci-atív tömb, és egy \T1/cmtt/m
-/n/12 std::function<double
+Underfull \hbox (badness 10000) in paragraph at lines 536--537
+\T1/cmr/m/n/12 fe-lü-let szá-má-ra az ani-má-ci-ós ada-tok biz-to-sí-tá-sa szük
+-sé-ges, a
  []
 
-
-Overfull \hbox (1.42497pt too wide) in paragraph at lines 520--521
-\T1/cmtt/m/n/12 (Coord &)> \T1/cmr/m/n/12 tí-pusú, \T1/cmtt/m/n/12 costfun \T1/
-cmr/m/n/12 azonosítójú c++ 11 sz-ab-vány-ban bevezetett "füg-gvénytí-
- []
-
-
-Overfull \hbox (76.66867pt too wide) in paragraph at lines 520--521
-\T1/cmr/m/n/12 ciós eljárás. Az os-ztály egyetlen privát hoz-záférhet®ség¶ \T1/
-cmtt/m/n/12 void set_costfun(std::function<double
- []
-
-
-Overfull \hbox (2.64621pt too wide) in paragraph at lines 521--522
-\T1/cmr/m/n/12 kívül csupán egy pub-likus hoz-záférhet®ség¶ füg-gvényt definiál
-, amely \T1/cmtt/m/n/12 OrtCompressed*
- []
-
-[28] [29]
-Chapter 4.
-[30
+[30] [31]
+4. fejezet.
+[32
 
 ] (./documentation.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 3598 strings out of 495020
- 48578 string characters out of 6181324
- 104277 words of memory out of 5000000
- 6632 multiletter control sequences out of 15000+600000
+ 5135 strings out of 493029
+ 73898 string characters out of 6136234
+ 147606 words of memory out of 5000000
+ 8474 multiletter control sequences out of 15000+600000
  33476 words of font info for 103 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 38i,16n,24p,2459b,282s stack positions out of 5000i,500n,10000p,200000b,80000s
- </afs/inf.elte.hu/user/d/do/dotuaai/.texmf-var/fonts/pk/ljfour/jknappen/ec/e
-ctt1200.600pk> </afs/inf.elte.hu/user/d/do/dotuaai/.texmf-var/fonts/pk/ljfour/j
-knappen/ec/ecrm1000.600pk> </afs/inf.elte.hu/user/d/do/dotuaai/.texmf-var/fonts
-/pk/ljfour/jknappen/ec/ecbx0800.600pk> </afs/inf.elte.hu/user/d/do/dotuaai/.tex
-mf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </afs/inf.elte.hu/user/d/do/
-dotuaai/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </afs/inf.elte.h
-u/user/d/do/dotuaai/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </af
-s/inf.elte.hu/user/d/do/dotuaai/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200
-.600pk> </afs/inf.elte.hu/user/d/do/dotuaai/.texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecbx2488.600pk> </afs/inf.elte.hu/user/d/do/dotuaai/.texmf-var/fonts/pk/ljf
-our/jknappen/ec/ecrm1200.600pk> </afs/inf.elte.hu/user/d/do/dotuaai/.texmf-var/
-fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </afs/inf.elte.hu/user/d/do/dotuaai
-/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk> </afs/inf.elte.hu/user/
-d/do/dotuaai/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1440.600pk></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/euler/euex10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/euler/euex8.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/euler/eurb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/euler/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/symbols/msbm10.pfb>
-Output written on documentation.pdf (32 pages, 394859 bytes).
+ 1141 hyphenation exceptions out of 8191
+ 38i,16n,27p,2459b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/euler/euex10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/euler/euex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/euler/eurb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/euler/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/s
+ymbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx0800.pfb></
+usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/font
+s/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-su
+per/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sfcc1440.pfb></usr/share/texmf/fonts
+/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-sup
+er/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></us
+r/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/
+type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-supe
+r/sftt1200.pfb>
+Output written on documentation.pdf (34 pages, 493957 bytes).
 PDF statistics:
- 682 PDF objects out of 1000 (max. 8388607)
- 179 compressed objects within 2 object streams
+ 256 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  120 words of extra memory for PDF output out of 10000 (max. 10000000)
 
