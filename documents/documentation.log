@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  2 APR 2017 19:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  2 APR 2017 21:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1134,10 +1134,10 @@ n input line 476.
 
 
 LaTeX Warning: Reference `bevezet\IeC {\'e}s, mp' on page 28 undefined on input
- line 516.
+ line 518.
 
 
-Overfull \hbox (9.61462pt too wide) in paragraph at lines 520--521
+Overfull \hbox (9.61462pt too wide) in paragraph at lines 526--527
 \T1/cmtt/m/n/12 std::map<std::string, std::string> \T1/cmr/m/n/12 tí-pu-sú, \T1
 /cmtt/m/n/12 files_dir \T1/cmr/m/n/12 azo-no-sí-tó-val el-lá-tott asszo-
  []
@@ -1145,39 +1145,39 @@ Overfull \hbox (9.61462pt too wide) in paragraph at lines 520--521
 [28]
 
 LaTeX Warning: Reference `mp r\IeC {\'e}sz a bevezet\IeC {\'e}sben' on page 29 
-undefined on input line 524.
+undefined on input line 530.
 
 
 LaTeX Warning: Reference `tesztel\IeC {\'e}s, PRD' on page 29 undefined on inpu
-t line 529.
+t line 535.
 
 
-Overfull \hbox (2.64621pt too wide) in paragraph at lines 521--531
+Overfull \hbox (2.64621pt too wide) in paragraph at lines 527--537
 \T1/cmr/m/n/12 kí-vül csu-pán egy pub-li-kus hoz-zá-fér-he-t®-sé-g¶ függ-vényt 
 de-fi-ni-ál, amely \T1/cmtt/m/n/12 OrtCompressed*
  []
 
-
-LaTeX Warning: Reference `optimizer fejezet' on page 29 undefined on input line
- 533.
-
 [29]
 
+LaTeX Warning: Reference `optimizer fejezet' on page 30 undefined on input line
+ 539.
+
+
 LaTeX Warning: Reference `tesztel\IeC {\H o}s r\IeC {\'e}sz, PRD defin\IeC {\'\
-i }ci\IeC {\'o}' on page 30 undefined on input line 535.
+i }ci\IeC {\'o}' on page 30 undefined on input line 541.
 
 
 LaTeX Warning: Reference `ecgsigprep fejezet' on page 30 undefined on input lin
-e 536.
+e 542.
 
 
-Overfull \hbox (7.26189pt too wide) in paragraph at lines 536--537
+Overfull \hbox (7.26189pt too wide) in paragraph at lines 542--543
 \T1/cmr/m/n/12 Az \T1/cmtt/m/n/12 OC.compressBeat \T1/cmr/m/n/12 me-tó-dus a ki
 -szá-mí-tott Fo-u-ri-er együtt-ha-tó-kat egy \T1/cmtt/m/n/12 OrtCompressed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--537
+Underfull \hbox (badness 10000) in paragraph at lines 542--543
 \T1/cmr/m/n/12 fe-lü-let szá-má-ra az ani-má-ci-ós ada-tok biz-to-sí-tá-sa szük
 -sé-ges, a
  []
@@ -1220,7 +1220,7 @@ er/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></us
 r/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/
 type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-supe
 r/sftt1200.pfb>
-Output written on documentation.pdf (34 pages, 493957 bytes).
+Output written on documentation.pdf (34 pages, 494106 bytes).
 PDF statistics:
  256 PDF objects out of 1000 (max. 8388607)
  172 compressed objects within 2 object streams
