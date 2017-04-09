@@ -27,3 +27,14 @@
 \select@language {magyar} \contentsline {section}{\numberline {3.5}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s hat\IeC {\'e}konys\IeC {\'a}g\IeC {\'a}nak tesztel\IeC {\'e}se}{36}
 \select@language {magyar} \contentsline {section}{\numberline {3.6}Tapasztalatok \IeC {\'e}s kitekint\IeC {\'e}s}{36}
 \select@language {magyar} \contentsline {chapter}{\numberline {4}F\IeC {\"u}ggel\IeC {\'e}k}{37}
+\select@language {magyar} \contentsline {section}{\numberline {4.1}Hermite polinomok, Hermite f\"uggv\'enyek}{37}
+\select@language {magyar} \contentsline {subsubsection}{Stirling formula}{37}
+\select@language {magyar} \contentsline {subsubsection}{\itshape Rodrigues formula}{37}
+\select@language {magyar} \contentsline {subsubsection}{\itshape Ortogonalit\'as, norm\'alt renszer}{37}
+\select@language {magyar} \contentsline {subsubsection}{\itshape Rekurzi\'ok}{38}
+\select@language {magyar} \contentsline {subsubsection}{\itshape F\"uggv\'eny\'ert\'ekek a $0$ helyen}{38}
+\select@language {magyar} \contentsline {subsubsection}{\itshape Kvadrat\'ura formula}{38}
+\select@language {magyar} \contentsline {section}{\numberline {4.2}Approxim\'aci\'o afffin transzform\'altakkal}{38}
+\select@language {magyar} \contentsline {subsubsection}{\itshape Alt\'ert\H ol vett t\'avols\'ag}{39}
+\select@language {magyar} \contentsline {subsubsection}{\itshape Becsl\'esek az $F_n$ f\"uggv\'enyre}{39}
+\select@language {magyar} \contentsline {chapter}{\numberline {5}Algoritmusok}{42}
