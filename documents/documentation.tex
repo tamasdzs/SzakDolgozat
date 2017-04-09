@@ -23,8 +23,8 @@
 \usepackage{amsmath}
 \usepackage{graphics}
 \usepackage{algorithm} 
-%\usepackage{algpseudocode} %ezzel összeakadhat \usepackage{algorithmic} 
-\usepackage{algorithmic} 
+\usepackage{algpseudocode} %ezzel összeakadhat \usepackage{algorithmic} 
+%\usepackage{algorithmic} 
 \usepackage{rotating}
 \usepackage{bigstrut}
 \usepackage{subfigure}
@@ -547,9 +547,10 @@ Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölv
 \par A NelderMead osztály rendelkezik egy protected hozzáférhetőségű, \texttt{std::vector} \texttt{<std::multimap<double, Coord>::reverse\_iterator>} típusú értéket visszaadó \linebreak \texttt{set\_pointers} azonosítójú függvénnyel. Az algoritmus által használt szimplex pointjait a \texttt{population} adattag tárolja, azonban az elérésük a \texttt{set\_pointers} függvény által visszaadott \texttt{std::vector} konténeren keresztül történik. Ez azért indokolt, mert ezzel a módszerrel a vektor első tagján keresztül elérhető a legkisebb hibájú, utolsó tagján keresztül pedig a legnagyobb hibájú pont, anélkül, hogy a hiba mértékének pontos ismerete szükséges lenne. Ennek eredménye képpen az aktuális szimplex egyes pontjai könnyen elérhetővé, és manipulálhatóvá válnak. 
 
 \par A NelderMead osztály konstruktora először ellenőrzi, hogy a bementként kapott \texttt{Coord} típusú objektumokat tartalmazó vektor mérete megegyezik-e hárommal. Ez azért fontos, mert a Nelder-Mead algoritmus egy hárompontú szimplex segítségével végzi az optimalizációt. Ezt követően feltölti a \texttt{population} adattagot a bement koordinátáival és "végtelen", pontosabban \texttt{std::numeric\_limits<double>::max()} hibát rendel az egyes értékekhez. A NelderMead osztály default destruktort használ. 
-\par Az osztálynak egyetlen publikus hozzáférhetőségű függvénye van. Ez az Optimizer osztálytól megörökölt \texttt{Optimize} azonosítójú függvény, amely egy \texttt{Coord} típusú objektumot ad vissza. A program jelenleg két dimenziós koordináták (dilatáció, és transzláció párok) feldolgozására használja a NelderMead modult, azonban mind a NelderMead osztály, mind a Coord struktúra felépítése lehetővé teszi az ennél több dimenziós pontokon történő keresést. A NelderMead osztály \texttt{Optimize} függvény implementációja az alábbi, a \ref{függelékben} is megtalálható algoritmus implementációja. 
+\par Az osztálynak egyetlen publikus hozzáférhetőségű függvénye van. Ez az Optimizer osztálytól megörökölt \texttt{Optimize} azonosítójú függvény, amely egy \texttt{Coord} típusú objektumot ad vissza. A program jelenleg két dimenziós koordináták (dilatáció, és transzláció párok) feldolgozására használja a NelderMead modult, azonban mind a NelderMead osztály, mind a Coord struktúra felépítése lehetővé teszi az ennél több dimenziós pontokon történő keresést. A NelderMead osztály \texttt{Optimize} függvény implementációja az alábbi, a \ref{függelékben} is megtalálható algoritmus pszeudokódja. 
 
-\iffalse
+\newpage
+
 \begin{algorithm}[htb!] 
 \begin{algorithmic}[1]
 	\Function{Nelder-Mead}{} 
@@ -581,7 +582,8 @@ Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölv
 \caption{Nelder-Mead}
 \label{alg:NM}
 \end{algorithm}
-\fi
+
+\newpage
 
 \subsection{A MatchingPursuit modul implementációja}
 
