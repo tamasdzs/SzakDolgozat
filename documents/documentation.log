@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  9 APR 2017 17:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  9 APR 2017 19:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1202,9 +1202,9 @@ amely a http://eigen.tuxfamily.org
 LaTeX Warning: Reference `a dolgozat c\IeC {\'e}lja' on page 33 undefined on in
 put line 629.
 
-[33] [34]
+[33] [34] [35]
 4. fejezet.
-[35
+[36
 
 ] (./documentation.aux)
 
@@ -1240,10 +1240,10 @@ er/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></us
 r/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/
 type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-supe
 r/sftt1200.pfb>
-Output written on documentation.pdf (37 pages, 500412 bytes).
+Output written on documentation.pdf (38 pages, 502842 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
+ 271 PDF objects out of 1000 (max. 8388607)
+ 183 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  120 words of extra memory for PDF output out of 10000 (max. 10000000)
 

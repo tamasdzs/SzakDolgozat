@@ -631,9 +631,9 @@ A megvalósított programcsomag legfontosabb céljaként \ref{a dolgozat célja}
 
 \subsection*{A Spline.h állomány}
 
-
-
-\subsection*{A google graph könyvtár}
+Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölve, a Spline.h állomány a \texttt{/src/headers/Spline.h} útvonalon található. Az állomány egy absztrakt harmadfokú spline modellt implementál. Az állományt Tino Kluge hozta létre, illetve tartja karban. A spline modellhez és az implementációhoz tartozó dokumentáció az alábbi weboldalon érhető el: http://kluge.in-chemnitz.de/opensource/spline/. A Spline.h előnyei közé tartozik, hogy nincsenek külső dependenciái, az \texttt{\#include "Spline.h"} direktíva alkalmazása után az összes funkció elérhetővé válik. Ezen kívül az állomány használata egyszerű és gyors.
+\par A tömörítő eljárás implementációja során egyetlen helyen szükséges spline interpoláció alkalmazása. Az eljárás robosztusságának a spline interpoláció csupán egy igen kis részét teszi ki. Ennek hatékony és pontos implementációja azonban önmagában is nagy feladatot jelenthet. Mindez indokolta egy külső spline modellt tartalmazó állomány igénybe vételét. 
+\par Az EKG tömörítés során spline interpolációra a bemeneti jel eltolásánál, azaz az aktuális transzlációs paraméter alkalmazásánál kerül sor. Ezt a műveletet az EcgSigPrep moduloban található \texttt{EcgSigPrep} osztály \texttt{setDilatTrans} függvénye végzi. Miután a jel értékeit az \texttt{std::rotate} függvény segítségével megfelelő számú pozícióval eltolta az eljárás, szükségessé válik az eltolt jel értékeinek kiszámítása a dilatált intervallum fölött. Ezen értékek kiszámítása spline interpolációval történik.
 
 \section{A felhasználói felület tesztelése}
 
