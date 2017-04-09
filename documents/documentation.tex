@@ -626,9 +626,12 @@ Az Eigen könyvtár egy C++ sablon könyvtár amelyet lineáris algebrai feladat
 
 \subsection*{A wfdb könyvtár}
 
-A megvalósított programcsomag legfontosabb céljaként \ref{a dolgozat célja} az MIT-BIH PhysioBank adatbázisban található EKG mérések tömörítése. A wfdb könyvtár az adatbázisban található mérések és a hozzájuk tartozó orvosi jelölések (annotációk) kezeléséhez biztosít függvényeket. A könyvtár 
+A megvalósított programcsomag legfontosabb céljaként \ref{a dolgozat célja} az MIT-BIH PhysioBank adatbázisban található EKG mérések tömörítése. A wfdb (WaveForm DataBase) könyvtár az adatbázisban található mérések és a hozzájuk tartozó orvosi jelölések (annotációk) kezeléséhez biztosít függvényeket. Egészen pontosan a könyvtár a PhyisioBank szerverein található mérések eléréséhez és feldolgozásához biztosít egy API felüleletet. A könyvtárban található függvények C illetve FortTran nyelveken érhetők el, de bizonyos funkcionalitások elérhetőek a népszerű MATLAB illetve python nyelveken is. A könyvtár fejlesztői interfészeket biztosítanak számos más programozási nyelv felé is, így gyakorlatilag bármely népszerű nyelvet felhasználva lehetőség nyílik az adatbázisban található jelek feldolgozására. Mivel a könyvtár lehetővé teszi a PhysioBank adatbázisban található mérések közvetlen (http, illetve FTP protokollokat felhasználó) elérését, ezért használatához szükséges a libcurl könyvtár feltelepítése is. A libcurl könyvtár képes az említett webes tartalmak böngésző nélküli eléréséhez. A könyvtár teljes dokumentációja a https://www.physionet.org/physiotools/wpg/wpg.pdf webcímen érhető el. 
+\par A bemutatott tömörítő eljárás jelenlegi implementációja az EcgSigPrep modulban használja fel a wfdb könyvtár szolgáltatásait. A modulban található \texttt{EcgSigPrep} osztály konstruktora nagy mértékben támaszkodik a könyvtár szolgáltatásaira annak érdekében, hogy a bemeneti paraméterül kapott mérés azonosítóhoz tartozó minták feldolgozásakor. Szintén a könyvtár függvényein keresztül képes az osztály az egyes szívütések különválasztására, mivel az ehhez szükséges R csúcs pozíciókat az eredeti méréshez tartozó annotációkból szűri ki. Az említett pozíciókat egy szintén a wfdb könyvtárban definiált típus a \texttt{WFDB\_Annotation} segítségével tárolja az osztály. A wfdb könyvtár szolgáltatásait az \texttt{EcgSigPrep} osztály konstruktorán kívül a publikus hozzáférhetőségű \texttt{getNextSegment} függvénye is igénybe veszi a soron következő szívütés széleinek meghatározásához. 
 
 \subsection*{A Spline.h állomány}
+
+
 
 \subsection*{A google graph könyvtár}
 
