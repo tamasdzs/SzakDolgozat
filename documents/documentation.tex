@@ -647,9 +647,9 @@ Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölv
 
 \chapter{Függelék}
 
-Ez a fejezet a felhaszn\'alt matematikai eszk\"oz\"ok \"osszefoglal\'as\'at tartalmazza az \cite{szego, szoke} k\"onyveket alapul v\'eve.
+A Függelék fejezet első része a felhasznát matematikai eszközök összefoglalását tartalmazza az \cite{szego, szoke} könyveket alapul véve. A matematikai eszközök bemutatásán kívül szintén ebben a fejezetben található
 
-\section {Hermite  polinomok, Hermite f\"uggv\'enyek}
+\section {Hermite  polinomok, Hermite függvények}
 \subsubsection{Stirling  formula}
 \begin{equation*}
 n!\thicksim \sqrt {2\pi n}\Big(\frac ne\Big)^n,  \binom {2n} n\thicksim \frac {2^{2n}}{\sqrt{\pi n}}\ \ (
@@ -663,7 +663,7 @@ n\to\infty)
 \end{split}
 \end{equation}
 
-\subsubsection{\it  Ortogonalit\'as, norm\'alt renszer}
+\subsubsection{\it  Ortogonalitás, normált rendszer}
 \begin{equation}
 \begin{split}
 &\int_{-\infty}^\infty e^{-x^2}H_n(x)H_m(x)\, dx=\pi^{1/2}2^n n!\, \delta_{mn}\ \ (m,n\in\Bbb N)\\
@@ -673,7 +673,7 @@ n\to\infty)
 \end{split}
 \end{equation}
 
-\subsubsection{\it  Rekurzi\'ok}
+\subsubsection{\it  Rekurziók}
 \begin{equation}
 \begin{split}
 &H_n(x)=2xH_{n-1}(x)-2(n-1)H_{n-2}(x)\ (n\ge 2)\\
@@ -686,7 +686,7 @@ n\to\infty)
 \end{split}
 \end{equation}
 
-\subsubsection{\it  F\"uggv\'eny\'ert\'ekek a $0$ helyen}
+\subsubsection{\it  Függvényértékek a $0$ helyen}
 \begin{equation}
 \begin{split}
 &H_{2m+1}(0)=0,\ H_{2m}(0)=(-1)^m\frac{(2m)!}{m!}\\
@@ -696,7 +696,7 @@ n\to\infty)
 \end{split}
 \end{equation}
 
-\subsubsection{\it Kvadrat\'ura formula}
+\subsubsection{\it Kvadratúra formula}
 $$
 \int_{-\infty}^\infty e^{-x^2}f(x)\, dx\backsimeq \sum_{i=1}^n \lambda_{in}f(x_{in})
 $$
@@ -705,31 +705,31 @@ $$
 H_n(x_{in})=0,\ \lambda_{in}=\frac{\pi^{1/2}2^{n+1}n!}{[H'_n(x_{in}]^2}\ \ \  (n=1,2,\cdots, 1\le i\le n)
 $$
 
-\section{Approxim\'aci\'o afffin transzform\'altakkal}
+\section{Approximáció afffin transzformáltakkal}
 \label{app:aprx}
 
-Jel\"olj\"uk az $\Bbb R$ sz\'amegyenesen szakaszonk\'ent folytonos, n\'egyzetesen integr\'alhat\'o f\"uggv\'enyek ter\'et $\mathcal F$-fel \'es vezess\"uk be az $\mathcal F$ t\'eren az
+Jelöljük az $\Bbb R$ számegyenesen szakaszonként folytonos, négyzetesen integrálható függvények terét $\mathcal F$-fel és vezessük be az $\mathcal F$ téren az
 $$
 \langle f,g\rangle:=\int_{-\infty}^\infty  f(x)g(x)\,dx
 $$
-skal\'aris szorzatot.
+skaláris szorzatot.
 
 
-\subsubsection{\it  Alt\'ert\H ol vett t\'avols\'ag}
+\subsubsection{\it  Altértől vett távolság}
 
-A  $\phi_n\in \mathcal F$ $(n\in\Bbb N)$ f\"uggv\'enyrendszer  ortonorm\'alt, ha
+A  $\phi_n\in \mathcal F$ $(n\in\Bbb N)$ függvényrendszer  ortonormált, ha
 $$
 \langle \phi_n,\phi_m\rangle:=\delta_{mn}\ \ (m,n\in\Bbb N).
 $$
-Ebb\H ol a rendszerb\H ol az
+Ebb\H ol a rendszerből az
 $$
 \ell(x)=\ell(x,\lambda, a)=\lambda x+a\ \ (x,a\in\Bbb R,\lambda>0)
 $$
-affin transzform\'aci\'oval sz\'armaztatott
+affin transzformációval származtatott
 $$
 \phi_n^{a,\lambda}(x):=\sqrt \lambda \phi_n(\lambda x+a)=\sqrt \lambda \phi_n(\ell(x)) \ (x,a\in\Bbb R,\lambda>0, n\in\Bbb N)
 $$
-rendszer szint\'en ortonorm\'alt. Val\'oban az $u=\ell(x)=\lambda x+a, dx=du/\lambda $ helyettes\'\i t\'essel
+rendszer szintén ortonormált. Valóban az $u=\ell(x)=\lambda x+a, dx=du/\lambda $ helyettesítéssel
 \begin{equation}
 \begin{split}
 &\langle \phi_n^{a,\lambda},\phi_m^{a,\lambda}\rangle:=
@@ -738,28 +738,28 @@ rendszer szint\'en ortonorm\'alt. Val\'oban az $u=\ell(x)=\lambda x+a, dx=du/\la
 \delta_{mn}\ \ (m,n\in\Bbb N).
 \end{split}
 \end{equation}
-Jel\"olje  $X_n^{a,\lambda}$ a $\phi_0^{a,\lambda},\cdots,\phi_n^{a,\lambda}$ f\"uggv\'enyek \'altal kifesz\'\i tett alteret. Adott $f\in \mathcal F$ fuggv\'enyhez a legk\"ozelebb es\H o $X_n^{a,\lambda}$-beli f\"uggv\'enyt az
+Jelölje  $X_n^{a,\lambda}$ a $\phi_0^{a,\lambda},\cdots,\phi_n^{a,\lambda}$ függvények által kifeszített alteret. Adott $f\in \mathcal F$ függvényhez a legközelebb eső $X_n^{a,\lambda}$-beli függvényt az
 $$
 S_n^{a,\lambda}f:=\sum_{k=0}^n \langle f,\phi_n^{a,\lambda}\rangle\phi_n^{a,\lambda}
 $$
-Fourier-projekci\'oval, az elt\'er\'es norm\'aj\'anak a  n\'egyzete  a
+Fourier-projekcióval, az eltérés normájának a  négyzete  a
 $$
 D_n^2(a,\lambda):=\|f-S_n^{a,\lambda}f\|^2=\langle f,f\rangle-\sum_{k=0}^n |\langle f,\phi_k^{a,\lambda}\rangle|^2
 $$
-f\"uggv\'ennyel adhat\'o meg. A $D_n(a,\lambda)$ minimum\'anak meghat\'aroz\'asa ekvivalens az
+függvénnyel adható meg. A $D_n(a,\lambda)$ minimumának meghatározása ekvivalens az
 $$
 F_n(a,\lambda):=\sum_{k=0}^n |\langle f,\phi_k^{a,\lambda}\rangle|^2\ \
 ((a,\lambda)\in T:=\{(p,q)\in\Bbb R^2:p\in\Bbb R, q>0\}
 $$
-f\"uggv\'eny maximum\'anak meghat\'aroz\'as\'aval.
+függvény maximumának meghatározásával.
 
-\subsubsection{\it  Becsl\'esek az $F_n$ f\"uggv\'enyre}
+\subsubsection{\it  Becslések az $F_n$ függvényre}
 
- A tov\'abbiakban a
+ A továbbiakban a
  $$
  \phi_n(x)=\Phi_n(x)=h_n(x)e^{-x^2/2}\ \ (x\in\Bbb R, n\in\Bbb N)
  $$
- norm\'alt Hermite-f\"uggv\'enyeket v\'alasztjuk ortonorm\'alt rendszernek. Ekkor
+ normált Hermite-függvényeket választjuk ortonormált rendszernek. Ekkor
  \begin{equation}
  \begin{split}
  &|\Phi_n(x)|\le M_n e^{-x^2/4}\le M_n, \ |\Phi_n'(x)|\le N_n e^{-x^2/4}\le N_n\ (x\in\Bbb R, n\in\Bbb N)\\
@@ -767,22 +767,22 @@ f\"uggv\'eny maximum\'anak meghat\'aroz\'as\'aval.
  &\int_{-\infty}^\infty|\Phi_n(x)|\, dx\le M_n\int_{-\infty}^\infty e^{-x^2/4}\, dx<4M_n
  \end{split}
  \end{equation}
- Ezeket felhaszn\'alva becsl\'eseket adunk az
+ Ezeket felhasználva becsléseket adunk az
  $$
  A_k(a,\lambda):=\langle f,\phi_k^{a,\lambda}\rangle=\sqrt{\lambda}\int_{-\infty}^\infty f(x)\phi_k(\lambda x+a)\, dx=\frac 1{\sqrt{\lambda}}\int_{-\infty}^\infty f((u-a)/\lambda)\phi_k(u)\, du
  $$
- Fourier-egy\"utthat\'okra. A tov\'abbiakban kompakt tart\'oj\'u, korl\'atos f\"uggv\'enyekb\H ol indulunk ki. Nem jelenti az \'altal\'anoss\'ag megszor\'\i t\'as\'at ha  feltessz\"uk, hogy
+ Fourier-együtthatókra. A továbbiakban kompakt tartójú, korlátos függvényekből indulunk ki. Nem jelenti az általánosság megszorítását ha  feltesszük, hogy
  $$
  f(x)=0,\ \text{ha}\ |x|\ge 1,\ \ |f(x)|\le 1 \ (x\in\Bbb R).
  $$
- A param\'eteres integr\'alokra vonatkoz\'o t\'etelb\H ol  k\"ovetkezik, hogy   az
+ A paraméteres integrálokra vonatkozó tételből  következik, hogy   az
  $$
  F_n(a,\lambda):=\sum_{k=0}^n|A_k(a,\lambda)|^2\ \ \  ((a,\lambda)\in T>0)
  $$
- f\"uggv\'eny folytonosan  differenci\'alhat\'o. Megmutatjuk, hogy az $F_n:T\to [0,\infty)$
- folytonos f\"uggv\'enynek van maximuma a $T$ (nem kompakt) halmazon.
+ függvény folytonosan  differenciálható. Megmutatjuk, hogy az $F_n:T\to [0,\infty)$
+ folytonos függvénynek van maximuma a $T$ (nem kompakt) halmazon.
 
- A fenti egyenl\H otlens\'egekb\H ol k\"ovetkezik, hogy
+ A fenti egyenlőtlenségekből következik, hogy
  \begin{equation}
  \begin{split}
  &|A_k(\lambda,a)|\le \sqrt{\lambda} M_k\int_{-\infty}^\infty |f(x)|\, dx\le 2M_k\sqrt{\lambda}\ \ (\lambda\le 1)\\
@@ -790,7 +790,7 @@ f\"uggv\'eny maximum\'anak meghat\'aroz\'as\'aval.
  \frac {4M_k}{\sqrt{\lambda}}\ (\lambda\ge 1),
  \end{split}
  \end{equation}
- tov\'abb\'a $\lambda\ge 1,\ a\ge 2\lambda $ eset\'en
+ továbbá $\lambda\ge 1,\ a\ge 2\lambda $ eset\'en
  \begin{equation}
  \begin{split}
  &|A_k(\lambda,a)|\le \frac 1{\sqrt{\lambda}}\int_{a-\lambda}^{a+\lambda}|\Phi_k(u)|\, du
@@ -800,18 +800,18 @@ f\"uggv\'eny maximum\'anak meghat\'aroz\'as\'aval.
  2 M_k\sqrt{\lambda} e^{-{\lambda^2}/4}<\frac {8M_k}{\sqrt{\lambda}}
 \end{split}
 \end{equation}
-Hasonl\'oan egyenl\H otlens\'eget kapunk az $a<-2\lambda$ esetben. Innen k\"ovetkezik, hogy az
+Hasonlóan egyenlőtlenséget kapunk az $a<-2\lambda$ esetben. Innen következik, hogy az
 $$
 T_s:=\{(p,q): -2s\le p\le 2s, 1/s\leq p \le s\}
 $$
-t\'eglalapon k\'\i v\"ul  \'erv\'enyes
+téglalapon kívüul  érvényes
 $$
 \sup_{(a,\lambda) \notin T_s}|A_k(a,\lambda)|\le \frac {8M_k}{\sqrt s}\ \  (s>1)
 $$
-becsl\'es. Ennek alapj\'an nyilv\'anval\'o, hogy a $F_n$  f\"uggv\'enynek l\'etezik a maximuma a $T$ t\'eglelapon.
+becslés. Ennek alapján nyilvánvaló, hogy a $F_n$  függvénynek létezik a maximuma a $T$ téglelapon.
 
-
-C\'elunk az
+\iffalse
+Célunk az
  maximum meghat\'aroz\'asa a leggyorsabb ereszked\'es elve alapj\'an. Bevezetve az $s(u)=\ell^{-1}(u)=(u-a)/\lambda$ jel\"ol\'est, a  param\'eteres integr\'al differenci\'al\'asi szab\'alya alapj\'an  azt kapjuk, hogy
 \begin{equation}
 \begin{split}
@@ -819,6 +819,8 @@ C\'elunk az
  &\frac \partial {\partial \lambda}A_k(a,\lambda)=\lambda^{1/2} \int_{-\infty}^\infty f(x)x\phi_k'(\ell(x))\, dx+\frac 12\lambda^{-1/2}\int_{-\infty}^\infty f(x)\phi_k(\ell(x))
  \end{split}
  \end{equation}
+
+
 
  A parci\'alis deriv\'altak a k\"ovetkez\H o h\'arom sorozattal fejezehet\H ok ki:
  \begin{equation}
@@ -838,8 +840,9 @@ Nevezetesen
 \end{split}
 \end{equation}
 
-\chapter{Algoritmusok}
-\label{chp:alg}
+\fi
+
+\section{Algoritmusok}
 %\section{PSO pszeudok\'od}
 \begin{algorithm}[htp] 
 \begin{algorithmic}[1]
