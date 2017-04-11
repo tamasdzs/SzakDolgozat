@@ -647,7 +647,7 @@ Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölv
 
 \chapter{Függelék}
 
-A Függelék fejezet első része a felhasznát matematikai eszközök összefoglalását tartalmazza az \cite{szego, szoke} könyveket alapul véve. A matematikai eszközök bemutatásán kívül szintén ebben a fejezetben található
+A Függelék fejezet első része a felhasznát matematikai eszközök összefoglalását tartalmazza az \cite{szego, szoke} könyveket alapul véve. A matematikai eszközök bemutatásán kívül szintén ebben a fejezetben található a \ref{bevezetes transz dilat} fejezetben kimondott állítás bizonyítása. A Függelék fejezet végén a Nelder Mead optimalizációs algoritmus pszeudo kódja kerül ismertetésre. 
 
 \section {Hermite  polinomok, Hermite függvények}
 \subsubsection{Stirling  formula}
@@ -708,11 +708,11 @@ $$
 \section{Approximáció afffin transzformáltakkal}
 \label{app:aprx}
 
-Jelöljük az $\Bbb R$ számegyenesen szakaszonként folytonos, négyzetesen integrálható függvények terét $\mathcal F$-fel és vezessük be az $\mathcal F$ téren az
+Jelölje a $\Bbb R$ számegyenesen szakaszonként folytonos, négyzetesen integrálható függvények terét $\mathcal F$. Az $\mathcal F$ téren jelentse
 $$
 \langle f,g\rangle:=\int_{-\infty}^\infty  f(x)g(x)\,dx
 $$
-skaláris szorzatot.
+a skaláris szorzatot.
 
 
 \subsubsection{\it  Altértől vett távolság}
@@ -721,7 +721,7 @@ A  $\phi_n\in \mathcal F$ $(n\in\Bbb N)$ függvényrendszer  ortonormált, ha
 $$
 \langle \phi_n,\phi_m\rangle:=\delta_{mn}\ \ (m,n\in\Bbb N).
 $$
-Ebb\H ol a rendszerből az
+Ebből a rendszerből az
 $$
 \ell(x)=\ell(x,\lambda, a)=\lambda x+a\ \ (x,a\in\Bbb R,\lambda>0)
 $$
@@ -767,7 +767,7 @@ függvény maximumának meghatározásával.
  &\int_{-\infty}^\infty|\Phi_n(x)|\, dx\le M_n\int_{-\infty}^\infty e^{-x^2/4}\, dx<4M_n
  \end{split}
  \end{equation}
- Ezeket felhasználva becsléseket adunk az
+ Ezeket felhasználva becsléseket adhatóak az
  $$
  A_k(a,\lambda):=\langle f,\phi_k^{a,\lambda}\rangle=\sqrt{\lambda}\int_{-\infty}^\infty f(x)\phi_k(\lambda x+a)\, dx=\frac 1{\sqrt{\lambda}}\int_{-\infty}^\infty f((u-a)/\lambda)\phi_k(u)\, du
  $$
