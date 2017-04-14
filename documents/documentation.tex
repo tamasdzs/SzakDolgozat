@@ -359,7 +359,7 @@ ahol $R^{(i)}=f-s^{(i)}$ a rezidum függvényt jelöli. Röviden tehát az $s^{(
 \chapter{Fejlesztői dokumentáció}
 
 Ebben a fejezetben található a Bevezetés-ben bemutatott eljárás implementációjának pontos (modul szintű) leírása, valamint az alkalmazott tesztek jellemzése illetve ezek eredményei. A tesztelés eredményeit a tapasztalok összegzése és néhány lehetséges jövőbeli fejlesztés jellemzése követi. \par A fejlesztői dokumentáció első részében a tömörítési módszer implementációjának leírása található. Ez az alfejezet két fő részre tagolható: a webes felhasználói felület és az ehhez felhasznált könyvtárakat leíró, valamint a háttérben a konkrét tömörítést elvégző c++ program modulonkénti jellemzését. Mivel a webes felület megvalósítása rövid, és specializált scriptek összessége, ezért ezek jellemzését minden esetben egyedi módon érdemes kezelni. Ellentétben ezzel a szemlélettel, a c++ program nagyban épít a nyelv által támogatott objektum orientált megközelítésre. Ez lehetővé teszi és indokolja is egyben, hogy az implementációt jellemző dokumentáció is hasonlóan jól strukturált legyen. Az egyes modulok dokumentációja ugyanazon három szempont szerint közelíti meg a jellemzésüket: a modul feladatának, a modul interfészének (hogyan és mely egyéb modulokhoz kapcsolódik), valamint a modult felépítő osztályok implementációjának pontos megfogalmazása. A modulok leírásánál találhatóak továbbá a szemléltetést segítő UML és egyéb hasznos diagrammok. 
-\par  A teszteléssel foglalkozó alfejezet szintén több részre tagolható. Az első alfelejezetben található a webes felhasználói felület funkcióinak tesztelési terve, illetve az egyes tesztek eredményeinek leírása. Ezt követi a c++ program moduljainak részletes tesztelési terve. A modulok tesztelését minden esetben egy külön tesztfájl végezte. Ennek leírása, az eredmények értékelése, illetve a tesztállomány elérési útja szintén megtalálható az alfejezetben. A  tesztelés alfejezet utolsó része a bemutatott tömörítési eljárást hivatott tesztelni. Ez több szempont alapján, egyéb EKG tömörítő módszerekkel történő összehasonlítás útján valósul meg. A tesztek eredményeinek jellemzését az egyes elfajuló, különleges esetek közelebbi vizsgálata, majd egy rövid kitekintés követi.
+\par  A teszteléssel foglalkozó alfejezet szintén több részre tagolható. Az első alfelejezetben található a webes felhasználói felület funkcióinak tesztelési terve, illetve az egyes tesztek eredményeinek leírása. Ezt követi a c++ program moduljainak részletes tesztelési terve. A modulok tesztelését minden esetben egy külön tesztfájl végezte. Ennek leírása, az eredmények értékelése, illetve a tesztállomány elérési útja szintén megtalálható az alfejezetben. A  tesztelés alfejezet utolsó része a bemutatott tömörítési eljárást hivatott tesztelni. Ez több szempont alapján, egyéb EKG tömörítő módszerekkel történő összehasonlítás útján valósul meg. 
 
 \section{A felhasználói felület implementációja}
 
@@ -641,9 +641,56 @@ Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölv
 
 \section{A tömörítő eljárás modul szintű tesztelése}
 
+
+
 \section{A tömörítő eljárás hatékonyságának tesztelése}
 
-\section{Tapasztalatok és kitekintés}
+	A dolgozatban ismertetett algoritmust a 117, 119-es rekordok mellett az MIT-BIH adatb\'azisban egyéb felvételein is lefuttattuk. Így összesen $3$ órányi adaton, $12830$ darab sz\'\i v\"ut\'esen pr\'ob\'altuk ki a m\'odszert. Az összehasonlíthatóság érdekében a tesztet megismételtük az eredeti \cite{hexp3} algoritmussal is. Mindkét esetben a kvantálást $b=7$ biten hajtottuk végre, az egyes szegmenseket pedig $\mathbf{n}=7,6,2$ együtthatóval reprezentáltuk. A futásidő csökkentéséhez a PSO algoritmus rajméretét $10$-re, az iterációk számát pedig 15-re állítottuk be. Így egy $30$ perces rekordon a Nelder-Mead (NM) szimplex módszer átlagosan $1400$ másodpercig, míg a PSO esetén $1600$ másodpercig futott. Megfelelő hardwer konfiguráció esetén ez már valós idejű adatfeldolgozást feltételez. Az eredményeket a pontosság és a tömörítési arány szempontjából is értékeltük:
+\begin{equation*}
+		\PRD=\frac{\left\|S_{\mathbf{n}}^{\mathbf{a},\boldsymbol{\lambda}}f-f\right\|_2}{\left\|f-\conj{f}\right\|_2}\times 100\,,\qquad  \CR=\frac{\text{eredeti EKG mérete}}{\text{tömörített EKG mérete}}\times 100\,,
+		\label{eq:prd_cr}
+\end{equation*}
+ahol $\conj{f}$ a jel átlaga. A pontosság mérésére az irodalomban az ún. $percentage$ $root$ $mean$ $square$ $difference$ $(PRD)$ terjedt el. Vegyük észre, hogy ez az $\ell^2$ normában mért relatív hibával egyenlő, ami független a jel átlagától. Az algoritmusok összehasonlításánál a CR-t és a PRD-t is figyelembe kell venni. Ez azonban megnehezíti a módszerek értékelését. Ezt kiküszöbölendő, a \cite{pkselect} cikkben bevezették az ún. $Quality\ Score$ $(QS)$ fogalmát, ami a CR és a PRD hányadosa. Így az az algoritmus tekinthető jobbnak, amelyik magasabb QS-el rendelkezik. Ennek megfelelően az eredményeket a \ref{tab:results} táblázatban foglaltuk össze.
+\begin{table}[H]
+\centering
+	\scalebox{0.7}{
+\begin{tabular}{|c||cccc|cccc|cccc|}
+\multicolumn{1}{c}{} & \multicolumn{4}{c}{\textbf{Hiba (PRD \%)}} & \multicolumn{4}{c}{\textbf{A t\"om\"or\'\i t\'es ar\'anya (CR $1:X$)}} & \multicolumn{4}{c}{\textbf{Quality Score ($\CR:\PRD$)}}\bigstrut\\\hline
+\textbf{Rec.} & \textbf{Eredeti} & \textbf{NM} & \textbf{PSO} & \textbf{JPEG2} & \textbf{Eredeti} & \textbf{NM} & \textbf{PSO} & \textbf{JPEG2} & \textbf{Eredeti} & \textbf{NM} & \textbf{PSO} & \textbf{JPEG2} \bigstrut[t]\\
+101 & 11.20 & 11.10 & 11.13 &11.07& 29.71 & 27.22 & 27.22 & 18.94 &\textbf{2.65}&2.45&2.47& 1.71\\
+117 & 13.20 & 11.81 & 17.66 &11.66& 36.07 & 33.06 & 33.06 & 23.66 &2.73&\textbf{2.79}&1.87& 2.02\\
+118 & 19.83 & 17.79 & 16.65 &17.72& 24.34 & 22.30 & 22.30 & 32.91 &1.22&1.25&1.33& \textbf{1.85}\\
+119 & 14.27 & 8.76 & 10.20  &8.80 & 27.89 & 25.55 & 25.55 & 23.85 &1.95&\textbf{2.91}&2.51& 2.71\\
+201 & 13.51 & 12.17 & 12.17 &12.14& 28.21 & 25.35 & 25.35 & 13.15 &\textbf{2.08}&\textbf{2.08}&\textbf{2.08}& 1.08\\
+213 & 19.92 & 18.28 & 17.60 &18.29& 17.08 & 15.64 & 15.64 & 35.23 &0.85&0.85&0.88& \textbf{1.92}\\
+%214 & 7.61 & 7.90 & 11.40   &7.91 & 24.53 & 22.04 & 22.47 & 19.32 &&&&\\
+\hline
+\textbf{\'Atlag} & 14.22 & 12.55 & 13.83 &12.51& 26.83 & 24.45 & 24.51 & 23.86 &1.91&\textbf{2.06}&1.85& 1.88\\\hline
+\end{tabular}
+}
+\caption{A tömörítés \"osszehasonl\'\i t\'asa k\"ul\"onb\"oz\H o m\'odszerek eset\'en.}
+\label{tab:results}
+\end{table}
+
+Általánosságban elmondható, hogy az összehasonlított módszerek közül, a dolgozatban bemutatott algoritmus volt a leghatékonyabb. Utóbbi PRD-je átlagosan $2\%$-al jobb, mint az eredeti módszeré. A tömörítési arány egy kicsit rosszabb, ami várható hiszen a transzlációs paramétereket is tárolnunk kell ellentétben \cite{hexp1}-el. Végeredményben viszont az átlagos QS alapján a dolgozatban bemutatott és a Nelder-Mead optimalizációval kombinált módszerünk győzött. Továbbá vegyük észre, hogy a $119$-es rekord esetén jelentős különbség van a két módszer között. A jelenség megértéséhez tekintsük a \ref{fig:eredetiVSsajat} ábrát, ahol a kérdéses jel első szívütését rajzoltuk ki. Látható, hogy az eredeti algoritmussal adott approximáció a T hullám közelében nagyon rossz. Ez egyrészt a szegmentáló algoritmus hibájának, másrészt a transzlációs paraméter hiányának köszönhető. Az eredeti algoritmus az EKG jelet a zöld pontokkal megjelölt szakaszokon közelíti, ahol az alkalmazott Hermite-függvények az intervallum középre vannak igazítva (lsd. fekete vonalak). Mivel a T hullám asszimetrikusan helyezkedik el az adott szegmensen, így még elég nagy dilatáció esetén sem lehet kompenzálni a hibát. A kidolgozott módszer azonban a $(a_i,\lambda_i)$ szabad paramétereknek és az optimalizációnak köszönhetően képes megbírkózni a feladattal és közel kétszer alacsonyabb PRD-vel állítja elő a jelet. Megjegyezzük, hogy ehhez mindkét reprezentációban ugyanannyi együtthatót használtunk fel. A saját módszerünk tárolás szempontjából csupán abban különbözik, hogy szegmensenként szükség van plussz egy transzlációs paraméterre. A példából érthető az is, hogy a \ref{tab:results} táblázat bizonyos rekordojain az eredeti algoritmus miért teljesít majdnem olyan jól, mint a dolgozatban bemutatott módszer. Ha ugyanis normális szívütéseink vannak és a szegmentálás is pontos, akkor az intervallumok felezőpontja közel van az optimumhoz. Mivel ez valós jelek esetén egyáltalán nem garantált, így a dolgozat problémafelvetése jogos és az erre adott megoldás gyakorlati szempontból is értékelhető.
+
+\chapter{Tapasztalatok és kitekintés}
+
+A dolgozatban a \cite{hexp3, hexp5} cikkekben bemutatott algoritmusokból kiindulva egy új EKG tömörítő eljárást konstruáltunk. Az módszer adaptív, amit a Hermite-függvények argumentum transzformációjával értünk el. A reprezentáció szabad $(a_i,\lambda_i)$ transzlációs és dilatációs paramétereit három optimalizációs algoritmussal állítottuk elő. A módszerek előnyeit, hátrányait egyaránt figyelembe vettük az alkalmazás során. Az említett optimum létezését beláttuk, illetve a gradiens módszerhez szükséges parciális deriváltakat levezettük. A tömörítő algoritmus hatékonyságát a PhysioNet adatbázis valós EKG felvételein teszteltük. A numerikus vizsgálatokban összesen $3.5$ órányi rekordot dolgoztunk fel, ami biztosította statisztikai kisérletekhez szükséges magas mintaelemszámot. Ezek alapján megállapítható, hogy a kiindulásként felhasznált \cite{hexp3, hexp5} algoritmusok eredményeit megjavítottuk. A \cite{jpeg2000ECG} cikkben ismertetett, JPEG 2000 alapú 2D-s EKG tömörítő eljárást is összehasonlítottuk a dolgozatban implementált módszerrel. Ez esetben is a saját algoritmusunk győzött.
+
+Megjegyezzük azonban, hogy a kidolgozott módszernek is vannak hátrányai. Mivel az iteratív approximáció során az MP megközelítés alkalmaztuk, így örököltük annak hibáit is. Előfordulhat, hogy az első lépésben nem a QRS komplexust közelítjük, hanem a T hullámot. Így az eredetileg ide szánt $7$ együtthatót a $T$ hullámra "pazaroljuk". Ez azonban a helyes inicializálással, illetve a QRS hibájának súlyozásával kiküszöbölhető. Másik probléma, hogy az MP algoritmus egy mohó stratégiát követ a $(a_i,\lambda_i)$ paraméterek meghatározásához. Így előfordulhat, hogy egy iterációban a szívütés egynél több hullámát is közelítjük, ha ez az $\ell^2$ hiba szempontjából indokolt. Ezt szemlélteti a \ref{fig:counterexample} ábra. Jól látható, hogy az első esetben a PRD kisebb, mint a második példában. Előbbinél azonban a rezidum függvény is jóval bonyolultabb. Tehát a végeredmény szempontjából előnyösebb, ha minden lépésben csak egy hullámot közelítünk. A jelenség az MP módszer és a mohó stratégia jól ismert hátránya, melyet a \cite{bpurs} dolgozat is részletesen tárgyal. Eszerint a probléma mérsékelhető, ha az mohó stratégiát más módszerekre cseréljük. Megjegyezzük, hogy ez úgy is megoldható, hogy az iterációs megközelítés helyett, a $3$ hullámhoz tartozó összesen $6$ paramétert egyszerre optimalizáljuk. Más szóval a keresést az eredeti kettő helyett egy hat dimenziós problématérben végezzük. Ezek a vizsgálatok jelenleg nem képezik a dolgozat tárgyát, de a későbbiekben fontosnak tartjuk azok elvégzését.
+ 
+\begin{figure}[htb!]
+  \centering
+\subfigure[Rossz eset.]{\includegraphics[scale=0.5,trim=100 280 100 280,clip]{./Abrak/Kitekintes/abra762_bad.pdf}}
+\subfigure[Jó eset.]{\includegraphics[scale=0.5,trim=100 280 100 280,clip]{./Abrak/Kitekintes/abra762_good.pdf}}
+\caption{A mohó stratégia hátránya.}
+\label{fig:counterexample}
+\end{figure}	
+
+\section*{K\"osz\"onetnyilv\'an\'\i t\'as}
+
+
 
 \chapter{Függelék}
 
@@ -771,7 +818,7 @@ függvény maximumának meghatározásával.
  $$
  A_k(a,\lambda):=\langle f,\phi_k^{a,\lambda}\rangle=\sqrt{\lambda}\int_{-\infty}^\infty f(x)\phi_k(\lambda x+a)\, dx=\frac 1{\sqrt{\lambda}}\int_{-\infty}^\infty f((u-a)/\lambda)\phi_k(u)\, du
  $$
- Fourier-együtthatókra. A továbbiakban kompakt tartójú, korlátos függvényekből indulunk ki. Nem jelenti az általánosság megszorítását ha  feltesszük, hogy
+ Fourier-együtthatókra. A továbbiakban kompakt tartójú, korlátos függvényekből indulunk ki. Nem jelenti az általánosság megszorítását a következő feltételezés:
  $$
  f(x)=0,\ \text{ha}\ |x|\ge 1,\ \ |f(x)|\le 1 \ (x\in\Bbb R).
  $$
@@ -779,7 +826,7 @@ függvény maximumának meghatározásával.
  $$
  F_n(a,\lambda):=\sum_{k=0}^n|A_k(a,\lambda)|^2\ \ \  ((a,\lambda)\in T>0)
  $$
- függvény folytonosan  differenciálható. Megmutatjuk, hogy az $F_n:T\to [0,\infty)$
+ függvény folytonosan  differenciálható. A következőkben bemutatásra kerül, hogy az $F_n:T\to [0,\infty)$
  folytonos függvénynek van maximuma a $T$ (nem kompakt) halmazon.
 
  A fenti egyenlőtlenségekből következik, hogy
@@ -800,15 +847,15 @@ függvény maximumának meghatározásával.
  2 M_k\sqrt{\lambda} e^{-{\lambda^2}/4}<\frac {8M_k}{\sqrt{\lambda}}
 \end{split}
 \end{equation}
-Hasonlóan egyenlőtlenséget kapunk az $a<-2\lambda$ esetben. Innen következik, hogy az
+Hasonlóan egyenlőtlenséget ad az $a<-2\lambda$ eset. Innen következik, hogy az
 $$
 T_s:=\{(p,q): -2s\le p\le 2s, 1/s\leq p \le s\}
 $$
-téglalapon kívüul  érvényes
+téglalapon kívül  érvényes a
 $$
 \sup_{(a,\lambda) \notin T_s}|A_k(a,\lambda)|\le \frac {8M_k}{\sqrt s}\ \  (s>1)
 $$
-becslés. Ennek alapján nyilvánvaló, hogy a $F_n$  függvénynek létezik a maximuma a $T$ téglelapon.
+becslés. Ennek alapján nyilvánvaló, hogy az $F_n$  függvénynek létezik a maximuma a $T$ téglelapon.
 
 \iffalse
 Célunk az
@@ -889,10 +936,10 @@ Nevezetesen
 
 \newpage
 %\section{Nelder-Mead pszeudok\'od}
-Az indexeket \'ugy rendezz\"uk, hogy
-$y_3\le y_2\le y_1$ teljes\"ulj\"on. Az $IterLepes(5)$ rutinnal az 
-$(x_1,x_2,x_3)$ h\'armast kicser\'elj\"uk a $T_5$ transzform\'aci\'oval kapott
-h\'armassal.
+Az indexek rendezésénél
+$y_3\le y_2\le y_1$ teljesül. Az $IterLepes(5)$ rutin az 
+$(x_1,x_2,x_3)$ hármast a $T_5$ transzformációval kapott
+hármasra cseréli.
 \bigskip
 
 \begin{algorithm}[htb!] 
