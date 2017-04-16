@@ -641,7 +641,18 @@ Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölv
 
 \section{A tömörítő eljárás modul szintű tesztelése}
 
+A modul tesztek elvégzése elengedhetlen egy modern programcsomag működésének ellenőrzésekor. Az egyes modul tesztek által definiált tesztesetek hivatottak igazolni, hogy a modulok implementációja során meghatározott funkciókkal a modul valóban rendelkezik, illetve ezeket helyesen alkalmazza. \par A fejlesztői dokumentáció jelen része tartalmazza a \ref{modulok implementáciüja} fejezetben bemutatott modulokhoz tartozó teszteket és eredményeket. Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölve, az egyes modulokhoz tartozó modul tesztek a \texttt{/src/[az aktuális modul neve]} útvonal mentén érhetők el. Minden modul tesztet jelölő mappa tartalmazza azt a \texttt{.cpp} állományt amelyben a tesztesetek definiálva vannak, a tesztesetek bemenetét, illetve az egyes tesztesetek kimenetét. Ezen kívül megtalálhatóak a modult implementáló állományokra mutató szimbólikus linkek is, valamint egy \texttt{make} állomány a modul teszt fordításához. 
+\par Minden modul teszt jellemzéséhez tartozik egy külön alfejezet. Az egyes modul tesztekhez tartozó alfelejezetek rövid jellemzését adják a tesztek legfontosabb céljainak. Ezen kívül táblázatot biztosítanak az egyes tesztesetek jellemzéséhez. A modulok szolgáltatásaitól függően a bemenetek és a kimenetek gyakran önmagukban is nagy terjedelműek, (például az EcgSigPrep modul egy teljes EKG felvételt vár bemenetül), ezért ezeknek csak a rövid jellemzése adott.   
 
+\subsection{A SigPrep és EcgSigPrep modulok tesztjei}
+
+\subsection{Az OrtFunSys és Hermite modulok tesztjei}
+
+\subsection{A Compresser és az OrtCompresser modulok tesztjei}
+
+\subsection{Az Optimizer és a NelderMead modulok tesztjei}
+
+\subsection{A MatchingPursuit modul tesztjei}
 
 \section{A tömörítő eljárás hatékonyságának tesztelése}
 
