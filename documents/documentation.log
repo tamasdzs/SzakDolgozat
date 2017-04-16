@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  15 APR 2017 11:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  16 APR 2017 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1236,74 +1236,99 @@ e 676.
 [37]
 4. fejezet.
 
-LaTeX Warning: Citation `hexp3' on page 38 undefined on input line 680.
+LaTeX Warning: Reference `Bevezet\IeC {\'e}s' on page 38 undefined on input lin
+e 680.
 
 
-LaTeX Warning: Citation `hexp5' on page 38 undefined on input line 680.
+LaTeX Warning: Citation `hexp3' on page 38 undefined on input line 684.
+
+
+LaTeX Warning: Citation `hexp5' on page 38 undefined on input line 684.
 
 
 LaTeX Warning: Reference `f\IeC {\"u}ggel\IeC {\'e}k' on page 38 undefined on i
-nput line 680.
+nput line 684.
 
 
-LaTeX Warning: Citation `hexp3' on page 38 undefined on input line 680.
+LaTeX Warning: Citation `hexp3' on page 38 undefined on input line 684.
 
 
-LaTeX Warning: Citation `hexp5' on page 38 undefined on input line 680.
+LaTeX Warning: Citation `hexp5' on page 38 undefined on input line 684.
 
 
-LaTeX Warning: Citation `jpeg2000ECG' on page 38 undefined on input line 680.
+LaTeX Warning: Citation `jpeg2000ECG' on page 38 undefined on input line 684.
 
 
-Overfull \hbox (9.11702pt too wide) in paragraph at lines 680--681
+Overfull \hbox (9.11702pt too wide) in paragraph at lines 684--685
 \T1/cmr/m/n/12 tö-mö-rí-t® el-já-rás konst-ruk-ci-ó-ja ke-rült be-mu-ta-tás-ra.
  Az mód-szer adap-tív, amit a Hermite-
  []
 
 
-Overfull \hbox (5.06023pt too wide) in paragraph at lines 680--681
+Overfull \hbox (5.06023pt too wide) in paragraph at lines 684--685
 \T1/cmr/m/n/12 függvények ar-gu-men-tum transz-for-má-ci-ó-já-val lett el-ér-ve
 . A rep-re-zen-tá-ció sza-bad $\U/euf/m/n/12 (\U/eur/m/n/12 a[]; ^^U[]\U/euf/m/
 n/12 )$
  []
 
 
-LaTeX Warning: Citation `bpurs' on page 38 undefined on input line 682.
+LaTeX Warning: Citation `bpurs' on page 38 undefined on input line 686.
 
-<./Abrak/Kitekintes/abra762_bad.pdf, id=200, 597.23125pt x 845.1575pt>
+[38
+
+] <./Abrak/Kitekintes/abra762_bad.pdf, id=203, 597.23125pt x 845.1575pt>
 File: ./Abrak/Kitekintes/abra762_bad.pdf Graphic file (type pdf)
 
 <use ./Abrak/Kitekintes/abra762_bad.pdf>
 Package pdftex.def Info: ./Abrak/Kitekintes/abra762_bad.pdf used on input line 
-686.
+690.
 (pdftex.def)             Requested size: 198.23988pt x 141.52773pt.
 
-<./Abrak/Kitekintes/abra762_good.pdf, id=202, 597.23125pt x 845.1575pt>
+<./Abrak/Kitekintes/abra762_good.pdf, id=205, 597.23125pt x 845.1575pt>
 File: ./Abrak/Kitekintes/abra762_good.pdf Graphic file (type pdf)
 
 <use ./Abrak/Kitekintes/abra762_good.pdf>
 Package pdftex.def Info: ./Abrak/Kitekintes/abra762_good.pdf used on input line
- 687.
+ 691.
 (pdftex.def)             Requested size: 198.23988pt x 141.52773pt.
- [38
-
-] [39 <./Abrak/Kitekintes/abra762_bad.pdf> <./Abrak/Kitekintes/abra762_good.pdf
->]
-5. fejezet.
-
-LaTeX Warning: Citation `szego' on page 40 undefined on input line 698.
 
 
-LaTeX Warning: Citation `szoke' on page 40 undefined on input line 698.
-
-
-LaTeX Warning: Reference `bevezetes transz dilat' on page 40 undefined on input
+LaTeX Warning: Reference `bevezetes:dolgozatspec' on page 39 undefined on input
  line 698.
 
-[40
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 701.
 
-] [41] [42] [43]
-Overfull \hbox (0.96092pt too wide) in paragraph at lines 940--945
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 701.
+ [39 <./Abrak/Kitekintes/abra762_bad.pdf> <./Abrak/Kitekintes/abra762_good.pdf>
+]
+
+LaTeX Warning: Reference `eljaras tesztek' on page 40 undefined on input line 7
+07.
+
+
+LaTeX Warning: Reference `modul tesztek' on page 40 undefined on input line 715
+.
+
+[40]
+5. fejezet.
+
+LaTeX Warning: Citation `szego' on page 41 undefined on input line 723.
+
+
+LaTeX Warning: Citation `szoke' on page 41 undefined on input line 723.
+
+
+LaTeX Warning: Reference `bevezetes transz dilat' on page 41 undefined on input
+ line 723.
+
+[41
+
+] [42] [43] [44]
+Overfull \hbox (0.96092pt too wide) in paragraph at lines 965--970
 []\T1/cmr/m/n/12 Az in-de-xek ren-de-zé-sé-nél $\U/eur/m/n/12 y[] \OMS/cmsy/m/n
 /12 ^^T \U/eur/m/n/12 y[] \OMS/cmsy/m/n/12 ^^T \U/eur/m/n/12 y[]$ \T1/cmr/m/n/1
 2 tel-je-sül. Az $\U/eur/m/n/12 IterLepes\U/euf/m/n/12 (\U/eur/m/n/12 5\U/euf/m
@@ -1311,7 +1336,7 @@ Overfull \hbox (0.96092pt too wide) in paragraph at lines 940--945
 /euf/m/n/12 )$
  []
 
-[44] (./documentation.aux)
+[45] (./documentation.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1320,10 +1345,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5546 strings out of 493029
- 80291 string characters out of 6136234
+ 5567 strings out of 493029
+ 80649 string characters out of 6136234
  159072 words of memory out of 5000000
- 8876 multiletter control sequences out of 15000+600000
+ 8894 multiletter control sequences out of 15000+600000
  34850 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,17n,27p,2459b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1350,10 +1375,10 @@ r/sfcc1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr
 ype1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super
 /sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/
 share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on documentation.pdf (46 pages, 598331 bytes).
+Output written on documentation.pdf (47 pages, 601534 bytes).
 PDF statistics:
- 323 PDF objects out of 1000 (max. 8388607)
- 219 compressed objects within 3 object streams
+ 326 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  142 words of extra memory for PDF output out of 10000 (max. 10000000)
 

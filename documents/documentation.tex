@@ -677,9 +677,13 @@ ahol $\conj{f}$ a jel átlaga. A pontosság mérésére az irodalomban az ún. $
 
 \chapter{Tapasztalatok és kitekintés}
 
+Ebben a fejezetben a bemutatott tömörítő eljárás tesztelése során megszerzett tapasztalatok, illetve az ezekből levont következtetések összegzése található. A fejezet első része a tömörítő eljárással kapcsolatos általános tapasztalatok és esetleges jövőbeli vizsgálódások vázlatát tartalmazza. A fejezet második felében található az eredmények összevetése a \ref{Bevezetés} fejezetben bemutatott specifikációval. Ennek következtében lehetőség nyílik a dolgozat elején bemutatott elvárások összehasonlítása a megvalósított eljárással. Szintén a Tapasztalatok és kitekintés fejezet végén található a köszönetnyílvánítás.  
+
+\section{Az eljárással kapcsolatos tapasztalatok}
+
 A dolgozatban a \cite{hexp3, hexp5} cikkekben bemutatott algoritmusokból kiindulva egy új EKG tömörítő eljárás konstrukciója került bemutatásra. Az módszer adaptív, amit a Hermite-függvények argumentum transzformációjával lett elérve. A reprezentáció szabad $(a_i,\lambda_i)$ transzlációs és dilatációs paramétereit a Nelder Mead optimalizációs algoritmus állítja elő. Az említett optimum létezése formális bizonyítása is megtalálható a dolgozatban \ref{függelék}. A tömörítő algoritmus hatékonysága a PhysioNet adatbázis valós EKG felvételein lett tesztelve. A numerikus vizsgálatokban összesen $3.5$ órányi rekord került feldolgozásra, ami biztosította statisztikai kisérletekhez szükséges magas mintaelemszámot. Ezek alapján megállapítható, hogy a kiindulásként felhasznált \cite{hexp3, hexp5} algoritmusok eredményeihez képest, sikerült egy hatékonyabb eljárás konstrukciója. Az eredmények között megtalálható a bemutatott algoritmus \cite{jpeg2000ECG} cikkben ismertetett, JPEG 2000 alapú 2D-s EKG tömörítő eljárással vett összehasonlítása is. Ebben az esetben is a bemutatott tömörítő eljárás bizonyult hatékonyabbnak.
 
-Megjegyzendő azonban, hogy a kidolgozott módszernek is vannak hátrányai. Mivel az iteratív approximáció során az MP megközelítés került alkalmazásra, így annak hibáit is örökölte a módszer. Előfordulhat, hogy az első lépésben nem a QRS komplexust közelíti, hanem a T hullámot. Így az eredetileg ide szánt $7$ együtthatót a $T$ hullámra "pazarolja". Ez azonban a helyes inicializálással, illetve a QRS hibájának súlyozásával kiküszöbölhető. Másik probléma, hogy az MP algoritmus egy mohó stratégiát követ a $(a_i,\lambda_i)$ paraméterek meghatározásához. Így előfordulhat, hogy egy iterációban a szívütés egynél több hullámát is közelíti, ha ez az $\ell^2$ hiba szempontjából indokolt. Ezt szemlélteti a \ref{fig:counterexample} ábra. Jól látható, hogy az első esetben a PRD kisebb, mint a második példában. Előbbinél azonban a rezidum függvény is jóval bonyolultabb. Tehát a végeredmény szempontjából előnyösebb, ha minden lépésben csak egy hullámot közelít a módszer. A jelenség az MP módszer és a mohó stratégia jól ismert hátránya, melyet a \cite{bpurs} dolgozat is részletesen tárgyal. Eszerint a probléma mérsékelhető, ha az mohó stratégiát más módszerekre cseréljük. Ennek a problémának egy lehetséges megoldása az iterációs megközelítés helyett, a $3$ hullámhoz tartozó összesen $6$ paramétert párhuzamosan történő optimalizálása. Más szóval a keresést az eredeti kettő helyett egy hat dimenziós problématérben is el lehet helyezni. Ezek a vizsgálatok jelenleg nem képezik a dolgozat tárgyát, de a későbbiekben fontosnak tartjuk azok elvégzését.
+Megjegyzendő azonban, hogy a kidolgozott módszernek is vannak hátrányai. Mivel az iteratív approximáció során az MP megközelítés került alkalmazásra, így annak hibáit is örökölte a módszer. Előfordulhat, hogy az első lépésben nem a QRS komplexust közelíti, hanem a T hullámot. Így az eredetileg ide szánt $7$ együtthatót a $T$ hullámra "pazarolja". Ez azonban a helyes inicializálással, illetve a QRS hibájának súlyozásával kiküszöbölhető. Másik probléma, hogy az MP algoritmus egy mohó stratégiát követ a $(a_i,\lambda_i)$ paraméterek meghatározásához. Így előfordulhat, hogy egy iterációban a szívütés egynél több hullámát is közelíti, ha ez az $\ell^2$ hiba szempontjából indokolt. Ezt szemlélteti a \ref{fig:counterexample} ábra. Jól látható, hogy az első esetben a PRD kisebb, mint a második példában. Előbbinél azonban a rezidum függvény is jóval bonyolultabb. Tehát a végeredmény szempontjából előnyösebb, ha minden lépésben csak egy hullámot közelít a módszer. A jelenség az MP módszer és a mohó stratégia jól ismert hátránya, melyet a \cite{bpurs} dolgozat is részletesen tárgyal. Eszerint a probléma mérsékelhető, ha az mohó stratégiát más módszerekre cseréljük. Ennek a problémának egy lehetséges megoldása az iterációs megközelítés helyett, a $3$ hullámhoz tartozó összesen $6$ paramétert párhuzamosan történő optimalizálása. Más szóval a keresést az eredeti kettő helyett egy hat dimenziós problématérben is el lehet helyezni. Ezek a vizsgálatok jelenleg nem képezik a dolgozat tárgyát, de a fontos kiindulási pontot biztosítanak a további vizsgálatokhoz.
  
 \begin{figure}[htb!]
   \centering
@@ -689,7 +693,28 @@ Megjegyzendő azonban, hogy a kidolgozott módszernek is vannak hátrányai. Miv
 \label{fig:counterexample}
 \end{figure}	
 
-\section*{K\"osz\"onetnyilv\'an\'\i t\'as}
+\section{Eredmények a feladat specifikációjához képest}
+
+A \ref{bevezetes:dolgozatspec} fejezetben bemutatásra került a feladat specifikációja, amely a dolgozatban bemutatott tömörítési eljárással, illetve az eljárás implementációjával kapcsolatban állított fel elvárásokat. A specifikáció első felében általános elvárások kerültek megfogalmazásra, melyek a tömörítő eljárást érintették. Ezek az elvárások röviden a következők: 
+
+\begin{itemize}
+\item A tömörítés kimenete egy olyan számsor legyen, amely pontosan reprezentálja a bemenetként kapott EKG felvételt, azonban álljon a bemenetnél kevesebb mintából.
+\item A tömörítő eljárás szeparálja az egyes EKG felvételeken található szívütések szegmenseit. 
+\item A tömörítő eljárás hatékonysága legyen összehasonlítható az idoralomban található egyéb eljárások hatékonyságával. 
+\item A tömörítő eljárás szűrje az EKG felvételeken található zajt.
+\end{itemize}
+
+A \ref{eljaras tesztek} tesztek alapján elmondható, hogy a specifikációban megfogalmazott, tömörítő eljárással kapcsolatos elvárások közül mindegyik megvalósult. Az egyetlen kivételt a zajszűrés jelenti. A bemutatott algoritmus természetes módon szűri a bemenetkén kapott zajos felvételt, hiszen a mérést Hermite sima függvényekkel közelíti. A zajszűrés mértékének pontos meghatározása azonban további vizsgálatokat igényelne. 
+\par A dolgozat elején bemutatott specifikáció második fele a tömörítő eljárás implementációjával szemben állít elvárásokat:
+
+\begin{itemize}
+\item Az implementációnak képesnek kell lennie az MIT-BIH adatbázisban található EKG felvételek tömörítésére. 
+\item Az implementáció bemenetként a fennt említett adatbázisban található felvételt, illetve egy korábbi tömörítés következtében létrejött EKG reprezentációt kell elfogadnia.
+\end{itemize} 
+
+A \ref{modul tesztek} fejezetből látható, hogy az implementációval kapcsolatos legfontosabb elvárások közül mindegyiknek eleget tesz a tömörítő eljárás megvalósítása.  
+
+\section{Köszönetnyilvánítás}
 
 
 
