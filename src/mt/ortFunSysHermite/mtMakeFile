@@ -1,0 +1,15 @@
+CC=g++
+CFLAGS=-c -Wall -std=c++0x -I ../../eigen -I ./headers
+LDFLAGS=
+LIBS=-lwfdb -lcurl
+SOURCES=mt.cpp OrtFunSys.cpp Hermite.cpp
+OBJECTS=$(SOURCES:.cpp=.o)
+EXECUTABLE=mt
+
+all: $(SOURCES) $(EXECUTABLE)
+    
+$(EXECUTABLE): $(OBJECTS) 
+	$(CC) $(LDFLAGS) $(OBJECTS) -o $@ $(LIBS)
+
+.cpp.o:
+	$(CC) $(CFLAGS) $< -o $@ $(LIBS)
