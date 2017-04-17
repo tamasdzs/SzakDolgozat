@@ -30,6 +30,7 @@
 \usepackage{subfigure}
 \usepackage{appendix}
 \usepackage{setspace}
+\usepackage{adjustbox}
 
 
 \newtheorem{theorem}{Theorem}
@@ -645,6 +646,28 @@ A modul tesztek elvégzése elengedhetlen egy modern programcsomag működésén
 \par Minden modul teszt jellemzéséhez tartozik egy külön alfejezet. Az egyes modul tesztekhez tartozó alfelejezetek rövid jellemzését adják a tesztek legfontosabb céljainak. Ezen kívül táblázatot biztosítanak az egyes tesztesetek jellemzéséhez. A modulok szolgáltatásaitól függően a bemenetek és a kimenetek gyakran önmagukban is nagy terjedelműek, (például az EcgSigPrep modul egy teljes EKG felvételt vár bemenetül), ezért ezeknek csak a rövid jellemzése adott.   
 
 \subsection{A SigPrep és EcgSigPrep modulok tesztjei}
+
+A SigPrep illetve az EcgSigPrep modulokhoz tartozó modul teszt a \texttt{/src/mt/sigPrepE} \linebreak \texttt{cgSigPrep} mappában található. A modul teszthet tartozó forráskódot az \texttt{mt.cpp} állomomány tartalmazza. Az \texttt{mt.cpp} állomány először az elvégzendő tesztesetek paramétereit adja meg makrók segítségével, ezeket pedig a \texttt{main} függvény követi az egyes \linebreak  tesztesetek definícióival. Az egyes tesztesetek kimenetét a \texttt{/src/mt/sigPrepEcgSigPre} \linebreak  \texttt{p/output/mt\_results.txt} szöveges állomány tartalmazza. A modul teszt célja, hogy a SigPrep illetve az EcgSigPrep modulok publikus (és közvetetten a privát) hozzáférhetőségű metódusainak helyességét igazolja. Ezt az \texttt{EcgSigPrep} osztályból példányosított objektum publikus függvényeinek meghívásával, és a visszaadott eredmények ellenőrzésével végezhető el. Az alábbi táblázat tartalmazza az elvégzett tesztesetek jelölését, rövid jellemzését, az eredményeket, illetve az ellenőrzés módját. A pontos kimenetek megtalálhatóak az \texttt{mt\_results.txt} állományban. 
+
+
+
+\begin{center}
+\begin{adjustbox}{width=1\textwidth}
+ \begin{tabular}{||c c c c||} 
+ \hline
+ Jelölés & Teszteset & Eredmény &  Ellenőrzés módja \\ [0.5ex] 
+ \hline\hline
+ TC1 & Az EcgSigPrep típusú objektum konstruktora lefut &  Ok & A standard output ellenőrzése. Helyes bemenet esetén az objektum létrejön, helytelen bemenet esetén hibaüzenet. \\ 
+ \hline
+ TC2 & A beolvasott EKG mérés első illetve második szívütésének kiiratása &  Ok & A kapott számsorozat grafikus ábrázolása. Ez összehasonlítható az \ref{adatbazis} oldalon található ábrázolással \\
+ \hline
+ TC3 & Dilatáció és transzláció alkalmazása a setDilatTrans metódus segítségével & Ok & A kapott számsor grafikus ábrázolása, összehasonlítása az eredeti szívütéssel. \\
+ \hline
+ TC4 & Az objektum getter függvényeinek ellenőrzése & Ok & A kimenet összevetése az elvárt eredményekkel. Ahol szükséges, ott az eredmények grafikus ábrázolása. \\
+ \hline
+\end{tabular}
+\end{adjustbox}
+\end{center}
 
 \subsection{Az OrtFunSys és Hermite modulok tesztjei}
 
