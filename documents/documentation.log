@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  17 APR 2017 17:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  19 APR 2017 20:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1287,124 +1287,140 @@ e-ne-tét a \T1/cmtt/m/n/12 /src/mt/sigPrepEcgSigPre
 
 [36]
 
-LaTeX Warning: Reference `adatbazis' on page 37 undefined on input line 662.
+LaTeX Warning: Reference `adatbazis' on page 37 undefined on input line 663.
 
 
-LaTeX Warning: Reference `sajat cikk' on page 37 undefined on input line 682.
+Overfull \hbox (10.97414pt too wide) in paragraph at lines 675--676
+\T1/cmr/m/n/12 Az Ort-FunSys il-let-ve az Her-mi-te mo-du-lok-hoz tar-to-zó mo-
+dul teszt a \T1/cmtt/m/n/12 /src/mt/ortFunSys
+ []
 
 
-LaTeX Warning: Reference `' on page 37 undefined on input line 683.
+Overfull \hbox (4.31003pt too wide) in paragraph at lines 675--676
+\T1/cmr/m/n/12 tesz-te-se-tek de-fi-ní-ci-ó-i-val. Az egyes tesz-te-se-tek ki-m
+e-ne-tét a \T1/cmtt/m/n/12 /src/mt/ortFunSysHermite
+ []
 
 
-LaTeX Warning: Citation `hexp3' on page 37 undefined on input line 683.
+LaTeX Warning: Reference `ortfunsys hermite implementacio leirasa' on page 37 u
+ndefined on input line 676.
 
 
-LaTeX Warning: Citation `pkselect' on page 37 undefined on input line 688.
+LaTeX Warning: Reference `sajat cikk' on page 37 undefined on input line 706.
+
+
+LaTeX Warning: Reference `' on page 37 undefined on input line 707.
+
+
+LaTeX Warning: Citation `hexp3' on page 37 undefined on input line 707.
 
 [37]
 
-LaTeX Warning: Citation `hexp1' on page 38 undefined on input line 710.
+LaTeX Warning: Citation `pkselect' on page 38 undefined on input line 712.
+
+
+LaTeX Warning: Citation `hexp1' on page 38 undefined on input line 734.
 
 
 LaTeX Warning: Reference `fig:eredetiVSsajat' on page 38 undefined on input lin
-e 710.
+e 734.
 
-[38]
+[38] [39]
 4. fejezet.
 
-LaTeX Warning: Reference `Bevezet\IeC {\'e}s' on page 39 undefined on input lin
-e 714.
+LaTeX Warning: Reference `Bevezet\IeC {\'e}s' on page 40 undefined on input lin
+e 738.
 
 
-LaTeX Warning: Citation `hexp3' on page 39 undefined on input line 718.
+LaTeX Warning: Citation `hexp3' on page 40 undefined on input line 742.
 
 
-LaTeX Warning: Citation `hexp5' on page 39 undefined on input line 718.
+LaTeX Warning: Citation `hexp5' on page 40 undefined on input line 742.
 
 
-LaTeX Warning: Reference `f\IeC {\"u}ggel\IeC {\'e}k' on page 39 undefined on i
-nput line 718.
+LaTeX Warning: Reference `f\IeC {\"u}ggel\IeC {\'e}k' on page 40 undefined on i
+nput line 742.
 
 
-LaTeX Warning: Citation `hexp3' on page 39 undefined on input line 718.
+LaTeX Warning: Citation `hexp3' on page 40 undefined on input line 742.
 
 
-LaTeX Warning: Citation `hexp5' on page 39 undefined on input line 718.
+LaTeX Warning: Citation `hexp5' on page 40 undefined on input line 742.
 
 
-LaTeX Warning: Citation `jpeg2000ECG' on page 39 undefined on input line 718.
+LaTeX Warning: Citation `jpeg2000ECG' on page 40 undefined on input line 742.
 
 
-Overfull \hbox (9.11702pt too wide) in paragraph at lines 718--719
+Overfull \hbox (9.11702pt too wide) in paragraph at lines 742--743
 \T1/cmr/m/n/12 tö-mö-rí-t® el-já-rás konst-ruk-ci-ó-ja ke-rült be-mu-ta-tás-ra.
  Az mód-szer adap-tív, amit a Hermite-
  []
 
 
-Overfull \hbox (5.06023pt too wide) in paragraph at lines 718--719
+Overfull \hbox (5.06023pt too wide) in paragraph at lines 742--743
 \T1/cmr/m/n/12 függvények ar-gu-men-tum transz-for-má-ci-ó-já-val lett el-ér-ve
 . A rep-re-zen-tá-ció sza-bad $\U/euf/m/n/12 (\U/eur/m/n/12 a[]; ^^U[]\U/euf/m/
 n/12 )$
  []
 
 
-LaTeX Warning: Citation `bpurs' on page 39 undefined on input line 720.
+LaTeX Warning: Citation `bpurs' on page 40 undefined on input line 744.
 
-[39
+[40
 
-] <./Abrak/Kitekintes/abra762_bad.pdf, id=206, 597.23125pt x 845.1575pt>
+] <./Abrak/Kitekintes/abra762_bad.pdf, id=209, 597.23125pt x 845.1575pt>
 File: ./Abrak/Kitekintes/abra762_bad.pdf Graphic file (type pdf)
 
 <use ./Abrak/Kitekintes/abra762_bad.pdf>
 Package pdftex.def Info: ./Abrak/Kitekintes/abra762_bad.pdf used on input line 
-724.
+748.
 (pdftex.def)             Requested size: 198.23988pt x 141.52773pt.
 
-<./Abrak/Kitekintes/abra762_good.pdf, id=208, 597.23125pt x 845.1575pt>
+<./Abrak/Kitekintes/abra762_good.pdf, id=211, 597.23125pt x 845.1575pt>
 File: ./Abrak/Kitekintes/abra762_good.pdf Graphic file (type pdf)
 
 <use ./Abrak/Kitekintes/abra762_good.pdf>
 Package pdftex.def Info: ./Abrak/Kitekintes/abra762_good.pdf used on input line
- 725.
+ 749.
 (pdftex.def)             Requested size: 198.23988pt x 141.52773pt.
 
 
-LaTeX Warning: Reference `bevezetes:dolgozatspec' on page 40 undefined on input
- line 732.
+LaTeX Warning: Reference `bevezetes:dolgozatspec' on page 41 undefined on input
+ line 756.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 735.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 759.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 735.
- [40 <./Abrak/Kitekintes/abra762_bad.pdf> <./Abrak/Kitekintes/abra762_good.pdf>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 759.
+ [41 <./Abrak/Kitekintes/abra762_bad.pdf> <./Abrak/Kitekintes/abra762_good.pdf>
 ]
 
-LaTeX Warning: Reference `eljaras tesztek' on page 41 undefined on input line 7
-41.
+LaTeX Warning: Reference `eljaras tesztek' on page 42 undefined on input line 7
+65.
 
 
-LaTeX Warning: Reference `modul tesztek' on page 41 undefined on input line 749
+LaTeX Warning: Reference `modul tesztek' on page 42 undefined on input line 773
 .
 
-[41]
+[42]
 5. fejezet.
 
-LaTeX Warning: Citation `szego' on page 42 undefined on input line 757.
+LaTeX Warning: Citation `szego' on page 43 undefined on input line 781.
 
 
-LaTeX Warning: Citation `szoke' on page 42 undefined on input line 757.
+LaTeX Warning: Citation `szoke' on page 43 undefined on input line 781.
 
 
-LaTeX Warning: Reference `bevezetes transz dilat' on page 42 undefined on input
- line 757.
+LaTeX Warning: Reference `bevezetes transz dilat' on page 43 undefined on input
+ line 781.
 
-[42
+[43
 
-] [43] [44] [45]
-Overfull \hbox (0.96092pt too wide) in paragraph at lines 999--1004
+] [44] [45] [46]
+Overfull \hbox (0.96092pt too wide) in paragraph at lines 1023--1028
 []\T1/cmr/m/n/12 Az in-de-xek ren-de-zé-sé-nél $\U/eur/m/n/12 y[] \OMS/cmsy/m/n
 /12 ^^T \U/eur/m/n/12 y[] \OMS/cmsy/m/n/12 ^^T \U/eur/m/n/12 y[]$ \T1/cmr/m/n/1
 2 tel-je-sül. Az $\U/eur/m/n/12 IterLepes\U/euf/m/n/12 (\U/eur/m/n/12 5\U/euf/m
@@ -1412,7 +1428,7 @@ Overfull \hbox (0.96092pt too wide) in paragraph at lines 999--1004
 /euf/m/n/12 )$
  []
 
-[46] (./documentation.aux)
+[47] (./documentation.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1421,10 +1437,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6300 strings out of 493029
- 92532 string characters out of 6136234
- 175275 words of memory out of 5000000
- 9592 multiletter control sequences out of 15000+600000
+ 6301 strings out of 493029
+ 92573 string characters out of 6136234
+ 172275 words of memory out of 5000000
+ 9593 multiletter control sequences out of 15000+600000
  34850 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,17n,37p,2459b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1451,10 +1467,10 @@ r/sfcc1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr
 ype1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super
 /sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/
 share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on documentation.pdf (48 pages, 606232 bytes).
+Output written on documentation.pdf (49 pages, 608381 bytes).
 PDF statistics:
- 329 PDF objects out of 1000 (max. 8388607)
- 223 compressed objects within 3 object streams
+ 333 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  142 words of extra memory for PDF output out of 10000 (max. 10000000)
 

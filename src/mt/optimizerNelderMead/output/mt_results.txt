@@ -1,0 +1,10 @@
+**************** MT TC 1 ****************
+testcase 1: Create an instance of a NelderMead type object
+testcase 1: DONE
+
+**************** MT TC 2 ****************
+testcase 2: Find minimum place of a test function
+Minimum place of f(x,y) := x^2+y^2
+X: 0.0012207 Y: -0.00167847
+testcase 2: DONE
+

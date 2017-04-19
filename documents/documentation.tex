@@ -647,7 +647,8 @@ A modul tesztek elvégzése elengedhetlen egy modern programcsomag működésén
 
 \subsection{A SigPrep és EcgSigPrep modulok tesztjei}
 
-A SigPrep illetve az EcgSigPrep modulokhoz tartozó modul teszt a \texttt{/src/mt/sigPrepE} \linebreak \texttt{cgSigPrep} mappában található. A modul teszthet tartozó forráskódot az \texttt{mt.cpp} állomomány tartalmazza. Az \texttt{mt.cpp} állomány először az elvégzendő tesztesetek paramétereit adja meg makrók segítségével, ezeket pedig a \texttt{main} függvény követi az egyes \linebreak  tesztesetek definícióival. Az egyes tesztesetek kimenetét a \texttt{/src/mt/sigPrepEcgSigPre} \linebreak  \texttt{p/output/mt\_results.txt} szöveges állomány tartalmazza. A modul teszt célja, hogy a SigPrep illetve az EcgSigPrep modulok publikus (és közvetetten a privát) hozzáférhetőségű metódusainak helyességét igazolja. Ezt az \texttt{EcgSigPrep} osztályból példányosított objektum publikus függvényeinek meghívásával, és a visszaadott eredmények ellenőrzésével végezhető el. Az alábbi táblázat tartalmazza az elvégzett tesztesetek jelölését, rövid jellemzését, az eredményeket, illetve az ellenőrzés módját. A pontos kimenetek megtalálhatóak az \texttt{mt\_results.txt} állományban. 
+A SigPrep illetve az EcgSigPrep modulokhoz tartozó modul teszt a \texttt{/src/mt/sigPrepE} \linebreak \texttt{cgSigPrep} mappában található. A modul teszthez tartozó forráskódot az \texttt{mt.cpp} állomomány tartalmazza. Az \texttt{mt.cpp} állomány először az elvégzendő tesztesetek paramétereit adja meg makrók segítségével, ezeket pedig a \texttt{main} függvény követi az egyes \linebreak  tesztesetek definícióival. Az egyes tesztesetek kimenetét a \texttt{/src/mt/sigPrepEcgSigPre} \linebreak  \texttt{p/output/mt\_results.txt} szöveges állomány tartalmazza. 
+\par A modul teszt célja, hogy a SigPrep illetve az EcgSigPrep modulok publikus (és közvetetten a privát) hozzáférhetőségű metódusainak helyességét igazolja. Ez az \texttt{EcgSigPrep} osztályból példányosított objektum publikus függvényeinek meghívásával, és a visszaadott eredmények ellenőrzésével végezhető el. Az alábbi táblázat tartalmazza az elvégzett tesztesetek jelölését, rövid jellemzését, az eredményeket, illetve az ellenőrzés módját. A pontos kimenetek megtalálhatóak az \texttt{mt\_results.txt} állományban. 
 
 
 
@@ -670,6 +671,29 @@ A SigPrep illetve az EcgSigPrep modulokhoz tartozó modul teszt a \texttt{/src/m
 \end{center}
 
 \subsection{Az OrtFunSys és Hermite modulok tesztjei}
+
+Az OrtFunSys illetve az Hermite modulokhoz tartozó modul teszt a \texttt{/src/mt/ortFunSys} \linebreak \texttt{Hermite} mappában található. A modul teszthet tartozó forráskódot az \texttt{mt.cpp} állomomány tartalmazza. Az \texttt{mt.cpp} állomány először az elvégzendő tesztesetek paramétereit adja meg makrók segítségével, ezeket pedig a \texttt{main} függvény követi az egyes \linebreak  tesztesetek definícióival. Az egyes tesztesetek kimenetét a \texttt{/src/mt/ortFunSysHermite} \linebreak  \texttt{/output/mt\_results.txt} szöveges állomány tartalmazza. 
+\par A modul teszt célja, hogy az OrtFunSys illetve az Hermite modulok metódusainak helyességét igazolja, bizonyítva ezzel, hogy valóban a \ref{ortfunsys hermite implementacio leirasa} fejezetekben bemutatott szolgáltatásokat nyújtják. A metódusok helyességének belátása az \texttt{Hermite} osztályból példányosított objektum publikus függvényeinek meghívásával, és a visszaadott eredmények ellenőrzésével végezhető el. Az alábbi táblázat tartalmazza az elvégzett tesztesetek jelölését, rövid jellemzését, az eredményeket, illetve az ellenőrzés módját. A pontos kimenetek megtalálhatóak az \texttt{mt\_results.txt} állományban. 
+
+\begin{center}
+\begin{adjustbox}{width=1\textwidth}
+ \begin{tabular}{||c c c c||} 
+ \hline
+ Jelölés & Teszteset & Eredmény &  Ellenőrzés módja \\ [0.5ex] 
+ \hline\hline
+ TC1 & Az Hermite típusú objektum konstruktora lefut &  Ok & A standard output ellenőrzése. \\ 
+ \hline
+ TC2 & A 20 fokú Hermite függvény zérushelyeinek ellenőrzése &  Ok & Az ortogonális polinomoknak megfelelően, 20 különböző értékű, egyszeres valós gyök az eredmény, amelyek szimmetrikusak az origóra. \\
+ \hline
+ TC3 & A kiszámított Hermite függvények értékeinek kiiratása & Ok & A kapott számsor grafikus ábrázolása, kritikus értékek (pl.maximum) ellenőrzése. \\
+ \hline
+ TC4 & A kiszámított Hermite függvényekhez tartozó Crisstoffel-Darboux számok kiiratása & Ok & A skaláris szorzás elvégzése két különböző, illetve két azonos Hermite függvénnyel. Az első esetben 0, második esetben 1 az eredmény. \\
+ \hline
+  TC5 & Hermite függvényrendszer generálása ekvidisztans felosztású intervallumon & Ok &    A kapott számsor grafikus ábrázolása, kritikus értékek (pl.maximum) ellenőrzése. \\
+ \hline
+\end{tabular}
+\end{adjustbox}
+\end{center}
 
 \subsection{A Compresser és az OrtCompresser modulok tesztjei}
 
