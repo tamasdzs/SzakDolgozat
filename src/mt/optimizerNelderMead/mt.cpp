@@ -41,7 +41,7 @@ int main() {
 	NelderMead NM(MT_NUM_OF_MAX_GENERATIONS_INT, MT_MAXIMUM_TOLARABLE_FVAL_DOUBLE, X);
 	ofs<<"testcase 1: DONE"<<std::endl<<std::endl;
 	
-	/* TC_2:  Retrieve roots of 20th degree Hermite function via getter*/
+	/* TC_2:  Find minimum place of a test function*/
 	ofs<<"**************** MT TC 2 ****************"<<std::endl;
 	ofs<<"testcase 2: Find minimum place of a test function"<<std::endl;
 	

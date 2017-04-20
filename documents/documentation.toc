@@ -28,8 +28,8 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {3.4.2}Az OrtFunSys \IeC {\'e}s Hermite modulok tesztjei}{37}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.4.3}A Compresser \IeC {\'e}s az OrtCompresser modulok tesztjei}{37}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.4.4}Az Optimizer \IeC {\'e}s a NelderMead modulok tesztjei}{37}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.5}A MatchingPursuit modul tesztjei}{37}
-\select@language {magyar} \contentsline {section}{\numberline {3.5}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s hat\IeC {\'e}konys\IeC {\'a}g\IeC {\'a}nak tesztel\IeC {\'e}se}{37}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.5}A MatchingPursuit modul tesztjei}{38}
+\select@language {magyar} \contentsline {section}{\numberline {3.5}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s hat\IeC {\'e}konys\IeC {\'a}g\IeC {\'a}nak tesztel\IeC {\'e}se}{38}
 \select@language {magyar} \contentsline {chapter}{\numberline {4}Tapasztalatok \IeC {\'e}s kitekint\IeC {\'e}s}{40}
 \select@language {magyar} \contentsline {section}{\numberline {4.1}Az elj\IeC {\'a}r\IeC {\'a}ssal kapcsolatos tapasztalatok}{40}
 \select@language {magyar} \contentsline {section}{\numberline {4.2}Eredm\IeC {\'e}nyek a feladat specifik\IeC {\'a}ci\IeC {\'o}j\IeC {\'a}hoz k\IeC {\'e}pest}{41}

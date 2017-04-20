@@ -699,6 +699,31 @@ Az OrtFunSys illetve az Hermite modulokhoz tartozó modul teszt a \texttt{/src/m
 
 \subsection{Az Optimizer és a NelderMead modulok tesztjei}
 
+Az Optimizer illetve az NelderMead modulokhoz tartozó modul teszt a \texttt{/src/mt/optimizerNel} \linebreak \texttt{derMead} mappában található. A modul teszthet tartozó forráskódot az \texttt{mt.cpp} állomomány tartalmazza. Az \texttt{mt.cpp} állomány először az elvégzendő tesztesetek paramétereit adja meg makrók segítségével, ezeket pedig a \texttt{main} függvény követi az egyes \linebreak  tesztesetek definícióival. Az egyes tesztesetek kimenetét a \texttt{/src/mt/ortFunSysHermite} \linebreak  \texttt{/output/mt\_results.txt} szöveges állomány tartalmazza. 
+\par A modul teszt feladata, hogy igazolja a \ref{optimizer nelder mead} fejezetekben meghatározott funkciók létét, illetve az implementáció helyességét. Ennek érdekében a tesztesetek valós adatokkal teszik próbára az Optimizer modul által definiált \texttt{std::vector<double>} típusból származtatott \texttt{Coord} struktúrát és a NelderMead modulban implementált Nelder-Mead algoritmust. A metódusok helyességének belátása a \texttt{NelderMead} osztályból példányosított objektum publikus \texttt{NelderMead::Optimize()} függvényének meghívásával, és a visszaadott eredmények ellenőrzésével végezhető el. Az alábbi táblázat tartalmazza az elvégzett tesztesetek jelölését, rövid jellemzését, az eredményeket, illetve az ellenőrzés módját. A pontos kimenetek megtalálhatóak az \texttt{mt\_results.txt} állományban. 
+
+\begin{center}
+\begin{adjustbox}{width=1\textwidth}
+ \begin{tabular}{||c c c c||} 
+ \hline
+ Jelölés & Teszteset & Eredmény &  Ellenőrzés módja \\ [0.5ex] 
+ \hline\hline
+ TC1 & A NelderMead típusú objektum konstruktora lefut &  Ok & A standard output ellenőrzése. \\ 
+ \hline
+ TC2 &
+ Az
+\vbox{
+\begin{equation}
+ f(x, y):=x^{2}+y^{2}\ \  (x,y\in\Bbb R)
+\end{equation}
+} 
+ függvény minimumhelyének közelítése a Nelder-Mead algoritmus segítségével. Különböző kezdeti paraméterek kipróbálásával.
+ &  Ok & A kiszámított minimum hely megtalálható a \texttt{mt\_results.txt} állományban. Jól látható, hogy az algoritmus iterációinak számát növelve, vagy a maximális elfogadható hibát csökkentve egyre közelebb kerül a kiszámított érték az origóhoz. \\
+ \hline
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
 \subsection{A MatchingPursuit modul tesztjei}
 
 \section{A tömörítő eljárás hatékonyságának tesztelése}
