@@ -32,6 +32,14 @@
 /* END DEFINES FOR ANIMATION OUTPUT */
 
 /* DEFINES FOR OPTIMIZATION INITIALIZATION */
+#define CN_MATCHING_PURSUIT_INIT_SIMPLEX_LOW_DILAT_DB  (double)0.14
+#define CN_MATCHING_PURSUIT_INIT_SIMPLEX_MID_DILAT_DB  (double)0.154
+#define CN_MATCHING_PURSUIT_INIT_SIMPLEX_HIGH_DILAT_DB (double)0.16
+
+#define CN_MATCHING_PURSUIT_POPULATION_SIZE_INT (unsigned int)3
+
+#define CN_MATCHING_PURSUIT_NELDER_ROUNDS_INT (int)20
+#define CN_MATCHING_PURSUIT_NELDER_MAXERR_DB  (double)0.2
 
 /* END DEFINES FOR OPTIMIZATION INITIALIZATION */
 
@@ -44,6 +52,7 @@ class MatchingPursuit {
 		 std::function<double (Coord &)> costfun;
 		 
 		 void set_costfun(std::function<double (Coord &)> cfun);
+		 std::vector<Coord> set_optimizer_init_values(Eigen::MatrixXd curr_sig);
 	public:
 		MatchingPursuit(EcgSigPrep *SH, std::map<std::string, std::string> fdirs);
 		MatchingPursuit(EcgSigPrep *SH);

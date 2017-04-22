@@ -9,14 +9,10 @@
  *	Used to store a compressed heartbeat. Stores data needed to reconstruct
  * 	compressed hearbeat. Contains a pointer to the next compressed heartbeat. 
  * 
- * 	TODO:
- * 	 - rename FCOEFFS to fourier_coefficients
- *   - own class for Compressed and OrtCompressed!
  * */
 struct Compressed {
-	Compressed* next;
 	Eigen::MatrixXd compressed_sig; 
-	Compressed(): next(0) { }
+	Compressed() { }
 };
 
 /*
@@ -25,9 +21,10 @@ struct Compressed {
  * orthonormal system. 
  * */
 struct OrtCompressed: public Compressed {
+	OrtCompressed* next;
 	double dilat;
 	double trans;
-	OrtCompressed(): Compressed(), dilat(1), trans(0) {}
+	OrtCompressed(): Compressed(), next(0), dilat(1), trans(0) {}
 };
 
 /*
@@ -36,7 +33,6 @@ struct OrtCompressed: public Compressed {
  * a signal handler. Methods include compression of a single heartbeat, decompression of 
  * a single heatbeat (orthonormal).  
  * 
- *  - TODO: Make class truly abstract (get rid of OrtCompressed*s)
  */
 
 class Compresser {

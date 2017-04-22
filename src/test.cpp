@@ -85,7 +85,7 @@ int main () {
 	
 	//MP TEST
 	EcgSigPrep* signal_handler = new EcgSigPrep("103", 2, 950);
-	
+
 	// MAP helyett define
 	std::map<std::string, std::string> files_dirs;
 	files_dirs.insert( std::pair<std::string, std::string>("in_action_sig", "/var/www/html/medical/results/in_action/s.csv") );

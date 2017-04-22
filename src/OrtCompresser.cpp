@@ -49,12 +49,9 @@ const Eigen::MatrixXd OrtCompresser::decompress( const OrtCompressed* compr ) {
 	return (H * compr->compressed_sig).transpose();
 }
 
-double OrtCompresser::getPRD( const OrtCompressed* compr, Eigen::MatrixXd & signal, std::string fout ) {
+double OrtCompresser::getPRD( const OrtCompressed* compr, Eigen::MatrixXd & signal, std::ofstream& fout ) {
 	Eigen::MatrixXd APR = decompress( compr );
-	std::ofstream result;
-	result.open(fout);
-	result<<APR.transpose();
-	result.close();
+	fout<<APR.transpose();
 	return ((signal - APR).norm() / (signal.array() - signal.mean()).matrix().norm());
 }
 
