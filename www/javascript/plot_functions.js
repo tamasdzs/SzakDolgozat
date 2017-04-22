@@ -13,6 +13,9 @@ var lastT = "EMPTY\n";
 var intervalIDs = [];
 var isCompressing;
 
+var prevDatas = ["EMPTY\n", "EMPTY\n", "EMPTY\n"];
+var filesToCheck_results = ["results/prd/prd.txt", "results/qs/qs.txt", "results/cr/cr.txt"];
+
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
@@ -64,13 +67,13 @@ function getResultsAndDraw(sigLocation, aprLocation, lastData, toClear, toClearP
 				}
 			}
 		} else {
-			console.log("No change in " + chartName);
+			
 		}
 	});
 }
 
 function drawAggregatedApr() {
-	//Get Signal
+	
 	var chartName = 'in_build_chart';
 	var chartTitle = "Aggregated approximations";
 	var toPlot = [];
@@ -99,13 +102,38 @@ function drawAggregatedApr() {
 	drawChart(toPlot, chartName, chartTitle, legends);
 }
 
+function getResultsAndPublish(prdLocation, qsLocation, crLocation, prevDatas) {
+	
+	$.get(prdLocation, function (data) {
+		if( data != prevDatas[0]) {
+			prevDatas[0] = data;
+			document.getElementById("prd").innerHTML = data;
+		}
+	});
+	
+	$.get(qsLocation, function (data) {
+		if( data != prevDatas[1]) {
+			prevDatas[1] = data;
+			document.getElementById("qs").innerHTML = data;
+		}
+	});
+	
+	$.get(crLocation, function (data) {
+		if( data != prevDatas[2]) {
+			prevDatas[2] = data;
+			document.getElementById("cr").innerHTML = data;
+		}
+	});
+}
+
 $(document).ready(function () {
 	isCompressing = true;
     
-    intervalIDs.push(setInterval( function() { getResultsAndDraw(filesToCheck[0], filesToCheck[1], lastAprStr, "noClear", 0, 'in_build_chart', 'ECG Compression', ['Time', 'Signal', 'Approximation']); } , 1000 * checkInterval));
-    intervalIDs.push(setInterval( function() { getResultsAndDraw(filesToCheck[2], filesToCheck[3], lastQRS, intervalIDs, 1, 'QRS_chart', 'Approximation of QRS', ['Time', 'Signal', 'QRS']); } , 5000 * checkInterval));
+    intervalIDs.push(setInterval(function() { getResultsAndDraw(filesToCheck[0], filesToCheck[1], lastAprStr, "noClear", 0, 'in_build_chart', 'ECG Compression', ['Time', 'Signal', 'Approximation']); } , 1000 * checkInterval));
+    intervalIDs.push(setInterval(function() { getResultsAndDraw(filesToCheck[2], filesToCheck[3], lastQRS, intervalIDs, 1, 'QRS_chart', 'Approximation of QRS', ['Time', 'Signal', 'QRS']); } , 5000 * checkInterval));
     intervalIDs.push(setInterval(function() { getResultsAndDraw(filesToCheck[4], filesToCheck[5], lastT, intervalIDs, 2, 'T_chart', 'Approximation of T segment', ['Time', 'Signal','T']); }, 5000 * checkInterval));
     intervalIDs.push(setInterval(function() { getResultsAndDraw(filesToCheck[6], filesToCheck[7], lastP, intervalIDs, 3, 'P_chart', 'Approximation of P segment', ['Time', 'Signal','P']); }, 5000 * checkInterval));
+    intervalIDs.push(setInterval(function() { getResultsAndPublish(filesToCheck_results[0], filesToCheck_results[1], filesToCheck_results[2], prevDatas); }, 1000 * checkInterval));
     
 });
 
