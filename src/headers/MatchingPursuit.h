@@ -15,6 +15,11 @@
 /* DEFINE CONSTANTS FOR MP MODULE */
 
 /* DEFINES FOR ANIMATION OUTPUT */
+
+#define CN_MATCHING_PURSUIT_PRD_STR "/var/www/html/medical/results/prd/prd.txt"
+#define CN_MATCHING_PURSUIT_QS_STR "/var/www/html/medical/results/qs/qs.txt"
+#define CN_MATCHING_PURSUIT_CR_STR "/var/www/html/medical/results/cr/cr.txt"
+
 #define CN_MATCHING_PURSUIT_IN_ACTION_SIG_STR "/var/www/html/medical/results/in_action/s.csv"
 #define CN_MATCHING_PURSUIT_IN_ACTION_APR_STR "/var/www/html/medical/results/in_action/a.csv"
 
@@ -29,6 +34,7 @@
            
 #define CN_MATHCING_PURSUIT_COMBINED_SIG_STR "/var/www/html/medical/results/combined/s.csv"
 #define CN_MATHCING_PURSUIT_COMBINED_APR_STR "/var/www/html/medical/results/combined/a.csv"
+
 /* END DEFINES FOR ANIMATION OUTPUT */
 
 /* DEFINES FOR OPTIMIZATION INITIALIZATION */

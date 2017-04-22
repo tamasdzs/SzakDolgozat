@@ -23,7 +23,7 @@ OrtCompresser::~OrtCompresser() {
  *   opjects together (MatchingPursuit::CompressBeat()) should create the new OrtCompressed object.
 */
 Eigen::MatrixXd OrtCompresser::compressBeat( Eigen::MatrixXd& signal ) {
-	return  (Herm_sys->transpose()*(big_ort_sys->get_ort_fun_lamb()->inverse()*signal.transpose()));
+	return  (Herm_sys->transpose()*(big_ort_sys->get_ort_fun_lamb()->inverse()*signal.transpose())); 
 }
 
 const Eigen::MatrixXd OrtCompresser::decompress( const OrtCompressed* compr ) {
@@ -57,5 +57,9 @@ double OrtCompresser::getPRD( const OrtCompressed* compr, Eigen::MatrixXd & sign
 
 double OrtCompresser::getPRD( const OrtCompressed* compr, Eigen::MatrixXd & signal ) {
 	Eigen::MatrixXd APR = decompress( compr );
+	return ((signal - APR).norm() / (signal.array() - signal.mean()).matrix().norm());
+}
+
+double OrtCompresser::getPRD( Eigen::MatrixXd& APR, Eigen::MatrixXd& signal ) {
 	return ((signal - APR).norm() / (signal.array() - signal.mean()).matrix().norm());
 }

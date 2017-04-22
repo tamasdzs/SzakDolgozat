@@ -18,10 +18,12 @@ class OrtCompresser: public Compresser {
 		
 	public:
 		OrtCompresser(OrtFunSys& H, const int dim);
+		OrtCompresser() : big_ort_sys(0), Herm_sys(0) {}
 		~OrtCompresser();
 		
 		double getPRD( const OrtCompressed* compr, Eigen::MatrixXd& signal, std::ofstream& fout );
 		double getPRD( const OrtCompressed* compr, Eigen::MatrixXd& signal );
+		double getPRD( Eigen::MatrixXd& APR, Eigen::MatrixXd& signal );
 		Eigen::MatrixXd compressBeat( Eigen::MatrixXd& signal );
 		const Eigen::MatrixXd decompress(const OrtCompressed* compr);
 };

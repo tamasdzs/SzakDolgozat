@@ -42,12 +42,16 @@ std::vector<Coord> MatchingPursuit::set_optimizer_init_values(Eigen::MatrixXd cu
 }
 
 OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
-	OrtCompressed* ret = 0;
+	OrtCompressed* ret;
 	
 	Eigen::MatrixXd sig = *(sig_handler->getNextSegment());
 	Eigen::MatrixXd osig = sig;
 	Eigen::MatrixXd original_signal = sig;
 	Hermite Herm(sig.cols());
+	
+	std::ofstream t_prd_ofs;
+	std::ofstream t_qs_ofs;
+	std::ofstream t_cr_ofs;
 	
 	std::ofstream t_inActionSig_ofs;
 	std::ofstream t_inActionApr_ofs;
@@ -65,6 +69,11 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 	std::ofstream t_combinedApr_ofs;
 	
 	for (unsigned int i = 0; i < rounds_deg.size(); ++i) {
+		
+		t_cr_ofs.open(CN_MATCHING_PURSUIT_CR_STR);
+		t_cr_ofs.clear();
+		t_cr_ofs<<((double)sig.cols())/((double)rounds_deg[i])<<std::endl;
+		t_cr_ofs.close();
 		
 		switch(i) {
 			case 0:
@@ -102,7 +111,7 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 		OrtCompressed* p = new OrtCompressed;
 		
 		set_costfun( 
-			[&osig, &OC, &Herm, &t_inActionApr_ofs, this ] (Coord & pos) -> double {
+			[&osig, &OC, &Herm, &t_inActionApr_ofs, &t_prd_ofs, &t_qs_ofs, this ] (Coord & pos) -> double {
 				double dilat = pos[0];
 				double trans = pos[1];
 				OrtCompressed a_compression;
@@ -115,6 +124,17 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 				t_inActionApr_ofs.clear();
 				double ret = OC.getPRD( &a_compression, osig, t_inActionApr_ofs );
 				t_inActionApr_ofs.close();  
+				
+				t_prd_ofs.open(CN_MATCHING_PURSUIT_PRD_STR);
+				t_prd_ofs.clear();
+				t_prd_ofs<<ret<<std::endl;
+				t_prd_ofs.close();
+				
+				t_qs_ofs.open(CN_MATCHING_PURSUIT_QS_STR);
+				t_qs_ofs.clear();
+				t_qs_ofs<<ret<<std::endl;
+				t_qs_ofs.close();
+				
 				return ret;
 			}
 		);
@@ -166,6 +186,41 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 		ret = p;
 		sig = osig;
 	}
+	
+	Eigen::MatrixXd t_finalApr_Matd = Eigen::MatrixXd::Zero(1, original_signal.cols());
+	OrtCompresser t_finalPRD_calculator;
+	
+	double t_finalCr_db = 0;
+	double t_finalPRD_db = 0;
+	double t_finalQs_db = 0;
+	
+	OrtCompressed*  t_segmentIterator_OrtCmpIt = ret;
+	for ( ; t_segmentIterator_OrtCmpIt != 0; t_segmentIterator_OrtCmpIt = t_segmentIterator_OrtCmpIt->next ) {
+		
+		t_finalCr_db += (double)t_segmentIterator_OrtCmpIt->compressed_sig.rows();
+		OrtCompresser t_decompresser_OrtCmp(Herm, t_segmentIterator_OrtCmpIt->compressed_sig.rows());
+		Eigen::MatrixXd t_currSegment_Matd = t_decompresser_OrtCmp.decompress( t_segmentIterator_OrtCmpIt );	
+		t_finalApr_Matd += t_currSegment_Matd;
+	}
+	
+	t_finalCr_db = ((double)original_signal.cols()) / (t_finalCr_db);
+	t_finalPRD_db = t_finalPRD_calculator.getPRD( t_finalApr_Matd, original_signal );
+	t_finalQs_db = t_finalPRD_db;
+	
+	t_cr_ofs.open(CN_MATCHING_PURSUIT_CR_STR);
+	t_cr_ofs.clear();
+	t_cr_ofs<<t_finalCr_db<<std::endl;
+	t_cr_ofs.close();
+	
+	t_prd_ofs.open(CN_MATCHING_PURSUIT_PRD_STR);
+	t_prd_ofs.clear();
+	t_prd_ofs<<t_finalPRD_db<<std::endl;
+	t_prd_ofs.close();
+	
+	t_qs_ofs.open(CN_MATCHING_PURSUIT_QS_STR);
+	t_qs_ofs.clear();
+	t_qs_ofs<<t_finalQs_db<<std::endl;
+	t_qs_ofs.close();
 	
 	return ret;
 }
