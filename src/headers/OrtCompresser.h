@@ -26,7 +26,7 @@ class OrtCompresser: public Compresser {
 		
 		double getPRD( const OrtCompressed* compr, Eigen::MatrixXd& signal, std::string fout );
 		double getPRD( const OrtCompressed* compr, Eigen::MatrixXd& signal );
-		OrtCompressed* compressBeat( Eigen::MatrixXd& signal );
+		Eigen::MatrixXd compressBeat( Eigen::MatrixXd& signal );
 		const Eigen::MatrixXd decompress(const OrtCompressed* compr);
 };
 

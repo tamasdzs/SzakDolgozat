@@ -22,11 +22,8 @@ OrtCompresser::~OrtCompresser() {
  * - This method should give back a matrix. The method that actually links the compressed
  *   opjects together (MatchingPursuit::CompressBeat()) should create the new OrtCompressed object.
 */
-OrtCompressed* OrtCompresser::compressBeat( Eigen::MatrixXd& signal ) {
-	OrtCompressed *ret = new OrtCompressed;
-	 
-	ret->compressed_sig = (Herm_sys->transpose()*(big_ort_sys->get_ort_fun_lamb()->inverse()*signal.transpose()));
-	return ret;
+Eigen::MatrixXd OrtCompresser::compressBeat( Eigen::MatrixXd& signal ) {
+	return  (Herm_sys->transpose()*(big_ort_sys->get_ort_fun_lamb()->inverse()*signal.transpose()));
 }
 
 const Eigen::MatrixXd OrtCompresser::decompress( const OrtCompressed* compr ) {

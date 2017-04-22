@@ -29,21 +29,22 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 		sigout.clear();
 		switch(i) {
 			case 0:
-				sigout.open(file_dirs["QRS_sig"]);
+				//sigout.open(file_dirs["QRS_sig"]);
+				sigout.open(CN_MATCHING_PURSUIT_QRS_SIG_STR);
 				sigout<<osig.transpose();
 				sigout.close();
 				sigout.clear();
-				sigout.open(file_dirs["combined_sig"]);
+				sigout.open(CN_MATHCING_PURSUIT_COMBINED_SIG_STR);
 				sigout<<osig.transpose();
 				sigout.close();
 				break;
 			case 1:	
-				sigout.open(file_dirs["T_sig"]);
+				sigout.open(CN_MATCHING_PURSUIT_T_SIG_STR);
 				sigout<<osig.transpose();
 				sigout.close();
 				break;
 			case 2:
-				sigout.open(file_dirs["P_sig"]);
+				sigout.open(CN_MATHCING_PURSUIT_P_SIG_STR);
 				sigout<<osig.transpose();
 				sigout.close();
 				break;
@@ -70,13 +71,12 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 			[&osig, &OC, &Herm, this ] (Coord & pos) -> double {
 				double dilat = pos[0];
 				double trans = pos[1];
-						
+				OrtCompressed a_compression;
 				Eigen::MatrixXd s = osig;
 				s = sig_handler->setDilatTrans( dilat, trans, Herm.get_ort_fun_roots(), s );
-				OrtCompressed* a_compression = OC.compressBeat( s );
-				a_compression->dilat = dilat; a_compression->trans = trans;
-				double ret = OC.getPRD( a_compression, osig, this->file_dirs["in_action_apr"] );  
-				delete a_compression;
+				a_compression.compressed_sig = OC.compressBeat( s );
+				a_compression.dilat = dilat; a_compression.trans = trans;
+				double ret = OC.getPRD( &a_compression, osig, this->file_dirs["in_action_apr"] );  
 				return ret;
 			}
 		);
@@ -112,7 +112,7 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 		
 		sig = sig_handler->setDilatTrans(optimized_coords[0], optimized_coords[1], Herm.get_ort_fun_roots(), sig);
 			
-		p = OC.compressBeat(sig);
+		p->compressed_sig = OC.compressBeat(sig);
 		p->dilat = optimized_coords[0];
 		p->trans = optimized_coords[1];
 		
