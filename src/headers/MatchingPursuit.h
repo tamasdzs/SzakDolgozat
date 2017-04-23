@@ -54,13 +54,11 @@
 class MatchingPursuit {
 	private:
 		 EcgSigPrep* sig_handler;
-		 std::map<std::string, std::string> file_dirs;
 		 std::function<double (Coord &)> costfun;
 		 
 		 void set_costfun(std::function<double (Coord &)> cfun);
 		 std::vector<Coord> set_optimizer_init_values(Eigen::MatrixXd curr_sig);
 	public:
-		MatchingPursuit(EcgSigPrep *SH, std::map<std::string, std::string> fdirs);
 		MatchingPursuit(EcgSigPrep *SH);
 		~MatchingPursuit();
 		

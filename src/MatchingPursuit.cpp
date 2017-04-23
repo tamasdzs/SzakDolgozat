@@ -1,11 +1,7 @@
 #include "MatchingPursuit.h"
 
-MatchingPursuit::MatchingPursuit( EcgSigPrep *SH, std::map<std::string, std::string> fdirs): sig_handler(SH) {
-	file_dirs = fdirs;
-}
+MatchingPursuit::MatchingPursuit( EcgSigPrep *SH ): sig_handler(SH) {
 
-MatchingPursuit::MatchingPursuit( EcgSigPrep*SH ) {
-	
 }
 
 MatchingPursuit::~MatchingPursuit() {
@@ -132,7 +128,7 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 				
 				t_qs_ofs.open(CN_MATCHING_PURSUIT_QS_STR);
 				t_qs_ofs.clear();
-				t_qs_ofs<<ret<<std::endl;
+				t_qs_ofs<< ( (double)s.cols() / (double)a_compression.compressed_sig.rows() ) / ( ret * (double)100.0)  <<std::endl;
 				t_qs_ofs.close();
 				
 				return ret;
@@ -205,7 +201,7 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg) {
 	
 	t_finalCr_db = ((double)original_signal.cols()) / (t_finalCr_db);
 	t_finalPRD_db = t_finalPRD_calculator.getPRD( t_finalApr_Matd, original_signal );
-	t_finalQs_db = t_finalPRD_db;
+	t_finalQs_db = t_finalCr_db / ( t_finalPRD_db * (double)100.0 );
 	
 	t_cr_ofs.open(CN_MATCHING_PURSUIT_CR_STR);
 	t_cr_ofs.clear();
