@@ -62,7 +62,7 @@ class MatchingPursuit {
 		MatchingPursuit(EcgSigPrep *SH);
 		~MatchingPursuit();
 		
-		OrtCompressed* CompressBeat(std::vector<int> rounds_deg);
+		OrtCompressed* CompressBeat(std::vector<int> rounds_deg, bool animation);
 };
 
 #endif
