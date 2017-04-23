@@ -67,8 +67,8 @@ const Eigen::MatrixXd* EcgSigPrep::getNextSegment() {
 	*signal = entire_signal->block(0, curr_pos, 1, abs(end_of_segment-curr_pos));
 	
 	
-	
-	curr_pos += end_of_segment;
+	int diff = end_of_segment - curr_pos;
+	curr_pos += diff;
 	
 	setSignal();
 	

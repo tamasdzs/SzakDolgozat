@@ -84,29 +84,32 @@ int main () {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////	
 	
 	//MP TEST
-	EcgSigPrep* signal_handler = new EcgSigPrep("103", 2, 950);
+	EcgSigPrep* signal_handler = new EcgSigPrep("signals/103/103", 2, 950);
 
-	// MAP helyett define
-	std::map<std::string, std::string> files_dirs;
-	files_dirs.insert( std::pair<std::string, std::string>("in_action_sig", "/var/www/html/medical/results/in_action/s.csv") );
-	files_dirs.insert( std::pair<std::string, std::string>("in_action_apr", "/var/www/html/medical/results/in_action/a.csv") );
-	files_dirs.insert( std::pair<std::string, std::string>("QRS_sig", "/var/www/html/medical/results/qrs/s.csv") );
-	files_dirs.insert( std::pair<std::string, std::string>("QRS_apr", "/var/www/html/medical/results/qrs/a.csv") );
-	files_dirs.insert( std::pair<std::string, std::string>("T_sig", "/var/www/html/medical/results/t/s.csv") );
-	files_dirs.insert( std::pair<std::string, std::string>("T_apr", "/var/www/html/medical/results/t/a.csv") );
-	files_dirs.insert( std::pair<std::string, std::string>("P_sig", "/var/www/html/medical/results/p/s.csv") );
-	files_dirs.insert( std::pair<std::string, std::string>("P_apr", "/var/www/html/medical/results/p/a.csv") );
-	files_dirs.insert( std::pair<std::string, std::string>("combined_sig", "/var/www/html/medical/results/combined/s.csv") );
-	files_dirs.insert( std::pair<std::string, std::string>("combined_apr", "/var/www/html/medical/results/combined/a.csv") );
-	
-	MatchingPursuit MP(signal_handler, files_dirs);
+	MatchingPursuit MP(signal_handler);
 	
 	std::vector<int> rounds_deg;
 	rounds_deg.push_back(7);
 	rounds_deg.push_back(6);
 	rounds_deg.push_back(2);
 	
-	MP.CompressBeat(rounds_deg);
+	OrtCompressed* res;
+	
+	res = MP.CompressBeat(rounds_deg, true);
+	OrtCompressed* del_res = 0;
+	for ( ; res != 0; res = res->next) {
+		
+		std::cout<<"Dilat: "<<res->dilat<<" Trans: "<<res->trans<<std::endl;
+		std::cout<<"coefss: "<<res->compressed_sig<<std::endl;
+		
+		if ( del_res == 0 ) {
+			del_res = res;
+		} else {
+			delete del_res;
+			del_res = res;
+		}
+	}
+	delete del_res;
 	
 	delete signal_handler;
 	
