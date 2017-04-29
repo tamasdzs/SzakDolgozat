@@ -107,21 +107,21 @@ function getResultsAndPublish(prdLocation, qsLocation, crLocation, prevDatas) {
 	$.get(prdLocation, function (data) {
 		if( data != prevDatas[0]) {
 			prevDatas[0] = data;
-			document.getElementById("prd").innerHTML = data;
+			document.getElementById("prd").innerHTML = "PRD = " + data.toString() + "%";
 		}
 	});
 	
 	$.get(qsLocation, function (data) {
 		if( data != prevDatas[1]) {
 			prevDatas[1] = data;
-			document.getElementById("qs").innerHTML = data;
+			document.getElementById("qs").innerHTML = "QS = " + data.toString();
 		}
 	});
 	
 	$.get(crLocation, function (data) {
 		if( data != prevDatas[2]) {
 			prevDatas[2] = data;
-			document.getElementById("cr").innerHTML = data;
+			document.getElementById("cr").innerHTML = "CR = " + data.toString();
 		}
 	});
 }

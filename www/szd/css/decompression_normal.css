@@ -1,0 +1,144 @@
+body {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#AnimMenu {
+	max-width:90px;
+	max-height:40px;
+	width: auto;
+	height: auto;
+}
+
+#KitomMenu {
+	max-width:130px;
+	max-height:40px;
+	width: auto;
+	height: auto;
+}
+
+#TomMenu {
+	max-width:110px;
+	max-height:40px;
+	width: auto;
+	height: auto;
+}
+
+#IsmMenu {
+	max-width:110px;
+	max-height:40px;
+	width: auto;
+	height: auto;
+}	
+
+
+
+#CimMenu {
+	max-width:250px;
+	max-height:50px;
+	width: auto;
+	height: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	width: 800px;
+	margin-top: 20px;
+	margin-bottom:30px;
+    margin-left: auto;
+    margin-right: auto;
+	
+}
+
+.regularNavPoint {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 5px;
+    text-decoration: none;
+}
+
+#finalLi {
+	display: block;
+    color: white;
+    text-align: center;
+    padding-top: 14px;
+	padding-left: 10px;
+	padding-right: 0;
+    text-decoration: none;
+}
+
+#titleLi {
+	display: block;
+    color: white;
+    text-align: center;
+    padding-top: 14px;
+	padding-left: 0px;
+	padding-right: 70px;
+    text-decoration: none;
+}
+
+li {
+    float: left;
+}
+
+.dataCell {
+	
+}
+
+
+.blueCell {
+	width : 196px;
+	height: 100px;
+	border:2px solid rgb(0, 0, 206);
+	background-color: blue;
+	-webkit-animation: fadein 1s linear forwards;
+    animation: fadein 1s linear forwards;
+}
+
+.redCell {
+	width : 196px;
+	height: 100px;
+	border:2px solid rgb(226, 0, 0);
+}
+
+#inActionGraph {
+	padding-right: 70px;
+}
+
+#graphHolder {
+	width: 800px;
+	height: 400px;
+	margin-top: 30px;
+	margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+#pageFooterImage {
+   margin-top: 30px; 
+   width:800px;
+   height: auto;   /* Height of the footer */
+   margin-left: 100px;
+   margin-right:100px;
+}
+
+.hidden {
+	display: none;
+}
+
+@-webkit-keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

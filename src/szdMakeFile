@@ -2,9 +2,9 @@ CC=g++
 CFLAGS=-c -Wall -std=c++0x -I ./eigen -I ./headers
 LDFLAGS=
 LIBS=-lwfdb -lcurl
-SOURCES=test.cpp OrtFunSys.cpp Hermite.cpp SigPrep.cpp EcgSigPrep.cpp OrtCompresser.cpp NelderMead.cpp MatchingPursuit.cpp
+SOURCES=main.cpp OrtFunSys.cpp Hermite.cpp SigPrep.cpp EcgSigPrep.cpp OrtCompresser.cpp NelderMead.cpp MatchingPursuit.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
-EXECUTABLE=test
+EXECUTABLE=main
 
 all: $(SOURCES) $(EXECUTABLE)
     

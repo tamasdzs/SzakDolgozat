@@ -14,7 +14,7 @@ void MatchingPursuit::set_costfun(std::function<double (Coord &)> cfun) {
 
 std::vector<Coord> MatchingPursuit::set_optimizer_init_values(Eigen::MatrixXd curr_sig) {
 	std::vector<Coord> ret;
-	ret.resize(CN_MATCHING_PURSUIT_POPULATION_SIZE_INT);
+	ret.resize(CN_MATCHING_PURSUIT_POPULATION_SIZE_INT); 
 	
 	ret[0][0] = CN_MATCHING_PURSUIT_INIT_SIMPLEX_HIGH_DILAT_DB; 
 	ret[1][0] = CN_MATCHING_PURSUIT_INIT_SIMPLEX_LOW_DILAT_DB; 

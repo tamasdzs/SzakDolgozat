@@ -1,0 +1,128 @@
+body {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#AnimMenu {
+	max-width:90px;
+	max-height:40px;
+	width: auto;
+	height: auto;
+}
+
+#KitomMenu {
+	max-width:130px;
+	max-height:40px;
+	width: auto;
+	height: auto;
+}
+
+#TomMenu {
+	max-width:110px;
+	max-height:40px;
+	width: auto;
+	height: auto;
+}
+
+#IsmMenu {
+	max-width:110px;
+	max-height:40px;
+	width: auto;
+	height: auto;
+}	
+
+
+
+#CimMenu {
+	max-width:250px;
+	max-height:50px;
+	width: auto;
+	height: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	width: 800px;
+	margin-top: 20px;
+	margin-bottom:30px;
+    margin-left: auto;
+    margin-right: auto;
+	
+}
+
+.regularNavPoint {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 5px;
+    text-decoration: none;
+}
+
+#finalLi {
+	display: block;
+    color: white;
+    text-align: center;
+    padding-top: 14px;
+	padding-left: 10px;
+	padding-right: 0;
+    text-decoration: none;
+}
+
+#titleLi {
+	display: block;
+    color: white;
+    text-align: center;
+    padding-top: 14px;
+	padding-left: 0px;
+	padding-right: 70px;
+    text-decoration: none;
+}
+
+li {
+    float: left;
+}
+
+.dataCell {
+
+}
+
+.graphCell {
+	border:3px solid rgb(226, 0, 0);
+}
+
+
+#graphHolder {
+	width: 800px;
+	height: 400px;
+	margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+	
+}
+
+#graphHolderCaption {
+	text-align: left;
+}
+
+#graphHolder {
+	border-collapse: collapse;
+}
+
+#graphHolderCaptionImage {
+	max-width:230px;
+	max-height:95px;
+	width: auto;
+	height: auto;
+}
+
+#pageFooterImage {
+   margin-top: 30px; 
+   width:800px;
+   height: auto;   /* Height of the footer */
+   margin-left: 100px;
+   margin-right:100px;
+}
