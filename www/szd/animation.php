@@ -21,7 +21,7 @@
 <table id="graphHolder">
 	<caption id="graphHolderCaption"> <img id="graphHolderCaptionImage" src="./resources/images/Felirat.png" alt="Példa tömörítés" > </caption>
 	<tr>
-		<td rowspan="2" class="graphCell" id="in_build_chart">
+		<td rowspan="2" class="graphCell" id="in_build_chart" onclick="launch_animation()">
 		
 		</td>
 		<td class="graphCell" id="QRS_chart">
@@ -46,6 +46,7 @@
 	</tr>
 </table>
 
+
 <script language="javascript" type="text/javascript">
 function launch_animation()
 {
@@ -57,8 +58,7 @@ function launch_animation()
 
                success: function(response)
                {
-				 alert("it ran at least");
-                // update code for your page
+		
                }
          });
 }

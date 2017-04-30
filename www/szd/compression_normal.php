@@ -130,7 +130,7 @@
 			
 			isShowingSigs = true;
 			
-			var recordNames     = ['101', '117', '118', '119', '201', '213'];
+			var recordNames     = ['101', '117', '118', '119', '201', '213', '103'];
 			var availableCoords = ['01', '02', '03', '10', '11', '12', '13', '20', '21', '22', '30', '31', '32'];
 			
 			var N = recordNames.length;

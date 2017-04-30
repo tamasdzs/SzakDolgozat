@@ -3,6 +3,7 @@
 
 <head>
 	<link rel="stylesheet" href="./css/compression_loading.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
 
 <body>
@@ -20,28 +21,52 @@
 </div>
 
 <div id="Main">
-	<a id="resLink" href="">
 	<img id="mainImage" src="">
-	</a>
 </div>
+
+<footer id="pageFooter">
+	<img id="pageFooterImage" src="./resources/images/FOOTER.png" alt="tamasdzs@gmail.com" >
+</footer>
+
+<script>
+	function hoverChangeImg(obj, path) {
+		obj.src = path;
+	}
+	
+	function createLinkForDownload(res_url) {
+		document.getElementById("Main").innerHTML = "<a href= \""+res_url+"\" download><img id=\"mainImage\" src=\"./resources/images/success.jpg\"></a>";
+	}
+	
+</script>
 
 <?php
 	
-	$validIds = array("101", "117", "118", "119", "201", "213");
+	$validIds = array("101", "117", "118", "119", "201", "213", "103");
 	$sigId = $_GET['sigID'];
 	
 	if ( in_array($sigId, $validIds) ) {
 		echo '<script>
 			  document.getElementById("mainImage").src = "./resources/images/Loading_Icon.gif";
+			  $.ajax({
+                type: "POST",
+                url: "launch_compression.php",
+                data: { sigID: '. $sigId .' },
+                success: function(data) {
+					if ( data.includes("success") ) {
+						createLinkForDownload("results/'.$sigId.'.cmp");
+					}
+					else {
+						alert("Ooops... something went wrong.");
+					}
+                  }
+			   });
 			  </script>';
-			  
-			  // Run clean_up.sh
-			  
-			  //Launch compression in compression mode
-			  
-			  //check that all went well
-			  
-			  //change image to DONE and add link for download results.
+		
+		$outputPath = "/var/www/html/szakdolgozat/results/" . $sigId.".cmp";
+		$sigPath = "signals/".$sigId."/".$sigId;
+		$scriptPath = getcwd();
+		$cmd = "./main 2 ".$sigPath." ".$outputPath; 
+	
 	}
 	else {
 		
@@ -52,18 +77,6 @@
 			  </script>';
 	}
 ?>
-
-<footer id="pageFooter">
-	<img id="pageFooterImage" src="./resources/images/FOOTER.png" alt="tamasdzs@gmail.com" >
-</footer>
-
-<script>
-	
-	function hoverChangeImg(obj, path) {
-		obj.src = path;
-	}
-	
-</script>
 
 </body>
 </html> 

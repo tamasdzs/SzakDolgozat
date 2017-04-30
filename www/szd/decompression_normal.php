@@ -24,7 +24,7 @@
 	<tr>
 		<td  class="blueCell" id="00">
 			<form action="decompression_loading.php" method="post" enctype="multipart/form-data">
-				<input type="file" id="fileToUpload" name="fileName" class="hidden" accept=".cmp" >
+				<input type="file" id="fileToUpload" name="fileToUpload" class="hidden" accept=".cmp" >
 				<input type="submit" name="fileSubmit" value="upload" id="submitButton" class="hidden">  
 			</form>
 			<label for="fileToUpload">Browse</label>

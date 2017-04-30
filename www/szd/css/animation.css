@@ -87,7 +87,8 @@ li {
 }
 
 .dataCell {
-
+	width: 194px;
+	height:200px;
 }
 
 .graphCell {
@@ -100,16 +101,14 @@ li {
 	height: 400px;
 	margin-top: 30px;
     margin-left: auto;
-    margin-right: auto;
-	
+    margin-right: auto; 
+    table-layout:fixed;
+    border-collapse: collapse;
+	overflow: hidden;
 }
 
 #graphHolderCaption {
 	text-align: left;
-}
-
-#graphHolder {
-	border-collapse: collapse;
 }
 
 #graphHolderCaptionImage {
@@ -118,6 +117,28 @@ li {
 	width: auto;
 	height: auto;
 }
+
+#in_build_chart {
+	width: 394px;
+	height: 400px;
+}
+
+#QRS_chart {
+	width: 197px;
+	height:200px;
+}
+
+
+#T_chart {
+	width: 194px;
+	height:200px;
+}
+
+#P_chart {
+	width: 197px;
+	height:200px;
+}
+
 
 #pageFooterImage {
    margin-top: 30px; 

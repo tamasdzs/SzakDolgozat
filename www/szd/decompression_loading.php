@@ -3,6 +3,7 @@
 
 <head>
 	<link rel="stylesheet" href="./css/decompression_loading.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
 
 <body>
@@ -20,13 +21,65 @@
 </div>
 
 <div id="Main">
-	<a id="resLink" href="">
 	<img id="mainImage" src="">
-	</a>
 </div>
 
 <?php
-	
+
+$target_dir = "uploads/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+$FileType = pathinfo($target_file,PATHINFO_EXTENSION);
+
+
+// Check if file already exists
+if (file_exists($target_file)) {
+    echo "<script>alert(\"File already exists\");</script>";
+    $uploadOk = 0;
+}
+// Check file size
+if ($_FILES["fileToUpload"]["size"] > 500000) {
+    echo "<script>alert(\"File is too large\");</script>";
+    $uploadOk = 0;
+}
+// Allow certain file formats
+if($FileType != "cmp" ) {
+    echo "<script>alert(\"only .cmp allowed, not " . $FileType. "\")</script>";
+    $uploadOk = 0;
+}
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+    echo "<script>alert(\"File upload failed\");</script>";
+// if everything is ok, try to upload file
+} else {
+    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+        
+        $resultId = str_replace( ".cmp", "", basename($_FILES["fileToUpload"]["name"]) );
+        
+        echo "<script> alert(\"". $resultId ."\") </script>";
+        
+        echo '<script>
+			  document.getElementById("mainImage").src = "./resources/images/Loading_Icon.gif";
+			  $.ajax({
+                type: "POST",
+                url: "launch_decompression.php",
+                data: { resultID: '. $resultId .' },
+                success: function(data) {
+					if ( data.includes("success") ) {
+						createLinkForDownload("results/'.$resultId.'.txt");
+					}
+					else {
+						alert("Ooops... something went wrong.");
+					}
+                  }
+			   });
+			  </script>';
+        
+        
+    } else {
+        echo "<script>alert(\"A feltöltés sikertelen :(\");</script>";
+    }
+}
 ?>
 
 <footer id="pageFooter">
@@ -34,6 +87,10 @@
 </footer>
 
 <script>
+	
+	function createLinkForDownload(res_url) {
+		document.getElementById("Main").innerHTML = "<a href= \""+res_url+"\" download><img id=\"mainImage\" src=\"./resources/images/success.jpg\"></a>";
+	}
 	
 	function hoverChangeImg(obj, path) {
 		obj.src = path;
