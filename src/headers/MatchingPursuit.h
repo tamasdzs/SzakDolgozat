@@ -16,24 +16,24 @@
 
 /* DEFINES FOR ANIMATION OUTPUT */
 
-#define CN_MATCHING_PURSUIT_PRD_STR "/var/www/html/szakdolgozat/results/prd/prd.txt"
-#define CN_MATCHING_PURSUIT_QS_STR "/var/www/html/szakdolgozat/results/qs/qs.txt"
-#define CN_MATCHING_PURSUIT_CR_STR "/var/www/html/szakdolgozat/results/cr/cr.txt"
+#define CN_MATCHING_PURSUIT_PRD_STR "../results/prd/prd.txt"
+#define CN_MATCHING_PURSUIT_QS_STR "../results/qs/qs.txt"
+#define CN_MATCHING_PURSUIT_CR_STR "../results/cr/cr.txt"
 
-#define CN_MATCHING_PURSUIT_IN_ACTION_SIG_STR "/var/www/html/szakdolgozat/results/in_action/s.csv"
-#define CN_MATCHING_PURSUIT_IN_ACTION_APR_STR "/var/www/html/szakdolgozat/results/in_action/a.csv"
+#define CN_MATCHING_PURSUIT_IN_ACTION_SIG_STR "../results/in_action/s.csv"
+#define CN_MATCHING_PURSUIT_IN_ACTION_APR_STR "../results/in_action/a.csv"
 
-#define CN_MATCHING_PURSUIT_QRS_SIG_STR "/var/www/html/szakdolgozat/results/qrs/s.csv"
-#define CN_MATCHING_PURSUIT_QRS_APR_STR "/var/www/html/szakdolgozat/results/qrs/a.csv"
+#define CN_MATCHING_PURSUIT_QRS_SIG_STR "../results/qrs/s.csv"
+#define CN_MATCHING_PURSUIT_QRS_APR_STR "../results/qrs/a.csv"
            
-#define CN_MATCHING_PURSUIT_T_SIG_STR "/var/www/html/szakdolgozat/results/t/s.csv"
-#define CN_MATCHING_PURSUIT_T_APR_STR "/var/www/html/szakdolgozat/results/t/a.csv"
+#define CN_MATCHING_PURSUIT_T_SIG_STR "../results/t/s.csv"
+#define CN_MATCHING_PURSUIT_T_APR_STR "../results/t/a.csv"
 
-#define CN_MATHCING_PURSUIT_P_SIG_STR "/var/www/html/szakdolgozat/results/p/s.csv"
-#define CN_MATHCING_PURSUIT_P_APR_STR "/var/www/html/szakdolgozat/results/p/a.csv"
+#define CN_MATHCING_PURSUIT_P_SIG_STR "../results/p/s.csv"
+#define CN_MATHCING_PURSUIT_P_APR_STR "../results/p/a.csv"
            
-#define CN_MATHCING_PURSUIT_COMBINED_SIG_STR "/var/www/html/szakdolgozat/results/combined/s.csv"
-#define CN_MATHCING_PURSUIT_COMBINED_APR_STR "/var/www/html/szakdolgozat/results/combined/a.csv"
+#define CN_MATHCING_PURSUIT_COMBINED_SIG_STR "../results/combined/s.csv"
+#define CN_MATHCING_PURSUIT_COMBINED_APR_STR "../results/combined/a.csv"
 
 /* END DEFINES FOR ANIMATION OUTPUT */
 
