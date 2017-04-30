@@ -15,7 +15,7 @@ then
 	echo "Setting rights for www folders failed. Make sure you run this script as root. (sudo ./build_all.sh)"
 	echo "Exiting..."
 	echo "***************************************************************************************************"
-	return -1
+	exit -1
 fi
 echo "setting rights: [OK]"
 
@@ -29,7 +29,7 @@ then
 	echo "C++ build failed. Make sure you have all of the prerequisites installed (wfdb, eigen, curl, etc...)"
 	echo "Exiting..."
 	echo "***************************************************************************************************"
-	return -1
+	exit -1
 fi
 echo "building executable from source: [OK]"
 
@@ -44,7 +44,7 @@ then
 	echo "Creating symbolic link to executable failed. Make sure you run this script as root. (sudo ./build_all.sh)"
 	echo "Exiting..."
 	echo "***************************************************************************************************"
-	return -1
+	exit -1
 fi
 echo "creating symbolic link to main: [OK]"
 
@@ -52,4 +52,4 @@ echo "**************************************************************************
 echo "Build finished with status OK"
 echo "Exiting..."
 echo "***************************************************************************************************"
-return 0
+exit 0
