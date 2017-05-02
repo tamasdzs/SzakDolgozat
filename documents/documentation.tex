@@ -405,7 +405,8 @@ A \texttt{compression\_loading.php} script a \texttt{/www/szd/compression\_loadi
 
 \subsection{A decompressionNormal.php implementációja}
 
-
+A \texttt{decompression\_loading.php} script a \texttt{/www/szd/compression\_loading.php} útvonalon érhető el. A script legfontosabb feladata, hogy implementálja azokat a HTML elemeket amelyek segítségével a felhasználó feltölthet egy .cmp szöveges állományt a szerverre kitömörítés céljából. A felhasználó a script által implementált weboldalt a navigációs menü "kitömörítés" pontjára kattintva érheti el. 
+\par A webolalon található táblázat üres leszámítva a ".cmp Keresése" és a "Feltöltés" gombokat. Ezeket egy elrejtett HTML form megfelelő elemeire mutató HTML labelek valósítja meg. A mutatott HTML form-nak két input mezője van: egy "File" típusú bemeneti elem, illetve egy "Submit" típusú bemeneti elem. Értelem szerűen a ".cmp keresése" felirattal ellátott label elem hivatkozik a "File" típusú input mezőre. A felhasználó erre az elemre kattintva egy felugró ablakot talál, amely az input mező paramétereinek köszönhetően csak .cmp kiterjesztésű állományokat keres. Sikeres kiválasztás esetén a "Feltölt"
 
 \subsection{A decompressionloading.php implementációja}
 
