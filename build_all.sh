@@ -8,7 +8,8 @@ ROOT_DIR=`pwd`
 
 #Create uploads dir
 echo "creating uploads folder..."
-mkdir ROOT_DIR/www/szd/uploads
+cd ROOT_DIR/www
+mkdir uploads
 if [ $? -ne 0 ]
 then
 	echo "***************************************************************************************************"
@@ -17,6 +18,7 @@ then
 	echo "***************************************************************************************************"
 	exit -1
 fi
+cd ROOT_DIR
 echo "creating uploas folder: [OK]"
 
 #Grant rights
