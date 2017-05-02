@@ -720,6 +720,25 @@ Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölv
 
 \section{A felhasználói felület tesztelése}
 
+A felhasználói felület scriptjeinek tesztelése, a scriptek által biztosított funkciók működésének ellenőrzésével, illetve hibás inputok szimulálásával történt. Az alábbiakban alfejezetekre bontva megtalálható, hogy az egyes scriptek esetén milyen bemenetek lettek kipróbálva, illetve ezek milyen eredményeket szolgáltattak. Egyes scriptek tesztelését egyszerre tárgyalják az alfejezetek, mivel ezeknek a működése szorosan összefügg.
+
+\subsection{Az Animációs scriptek tesztelése}
+
+Az animéciós funkció webes felülethez köthető részéért a \texttt{/www/szd/animation.php}, illetve \texttt{/www/szd/launch\_animation.php} scriptek felelősek. A scriptek helyességének belátáshoz a következő tesztek lettek elvégezve:
+
+\begin{enumerate}
+\item Az animation.php által generált weboldal böngészőben történő megjelenítése. Az egyes HTML elemek pozícióinak és stílusjegyeinek manuális ellenőrzése.
+\item Az animation.php által generált weboldalon a legnagyobb grafikonra történő kattintás. Annak ellenőrzése, hogy az animáció az elvárt módon lefut.
+\item Az animation.php által generált weboldalon a legnagyobb grafikonra történő kattintás olyankor amikor már fut az animáció. Annek ellenőrzése, hogy a \texttt{launch\_animation.php} script nem invokálja újra az animációt ameddig az előző tart.
+\item A navigációs menüben más oldalakra történő ellépés amég tart az animáció. Ezt követően a navigációs menü segítségével visszalépés az animációs oldalra. Annak ellenőrzése, hogy ez nem befolyásolja az animáció megjelenítését.
+\end{enumerate}
+
+A felsorolt tesztesetek mindegyikének megfeleltek az animációért felelős scriptek.
+
+\subsection{A tömörítésért felelős scriptek tesztelése}
+
+\subsection{A kitömörítésért felelős scriptek tesztelése}
+
 \section{A tömörítő eljárás modul szintű tesztelése}
 
 A modul tesztek elvégzése elengedhetlen egy modern programcsomag működésének ellenőrzésekor. Az egyes modul tesztek által definiált tesztesetek hivatottak igazolni, hogy a modulok implementációja során meghatározott funkciókkal a modul valóban rendelkezik, illetve ezeket helyesen alkalmazza. \par A fejlesztői dokumentáció jelen része tartalmazza a \ref{modulok implementáciüja} fejezetben bemutatott modulokhoz tartozó teszteket és eredményeket. Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölve, az egyes modulokhoz tartozó modul tesztek a \texttt{/src/mt/[az aktuális modul neve]} útvonal mentén érhetők el. Minden modul tesztet jelölő mappa tartalmazza azt a \texttt{.cpp} állományt amelyben a tesztesetek definiálva vannak, a tesztesetek bemenetét, illetve az egyes tesztesetek kimenetét. Ezen kívül megtalálhatóak a modult implementáló állományok is, valamint egy \texttt{make} állomány a modul teszt fordításához. 
