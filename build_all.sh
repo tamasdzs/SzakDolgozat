@@ -6,6 +6,19 @@ echo "**************************************************************************
 
 ROOT_DIR=`pwd`
 
+#Create uploads dir
+echo "creating uploads folder..."
+mkdir ROOT_DIR/www/szd/uploads
+if [ $? -ne 0 ]
+then
+	echo "***************************************************************************************************"
+	echo "Creating uploads folder failed. Make sure you run this script as root. (sudo ./build_all.sh)"
+	echo "Exiting..."
+	echo "***************************************************************************************************"
+	exit -1
+fi
+echo "creating uploas folder: [OK]"
+
 #Grant rights
 echo "setting rights..."
 chmod -R 777 ./www
