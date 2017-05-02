@@ -414,11 +414,16 @@ A \texttt{decompression\_loading.php} script a \texttt{/www/szd/decompression\_l
 \par A \texttt{decompression\_loading.php} először több szempontból megvizsgálja a feltölteni kívánt .cmp állományt. Először is ellenőrzi, hogy nem töltöttek-e fel azonos névvel állományt a szerverre. Amennyiben igen, a script felugró ablakkal figyelmezteti erre a felhasználót, a kitömörítés pedig nem indul el. Ezt követően a script ellenőrzi a feltölteni kívánt állomány méretét. Abban az esetben, ha a fájl mérete meghaladja az 5 MB-t, a script abortálja a kitömörítést túl nagy fájlméretre hivatkozva. Végül az állomány kiterjesztésének az ellenőrzése következik.
 \par A sikeres ellenőrzéseket követően a \texttt{decompression\_loading.php} beállítja a kitömörítés alatt látható animációt a webes felületen, majd egy Ajax híváson keresztül elindítja a \texttt{launch\_decompression.php} scriptet, amely rendszerhívás útján invokálja a fő programot kitömörítési üzemmódban. A sikeres kitömörítést követően a \texttt{decompression\_loading.php} megjelenít egy ezt jelző képet. A képre kattintva a felhasználó letöltheti a kitömörített aprroximáció értékeit tartalmazó szöveges állományt. 
 
-\subsection{A launchanimation.php implementációja}
+\subsection{A launchAnimation.php implementációja}
 
-A \texttt{launch\_animation.php} script a \texttt{/www/szd/launch\_animation.php} útvonalon érhető el. A script legfontosabb feladata, hogy implementálja azokat a HTML elemeket amelyek a felhasználó által feltöltött .cmp állomány kitömörítése alatt láthatóak, illetve egy linket biztosítson a kitömörített szívütéseket tartalmazó szöveges állományhoz . A felhasználó a scriptet nem érheti el a navigációs menün keresztül, kizárólag a \texttt{decompression\_normal.php} scripten keresztül juthat ide. 
+A \texttt{launch\_animation.php} script a \texttt{/www/szd/launch\_animation.php} útvonalon érhető el. A script legfontosabb feladata, hogy sikeresen elindítsa a főprogramot animációs üzemmódban, vagyis biztosítsa az inputot a \texttt{animation.php} weboldal grafikonjai számára. Ez a php script nem implementál megtekinthető weboldalt.
+\par A jelenlegi implementáció fontos szempontként tekint a szerver oldali erőforrások takarékos felhasználására. Éppen ezért a tömörítési eljárást implementáló főprogramnak egyszerre csak egy előfordulása futtatható. A \texttt{launch\_animation.php} script először ezt ellenőrzi. Amennyiben már fut a főprogram, ezt jelzi az őt hívó \texttt{animation.php} script felé egy \texttt{echo} utasítással. Ez megfelelő eljárás ugyanis, Ajax hívást indító \texttt{animation.php} script képes a \texttt{launch\_animation.php} által standard outputra írt kimenet beolvasására. 
+\par Abban az esetben, ha a főprogram még nem fut, a \texttt{launch\_decompression} először lefuttatja a \texttt{/www/szd/server\_scripts/clean\_results.sh} bash scriptet. A \texttt{clean\_results.sh} script feladata, hogy inicializálja a \texttt{/www/szd/results} útvonalon található mappákban elhelyezett állományok tartalmát. Ennek következtében a \texttt{animation.php} script által implementált weboldalon található grafikonok eltűnnek, és az új animáció kezdetét veheti.
+\par A \texttt{clean\_results.sh} lefuttatása után a \texttt{launch\_animation.php} elindítja a főprogramot animációs üzemmódban. Ezt azt jelenti, hogy egyetlen parancssori bemenet ad meg a rendszerhívás során, melynek az értéke 1.
 
 \subsection{A launchcompression.php implementációja}
+
+
 
 \subsection{A launchdecompression.php implementációja}
 
