@@ -727,7 +727,7 @@ A felhasználói felület scriptjeinek tesztelése, a scriptek által biztosíto
 Az animéciós funkció webes felülethez köthető részéért a \texttt{/www/szd/animation.php}, illetve \texttt{/www/szd/launch\_animation.php} scriptek felelősek. A scriptek helyességének belátáshoz a következő tesztek lettek elvégezve:
 
 \begin{enumerate}
-\item Az animation.php által generált weboldal böngészőben történő megjelenítése. Az egyes HTML elemek pozícióinak és stílusjegyeinek manuális ellenőrzése.
+\item Az \texttt{animation.php} által generált weboldal böngészőben történő megjelenítése. Az egyes HTML elemek pozícióinak és stílusjegyeinek manuális ellenőrzése.
 \item Az animation.php által generált weboldalon a legnagyobb grafikonra történő kattintás. Annak ellenőrzése, hogy az animáció az elvárt módon lefut.
 \item Az animation.php által generált weboldalon a legnagyobb grafikonra történő kattintás olyankor amikor már fut az animáció. Annek ellenőrzése, hogy a \texttt{launch\_animation.php} script nem invokálja újra az animációt ameddig az előző tart.
 \item A navigációs menüben más oldalakra történő ellépés amég tart az animáció. Ezt követően a navigációs menü segítségével visszalépés az animációs oldalra. Annak ellenőrzése, hogy ez nem befolyásolja az animáció megjelenítését.
@@ -736,6 +736,24 @@ Az animéciós funkció webes felülethez köthető részéért a \texttt{/www/s
 A felsorolt tesztesetek mindegyikének megfeleltek az animációért felelős scriptek.
 
 \subsection{A tömörítésért felelős scriptek tesztelése}
+
+A tömörítési funkció webes felülethez köthető részéért a \texttt{/www/szd/compression\_normal.php}, a \texttt{/www/szd/compression\_loading.php} illetve \texttt{/www/szd/launch\_compression.php} scriptek felelősek. A scriptek helyességének belátáshoz a következő tesztek lettek elvégezve:
+
+\begin{enumerate}
+\item A \texttt{compression\_normal.php} által generált weboldal böngészőben történő megjelenítése. Az egyes HTML elemek pozícióinak és stílusjegyeinek manuális ellenőrzése.
+\item A \texttt{compression\_normal.php} által generált weboldalon a "Jelek" gombra történő kattintás. Annak ellenőrzése, hogy a tömöríthető méréséek nevei megjelennek a táblázatban.
+\item A \texttt{compression\_normal.php} által generált weboldalon a "Jelek" gombra történő kattintás. Ezt követően a megjelenő mérés azonosítók közül az egyik véletlenszerű kiválasztása. Annak ellenőrzése, hogy erre kattintva a többi azonosító eltűnik a táblázatból, de a kiválasztott azonosító nem.
+\item A \texttt{compression\_normal.php} által generált weboldalon a "Jelek" gombra történő kattintás. Ezt követően a táblázat egy üres cellájára történő kattintás. Annak ellenőrzése, hogy ez a kattintás nem változtat a táblázat elemein.
+\item A \texttt{compression\_normal.php} által generált weboldalon egy testzőleges jel kiválasztása és tömörítése. Annak ellenőrzése, hogy az interfész a \texttt{compression\_loading.php} script által generált weboldalra irányítja a bömgészőt.
+
+\item A \texttt{compression\_normal.php} által generált weboldalon egy testzőleges jel kiválasztása és tömörítése. Annak ellenőrzése, hogy az interfész a \texttt{compression\_loading.php} script által generált weboldalra irányítja a bömgészőt, megjelenik a várakozási idő alatt látható animáció, majd a tömörítés végével a generált .cmp állomány letöltése. 
+
+\item A \texttt{compression\_normal.php} által generált weboldalon egy testzőleges jel kiválasztása és tömörítése. A tömörítés végeztével az URL-ben látható mérés név megváltoztatása egy illegális mérés nevére (pl. "103xy"). Annak ellenőrzése, hogy nem létező mérést nem tömörít a programcsomag, vagyis megjelenik egy hibaüzenet.
+
+\end{enumerate}
+
+A felsorolt tesztesetek mindegyikének megfeleltek a tömörítésért felelős scriptek.
+
 
 \subsection{A kitömörítésért felelős scriptek tesztelése}
 
