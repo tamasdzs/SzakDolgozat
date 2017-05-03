@@ -383,7 +383,7 @@ A C++ program fordításához szükséges további könyvtárak (Eigen, Spline.h
 
 \section{A programcsomag felkonfigurálása}
 
-Az előző alfejezetben felsorolt dependeciák feltelepítése után a programcsomag készen áll a felkonfigurálásra. Először is érdemes a mellékelt adathordozón található teljes mappaszerkezetet a webszerverünk publikus (legalább a lokális hálózaton keresztül elérhető) gyökér mappájába másolni. Ezt követően linux terminál segítségével navigáljunk a mappaszerkezet gyökerébe. \texttt{cd [a webszerver publikus mappájába vezető útvonal]/szakdolgozat}. Végül adjuk ki a következő parancsot: \texttt{sudo ./build_all.sh}. A rendszer kérheti a root felhasználó jelszavát, ezt követően a terminál ablakban megfigyelhető a telepítés aktuális állapota. Amennyiben a telepítés sikeres, a következő üzenet jelenik meg:
+Az előző alfejezetben felsorolt dependeciák feltelepítése után a programcsomag készen áll a felkonfigurálásra. Először is érdemes a mellékelt adathordozón található teljes mappaszerkezetet a webszerverünk publikus (legalább a lokális hálózaton keresztül elérhető) gyökér mappájába másolni. Ezt követően linux terminál segítségével navigáljunk a mappaszerkezet gyökerébe. \texttt{cd /[a webszerver publikus mappájába vezető útvonal]/szakdolgozat}. Végül adjuk ki a következő parancsot: \texttt{sudo ./build_all.sh}. A rendszer kérheti a root felhasználó jelszavát, ezt követően a terminál ablakban megfigyelhető a telepítés aktuális állapota. Amennyiben a telepítés sikeres, a következő üzenet jelenik meg:
 
 \begin{figure}[H]
 \begin{center}
@@ -392,7 +392,26 @@ Az előző alfejezetben felsorolt dependeciák feltelepítése után a programcs
 \end{center}
 \end{figure}
 
-Ezt követően a programcsomag összes szolgáltatása elérhető egy böngésző segítségével a webes felület kezdőlapját a \texttt{http://localhost/szakdolgozat/www/szd/about.php} címen érhetjük el. A főprogram futtatható ál
+Ezt követően a programcsomag összes szolgáltatása elérhető egy böngésző segítségével a webes felület kezdőlapját a \texttt{http://localhost/szakdolgozat/www/szd/about.php} címen érhetjük el. A főprogram futtatható állományát a \texttt{/src} mappában találjuk, futtatásához a \texttt{./main [paraméter lista]} parancs kiadása szükséges. 
+
+\section{A webes felhasználói felület használata}
+
+A webes felhasználói felület használatáról szóló alfejezet a megtekinthető weboldalak helyes használatát mutatja be. A felhasználói felület összesen négy fő oldalból áll, melyek kiegészülnek ideiglenesen látható oldalakkal a szolgáltatások igénybevétele során. 
+
+\subsection*{Az ismertető oldal használata}
+
+Amennyiben a felhasználói dokumentáció utasításait követtük a programcsomag felkonfigurálása során, az ismertetőt tartalmazó weboldalt a \texttt{http://localhost/szakdolgozat/www/szd/about.php} URL-en keresztül érjük el. Az ismertető lap tartalmazza a webes felület segítségével igénybe vehető szolgáltatások rövid összefoglalását. 
+
+\begin{figure}[H]
+\begin{center}
+   \includegraphics[width=100mm]{./Abrak/Ereszkedo1/F_2sz.png}
+  \caption{Az $F_n$ szí nkódos ábrázolása}
+\end{center}
+\end{figure}
+
+\subsection*{Az animáció oldal használata}
+
+Az ismertető oldalról legegyszerűbben úgy juthatunk az aimációs oldalra, ha az ismertető oldal tetjén található horizontális navigációs sáv "Animáció" feliratú menüpontjára kattintunk. A böngésző ekkor betölti a \texttt{http://localhost/szakdolgozat/www/szd/animation.php} URL címen elérhető weboldalt. Az animációs oldal célja, hogy bemutassa egy optimalizált szívütés tömörítés menetét. Az animációt a megjelenő grafikonok közül a legnagyobbra történő kattintással indíthatjuk el. Ekkor a weboldal frissül, és elkezdődik az animáció. A legnagyobb grafikon az animáció futása alatt mindig az éppen aktuális szívütés szegmens (QRS, T, P) tömörítése látható. A grafikonban kékkel látható az eredeti szívütésből aktuálisan visszamaradó reziduum jel, pirossal pedig az approximáció az aktuális dilatációs és transzlációs paraméterek mellett. Amikor egy szegmens tömörítése befejeződik, a Nelder-Mead algoritmus által talált legjobb közelítés, illetve a hozzá tartozó reziduum jel átkerül a táblázat egy kisebb cellájába, a legnagyobb grafikonon pedig a következő szegmens tömörítése, vagyis a Matching Pursuit algoritmus újabb lépésének menete lesz látható. Miután az összes szegmens (és ezáltal a teljes szívütés) tömörítése befejeződött, a legnagyobb grafikonon megjelenik az eredeti szívütés kék színkóddal, az egyes szegmensekhez tartozó approximációk pedig egyszerre, de különböző színekkel ábrázolva válnak láthatóvá. Az animációs weboldalon a grafikonokon kívül még egy speciális cella található. Ez a cella tartalmazza a legnagyobb grafikonon ábrázolt approximáció hibáját (PRD), tömörítési rátát (CR), illetve a hiba és a tömörítési ráta arányát (QS). Ezekről az értékekről részletesebb leírás található a \ref{ott ahol van} fejezetben.
 
 \chapter{Fejlesztői dokumentáció}
 
