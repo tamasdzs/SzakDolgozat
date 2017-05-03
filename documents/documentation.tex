@@ -744,7 +744,7 @@ A tömörítési funkció webes felülethez köthető részéért a \texttt{/www
 \item A \texttt{compression\_normal.php} által generált weboldalon a "Jelek" gombra történő kattintás. Annak ellenőrzése, hogy a tömöríthető méréséek nevei megjelennek a táblázatban.
 \item A \texttt{compression\_normal.php} által generált weboldalon a "Jelek" gombra történő kattintás. Ezt követően a megjelenő mérés azonosítók közül az egyik véletlenszerű kiválasztása. Annak ellenőrzése, hogy erre kattintva a többi azonosító eltűnik a táblázatból, de a kiválasztott azonosító nem.
 \item A \texttt{compression\_normal.php} által generált weboldalon a "Jelek" gombra történő kattintás. Ezt követően a táblázat egy üres cellájára történő kattintás. Annak ellenőrzése, hogy ez a kattintás nem változtat a táblázat elemein.
-\item A \texttt{compression\_normal.php} által generált weboldalon egy testzőleges jel kiválasztása és tömörítése. Annak ellenőrzése, hogy az interfész a \texttt{compression\_loading.php} script által generált weboldalra irányítja a bömgészőt.
+\item A \texttt{compression\_normal.php} által generált weboldalon egy testzőleges jel kiválasztása és tömörítése. Annak ellenőrzése, hogy az interfész a \texttt{compression\_loading.php} script által generált weboldalra irányítja a böngészőt.
 
 \item A \texttt{compression\_normal.php} által generált weboldalon egy testzőleges jel kiválasztása és tömörítése. Annak ellenőrzése, hogy az interfész a \texttt{compression\_loading.php} script által generált weboldalra irányítja a bömgészőt, megjelenik a várakozási idő alatt látható animáció, majd a tömörítés végével a generált .cmp állomány letöltése. 
 
@@ -756,6 +756,20 @@ A felsorolt tesztesetek mindegyikének megfeleltek a tömörítésért felelős 
 
 
 \subsection{A kitömörítésért felelős scriptek tesztelése}
+
+A kitömörítési funkció webes felülethez köthető részéért a \texttt{/www/szd/decompression\_normal.php}, a \texttt{/www/szd/decompression\_loading.php} illetve \texttt{/www/szd/launch\_decompression.php} scriptek felelősek. A scriptek helyességének belátáshoz a következő tesztek lettek elvégezve:
+
+\begin{enumerate}
+\item A \texttt{decompression\_normal.php} által generált weboldal böngészőben történő megjelenítése. Az egyes HTML elemek pozícióinak és stílusjegyeinek manuális ellenőrzése.
+\item A \texttt{decompression\_normal.php} által generált weboldalon a "Keresés" gombra történő kattintás. Annak ellenőrzése, hogy megjelenik-e a felubró ablak amiben a felhasználó kiválaszthatja a kitömöríteni kívánt mérést.
+\item A \texttt{decompression\_normal.php} által generált weboldalon egy testzőleges jel kiválasztása és kitömörítése. Annak ellenőrzése, hogy az interfész a \texttt{decompression\_loading.php} script által generált weboldalra irányítja a böngészőt.
+
+\item A \texttt{decompression\_normal.php} által generált weboldalon egy testzőleges jel kiválasztása és kitömörítése. Annak ellenőrzése, hogy az interfész a \texttt{decompression\_loading.php} script által generált weboldalra irányítja a bömgészőt, megjelenik a várakozási idő alatt látható animáció, majd a tömörítés végével a generált .txt állomány letöltése. 
+
+\end{enumerate}
+
+A felsorolt tesztesetek mindegyikének megfeleltek a tömörítésért felelős scriptek.
+
 
 \section{A tömörítő eljárás modul szintű tesztelése}
 
