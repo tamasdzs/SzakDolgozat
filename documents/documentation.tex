@@ -381,6 +381,19 @@ A programcsomag UNIX alapú operációs rendszeren (Ubuntu 16.04) lett fejlesztv
 
 A C++ program fordításához szükséges további könyvtárak (Eigen, Spline.h) feltelepítése nem szükséges, az ezekhez szükséges állományok megtalálhatóak a \texttt{/src} útvonalon.
 
+\section{A programcsomag felkonfigurálása}
+
+Az előző alfejezetben felsorolt dependeciák feltelepítése után a programcsomag készen áll a felkonfigurálásra. Először is érdemes a mellékelt adathordozón található teljes mappaszerkezetet a webszerverünk publikus (legalább a lokális hálózaton keresztül elérhető) gyökér mappájába másolni. Ezt követően linux terminál segítségével navigáljunk a mappaszerkezet gyökerébe. \texttt{cd [a webszerver publikus mappájába vezető útvonal]/szakdolgozat}. Végül adjuk ki a következő parancsot: \texttt{sudo ./build_all.sh}. A rendszer kérheti a root felhasználó jelszavát, ezt követően a terminál ablakban megfigyelhető a telepítés aktuális állapota. Amennyiben a telepítés sikeres, a következő üzenet jelenik meg:
+
+\begin{figure}[H]
+\begin{center}
+   \includegraphics[width=100mm]{./Abrak/Ereszkedo1/F_2sz.png}
+  \caption{Az $F_n$ szí nkódos ábrázolása}
+\end{center}
+\end{figure}
+
+Ezt követően a programcsomag összes szolgáltatása elérhető egy böngésző segítségével a webes felület kezdőlapját a \texttt{http://localhost/szakdolgozat/www/szd/about.php} címen érhetjük el. A főprogram futtatható ál
+
 \chapter{Fejlesztői dokumentáció}
 
 Ebben a fejezetben található a Bevezetés-ben bemutatott eljárás implementációjának pontos (modul szintű) leírása, valamint az alkalmazott tesztek jellemzése illetve ezek eredményei. A tesztelés eredményeit a tapasztalok összegzése és néhány lehetséges jövőbeli fejlesztés jellemzése követi. \par A fejlesztői dokumentáció első részében a tömörítési módszer implementációjának leírása található. Ez az alfejezet két fő részre tagolható: a webes felhasználói felület és az ehhez felhasznált könyvtárakat leíró, valamint a háttérben a konkrét tömörítést elvégző c++ program modulonkénti jellemzését. Mivel a webes felület megvalósítása rövid, és specializált scriptek összessége, ezért ezek jellemzését minden esetben egyedi módon érdemes kezelni. Ellentétben ezzel a szemlélettel, a c++ program nagyban épít a nyelv által támogatott objektum orientált megközelítésre. Ez lehetővé teszi és indokolja is egyben, hogy az implementációt jellemző dokumentáció is hasonlóan jól strukturált legyen. Az egyes modulok dokumentációja ugyanazon három szempont szerint közelíti meg a jellemzésüket: a modul feladatának, a modul interfészének (hogyan és mely egyéb modulokhoz kapcsolódik), valamint a modult felépítő osztályok implementációjának pontos megfogalmazása. A modulok leírásánál találhatóak továbbá a szemléltetést segítő UML és egyéb hasznos diagrammok. 
