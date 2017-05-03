@@ -368,7 +368,7 @@ A programcsomag UNIX alapú operációs rendszeren (Ubuntu 16.04) lett fejlesztv
 \begin{itemize}
 \item Egy lokálisan feltelepített HTTP web szerver. A fejlesztés és tesztelés Apache 2.0 szerveren történt.
 \item Működőképes php interpreter. A fejlesztéshez és a teszteléshez a 7.0 php verzió lett alkalmazva. 
-\item Hozzáférés a php.ini állományhoz. A \texttt{file_uploads} direktívának \texttt{On} értéket kell kapnia.
+\item Hozzáférés a php.ini állományhoz. A \texttt{file\_uploads} direktívának \texttt{On} értéket kell kapnia.
 \item HTML 5 parsolásra alkalmas web böngésző. 
 \end{itemize}
 
@@ -383,7 +383,7 @@ A C++ program fordításához szükséges további könyvtárak (Eigen, Spline.h
 
 \section{A programcsomag felkonfigurálása}
 
-Az előző alfejezetben felsorolt dependeciák feltelepítése után a programcsomag készen áll a felkonfigurálásra. Először is érdemes a mellékelt adathordozón található teljes mappaszerkezetet a webszerverünk publikus (legalább a lokális hálózaton keresztül elérhető) gyökér mappájába másolni. Ezt követően linux terminál segítségével navigáljunk a mappaszerkezet gyökerébe. \texttt{cd /[a webszerver publikus mappájába vezető útvonal]/szakdolgozat}. Végül adjuk ki a következő parancsot: \texttt{sudo ./build_all.sh}. A rendszer kérheti a root felhasználó jelszavát, ezt követően a terminál ablakban megfigyelhető a telepítés aktuális állapota. Amennyiben a telepítés sikeres, a következő üzenet jelenik meg:
+Az előző alfejezetben felsorolt dependeciák feltelepítése után a programcsomag készen áll a felkonfigurálásra. Először is érdemes a mellékelt adathordozón található teljes mappaszerkezetet a webszerverünk publikus (legalább a lokális hálózaton keresztül elérhető) gyökér mappájába másolni. Ezt követően linux terminál segítségével navigáljunk a mappaszerkezet gyökerébe. \texttt{cd /[a webszerver publikus mappájába vezető útvonal]/szakdolgozat}. Végül adjuk ki a következő parancsot: \texttt{sudo ./build\_all.sh}. A rendszer kérheti a root felhasználó jelszavát, ezt követően a terminál ablakban megfigyelhető a telepítés aktuális állapota. Amennyiben a telepítés sikeres, a következő üzenet jelenik meg:
 
 \begin{figure}[H]
 \begin{center}
@@ -434,8 +434,9 @@ Ahogyan ezt a tömörítési oldal használatáról szóló bekezdés említette
 
 \chapter{Fejlesztői dokumentáció}
 
-Ebben a fejezetben található a Bevezetés-ben bemutatott eljárás implementációjának pontos (modul szintű) leírása, valamint az alkalmazott tesztek jellemzése illetve ezek eredményei. A tesztelés eredményeit a tapasztalok összegzése és néhány lehetséges jövőbeli fejlesztés jellemzése követi. \par A fejlesztői dokumentáció első részében a tömörítési módszer implementációjának leírása található. Ez az alfejezet két fő részre tagolható: a webes felhasználói felület és az ehhez felhasznált könyvtárakat leíró, valamint a háttérben a konkrét tömörítést elvégző c++ program modulonkénti jellemzését. Mivel a webes felület megvalósítása rövid, és specializált scriptek összessége, ezért ezek jellemzését minden esetben egyedi módon érdemes kezelni. Ellentétben ezzel a szemlélettel, a c++ program nagyban épít a nyelv által támogatott objektum orientált megközelítésre. Ez lehetővé teszi és indokolja is egyben, hogy az implementációt jellemző dokumentáció is hasonlóan jól strukturált legyen. Az egyes modulok dokumentációja ugyanazon három szempont szerint közelíti meg a jellemzésüket: a modul feladatának, a modul interfészének (hogyan és mely egyéb modulokhoz kapcsolódik), valamint a modult felépítő osztályok implementációjának pontos megfogalmazása. A modulok leírásánál találhatóak továbbá a szemléltetést segítő UML és egyéb hasznos diagrammok. 
-\par  A teszteléssel foglalkozó alfejezet szintén több részre tagolható. Az első alfelejezetben található a webes felhasználói felület funkcióinak tesztelési terve, illetve az egyes tesztek eredményeinek leírása. Ezt követi a c++ program moduljainak részletes tesztelési terve. A modulok tesztelését minden esetben egy külön tesztfájl végezte. Ennek leírása, az eredmények értékelése, illetve a tesztállomány elérési útja szintén megtalálható az alfejezetben. A  tesztelés alfejezet utolsó része a bemutatott tömörítési eljárást hivatott tesztelni. Ez több szempont alapján, egyéb EKG tömörítő módszerekkel történő összehasonlítás útján valósul meg. 
+Ebben a fejezetben található az előzőekben bevezetett eljárás implementációjának pontos (modul szintű) leírása, valamint az alkalmazott tesztek jellemzése illetve ezek eredményei. A tesztelés eredményeit a tapasztalok összegzése és néhány lehetséges jövőbeli fejlesztés jellemzése követi. \par A fejlesztői dokumentáció első részében a tömörítési módszer implementációjának leírása található. Ez az alfejezet két fő részre tagolható: a webes felhasználói felület és az ehhez felhasznált könyvtárakat leíró, valamint a háttérben a konkrét tömörítést elvégző c++ program modulonkénti jellemzését. Mivel a webes felület megvalósítása rövid, és specializált scriptek összessége, ezért ezek jellemzését minden esetben egyedi módon érdemes kezelni. 
+\par A C++ program nagyban épít a nyelv által támogatott objektum orientált megközelítésre. Ez lehetővé teszi és indokolja is egyben, hogy az implementációt jellemző dokumentáció is hasonlóan jól strukturált legyen. Az egyes modulok dokumentációja ugyanazon három szempont szerint közelíti meg a jellemzésüket: a modul feladatának, a modul interfészének (hogyan és mely egyéb modulokhoz kapcsolódik), valamint a modult felépítő osztályok implementációjának pontos megfogalmazása. A modulok leírásánál találhatóak továbbá a szemléltetést segítő UML és egyéb hasznos diagrammok. 
+\par  A teszteléssel foglalkozó alfejezet szintén több részre tagolható. Az első alfelejezetben található a webes felhasználói felület funkcióinak tesztelési terve, illetve az egyes tesztek eredményeinek leírása. Ezt követi a c++ program moduljainak részletes tesztelési terve. A modulok tesztelését minden esetben egy külön tesztfájl végezte. Ennek leírása, az eredmények értékelése, illetve a tesztállomány elérési útja szintén megtalálható az alfejezetben. A  tesztelés alfejezet utolsó része a bemutatott módszert hivatott tesztelni. Ez több szempont alapján, egyéb EKG tömörítő módszerekkel történő összehasonlítás útján valósul meg. 
 
 \section{A felhasználói felület implementációja}
 
@@ -512,7 +513,7 @@ A \texttt{launch\_decompression.php} script a \texttt{/www/szd/launch\_decompres
 
 Az eddig bemutatott scripteken kívül a webes felhasználói felület zökkenőmentes működéséhez szükséges néhány további erőforrás igénybevétele is. A teljes webes interfész a \texttt{/www/szd} útvonalon található. Ebben az alfejezetben kerülnek részletezésre a nem php nyelven íródott, de a webes felület által felhasznált mappák és állományok.
 
-\par A \textttt{/www/szd/cpp} mappa egy szimbolikus linket tartalmaz, amely a \texttt{/src/main} állományra mutat. A webes felület ezen a linken keresztül képes a főprogramot invokálni. A linket a \texttt{build\_all.sh} script generálja. Szintén ebben a mappában találhatóak az MIT-BIH adatbázisból letöltött, és a webes interfész által tömöríthető mérések. 
+\par A \texttt{/www/szd/cpp} mappa egy szimbolikus linket tartalmaz, amely a \texttt{/src/main} állományra mutat. A webes felület ezen a linken keresztül képes a főprogramot invokálni. A linket a \texttt{build\_all.sh} script generálja. Szintén ebben a mappában találhatóak az MIT-BIH adatbázisból letöltött, és a webes interfész által tömöríthető mérések. 
 \par A \texttt{/www/szd/css} mappa tartalmazza az egyes weboldalakhoz tartozó stílus definíciókat. A definíciók .css kiterjesztésű állományokban találhatóak.
 \par A \texttt{/www/szd/results} mappába kerülnek a tömörítések, kitömörítések illetve az animációs üzemmód által visszaadott értékek. Az egyes almappákban az animáció során az adott szegmensre jellemző reziduum jel, illetve annak approximációja található. Szintén a \texttt{results} mappában kapnak helyet a tömörítés során keletkező .cmp állományok, illetve a kitömörítés során generálódó .txt állományok. 
 
@@ -521,7 +522,7 @@ Az eddig bemutatott scripteken kívül a webes felhasználói felület zökkenő
 
 \section{A tömörítő eljárás implementációja}
 
-A fejlesztői dokumentáció bevezetésében leírtakkal összhangban, a tömörítő eljárás implementációjával foglalkozó fejezet minden pontja három részre tagolható. Minden alfejezet az aktuális modul feladatának pontos megfogalmazásával kezdődik. Ezt követi a modul interfészének definiálása, melynek segítségével átlátható a modul kapcsolata a program többi részével. Végül a modult alkotó osztályok és strukturák fő metódusainak, illetve adattagjainak leírása következik. A program robosztussága indokolja, hogy minden egyes metódus és függvény ne kerüljön itt jellemzésre, azonban a program forráskódjában minden metódus előtt megtalálható annak rövid jellemzése, elvárt bemenete, és esetleges visszaadott értékének típusa. Az egyes modulok dokumentációja tartalmazza ezen kívűl az ezeket leíró UML, és egyéb diagrammokat. Az egyes modulok imlpementációja külön .h, és .cpp kiterjesztésű állományokban található, ezért az egyes alfejezetek címei megegyeznek ezen állományok elnevezésével. A fejezet utolsó alfejezete leírást biztosít az implementáció által felhasznált külső könyvtárakhoz, illetve indokolja ezek választását.
+A fejlesztői dokumentáció bevezetésében leírtakkal összhangban, a tömörítő eljárás implementációjával foglalkozó fejezet minden pontja három részre tagolható. Minden alfejezet az aktuális modul feladatának pontos megfogalmazásával kezdődik. Ezt követi a modul interfészének definiálása, melynek segítségével átlátható a modul kapcsolata a program többi részével. Végül a modult alkotó osztályok és strukturák fő metódusainak, illetve adattagjainak leírása következik. A program robosztussága indokolja, hogy minden egyes metódus és függvény ne kerüljön itt jellemzésre, azonban a program forráskódjában minden metódus előtt megtalálható annak rövid jellemzése, elvárt bemenete, és esetleges visszaadott értékének típusa. Az egyes modulok dokumentációja tartalmazza ezen kívül az ezeket leíró UML, és egyéb diagrammokat. Az egyes modulok imlpementációja külön .h, és .cpp kiterjesztésű állományokban található, ezért az egyes alfejezetek címei megegyeznek ezen állományok elnevezésével. A fejezet utolsó alfejezete leírást biztosít az implementáció által felhasznált külső könyvtárakhoz, illetve indokolja ezek választását.
 
 \subsection{A SigPrep modul implementációja}
 
@@ -531,7 +532,7 @@ Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölv
 
 \par A modul feladata, hogy egységes módszert biztosítson a bemeneti jelek kezeléséhez. 
 Mivel az eljárás EKG jelek tömörítésével foglalkozik, illetve speciálisan az MIT-BIH adatbázisban megtalálható egyedi formátumú jelek feldolgozásával, 
-ezért egy általános jel kezelő modul implementációja nem volt szükséges a módszer megvalósításához. Annak érdekében azonban, hogy 
+ezért egy általános jel kezelő modul implementációja nem volt szükséges a módszer megvalósításához. Annak érdekében azonban, 
 hogy a bemutatott jel tömörítő eljárást jövőbeli vizsgálódások során könnyen ki lehessen próbálni egyéb jel típusokon, fontos az ehhez szükséges, általános metódusok definiálása. A SigPrep modul feladata tehát, hogy definiálja azokat az egységes függvényeket amelyek elengedhetetlenek a bemeneti jelek programon belül történő kezeléséhez. Ezen kezelési módszerek pontos megvalósítását a \texttt{/src/headers/SigPrep.h} állományban található SigPrep osztályból származtatatott osztályok, (a jelenlegi programcsomagban a \texttt{EcgSigPrep} osztály), írják le. 
 
 \subsection*{A modul interfésze}
@@ -581,8 +582,7 @@ Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/-vel} jelölv
 \subsection*{A modul feladata}
 
 \par A modul feladata, hogy definiálja azokat a konténereket illetve absztrakt metódusokat amelyek segítségével 
-megadható egy a program által felhasználható függvényrendszer. A Bevezetés fejezetben leírt eljárás speciálisan az ott bemutatott Hermite függvényrendszert 
-alkalmazza az EKG jelek tömörítéséhez. A bemutatott algoritmusokat azonban további, különböző tulajdonságú ortogonális (vagy akár csak lineárisan független) 
+megadható egy a program által felhasználható függvényrendszer. A Bevezetés fejezetben leírt eljárás speciálisan a dilatációs illetve transzlációs paramétertől függő Hermite függvényrendszert alkalmazza az EKG jelek tömörítéséhez. A bemutatott algoritmusokat azonban további, különböző tulajdonságú ortogonális (vagy akár csak lineárisan független) 
 függvényrendszerek segítségével is érdemes lehet kipróbálni. Annak érdekében, hogy ez könnyedén implementálható legyen, fontos hogy az egyes függvényrendszereket kezelő metódusok absztrak módon legyenek definiálva.
 Az OrtFunSys modul feladata tehát, hogy megadja azokat az adatszerkezeteket és absztrakt metódusokat, amelyek segítségével a program képes függvényrendszerek kezelésére. Az egyes függvényrendszerek, példaul az Hermite függvények pontos implementációja
 a \texttt{/src/headers/OrtFunSys.h} állományban definiált OrtFunSys osztályból származtatatott osztályokban található. 
