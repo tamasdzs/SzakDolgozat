@@ -357,6 +357,30 @@ ahol $R^{(i)}=f-s^{(i)}$ a rezidum függvényt jelöli. Röviden tehát az $s^{(
 
 \chapter{Felhasználói dokumentáció}
 
+A Felhasználói dokumentáció fejezet a mellékelt programcsomag használatát mutatja be. Az első alfejezetben találhatóak a rendszerkövetelmények, kiegészítve az ajánlott rendszer paraméterekkel. Ezt követően bemutatásra kerül a programcsomag felkonfigurálásának menete, majd a webes felhasználói felület használata. Végül a főprogram egyéb, csak a parancssorból hasznáható funckióinak jellemzése következik.
+
+\section{Rendszerkövetelmények}
+
+A programcsomag UNIX alapú operációs rendszeren (Ubuntu 16.04) lett fejlesztve, illetve tesztelve. A felhasznált megoldások miatt valamely debian alapú linux operációs rendszer ajánlott a használatához. Természetesen amennyiben a programcsomag egy interneten keresztül elérhető webszerveren kerül felkonfigurálásra, a webes interfész által nyújtott szolgáltatások hálozaton keresztül is elérhetőek. A továbbiakban külön felsorolásra kerülnek a webes felhasználói felület, illetve a c++ nyelven írt főprogram sikeres használatához szükséges követelmények.
+
+\subsection*{A felhasználói felület felkonfigurálásához szükséges követelmények}
+
+\begin{itemize}
+\item Egy lokálisan feltelepített HTTP web szerver. A fejlesztés és tesztelés Apache 2.0 szerveren történt.
+\item Működőképes php interpreter. A fejlesztéshez és a teszteléshez a 7.0 php verzió lett alkalmazva. 
+\item Hozzáférés a php.ini állományhoz. A \texttt{file_uploads} direktívának \texttt{On} értéket kell kapnia.
+\item HTML 5 parsolásra alkalmas web böngésző. 
+\end{itemize}
+
+\subsection*{A C++ jelfeldolgozó program dependenciái}
+
+\begin{itemize}
+\item GNU G++ fordító. A fejlesztés során a ... verzió lett alkalmazva.
+\item Feltelepített és működő wfdb könyvtár. A telepítéshez segítséget talál a \ref{wfdb} weboldalon.
+\end{itemize}
+
+A C++ program fordításához szükséges további könyvtárak (Eigen, Spline.h) feltelepítése nem szükséges, az ezekhez szükséges állományok megtalálhatóak a \texttt{/src} útvonalon.
+
 \chapter{Fejlesztői dokumentáció}
 
 Ebben a fejezetben található a Bevezetés-ben bemutatott eljárás implementációjának pontos (modul szintű) leírása, valamint az alkalmazott tesztek jellemzése illetve ezek eredményei. A tesztelés eredményeit a tapasztalok összegzése és néhány lehetséges jövőbeli fejlesztés jellemzése követi. \par A fejlesztői dokumentáció első részében a tömörítési módszer implementációjának leírása található. Ez az alfejezet két fő részre tagolható: a webes felhasználói felület és az ehhez felhasznált könyvtárakat leíró, valamint a háttérben a konkrét tömörítést elvégző c++ program modulonkénti jellemzését. Mivel a webes felület megvalósítása rövid, és specializált scriptek összessége, ezért ezek jellemzését minden esetben egyedi módon érdemes kezelni. Ellentétben ezzel a szemlélettel, a c++ program nagyban épít a nyelv által támogatott objektum orientált megközelítésre. Ez lehetővé teszi és indokolja is egyben, hogy az implementációt jellemző dokumentáció is hasonlóan jól strukturált legyen. Az egyes modulok dokumentációja ugyanazon három szempont szerint közelíti meg a jellemzésüket: a modul feladatának, a modul interfészének (hogyan és mely egyéb modulokhoz kapcsolódik), valamint a modult felépítő osztályok implementációjának pontos megfogalmazása. A modulok leírásánál találhatóak továbbá a szemléltetést segítő UML és egyéb hasznos diagrammok. 
