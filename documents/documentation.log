@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  6 MAY 2017 16:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  6 MAY 2017 16:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1120,21 +1120,7 @@ Package pdftex.def Info: ./Abrak/Ereszkedo1/F_2sz.png used on input line 429.
 3. fejezet.
 [19
 
-]
-
-LaTeX Warning: Reference `specifik\IeC {\'a}ci\IeC {\'o}' on page 20 undefined 
-on input line 446.
-
-
-LaTeX Warning: Reference `\IeC {\"o}sszes\IeC {\'\i }tett t\IeC {\'a}bl\IeC {\'
-a}zat' on page 20 undefined on input line 446.
-
-
-LaTeX Warning: Reference `felhaszn\IeC {\'a}l\IeC {\'o}i doksi, hossz\IeC {\'u}
- jelek t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\'e}se' on page 20 undefined o
-n input line 446.
-
-[20]
+] [20]
 Overfull \hbox (34.65578pt too wide) in paragraph at lines 464--465
 \T1/cmr/m/n/12 ha-tó a na-vi-gá-ci-ós me-nü-sor, mely-hez az ani-má-ci-ót a scr
 ipt-ben de-fi-ni-ált \T1/cmtt/m/n/12 hoverChangeImg(obj,
@@ -1611,10 +1597,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6351 strings out of 493029
- 93543 string characters out of 6136234
- 176370 words of memory out of 5000000
- 9637 multiletter control sequences out of 15000+600000
+ 6350 strings out of 493029
+ 93488 string characters out of 6136234
+ 176391 words of memory out of 5000000
+ 9636 multiletter control sequences out of 15000+600000
  34850 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,17n,37p,3296b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1641,7 +1627,7 @@ r/sfcc1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr
 ype1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super
 /sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/
 share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on documentation.pdf (64 pages, 728279 bytes).
+Output written on documentation.pdf (64 pages, 728212 bytes).
 PDF statistics:
  409 PDF objects out of 1000 (max. 8388607)
  278 compressed objects within 3 object streams
