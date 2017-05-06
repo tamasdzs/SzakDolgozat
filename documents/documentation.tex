@@ -114,7 +114,7 @@ Az információ ábrázolásának módja az informatika tudomány fontos kérdé
 		
 \section{A feladat specifikációja}
 
-A dolgozat célja egy olyan tömörítési eljárás bemutatása, amely lehetővé teszi az EKG jelek hatékony (memória takarékos) ábrázolását, a mérések zaj szűrését, illetve az EKG hullámszegmenseinek szeparációját. Az utóbbi jellemző orvosi szempontból lehet hasznos, ugyanis sok kóros elváltozás kimutatásához szükséges az egyes hullámszegmensek széleinek ismerete. A dolgozatban bemutatott módszer hatékonysága, az irodalomban fellelhető más tömörítési eljárások \cite{} hatékonyságának összehasonlításával igazolandó. \par A dolgozatban bemutatott tömörítési eljárás implementációjának feladata, hogy az MIT-BIH adatbázisban található EKG jelek tömörítésére alkalmas legyen, ehhez pedig egy könnyen használható webes felületet biztosítson. Az implementációnak két féle bemente megengedett: tömörítés esetén az MIT-BIH adatbázisban megtalálható EKG jelek, illetve a tömörítés következtében létrejött számsorozat, melyet a tömörített jel helyreállításához használ.  
+A dolgozat célja egy olyan tömörítési eljárás bemutatása, amely lehetővé teszi az EKG jelek hatékony (memória takarékos) ábrázolását, a mérések zaj szűrését, illetve az EKG hullámszegmenseinek szeparációját. Az utóbbi jellemző orvosi szempontból lehet hasznos, ugyanis sok kóros elváltozás kimutatásához szükséges az egyes hullámszegmensek széleinek ismerete. A dolgozatban bemutatott módszer hatékonysága, az irodalomban fellelhető más tömörítési eljárások \cite{neuralStuff, waveletOpt, ecgCompIrregular, kvadCikk, origCikk, ecgDataCompressionTech} hatékonyságának összehasonlításával igazolandó. \par A dolgozatban bemutatott tömörítési eljárás implementációjának feladata, hogy az MIT-BIH adatbázisban található EKG jelek tömörítésére alkalmas legyen, ehhez pedig egy könnyen használható webes felületet biztosítson. Az implementációnak két féle bemente megengedett: tömörítés esetén az MIT-BIH adatbázisban megtalálható EKG jelek, illetve a tömörítés következtében létrejött számsorozat, melyet a tömörített jel helyreállításához használ.  
 
 \section{A modell ismertetése}
 A modern orvostudományban nagy jelentőséggel bírnak 
@@ -129,7 +129,7 @@ amely a szív állapotáról képes információt adni. Bár ennek a dolgozatnak
 \end{center}
 \end{figure}
  
-Az irodalomban ismert tömörítő algoritmusokat \cite{unifiedReview} alapján három kategóriába sorolhatjuk: 1) egyszerű paraméteres becslések (pl.: interpoláció, különbségi kódolás, stb.), 2) direkt módszerek (pl.: csúcsok, meredekségek, stb. tárolása), 3) transzformációs eljárások. Az utóbbi osztály tartalmazza azokat az algoritmusokat, melyek a jelet egy előre adott függvényrendszer szerinti sorfejtéssel approximálják. Így az eredeti adatsorozat helyett csak az együtthatókat és a rendszer paramétereit kell tárolnunk. Ezen kategóriába sorolandó a dolgozatban bemutatott algoritmus is. Nevezetesen, az eredeti adatsorozatot speciális, Hermite-polinomok segítségével előállitott függvényrendszerrel fogjuk közelíti. A módszer alapját képező eljárás \cite{hexp3}, jól ismert az irodalomban, mely nem csak a jelek tömörítéséhez, de azok modellezéséhez \cite{hexp2}, illetve osztályozásához \cite{hexp1, hexp4} is alkalmazható. A dolgozatban az EKG jelekkel való hasonlóságuk miatt Hermite-függvényeket használunk az adatok reprezentálásához. Ezeket egy argumentum transzformáción keresztül szabad paraméterekkel egészítjük ki. Ennek köszönhetően az eredeti jelet egy adaptív bázisban írhatjuk fel. Az említett paraméterek megválasztásához a Nelder-Mead optimalizációs eljárást alkalmaztuk. Mivel az EKG jelek diszkrét adatsorozatok, ezért a módszert \cite{hexp5} alapján implementáltuk diszkrét ortogonális Hermite-polinomokra is. A dolgozatban különböző tesztekkel demonstráljuk az algoritmus hatékonyságát. Ehhez, több órányi, zajjal terhelt, valódi EKG felvételt használtunk. Ezen keresztül a bemutatott módszert összehasonlítottuk több másik, az irodalomban jól ismert tömörítő algoritmussal is \cite{jpeg2000ECG}. 
+Az irodalomban ismert tömörítő algoritmusokat \cite{ecgDataCompressionTech} alapján három kategóriába sorolhatjuk: 1) egyszerű paraméteres becslések (pl.: interpoláció, különbségi kódolás, stb.), 2) direkt módszerek (pl.: csúcsok, meredekségek, stb. tárolása), 3) transzformációs eljárások. Az utóbbi osztály tartalmazza azokat az algoritmusokat, melyek a jelet egy előre adott függvényrendszer szerinti sorfejtéssel approximálják. Így az eredeti adatsorozat helyett csak az együtthatókat és a rendszer paramétereit kell tárolnunk. Ezen kategóriába sorolandó a dolgozatban bemutatott algoritmus is. Nevezetesen, az eredeti adatsorozatot speciális, Hermite-polinomok segítségével előállitott függvényrendszerrel fogjuk közelíti. A módszer alapját képező eljárás \cite{origCikk}, jól ismert az irodalomban, mely nem csak a jelek tömörítéséhez, de azok modellezéséhez \cite{methodForQRSEval}, illetve osztályozásához \cite{detAcuteMyo, clusterMaps} is alkalmazható. A dolgozatban az EKG jelekkel való hasonlóságuk miatt Hermite-függvényeket használunk az adatok reprezentálásához. Ezeket egy argumentum transzformáción keresztül szabad paraméterekkel egészítjük ki. Ennek köszönhetően az eredeti jelet egy adaptív bázisban írhatjuk fel. Az említett paraméterek megválasztásához a Nelder-Mead optimalizációs eljárást alkalmaztuk. Mivel az EKG jelek diszkrét adatsorozatok, ezért a módszert \cite{kvadCikk} alapján implementáltuk diszkrét ortogonális Hermite-polinomokra is. A dolgozatban különböző tesztekkel demonstráljuk az algoritmus hatékonyságát. Ehhez, több órányi, zajjal terhelt, valódi EKG felvételt használtunk. Ezen keresztül a bemutatott módszert összehasonlítottuk több másik, az irodalomban jól ismert tömörítő algoritmussal is \cite{ecgCompIrregular}. 
 
 A tömörítő eljárást egy c++ nyelven megírt, objektum elvű alkalmazás implementálja, melyet egy webes felületen keresztül érhetünk el. A felület lehetőséget biztosít a dolgozatban jelölt tesztek újrafuttatására, valamint a teszteléskor felhasznált adatbázis további jeleinek a tömörítésére. Szintén a webes felületen keresztül nyílik alkamunk a már tömörített EKG jelek helyreállítására. 
 
@@ -149,20 +149,20 @@ $$
 \|f-S_nf\|^2=\|f\|^2-\sum_{k=0}^n|\langle f,\Phi_k\rangle|^2
 $$
 képplettel adható meg. Adott hibán belüli közelítést véve a jel helyett  elég az
-$S_nf$ approximációt reprezentáló  $\langle f,\Phi_k\rangle\ (k=0,1,\cdots, n)$ Fourier-együtthatókat tárolni.  Zajos jel esetén az ilyen típusú approximáció szűrőként is szolgál.  A közelítés megvalósításához a klasszikus ortogonális rendszerek közül  EKG görbék közelítésére  az Hermite-féle függvények bizonyultak használhatónak. Ezt támasztják alá a [...] dolgozatok. Az  Hermite függvények alkalmazása azzal is indikolható, hogy grafikonjuk hasonlít az EKG görbékre. Ezt a tulajdonságot a \ref{fig:phi0-3} ábra szemlélteti.
+$S_nf$ approximációt reprezentáló  $\langle f,\Phi_k\rangle\ (k=0,1,\cdots, n)$ Fourier-együtthatókat tárolni.  Zajos jel esetén az ilyen típusú approximáció szűrőként is szolgál.  A közelítés megvalósításához a klasszikus ortogonális rendszerek közül  EKG görbék közelítésére  az Hermite-féle függvények bizonyultak használhatónak. Ezt támasztják alá a \cite{origCikk, kvadCikk} dolgozatok. Az  Hermite függvények alkalmazása azzal is indikolható, hogy grafikonjuk hasonlít az EKG görbékre. Ezt a tulajdonságot a \ref{fig:phi0-3} ábra szemlélteti.
 
-\iffalse
+
 
 \begin{figure}
 \centering
-\subfigure[$\Phi_{0}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi0.pdf}} 
-\subfigure[$\Phi_{1}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi1.pdf}}
-\subfigure[$\Phi_{2}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi2.pdf}} 
-\subfigure[$\Phi_{3}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./%Abrak/Egyeb/phi3.pdf}}
+\subfigure[$\Phi_{0}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./Abrak/Egyeb/phi0.pdf}} 
+\subfigure[$\Phi_{1}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./Abrak/Egyeb/phi1.pdf}}
+\subfigure[$\Phi_{2}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./Abrak/Egyeb/phi2.pdf}} 
+\subfigure[$\Phi_{3}(x)$]{\includegraphics[scale=0.34,trim=150 280 150 280,clip]{./Abrak/Egyeb/phi3.pdf}}
 \caption{A Hermite-függvényrendszer első négy tagja.}
 \label{fig:phi0-3}
 \end{figure}
-\fi
+
 
 
 \subsection{Hermite-függvények}
@@ -220,7 +220,7 @@ az $f$ legjobb approximációja az
 \begin{equation}
 S_n^{a,\lambda}f:=\sum_{k=0}^n\langle f,\Phi_k^{a,\lambda}\rangle\Phi_k^{a,\lambda}\ \
 (n\in\Bbb N, a\in\Bbb R,\lambda>0)
-\end{equation}
+\end{equation} \label{eq:hilaprx}
 projekció és a közelítés hibája az $a$ transzlációs és a $\lambda$ dilatációs paraméter függvénye:
 \begin{equation}
 D^2_n(a,\lambda):=\|f\|^2-\sum_{k=0}^n|\langle f,\Phi_k^{a,\lambda}\rangle|^2.
@@ -259,7 +259,7 @@ paraméter esetén.
 
 
 
-A $Nelder-Mead$ szimplex algoritmust \cite{} eredetileg 1965-ben
+A $Nelder-Mead$ szimplex algoritmust \cite{nelderMead} eredetileg 1965-ben
 fejlesztették ki azzal céllal, hogy létrehozzanak egy eljárást, amely
 képes meghatározni egy $f : \Bbb R^n \to \Bbb R$ nemlineáris függvény minimum (maximum) helyét a  gradiens felhasználása  nélkül,
  pusztán a függvényértékekre  támszkodva. 
@@ -298,8 +298,8 @@ Megjegyezendő, hogy a $Nelder-Mead$ szimplex módszer egy determinisztikus algo
 
 Mivel a $Nelder-Mead$ algoritmus
 kizárólag a függvényértékekre támaszkodik, a hibafüggvény értékeinek kiszámításához elegendő az Hermite-függvényeket valamilyen felosztás pontjaiban egyszer meghatatározni. Ez implementációs szempontból is fontos, hiszen nem kell minden $(\lambda,a)$ paraméterhez kiszámolni az ettől függő, rekurzióval adott Hermite-féle függvényrendszer tagjait. Ehelyett elég az eredeti diszkrét adatsorozatot dilatálni, illetve eltolni, ami lényegesen kevesebb számítást igényel. Továbbá, az említett felosztás pontjainak valamely Hermite-függvény zérushelyeit választva, a hibafüggvényben  szereplő integrálok kiszámításához
-a \cite{} dolgozatban használt eljáráshoz hasonlóan kvadratúra formulát is alkalmazhatunk. Ennek előnye, hogy az alappontokban a módszer interpolál, így itt lehetséges a jel mintáinak pontos rekonstrukciója. Ugyanakkor, a kapott approximáció is pontosabb, amit a \cite{}-ben közölt numerikus tesztek is alátámasztanak.
-	\par Ahogyan ez a \cite{} dolgozatban látható, további optimalizációs algoritmusok is alkalmazhatóak a probléma megoldásához. Egy ezek közül a leggyosrabb ereszkedés módszere, melynek az alkalmazásához 
+a \cite{waveletOpt} dolgozatban használt eljáráshoz hasonlóan kvadratúra formulát is alkalmazhatunk. Ennek előnye, hogy az alappontokban a módszer interpolál, így itt lehetséges a jel mintáinak pontos rekonstrukciója. Ugyanakkor, a kapott approximáció is pontosabb, amit a \cite{waveletOpt}-ben közölt numerikus tesztek is alátámasztanak.
+	\par Ahogyan ez a \cite{sajat} dolgozatban látható, további optimalizációs algoritmusok is alkalmazhatóak a probléma megoldásához. Egy ezek közül a leggyosrabb ereszkedés módszere, melynek az alkalmazásához 
 szükségünk van a függvény parciális deriváltjaira. Ezek előállításával ilyen esetben
 külön  kell foglalkozni. Az Hermite-függvények deriváltjaira vonatkozó formulák alapján a
 parciális deriváltakra a hibafüggvényhez hasonló ellőállítás adható. Ebben az esetben az \eqref{eq:dotprod} egyenletben szereplő integrálok kiszámításához ekvidisztans felosztása alkalmazandó.
@@ -335,15 +335,15 @@ Hátra van még a megfelelő $(a,\lambda)$ paraméterek beállítása. Annak ér
 	S_{\mathbf{n}}^{\mathbf{a},\boldsymbol{\lambda}}f:=\sum_{i=1}^N\sum_{k=0}^{n_i} \langle f^{a_i,\lambda_i},\Phi_{k}\rangle\Phi_{k} \quad
 	(a_k \in \Bbb R,\lambda_k>0)\,,
 \end{equation*}
-ahol $\mathbf{a}=a_1, a_2, \ldots, a_N$ az alkalmazott transzlációk, $\boldsymbol{\lambda}=\lambda_1, \lambda_2, \ldots, \lambda_N$ pedig a dilatációk sorozata. Az egyes sorfejtésekhez tartozó együtthatók számát az $\mathbf{n}=n_1, n_2, \ldots, n_N$ vektor jelöli. Mivel az EKG jel alapvetően három fő hullámból áll ezért jelen probléma megoldásakor $N=3.$ Továbbá a \cite{hexp3} dolgozat eredményei alapján
+ahol $\mathbf{a}=a_1, a_2, \ldots, a_N$ az alkalmazott transzlációk, $\boldsymbol{\lambda}=\lambda_1, \lambda_2, \ldots, \lambda_N$ pedig a dilatációk sorozata. Az egyes sorfejtésekhez tartozó együtthatók számát az $\mathbf{n}=n_1, n_2, \ldots, n_N$ vektor jelöli. Mivel az EKG jel alapvetően három fő hullámból áll ezért jelen probléma megoldásakor $N=3.$ Továbbá a \cite{origCikk} dolgozat eredményei alapján
 a QRS komplexumot egy heted, a T hullámot hatod, a P hullámot pedig egy másodfokú ortogonális rendszer segítségével approximálja az eljárás azaz $\mathbf{n}=7,6,2\,.$ Fontos, hogy a legjobb approximáció előállításához a \eqref{eq:hilaprx} egyenlettel ellentétben már az eredeti függvény $f^{a_i,\lambda_i}$ transzformáltja használatos. Ez nem jelent megszorítást az eredeti problémára nézve, implementációs szempontból viszont $f^{a_i,\lambda_i}$ kiszámítása gyorsabb, mint a $\Phi_n^{a_i,\lambda_i}$ rendszer előállítása.
 
-A $(a_i,\lambda_i)$ paraméter párok optimalizációja egymástól függetlenül történik. Így azonban nem garantált, hogy az algoritmus a P, QRS, T hullámokat külön-külön approximálja. A problémát az irodalomban jól ismert ún. $Matching\ Pursuit$ $(MP)$ konstrukció \cite{mpurs} alkalmazásával oldja meg a módszer. Ez egy mohó algoritmus, mely minden lépésben a \eqref{eq:Fnfuggv} egyenletben definiált $F_n(a_i,\lambda_i)$ függvény maximalizálására törekszik. Az iteráció $i.$ lépése a következő alakban írható fel:
+A $(a_i,\lambda_i)$ paraméter párok optimalizációja egymástól függetlenül történik. Így azonban nem garantált, hogy az algoritmus a P, QRS, T hullámokat külön-külön approximálja. A problémát az irodalomban jól ismert ún. $Matching\ Pursuit$ $(MP)$ konstrukció \cite{mpCikk} alkalmazásával oldja meg a módszer. Ez egy mohó algoritmus, mely minden lépésben a \eqref{eq:hilaprx} egyenletben definiált $F_n(a_i,\lambda_i)$ függvény minimalizálására törekszik. Az iteráció $i.$ lépése a következő alakban írható fel:
 \begin{equation}
 	s^{(i)}=s^{(i-1)} + S^{a_i,\lambda_i}_{n_i} R^{(i-1)} \quad (1\leq i \leq N)\,,
 \label{eq:mpurs}
 \end{equation}
-ahol $R^{(i)}=f-s^{(i)}$ a rezidum függvényt jelöli. Röviden tehát az $s^{(0)}=0,\ R^{(0)}=f$ inicializálás után, az eljárás az $i.$ lépésében megkeresi az $R^{(i-1)}$ függvény $\ell^2$ norma szerinti legjobb közelítését, amit ki is von az említett rezidum vektorból. Ezt $N$ iteráción keresztül ismétli az aktuális $R^{(i)}$ függvényre. Az MP módszer egy gyors algoritmus, mellyel megkonstruálható az $f\in\mathcal{F}$ jel ritka reprezentációja. Emellett lehetséges az EKG szívütéseinek automatikus szeparációja is, hiszen a jel különböző részeit eltérő ortogonális rendszerek segítségével közelítjük. Figyelmet érdemel, hogy az eredeti \cite{hexp3} módszerben ezt a lépést egy külön szegmentáló algoritmus végezte. Így a közelítés pontossága erősen függött a szegmentálás eredményétől (lsd. \ref{sec:test} fejezet). A kifejlesztett eljárásnál azonban ez a probléma nem áll fenn még zajos jelek esetén sem. A dolgozatban bemutatott módszer iterációs lépéseit, az $R^{(i)}$ rezidum függvények alakulását, illetve a szeparált EKG jelet az \ref{fig:mpstep} ábra szemlélteti. Jól látható az is, hogy a fekete vonallal jelölt optimális transzláció általában nem az abszolút maximum helyén található. Ez indokolja, hogy a $\lambda_i$ dilatáció mellett az $a_i$ paraméter optimalizációjára is szükség van. Mivel ez utóbbi a kiindulásként használt \cite{hexp3} dolgozatból hiányzik, ezért a pontosság és tömörítési arány jelentős javulása várható el tőle.
+ahol $R^{(i)}=f-s^{(i)}$ a rezidum függvényt jelöli. Röviden tehát az $s^{(0)}=0,\ R^{(0)}=f$ inicializálás után, az eljárás az $i.$ lépésében megkeresi az $R^{(i-1)}$ függvény $\ell^2$ norma szerinti legjobb közelítését, amit ki is von az említett rezidum vektorból. Ezt $N$ iteráción keresztül ismétli az aktuális $R^{(i)}$ függvényre. Az MP módszer egy gyors algoritmus, mellyel megkonstruálható az $f\in\mathcal{F}$ jel ritka reprezentációja. Emellett lehetséges az EKG szívütéseinek automatikus szeparációja is, hiszen a jel különböző részeit eltérő ortogonális rendszerek segítségével közelítjük. Figyelmet érdemel, hogy az eredeti \cite{origCikk} módszerben ezt a lépést egy külön szegmentáló algoritmus végezte. Így a közelítés pontossága erősen függött a szegmentálás eredményétől (lsd. \ref{sec:methodtest} fejezet). A kifejlesztett eljárásnál azonban ez a probléma nem áll fenn még zajos jelek esetén sem. A dolgozatban bemutatott módszer iterációs lépéseit, az $R^{(i)}$ rezidum függvények alakulását, illetve a szeparált EKG jelet az \ref{fig:mpstep} ábra szemlélteti. Jól látható az is, hogy a fekete vonallal jelölt optimális transzláció általában nem az abszolút maximum helyén található. Ez indokolja, hogy a $\lambda_i$ dilatáció mellett az $a_i$ paraméter optimalizációjára is szükség van. Mivel ez utóbbi a kiindulásként használt \cite{origCikk} dolgozatból hiányzik, ezért a pontosság és tömörítési arány jelentős javulása várható el tőle.
 \begin{figure}[htb!]
   \centering
 \subfigure[A QRS approximációja.]{\includegraphics[scale=0.5,trim=120 280 100 280,clip]{./Abrak/Lepesek/abra_lepes0.pdf}} 
@@ -779,17 +779,17 @@ Nagy terjedelmű szoftverek fejlesztése külső erőforrások igénybevétele n
 
 \subsection*{Az Eigen könyvtár}
 
-Az Eigen könyvtár egy C++ sablon könyvtár amelyet lineáris algebrai feladatok megoldásához fejlesztettek ki. Gazdag választékát biztosítja mátrixok, vektorok és egyéb hasznos tömbön alapuló adatszerkezetek könnyen kezelhető reprezentációinak, illetve különböző numerikus feladatokat megoldó osztályoknak. A könyvtár fejlesztését önkéntesek biztosítják. A legtöbbet hozzájáruló önkénetesek nevei, illetve a könyvtár dokumentációja megtalálhatóak a projekt weboldalán, amely a http://eigen.tuxfamily.org címen érhető el.
+Az Eigen könyvtár egy C++ sablon könyvtár amelyet lineáris algebrai feladatok megoldásához fejlesztettek ki. Gazdag választékát biztosítja mátrixok, vektorok és egyéb hasznos tömbön alapuló adatszerkezetek könnyen kezelhető reprezentációinak, illetve különböző numerikus feladatokat megoldó osztályoknak. A könyvtár fejlesztését önkéntesek biztosítják. A legtöbbet hozzájáruló önkénetesek nevei, illetve a könyvtár dokumentációja megtalálhatóak a projekt weboldalán, amely a \cite{eigenEler} címen érhető el.
 \par A könyvtár legnagyobb erőssége, hogy a MATLAB nyelvben megszokott felületet biztosít mátrixok illetve vektorok kezeléséhez. Mivel a tömörítő eljárás megvalósításánál számos ilyen feladattal kell szembenézni, ezért ideális választásnak mondható a könyvtár alkalmazása. Az Eigen könyvtár által nyújtott szolgálatatásokat gyakorlatilag az implementáció minden modulja igénybe veszi. A program a tömörítendő jelet az Eigen::MatrixXd dinamikusan változtatható méretű mátrixban tárolja, csakúgy mint a tömörítéshez felhasznált Hermite függvényrendszer értékeit. A pontokat melyek fölött az Hermite függvények értékeit kiszámítja a program az Eigen programcsomag egy saját érték probléma megoldó objektumának segítségével kerülnek meghatározásra. A tömörítő eljárás implementációja soran a könyvtár megbízható, gyors és könnyen alkalmazható tulajdonságairól tett tanúbizonyságot.
 
 \subsection*{A wfdb könyvtár}
 
-A megvalósított programcsomag legfontosabb céljat \ref{a dolgozat célja} az MIT-BIH PhysioBank adatbázisban található EKG mérések tömörítése. A wfdb (WaveForm DataBase) könyvtár az adatbázisban található mérések és a hozzájuk tartozó orvosi jelölések (annotációk) kezeléséhez biztosít függvényeket. Egészen pontosan a könyvtár a PhyisioBank szerverein található mérések eléréséhez és feldolgozásához biztosít egy API felüleletet. A könyvtárban található függvények C illetve FortTran nyelveken érhetők el, de bizonyos funkcionalitások elérhetőek a népszerű MATLAB illetve python nyelveken is. A könyvtár fejlesztői interfészeket biztosítanak számos más programozási nyelv felé is, így gyakorlatilag bármely népszerű nyelvet felhasználva lehetőség nyílik az adatbázisban található jelek feldolgozására. Mivel a könyvtár lehetővé teszi a PhysioBank adatbázisban található mérések közvetlen (http, illetve FTP protokollokat felhasználó) elérését, ezért használatához szükséges a libcurl könyvtár feltelepítése is. A libcurl könyvtár képes az említett webes tartalmak böngésző nélküli eléréséhez. A könyvtár teljes dokumentációja a https://www.physionet.org/physiotools/wpg/wpg.pdf webcímen érhető el. 
+A megvalósított programcsomag legfontosabb céljat \ref{a dolgozat célja} az MIT-BIH PhysioBank adatbázisban található EKG mérések tömörítése. A wfdb (WaveForm DataBase) könyvtár az adatbázisban található mérések és a hozzájuk tartozó orvosi jelölések (annotációk) kezeléséhez biztosít függvényeket. Egészen pontosan a könyvtár a PhyisioBank szerverein található mérések eléréséhez és feldolgozásához biztosít egy API felüleletet. A könyvtárban található függvények C illetve FortTran nyelveken érhetők el, de bizonyos funkcionalitások elérhetőek a népszerű MATLAB illetve python nyelveken is. A könyvtár fejlesztői interfészeket biztosítanak számos más programozási nyelv felé is, így gyakorlatilag bármely népszerű nyelvet felhasználva lehetőség nyílik az adatbázisban található jelek feldolgozására. Mivel a könyvtár lehetővé teszi a PhysioBank adatbázisban található mérések közvetlen (http, illetve FTP protokollokat felhasználó) elérését, ezért használatához szükséges a libcurl könyvtár feltelepítése is. A libcurl könyvtár képes az említett webes tartalmak böngésző nélküli eléréséhez. A könyvtár teljes dokumentációja a \cite{wfdbEler} webcímen érhető el. 
 \par A bemutatott tömörítő eljárás jelenlegi implementációja az EcgSigPrep modulban használja fel a wfdb könyvtár szolgáltatásait. A modulban található \texttt{EcgSigPrep} osztály konstruktora nagy mértékben támaszkodik a könyvtár szolgáltatásaira, a bemeneti paraméterül kapott mérés azonosítóhoz tartozó minták feldolgozásakor. Szintén a könyvtár függvényein keresztül képes az osztály az egyes szívütések különválasztására, mivel az ehhez szükséges R csúcs pozíciókat az eredeti méréshez tartozó annotációkból szűri ki. Az említett pozíciókat egy szintén a wfdb könyvtárban definiált típus a \texttt{WFDB\_Annotation} segítségével tárolja az osztály. A wfdb könyvtár szolgáltatásait az \texttt{EcgSigPrep} osztály konstruktorán kívül a publikus hozzáférhetőségű \texttt{getNextSegment} függvénye is igénybe veszi a soron következő szívütés széleinek meghatározásához. 
 
 \subsection*{A Spline.h állomány}
 
-Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölve, a Spline.h állomány a \texttt{/src/headers/Spline.h} útvonalon található. Az állomány egy absztrakt harmadfokú spline modellt implementál. Az állományt Tino Kluge hozta létre, illetve tartja karban. A spline modellhez és az implementációhoz tartozó dokumentáció az alábbi weboldalon érhető el: http://kluge.in-chemnitz.de/opensource/spline/. A Spline.h előnyei közé tartozik, hogy nincsenek külső dependenciái, az \texttt{\#include "Spline.h"} direktíva alkalmazása után az összes funkció elérhetővé válik. Ezen kívül az állomány használata egyszerű és gyors.
+Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölve, a Spline.h állomány a \texttt{/src/headers/Spline.h} útvonalon található. Az állomány egy absztrakt harmadfokú spline modellt implementál. Az állományt Tino Kluge hozta létre, illetve tartja karban. A spline modellhez és az implementációhoz tartozó dokumentáció a \cite{splineEler} weboldalon érhető el. A Spline.h előnyei közé tartozik, hogy nincsenek külső dependenciái, az \texttt{\#include "Spline.h"} direktíva alkalmazása után az összes funkció elérhetővé válik. Ezen kívül az állomány használata egyszerű és gyors.
 \par A tömörítő eljárás implementációja során egyetlen helyen szükséges spline interpoláció alkalmazása. Az eljárás robosztusságának a spline interpoláció csupán egy igen kis részét teszi ki. Ennek hatékony és pontos implementációja azonban önmagában is nagy feladatot jelenthet. Mindez indokolta egy külső spline modellt tartalmazó állomány igénybe vételét. 
 \par Az EKG tömörítés során spline interpolációra a bemeneti jel eltolásánál, azaz az aktuális transzlációs paraméter alkalmazásánál kerül sor. Ezt a műveletet az EcgSigPrep moduloban található \texttt{EcgSigPrep} osztály \texttt{setDilatTrans} függvénye végzi. Miután a jel értékeit az \texttt{std::rotate} függvény segítségével megfelelő számú pozícióval eltolta az eljárás, szükségessé válik az eltolt jel értékeinek kiszámítása a dilatált intervallum fölött. Ezen értékek kiszámítása spline interpolációval történik.
 
@@ -972,7 +972,7 @@ A MatchingPursuit modulhoz tartozó modul teszt a \texttt{/src/mt/matchingPursui
 \end{adjustbox}
 \end{center}
 
-\section{A tömörítő eljárás hatékonyságának tesztelése}
+\section{A tömörítő eljárás hatékonyságának tesztelése} \label{sec:methodtest}
 
 	Ez a fejezet a bemutatott tömörítő eljárással kapcsolatos tesztesetek eredményeit tárgyalja. Ezek a tesztek implementációtól függetlenül hivatottak bemutatni a kidolgozott tömörítő eljárás helyességét, illetve eredményességét más eljárásokhoz képest. Mivel a tömörítő eljárásról a \ref{sajat cikk} folyóiratban már korábban megjelent egy tanulmány, ebben a fejezetben az itt bemutatott eredmények szerepelnek. Az eredeményeket a tömörítő algoritmus MATLAB nyelven íródott implementációjával sikerült elérni. A dolgozatban tárgyalt c++ nyelven implementált programmal az adatok nagy számossága miatt, az összes rekord újratömörítése nem volt szükségszerű. Természetesen a program alkalmas az itt bemutatott bármely mérés teljes tömörítésére, illetve a közelítés hibájának meghatározására. Ez a modul tesztelés során egyértelműen kiderült, hiszen a tesztesetek között szerepelt egy hosszú, összefüggő rekord tömörítése is. 
 \par A tömörítési eljárás a korábbi \ref{} dolgozatokban szereplő 117, 119-es rekordok mellett az MIT-BIH adatbázis egyéb felvételein is kipróbálásra került. Így összesen $3$ órányi adaton, $12830$ darab szívütést tömörített a módszer. Az összehasonlíthatóság érdekében az eredeti \cite{hexp3} algoritmuson is elvégeztük a tesztet. Mindkét esetben az egyes szegmensek $\mathbf{n}=7,6,2$ együtthatóval lettek meghatározva. A futásidő csökkentésének érdekében az iterációk száma a 15 értékben került meghatározásra. Így egy $30$ perces rekordon a Nelder-Mead (NM) szimplex módszer átlagosan $1400$ másodpercig futott. Az eredményeket a pontosság és a tömörítési arány szempontjából is szükséges értékelni:
@@ -1329,4 +1329,143 @@ hármasra cseréli.
 \label{alg:NM}
 \end{algorithm}
 
+\begin{thebibliography}{9}
+
+\bibitem{ecgDataCompressionTech} 
+S. M. S. Jalaleddine, C. G. Hutchens, R. D. Strattan, and W. A. Coberly,
+„ECG data compression techniques – a unified approach,”
+\textit{IEEE Transactions on Bio-medical Engineering}, 
+vol. 37, no. 4, pp. 329–343, 1990.
+ 
+\bibitem{origCikk} 
+R. Jane, S. Olmos, P. Laguna, and P. Caminal,
+„Adaptive Hermite models for
+ECG data compression: Performance and evaluation with automatic wave detec-
+tion,” in
+\textit{Proceedings of the International Conference on Computers in Cardiology},
+1993, pp. 389–392.
+ 
+\bibitem{methodForQRSEval} 
+L. Sörnmo, P. L. Börjesson, M. E. Nygards, and O. Pahlm,
+„Adaptive Hermite models for
+„A method for evaluation of QRS shape features using a mathematical model for the ECG,” 
+\textit{IEEE Transactions on Biomedical Engineering},
+vol. 28, pp. 713–717, 1981.
+
+\bibitem{detAcuteMyo} 
+H. Haraldsson, L. Edenbrandt, and M. Ohlsson,
+„Detecting acute myocardial infarction in the 12-lead ECG using Hermite expansions and neural networks,”
+\textit{Artificial Intelligence in Medicine},
+vol. 32, pp. 127–136, 2004.
+
+\bibitem{clusterMaps} 
+M. Lagerholm, C. Peterson, G. Braccini, L. Edenbrandth, and L. Sörnmo,
+„Clustering ECG complexes using Hermite functions and self-organizing maps,”
+\textit{IEEE Transactions on Biomedical Engineering},
+vol. 47, pp. 838–717, 2000.
+
+\bibitem{kvadCikk} 
+A. Sandryhaila, S. Saba, M. Püschel, and J. Kovacevic,
+„Efficient compression of QRS complexes using Hermite expansion,”
+\textit{IEEE Transactions on Signal Processing},
+vol. 60, no. 2, pp. 947–955, 2012.
+
+\bibitem{ecgCompIrregular} 
+H. H. Chou, Y. J. Chen, Y. C. Shiau, and T. S. Kuo,
+„An effective and efficient compression algorithm for ECG signals with irregular periods,”
+\textit{IEEE Transactions on Biomedical Engineering},
+vol. 53, no. 6, pp. 1198–1205, 2006.
+
+\bibitem{nelderMead} 
+J. A. Nelder and R. Mead,
+„A simplex method for function minimization,”
+\textit{Computer Journal},
+vol. 7, no. 4, pp. 308–313, 1965.
+
+\bibitem{numOpt} 
+J. Nocedal and S. J. Wright,
+\textit{Numerical Optimization},
+Springer-Verlag, New York, USA, 2nd edition, 2006.
+
+\bibitem{waveletOpt} 
+M. Abo-Zahhad, A. F. Al-Ajlouni, S. M. Ahmed, and R.J. Schilling,
+„A new algorithm for the compression of ECG signals based on mother wavelet parameterization and best-threshold level selection,”
+\textit{Digital Signal Processing},
+vol. 23, pp. 1002–1011, 2013.
+
+\bibitem{gautschi} 
+W. Gautschi,
+\textit{Orthogonal Polynomials, Computation and Approximation},
+Numerical Mathematics and Scientific Computation. Oxford University Press, Oxford,
+UK, 2004.
+
+\bibitem{mpCikk} 
+S. G. Mallat and Z. Zhang,
+„Matching pursuit in time-frequency dictionary,”
+\textit{IEEE Transactions on Signal Processing},
+vol. 41, no. 12, pp. 3397–3415, 1993.
+
+\bibitem{adatbCikk} 
+A. L. Goldberger, L. A. N. Amaral, L. Glass, J. M. Hausdorff, P. Ch. Ivanov,
+R. G. Mark, J. E. Mietus, G. B. Moody, C. K. Peng, and H. E. Stanley,
+„PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource
+for complex physiologic signals,”
+\textit{Circulation}, vol. 101, no. 23, pp. 215–220, 2000.
+vol. 41, no. 12, pp. 3397–3415, 1993.
+
+\bibitem{neuralStuff} 
+C. M. Fira and L. Goras,
+„An ECG signals compression method and its validation using NNs,”
+\textit{IEEE Transactions on Biomedical Engineering},
+vol. 55, no. 4, pp. 1319–1326, 2008.
+
+\bibitem{realTimeQrs} 
+J. Pan and W. J. Tompkins,
+„A real-time QRS detection algorithm,”
+\textit{IEEE Transactions on Biomedical Engineering},
+vol. 32, pp. 230–236, 1985.
+
+\bibitem{masikMatchingPursuitCikk} 
+S. S. Chen, D. L. Donoho, and M. A. Saunders,
+„Atomic decomposition by basis pursuit,”
+\textit{SIAM Review},
+vol. 43, no. 1, pp. 129–159, 2001.
+
+\bibitem{sajat} 
+T. Dozsa, P. Kovacs,
+„ECG Signal Compression Using Adaptive Hermite Functions,”
+\textit{ Advances in Intelligent Systems and Computing},
+AISC, volume 399
+
+\bibitem{szego} 
+G. Szegő,
+\textit{Orthogonal polynomials},
+AMS Colloquium Publications, New York, USA, 3rd edition, 1967.
+
+\bibitem{szokefalviNagy} 
+B. Szőkefalvi-Nagy,
+\textit{Valós függvények és függvénysorok},
+Polygon Könyvtár, Szeged, HU, 2002.
+
+\bibitem{eigenEler}
+http://eigen.tuxfamily.org,
+2017.05.05
+
+\bibitem{wfdbEler}
+https://www.physionet.org/physiotools/wpg/wpg.pdf,
+2017.05.05
+
+\bibitem{splineEler}
+http://kluge.in-chemnitz.de/opensource/spline,
+2017.05.05
+
+\end{thebibliography}
+
+
+
 \end{document}
+
+
+
+
+
