@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  6 MAY 2017 16:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  6 MAY 2017 19:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1120,45 +1120,10 @@ Package pdftex.def Info: ./Abrak/Ereszkedo1/F_2sz.png used on input line 429.
 3. fejezet.
 [19
 
-] [20]
-Overfull \hbox (34.65578pt too wide) in paragraph at lines 464--465
-\T1/cmr/m/n/12 ha-tó a na-vi-gá-ci-ós me-nü-sor, mely-hez az ani-má-ci-ót a scr
-ipt-ben de-fi-ni-ált \T1/cmtt/m/n/12 hoverChangeImg(obj,
- []
-
-
-LaTeX Warning: Reference `jQuerry' on page 21 undefined on input line 465.
-
-
-LaTeX Warning: Reference `Google Charts' on page 21 undefined on input line 465
-.
-
-
-LaTeX Warning: Reference `ahol ezt kifejtem' on page 21 undefined on input line
- 465.
-
-[21] [22]
-Overfull \hbox (31.36163pt too wide) in paragraph at lines 472--473
-\T1/cmr/m/n/12 la-me-lyi-ké-re is kat-tint-hat a fel-hasz-ná-ló. Si-ke-res kat-
-tin-tás ese-tén meg-hí-vó-dik a \T1/cmtt/m/n/12 hideRecords()
- []
-
-
-Overfull \hbox (24.70207pt too wide) in paragraph at lines 473--474
-\T1/cmr/m/n/12 mel-lett, és vissza-tér. Ha a mé-ré-sek azo-no-sí-tói meg van-na
-k je-le-nít-va, a \T1/cmtt/m/n/12 beginCompression()
- []
-
-[23]
-Overfull \hbox (14.3923pt too wide) in paragraph at lines 477--478
-\T1/cmr/m/n/12 son ke-resz-tül in-vo-ká-ló \T1/cmtt/m/n/12 launch_compression.p
-hp \T1/cmr/m/n/12 scrip-tet. A \T1/cmtt/m/n/12 compression_loading.php
- []
-
-
-Overfull \hbox (44.44186pt too wide) in paragraph at lines 479--480
-\T1/cmr/m/n/12 rí-tett je-let tar-tal-ma-zó .cmp szö-ve-ges ál-lo-mányt. Ezt a 
-fo-lya-ma-tot a \T1/cmtt/m/n/12 compression_loading.php
+] [20] [21] [22] [23]
+Underfull \hbox (badness 10000) in paragraph at lines 477--478
+\T1/cmr/m/n/12 rend-szer-hí-vá-son ke-resz-tül in-vo-ká-ló \T1/cmtt/m/n/12 laun
+ch_compression.php \T1/cmr/m/n/12 scrip-tet.
  []
 
 
@@ -1174,24 +1139,27 @@ t a \T1/cmtt/m/n/12 /www/szd/decompression_loading.php \T1/cmr/m/n/12 út-
  []
 
 [24]
-Overfull \hbox (32.31026pt too wide) in paragraph at lines 496--497
-\T1/cmr/m/n/12 tat-ja a \T1/cmtt/m/n/12 /www/szd/server_scripts/clean_results.s
-h \T1/cmr/m/n/12 bash scrip-tet. A \T1/cmtt/m/n/12 clean_results.sh
+Underfull \hbox (badness 10000) in paragraph at lines 496--497
+\T1/cmr/m/n/12 le-fut-tat-ja a \T1/cmtt/m/n/12 /www/szd/server_scripts/clean_re
+sults.sh \T1/cmr/m/n/12 bash scrip-tet.
  []
 
 [25]
-Overfull \hbox (63.8528pt too wide) in paragraph at lines 501--502
+Underfull \hbox (badness 10000) in paragraph at lines 501--502
 \T1/cmr/m/n/12 mö-rí-té-si üzem-mód-ban, vagy-is lét-re-hoz-za a le-tölt-he-t® 
-.cmp ál-lo-mányt a \T1/cmtt/m/n/12 compression_loading.php
+.cmp ál-lo-mányt a
  []
 
-[26] [27]
-
-LaTeX Warning: Reference `ekg konyv' on page 28 undefined on input line 543.
-
-[28]
+[26] [27] [28]
 Underfull \hbox (badness 10000) in paragraph at lines 544--545
-\T1/cmr/m/n/12 pub-li-kus hoz-zá-fér-he-t®-sé-g¶ függ-vényt de-fi-ni-ál.
+\T1/cmr/m/n/12 nak. Az osz-tály dest-ruk-to-ra eze-ket a cí-me-ket sza-ba-dít-j
+a fel.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 544--545
+\T1/cmr/m/n/12 Eze-ken kí-vül össze-sen öt pub-li-kus hoz-zá-fér-he-t®-sé-g¶ fü
+gg-vényt de-fi-ni-ál.
  []
 
 
@@ -1201,25 +1169,12 @@ Underfull \hbox (badness 1845) in paragraph at lines 544--545
  []
 
 [29]
-Overfull \hbox (27.17578pt too wide) in paragraph at lines 558--559
+Underfull \hbox (badness 1552) in paragraph at lines 558--559
 \T1/cmr/m/n/12 Az Ecg-Sig-Prep mo-dult a \T1/cmtt/m/n/12 /src/headers/EcgSigPre
-p.h \T1/cmr/m/n/12 ál-lo-mány-ban dek-la-rált \T1/cmtt/m/n/12 EcgSigPrep
+p.h \T1/cmr/m/n/12 ál-lo-mány-ban dek-la-rált
  []
 
 [30]
-
-LaTeX Warning: Reference `K\IeC {\"u}ls\IeC {\H o} k\IeC {\"o}nyvt\IeC {\'a}rak
-' on page 31 undefined on input line 563.
-
-
-LaTeX Warning: Reference `QRS hermite cikk' on page 31 undefined on input line 
-572.
-
-
-LaTeX Warning: Reference `SigPrepmodul le\IeC {\'\i }r\IeC {\'a}sa' on page 31 
-undefined on input line 572.
-
-
 Underfull \hbox (badness 1859) in paragraph at lines 573--574
 []\T1/cmr/m/n/12 Az \T1/cmtt/m/n/12 EcgSigPrep \T1/cmr/m/n/12 osz-tály pub-li-k
 us függ-vé-nye-ként de-fi-ni-ált \T1/cmtt/m/n/12 Eigen::MatrixXd
@@ -1231,88 +1186,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 573--574
 trixXd*
  []
 
-[31]
-
-LaTeX Warning: Reference `' on page 32 undefined on input line 584.
-
-[32] [33]
+[31] [32] [33]
 Overfull \hbox (3.0288pt too wide) in paragraph at lines 605--606
 []\T1/cmr/m/n/12 A konst-ruk-tor, il-let-ve a vir-tu-á-lis dest-ruk-tor imp-le-
 men-tá-ci-ói a \T1/cmtt/m/n/12 /src/OrtFunSys.cpp
  []
 
-
-LaTeX Warning: Citation `Gautschi' on page 34 undefined on input line 625.
-
-[34]
-
-LaTeX Warning: Reference `bevezet\IeC {\'e}s->hermite' on page 35 undefined on 
-input line 626.
-
-[35]
-
-LaTeX Warning: Reference `bevezetes->dilattransz' on page 36 undefined on input
- line 647.
-
-[36]
-
-LaTeX Warning: Reference `bevezet\IeC {\'e}s->t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i
- }t\IeC {\'e}s' on page 37 undefined on input line 664.
-
-
-LaTeX Warning: Reference `formula sz\IeC {\'a}ma' on page 37 undefined on input
- line 664.
-
-
-Overfull \hbox (29.24266pt too wide) in paragraph at lines 664--665
+[34] [35] [36] [37]
+Underfull \hbox (badness 1354) in paragraph at lines 664--665
 []\T1/cmr/m/n/12 Az osz-tály négy pub-li-kus függ-vénnyel ren-del-ke-zik. Az el
--s® ezek kö-zül az \T1/cmtt/m/n/12 OrtCompressed*
+-s® ezek kö-zül az
  []
 
-[37]
-
-LaTeX Warning: Reference `PRD r\IeC {\'e}sz' on page 38 undefined on input line
- 667.
-
 [38] [39]
-
-LaTeX Warning: Reference `Bevezet\IeC {\'e}s nelder mead' on page 40 undefined 
-on input line 691.
-
-
 Overfull \hbox (0.79971pt too wide) in paragraph at lines 699--700
 \T1/cmr/m/n/12 tí-pu-sú, \T1/cmtt/m/n/12 population \T1/cmr/m/n/12 azo-no-sí-tó
 -jú pro-tec-ted hoz-zá-fér-he-t®-sé-g¶ adat-ta-got. En-nek az adat-
  []
 
 [40]
-
-LaTeX Warning: Reference `f\IeC {\"u}ggel\IeC {\'e}kben' on page 41 undefined o
-n input line 703.
-
-
 Overfull \hbox (1.3626pt too wide) in paragraph at lines 745--746
 \T1/cmr/m/n/12 su-it mo-dult az \T1/cmtt/m/n/12 /src/headers/MatchingPursuit.h\
 T1/cmr/m/n/12 , és a \T1/cmtt/m/n/12 /src/MatchingPursuit.cpp
  []
 
-
-LaTeX Warning: Reference `bevezet\IeC {\'e}s, mp' on page 41 undefined on input
- line 749.
-
 [41]
-Overfull \hbox (9.61462pt too wide) in paragraph at lines 757--758
+Underfull \hbox (badness 1194) in paragraph at lines 757--758
 \T1/cmtt/m/n/12 std::map<std::string, std::string> \T1/cmr/m/n/12 tí-pu-sú, \T1
-/cmtt/m/n/12 files_dir \T1/cmr/m/n/12 azo-no-sí-tó-val el-lá-tott asszo-
+/cmtt/m/n/12 files_dir \T1/cmr/m/n/12 azo-no-sí-tó-val el-lá-tott
  []
-
-
-LaTeX Warning: Citation `mp rész a bevezetésben' on page 42 undefined on input 
-line 761.
-
-
-LaTeX Warning: Reference `tesztel\IeC {\'e}s, PRD' on page 42 undefined on inpu
-t line 766.
 
 
 Overfull \hbox (2.64621pt too wide) in paragraph at lines 758--768
@@ -1320,38 +1222,12 @@ Overfull \hbox (2.64621pt too wide) in paragraph at lines 758--768
 de-fi-ni-ál, amely \T1/cmtt/m/n/12 OrtCompressed*
  []
 
-[42]
-
-LaTeX Warning: Reference `optimizer fejezet' on page 43 undefined on input line
- 770.
-
-
-LaTeX Warning: Reference `tesztel\IeC {\H o}s r\IeC {\'e}sz, PRD defin\IeC {\'\
-i }ci\IeC {\'o}' on page 43 undefined on input line 772.
-
-[43]
-
-LaTeX Warning: Reference `ecgsigprep fejezet' on page 44 undefined on input lin
-e 773.
-
-
-Overfull \hbox (7.26189pt too wide) in paragraph at lines 773--774
-\T1/cmr/m/n/12 Az \T1/cmtt/m/n/12 OC.compressBeat \T1/cmr/m/n/12 me-tó-dus a ki
--szá-mí-tott Fo-u-ri-er együtt-ha-tó-kat egy \T1/cmtt/m/n/12 OrtCompressed
- []
-
-
+[42] [43]
 Underfull \hbox (badness 10000) in paragraph at lines 773--774
-\T1/cmr/m/n/12 fe-lü-let szá-má-ra az ani-má-ci-ós ada-tok biz-to-sí-tá-sa szük
--sé-ges, a
+\T1/cmr/m/n/12 a
  []
 
-[44]
-
-LaTeX Warning: Reference `a dolgozat c\IeC {\'e}lja' on page 45 undefined on in
-put line 786.
-
-[45] [46]
+[44] [45] [46]
 Overfull \hbox (41.51134pt too wide) in paragraph at lines 814--815
 \T1/cmr/m/n/12 A tö-mö-rí-té-si funk-ció we-bes fe-lü-let-hez köt-he-t® ré-szé-
 ért a \T1/cmtt/m/n/12 /www/szd/compression_normal.php\T1/cmr/m/n/12 ,
@@ -1370,32 +1246,22 @@ Overfull \hbox (43.24063pt too wide) in paragraph at lines 823--824
  []
 
 [47]
-Overfull \hbox (63.32126pt too wide) in paragraph at lines 834--835
+Overfull \hbox (7.75983pt too wide) in paragraph at lines 834--835
 \T1/cmr/m/n/12 A ki-tö-mö-rí-té-si funk-ció we-bes fe-lü-let-hez köt-he-t® ré-s
-zé-ért a \T1/cmtt/m/n/12 /www/szd/decompression_normal.php\T1/cmr/m/n/12 ,
+zé-ért a \T1/cmtt/m/n/12 decompression_normal.php\T1/cmr/m/n/12 ,
  []
 
 
-Overfull \hbox (24.38206pt too wide) in paragraph at lines 834--835
-\T1/cmr/m/n/12 a \T1/cmtt/m/n/12 /www/szd/decompression_loading.php \T1/cmr/m/n
-/12 il-let-ve \T1/cmtt/m/n/12 /www/szd/launch_decompression.php
- []
-
-
-Overfull \hbox (76.47134pt too wide) in paragraph at lines 839--840
+Underfull \hbox (badness 10000) in paragraph at lines 839--840
 \T1/cmr/m/n/12 vá-lasz-tá-sa és ki-tö-mö-rí-té-se. An-nak el-len-®r-zé-se, hogy
- az in-ter-fész a \T1/cmtt/m/n/12 decompression_loading.php
+ az in-ter-fész a
  []
 
 
-Overfull \hbox (76.47134pt too wide) in paragraph at lines 841--842
+Underfull \hbox (badness 10000) in paragraph at lines 841--842
 \T1/cmr/m/n/12 vá-lasz-tá-sa és ki-tö-mö-rí-té-se. An-nak el-len-®r-zé-se, hogy
- az in-ter-fész a \T1/cmtt/m/n/12 decompression_loading.php
+ az in-ter-fész a
  []
-
-
-LaTeX Warning: Reference `modulok implement\IeC {\'a}ci\IeC {\"u}ja' on page 48
- undefined on input line 850.
 
 
 Overfull \hbox (2.85905pt too wide) in paragraph at lines 850--851
@@ -1416,172 +1282,169 @@ e-ne-tét a \T1/cmtt/m/n/12 /src/mt/sigPrepEcgSigPre
  []
 
 
-LaTeX Warning: Reference `adatbazis' on page 49 undefined on input line 868.
-
-
-Overfull \hbox (10.97414pt too wide) in paragraph at lines 880--881
-\T1/cmr/m/n/12 Az Ort-FunSys il-let-ve az Her-mi-te mo-du-lok-hoz tar-to-zó mo-
-dul teszt a \T1/cmtt/m/n/12 /src/mt/ortFunSys
- []
-
-
-Overfull \hbox (4.31003pt too wide) in paragraph at lines 880--881
+Overfull \hbox (4.31003pt too wide) in paragraph at lines 879--880
 \T1/cmr/m/n/12 tesz-te-se-tek de-fi-ní-ci-ó-i-val. Az egyes tesz-te-se-tek ki-m
 e-ne-tét a \T1/cmtt/m/n/12 /src/mt/ortFunSysHermite
  []
 
-
-LaTeX Warning: Reference `ortfunsys hermite implementacio leirasa' on page 49 u
-ndefined on input line 881.
-
 [49]
-Overfull \hbox (76.16936pt too wide) in paragraph at lines 905--906
+Underfull \hbox (badness 1590) in paragraph at lines 904--905
 \T1/cmr/m/n/12 Az Comp-res-ser il-let-ve az Ort-Comp-res-ser mo-du-lok-hoz tar-
-to-zó mo-dul teszt a \T1/cmtt/m/n/12 /src/mt/compresserOrt
+to-zó mo-dul teszt a
  []
 
 
-Overfull \hbox (47.52448pt too wide) in paragraph at lines 905--906
-\T1/cmr/m/n/12 tesz-te-se-tek de-fi-ní-ci-ó-i-val. Az egyes tesz-te-se-tek ki-m
-e-ne-tét a \T1/cmtt/m/n/12 /src/mt/compresserOrtCompresser
+Underfull \hbox (badness 10000) in paragraph at lines 904--905
+\T1/cmtt/m/n/12 /src/mt/compresserOrt
  []
 
 
-LaTeX Warning: Reference `compresser ortcompresser' on page 50 undefined on inp
-ut line 906.
+Underfull \hbox (badness 10000) in paragraph at lines 904--905
+\T1/cmr/m/n/12 mé-te-re-it ad-ja meg mak-rók se-gít-sé-gé-vel, eze-ket pe-dig a
+ \T1/cmtt/m/n/12 main \T1/cmr/m/n/12 függ-vény
+ []
 
 
-Overfull \hbox (46.23222pt too wide) in paragraph at lines 928--929
+Underfull \hbox (badness 3668) in paragraph at lines 904--905
+\T1/cmr/m/n/12 kö-ve-ti az egyes tesz-te-se-tek de-fi-ní-ci-ó-i-val. Az egyes t
+esz-te-se-tek ki-me-ne-tét a
+ []
+
+
+Overfull \hbox (8.89275pt too wide) in paragraph at lines 904--905
+\T1/cmtt/m/n/12 /src/mt/compresserOrtCompresser/output/mt_results.txt \T1/cmr/m
+/n/12 szö-ve-ges ál-lo-mány tar-
+ []
+
+
+Overfull \hbox (46.23222pt too wide) in paragraph at lines 927--928
 \T1/cmr/m/n/12 Az Op-ti-mi-zer il-let-ve az Nel-der-Me-ad mo-du-lok-hoz tar-to-
 zó mo-dul teszt a \T1/cmtt/m/n/12 /src/mt/optimizerNel
  []
 
 
-Overfull \hbox (4.31003pt too wide) in paragraph at lines 928--929
+Overfull \hbox (4.31003pt too wide) in paragraph at lines 927--928
 \T1/cmr/m/n/12 tesz-te-se-tek de-fi-ní-ci-ó-i-val. Az egyes tesz-te-se-tek ki-m
 e-ne-tét a \T1/cmtt/m/n/12 /src/mt/ortFunSysHermite
  []
 
-
-LaTeX Warning: Reference `optimizer nelder mead' on page 50 undefined on input 
-line 929.
-
-
-Overfull \hbox (39.5195pt too wide) in paragraph at lines 955--956
-\T1/cmr/m/n/12 ó-i-val. Az egyes tesz-te-se-tek ki-me-ne-tét a \T1/cmtt/m/n/12 
-/src/mt/matchingPursuit/output/mt_results.txt
+[50]
+Underfull \hbox (badness 4505) in paragraph at lines 948--949
+\T1/cmr/m/n/12 meg mak-rók se-gít-sé-gé-vel, eze-ket pe-dig a \T1/cmtt/m/n/12 m
+ain \T1/cmr/m/n/12 függ-vény kö-ve-ti az egyes
  []
 
-[50]
 
-LaTeX Warning: Reference `matching pursuit' on page 51 undefined on input line 
-956.
-
-
-LaTeX Warning: Reference `sajat cikk' on page 51 undefined on input line 976.
+Underfull \hbox (badness 10000) in paragraph at lines 948--949
+\T1/cmr/m/n/12 tesz-te-se-tek de-fi-ní-ci-ó-i-val. Az egyes tesz-te-se-tek ki-m
+e-ne-tét a
+ []
 
 
-LaTeX Warning: Reference `' on page 51 undefined on input line 977.
-
-
-LaTeX Warning: Citation `hexp3' on page 51 undefined on input line 977.
-
-
-LaTeX Warning: Citation `pkselect' on page 51 undefined on input line 982.
+LaTeX Warning: Reference `sajat cikk' on page 51 undefined on input line 969.
 
 [51]
 
-LaTeX Warning: Citation `hexp1' on page 52 undefined on input line 1004.
+LaTeX Warning: Reference `' on page 52 undefined on input line 970.
+
+
+LaTeX Warning: Citation `hexp3' on page 52 undefined on input line 970.
+
+
+LaTeX Warning: Citation `pkselect' on page 52 undefined on input line 975.
+
+
+LaTeX Warning: Citation `hexp1' on page 52 undefined on input line 997.
 
 
 LaTeX Warning: Reference `fig:eredetiVSsajat' on page 52 undefined on input lin
-e 1004.
+e 997.
 
-[52]
+[52] [53]
 4. fejezet.
 
-LaTeX Warning: Reference `Bevezet\IeC {\'e}s' on page 53 undefined on input lin
-e 1008.
+LaTeX Warning: Reference `Bevezet\IeC {\'e}s' on page 54 undefined on input lin
+e 1001.
 
 
-LaTeX Warning: Citation `hexp3' on page 53 undefined on input line 1012.
+LaTeX Warning: Citation `hexp3' on page 54 undefined on input line 1005.
 
 
-LaTeX Warning: Citation `hexp5' on page 53 undefined on input line 1012.
+LaTeX Warning: Citation `hexp5' on page 54 undefined on input line 1005.
 
 
-LaTeX Warning: Reference `f\IeC {\"u}ggel\IeC {\'e}k' on page 53 undefined on i
-nput line 1012.
+LaTeX Warning: Reference `f\IeC {\"u}ggel\IeC {\'e}k' on page 54 undefined on i
+nput line 1005.
 
 
-LaTeX Warning: Citation `hexp3' on page 53 undefined on input line 1012.
+LaTeX Warning: Citation `hexp3' on page 54 undefined on input line 1005.
 
 
-LaTeX Warning: Citation `hexp5' on page 53 undefined on input line 1012.
+LaTeX Warning: Citation `hexp5' on page 54 undefined on input line 1005.
 
 
-LaTeX Warning: Citation `jpeg2000ECG' on page 53 undefined on input line 1012.
+LaTeX Warning: Citation `jpeg2000ECG' on page 54 undefined on input line 1005.
 
 
-Overfull \hbox (3.89479pt too wide) in paragraph at lines 1012--1013
+Overfull \hbox (3.89479pt too wide) in paragraph at lines 1005--1006
 \T1/cmr/m/n/12 tö-mö-rí-t® el-já-rás konst-ruk-ci-ó-ja ke-rült be-mu-ta-tás-ra.
  A mód-szer adap-tív, amit a Hermite-
  []
 
 
-Overfull \hbox (0.16557pt too wide) in paragraph at lines 1012--1013
+Overfull \hbox (0.16557pt too wide) in paragraph at lines 1005--1006
 \T1/cmr/m/n/12 függvények ar-gu-men-tum transz-for-má-ci-ó-já-val ér-tünk el. A
  rep-re-zen-tá-ció sza-bad $\U/euf/m/n/12 (\U/eur/m/n/12 a[]; ^^U[]\U/euf/m/n/1
 2 )$
  []
 
 
-LaTeX Warning: Citation `bpurs' on page 53 undefined on input line 1014.
+LaTeX Warning: Citation `bpurs' on page 54 undefined on input line 1007.
 
-[53
+[54
 
-] <./Abrak/Kitekintes/abra762_bad.pdf, id=279, 597.23125pt x 845.1575pt>
+] <./Abrak/Kitekintes/abra762_bad.pdf, id=282, 597.23125pt x 845.1575pt>
 File: ./Abrak/Kitekintes/abra762_bad.pdf Graphic file (type pdf)
 
 <use ./Abrak/Kitekintes/abra762_bad.pdf>
 Package pdftex.def Info: ./Abrak/Kitekintes/abra762_bad.pdf used on input line 
-1018.
+1011.
 (pdftex.def)             Requested size: 198.23988pt x 141.52773pt.
 
-<./Abrak/Kitekintes/abra762_good.pdf, id=281, 597.23125pt x 845.1575pt>
+<./Abrak/Kitekintes/abra762_good.pdf, id=284, 597.23125pt x 845.1575pt>
 File: ./Abrak/Kitekintes/abra762_good.pdf Graphic file (type pdf)
 
 <use ./Abrak/Kitekintes/abra762_good.pdf>
 Package pdftex.def Info: ./Abrak/Kitekintes/abra762_good.pdf used on input line
- 1019.
+ 1012.
 (pdftex.def)             Requested size: 198.23988pt x 141.52773pt.
 
 
-LaTeX Warning: Reference `bevezetes:dolgozatspec' on page 54 undefined on input
- line 1026.
+LaTeX Warning: Reference `bevezetes:dolgozatspec' on page 55 undefined on input
+ line 1019.
 
 
-LaTeX Warning: Reference `eljaras tesztek' on page 54 undefined on input line 1
-035.
+LaTeX Warning: Reference `eljaras tesztek' on page 55 undefined on input line 1
+028.
 
-[54 <./Abrak/Kitekintes/abra762_bad.pdf> <./Abrak/Kitekintes/abra762_good.pdf>]
+[55 <./Abrak/Kitekintes/abra762_bad.pdf> <./Abrak/Kitekintes/abra762_good.pdf>]
 
-LaTeX Warning: Reference `modul tesztek' on page 55 undefined on input line 104
-3.
+LaTeX Warning: Reference `modul tesztek' on page 56 undefined on input line 103
+6.
 
-[55]
+[56]
 5. fejezet.
 
-LaTeX Warning: Citation `szoke' on page 56 undefined on input line 1051.
+LaTeX Warning: Citation `szoke' on page 57 undefined on input line 1044.
 
 
-LaTeX Warning: Reference `bevezetes transz dilat' on page 56 undefined on input
- line 1051.
+LaTeX Warning: Reference `bevezetes transz dilat' on page 57 undefined on input
+ line 1044.
 
-[56
+[57
 
-] [57] [58] [59]
-Overfull \hbox (0.96092pt too wide) in paragraph at lines 1293--1298
+] [58] [59] [60]
+Overfull \hbox (0.96092pt too wide) in paragraph at lines 1286--1291
 []\T1/cmr/m/n/12 Az in-de-xek ren-de-zé-sé-nél $\U/eur/m/n/12 y[] \OMS/cmsy/m/n
 /12 ^^T \U/eur/m/n/12 y[] \OMS/cmsy/m/n/12 ^^T \U/eur/m/n/12 y[]$ \T1/cmr/m/n/1
 2 tel-je-sül. Az $\U/eur/m/n/12 IterLepes\U/euf/m/n/12 (\U/eur/m/n/12 5\U/euf/m
@@ -1589,21 +1452,21 @@ Overfull \hbox (0.96092pt too wide) in paragraph at lines 1293--1298
 /euf/m/n/12 )$
  []
 
-[60] [61
+[61] [62
 
-] [62] (./documentation.aux)
+] [63] (./documentation.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6350 strings out of 493029
- 93488 string characters out of 6136234
- 176391 words of memory out of 5000000
- 9636 multiletter control sequences out of 15000+600000
+ 6338 strings out of 493029
+ 93198 string characters out of 6136234
+ 174575 words of memory out of 5000000
+ 9624 multiletter control sequences out of 15000+600000
  34850 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,17n,37p,3296b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,17n,37p,3294b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
@@ -1627,10 +1490,10 @@ r/sfcc1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr
 ype1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super
 /sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/
 share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on documentation.pdf (64 pages, 728212 bytes).
+Output written on documentation.pdf (65 pages, 726302 bytes).
 PDF statistics:
- 409 PDF objects out of 1000 (max. 8388607)
- 278 compressed objects within 3 object streams
+ 412 PDF objects out of 1000 (max. 8388607)
+ 280 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  191 words of extra memory for PDF output out of 10000 (max. 10000000)
 

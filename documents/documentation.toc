@@ -17,13 +17,13 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {3.1.1}A felhaszn\IeC {\'a}l\IeC {\'o}i fel\IeC {\"u}let specifik\IeC {\'a}ci\IeC {\'o}ja}{20}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.1.2}Az about.php implement\IeC {\'a}ci\IeC {\'o}ja}{21}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.1.3}Az animation.php implement\IeC {\'a}ci\IeC {\'o}ja}{21}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.1.4}A compressionNormal.php implement\IeC {\'a}ci\IeC {\'o}ja }{23}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.1.5}A compressionLoading.php implement\IeC {\'a}ci\IeC {\'o}ja}{24}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.1.6}A decompressionNormal.php implement\IeC {\'a}ci\IeC {\'o}ja}{24}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.1.7}A decompressionLoading.php implement\IeC {\'a}ci\IeC {\'o}ja}{25}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.1.8}A launchAnimation.php implement\IeC {\'a}ci\IeC {\'o}ja}{25}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.1.9}A launchCompression.php implement\IeC {\'a}ci\IeC {\'o}ja}{26}
-\select@language {magyar} \contentsline {subsection}{\numberline {3.1.10}A launchdecompression.php implement\IeC {\'a}ci\IeC {\'o}ja}{26}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.1.4}A compression-normal.php implement\IeC {\'a}ci\IeC {\'o}ja }{23}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.1.5}A compression-loading.php implement\IeC {\'a}ci\IeC {\'o}ja}{24}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.1.6}A decompression-normal.php implement\IeC {\'a}ci\IeC {\'o}ja}{24}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.1.7}A decompression-loading.php implement\IeC {\'a}ci\IeC {\'o}ja}{25}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.1.8}A launch-animation.php implement\IeC {\'a}ci\IeC {\'o}ja}{25}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.1.9}A launch-compression.php implement\IeC {\'a}ci\IeC {\'o}ja}{26}
+\select@language {magyar} \contentsline {subsection}{\numberline {3.1.10}A launch-decompression.php implement\IeC {\'a}ci\IeC {\'o}ja}{26}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.1.11}A webes fel\IeC {\"u}let m\IeC {\H u}k\IeC {\"o}d\IeC {\'e}s\IeC {\'e}hez sz\IeC {\"u}ks\IeC {\'e}ges tov\IeC {\'a}bbi mapp\IeC {\'a}k \IeC {\'e}s tartalmuk}{27}
 \select@language {magyar} \contentsline {section}{\numberline {3.2}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s implement\IeC {\'a}ci\IeC {\'o}ja}{27}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.2.1}A SigPrep modul implement\IeC {\'a}ci\IeC {\'o}ja}{28}
@@ -46,20 +46,20 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {3.4.3}A Compresser \IeC {\'e}s az OrtCompresser modulok tesztjei}{50}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.4.4}Az Optimizer \IeC {\'e}s a NelderMead modulok tesztjei}{50}
 \select@language {magyar} \contentsline {subsection}{\numberline {3.4.5}A MatchingPursuit modul tesztje}{51}
-\select@language {magyar} \contentsline {section}{\numberline {3.5}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s hat\IeC {\'e}konys\IeC {\'a}g\IeC {\'a}nak tesztel\IeC {\'e}se}{51}
-\select@language {magyar} \contentsline {chapter}{\numberline {4}Tapasztalatok \IeC {\'e}s Kitekint\IeC {\'e}s}{53}
-\select@language {magyar} \contentsline {section}{\numberline {4.1}Az elj\IeC {\'a}r\IeC {\'a}ssal kapcsolatos tapasztalatok}{53}
-\select@language {magyar} \contentsline {section}{\numberline {4.2}Eredm\IeC {\'e}nyek a feladat specifik\IeC {\'a}ci\IeC {\'o}j\IeC {\'a}hoz k\IeC {\'e}pest}{54}
-\select@language {magyar} \contentsline {section}{\numberline {4.3}K\IeC {\"o}sz\IeC {\"o}netnyilv\IeC {\'a}n\IeC {\'\i }t\IeC {\'a}s}{55}
-\select@language {magyar} \contentsline {chapter}{\numberline {5}F\IeC {\"u}ggel\IeC {\'e}k}{56}
-\select@language {magyar} \contentsline {section}{\numberline {5.1}Hermite polinomok, Hermite f\IeC {\"u}ggv\IeC {\'e}nyek}{56}
-\select@language {magyar} \contentsline {subsubsection}{Stirling formula}{56}
-\select@language {magyar} \contentsline {subsubsection}{\itshape Rodrigues formula}{56}
-\select@language {magyar} \contentsline {subsubsection}{\itshape Ortogonalit\IeC {\'a}s, norm\IeC {\'a}lt rendszer}{56}
-\select@language {magyar} \contentsline {subsubsection}{\itshape Rekurzi\IeC {\'o}k}{57}
-\select@language {magyar} \contentsline {subsubsection}{\itshape F\IeC {\"u}ggv\IeC {\'e}ny\IeC {\'e}rt\IeC {\'e}kek a $0$ helyen}{57}
-\select@language {magyar} \contentsline {subsubsection}{\itshape Kvadrat\IeC {\'u}ra formula}{57}
-\select@language {magyar} \contentsline {section}{\numberline {5.2}Approxim\IeC {\'a}ci\IeC {\'o} afffin transzform\IeC {\'a}ltakkal}{57}
-\select@language {magyar} \contentsline {subsubsection}{\itshape Alt\IeC {\'e}rt\IeC {\H o}l vett t\IeC {\'a}vols\IeC {\'a}g}{58}
-\select@language {magyar} \contentsline {subsubsection}{\itshape Becsl\IeC {\'e}sek az $F_n$ f\IeC {\"u}ggv\IeC {\'e}nyre}{58}
-\select@language {magyar} \contentsline {section}{\numberline {5.3}Algoritmusok}{59}
+\select@language {magyar} \contentsline {section}{\numberline {3.5}A t\IeC {\"o}m\IeC {\"o}r\IeC {\'\i }t\IeC {\H o} elj\IeC {\'a}r\IeC {\'a}s hat\IeC {\'e}konys\IeC {\'a}g\IeC {\'a}nak tesztel\IeC {\'e}se}{52}
+\select@language {magyar} \contentsline {chapter}{\numberline {4}Tapasztalatok \IeC {\'e}s Kitekint\IeC {\'e}s}{54}
+\select@language {magyar} \contentsline {section}{\numberline {4.1}Az elj\IeC {\'a}r\IeC {\'a}ssal kapcsolatos tapasztalatok}{54}
+\select@language {magyar} \contentsline {section}{\numberline {4.2}Eredm\IeC {\'e}nyek a feladat specifik\IeC {\'a}ci\IeC {\'o}j\IeC {\'a}hoz k\IeC {\'e}pest}{55}
+\select@language {magyar} \contentsline {section}{\numberline {4.3}K\IeC {\"o}sz\IeC {\"o}netnyilv\IeC {\'a}n\IeC {\'\i }t\IeC {\'a}s}{56}
+\select@language {magyar} \contentsline {chapter}{\numberline {5}F\IeC {\"u}ggel\IeC {\'e}k}{57}
+\select@language {magyar} \contentsline {section}{\numberline {5.1}Hermite polinomok, Hermite f\IeC {\"u}ggv\IeC {\'e}nyek}{57}
+\select@language {magyar} \contentsline {subsubsection}{Stirling formula}{57}
+\select@language {magyar} \contentsline {subsubsection}{\itshape Rodrigues formula}{57}
+\select@language {magyar} \contentsline {subsubsection}{\itshape Ortogonalit\IeC {\'a}s, norm\IeC {\'a}lt rendszer}{57}
+\select@language {magyar} \contentsline {subsubsection}{\itshape Rekurzi\IeC {\'o}k}{58}
+\select@language {magyar} \contentsline {subsubsection}{\itshape F\IeC {\"u}ggv\IeC {\'e}ny\IeC {\'e}rt\IeC {\'e}kek a $0$ helyen}{58}
+\select@language {magyar} \contentsline {subsubsection}{\itshape Kvadrat\IeC {\'u}ra formula}{58}
+\select@language {magyar} \contentsline {section}{\numberline {5.2}Approxim\IeC {\'a}ci\IeC {\'o} afffin transzform\IeC {\'a}ltakkal}{58}
+\select@language {magyar} \contentsline {subsubsection}{\itshape Alt\IeC {\'e}rt\IeC {\H o}l vett t\IeC {\'a}vols\IeC {\'a}g}{59}
+\select@language {magyar} \contentsline {subsubsection}{\itshape Becsl\IeC {\'e}sek az $F_n$ f\IeC {\"u}ggv\IeC {\'e}nyre}{59}
+\select@language {magyar} \contentsline {section}{\numberline {5.3}Algoritmusok}{60}
