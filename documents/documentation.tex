@@ -363,7 +363,7 @@ A Felhasználói dokumentáció fejezet a mellékelt programcsomag használatát
 
 A programcsomag UNIX alapú operációs rendszeren (Ubuntu 16.04) lett fejlesztve, illetve tesztelve. A felhasznált megoldások miatt valamely debian alapú linux operációs rendszer ajánlott a használatához. Természetesen amennyiben a programcsomag egy interneten keresztül elérhető webszerveren kerül felkonfigurálásra, a webes interfész által nyújtott szolgáltatások hálozaton keresztül is elérhetőek. A továbbiakban külön felsorolásra kerülnek a webes felhasználói felület, illetve a c++ nyelven írt főprogram sikeres használatához szükséges követelmények.
 
-\subsection*{A felhasználói felület felkonfigurálásához szükséges követelmények}
+\subsection*{A felhasználói felület konfigurálásához szükséges követelmények}
 
 \begin{itemize}
 \item Egy lokálisan feltelepített HTTP web szerver. A fejlesztés és tesztelés Apache 2.0 szerveren történt.
@@ -376,23 +376,22 @@ A programcsomag UNIX alapú operációs rendszeren (Ubuntu 16.04) lett fejlesztv
 
 \begin{itemize}
 \item GNU G++ fordító. A fejlesztés során a ... verzió lett alkalmazva.
-\item Feltelepített és működő wfdb könyvtár. A telepítéshez segítséget talál a \ref{wfdb} weboldalon.
+\item Feltelepített és működő wfdb könyvtár. A telepítéshez segítséget talál a {wfdbEler} weboldalon.
 \end{itemize}
 
-A C++ program fordításához szükséges további könyvtárak (Eigen, Spline.h) feltelepítése nem szükséges, az ezekhez szükséges állományok megtalálhatóak a \texttt{/src} útvonalon.
+\noindent A c++ program fordításához szükséges további könyvtárak (Eigen, Spline.h) feltelepítése nem szükséges, az ezekhez szükséges állományok megtalálhatóak a \texttt{/src} útvonalon.
 
 \section{A programcsomag felkonfigurálása}
 
-Az előző alfejezetben felsorolt dependeciák feltelepítése után a programcsomag készen áll a felkonfigurálásra. Először is érdemes a mellékelt adathordozón található teljes mappaszerkezetet a webszerverünk publikus (legalább a lokális hálózaton keresztül elérhető) gyökér mappájába másolni. Ezt követően linux terminál segítségével navigáljunk a mappaszerkezet gyökerébe. \texttt{cd /[a webszerver publikus mappájába vezető útvonal]/szakdolgozat}. Végül adjuk ki a következő parancsot: \texttt{sudo ./build\_all.sh}. A rendszer kérheti a root felhasználó jelszavát, ezt követően a terminál ablakban megfigyelhető a telepítés aktuális állapota. Amennyiben a telepítés sikeres, a következő üzenet jelenik meg:
+Az előző alfejezetben felsorolt dependeciák feltelepítése után a programcsomag készen áll a felkonfigurálásra. Először is érdemes a mellékelt adathordozón található teljes mappaszerkezetet a webszerverünk publikus (legalább a lokális hálózaton keresztül elérhető) gyökér mappájába másolni. Ezt követően linux terminál segítségével navigáljunk a mappaszerkezet gyökerébe. \texttt{cd /[a webszerver publikus mappájába vezető útvonal]/szakdolgozat}. \par Végül adjuk ki a következő parancsot: \texttt{sudo ./build\_all.sh}. A rendszer kérheti a root felhasználó jelszavát, ezt követően a terminál ablakban megfigyelhető a telepítés aktuális állapota. Amennyiben a telepítés sikeres, a következő üzenet jelenik meg:
 
 \begin{figure}[H]
 \begin{center}
-   \includegraphics[width=100mm]{./Abrak/Ereszkedo1/F_2sz.png}
-  \caption{Az $F_n$ szí nkódos ábrázolása}
+   \includegraphics[width=150mm]{./Abrak/web/buildDone.jpg}
 \end{center}
 \end{figure}
 
-Ezt követően a programcsomag összes szolgáltatása elérhető egy böngésző segítségével a webes felület kezdőlapját a \texttt{http://localhost/szakdolgozat/www/szd/about.php} címen érhetjük el. A főprogram futtatható állományát a \texttt{/src} mappában találjuk, futtatásához a \texttt{./main [paraméter lista]} parancs kiadása szükséges. 
+Ezt követően a programcsomag összes szolgáltatása elérhető egy böngésző segítségével a kezdőlapot a \texttt{http://localhost/szakdolgozat/www/szd/about.php} címen érhetjük el. A főprogram futtatható állományát a \texttt{/src} mappában találjuk, futtatásához a \texttt{./main [paraméter lista]} parancs kiadása szükséges. 
 
 \section{A webes felhasználói felület használata}
 
@@ -400,7 +399,7 @@ A webes felhasználói felület használatáról szóló alfejezet a megtekinthe
 
 \subsection*{Az ismertető oldal használata}
 
-Amennyiben a felhasználói dokumentáció utasításait követtük a programcsomag felkonfigurálása során, az ismertetőt tartalmazó weboldalt a \texttt{http://localhost/szakdolgozat/www/szd/about.php} URL-en keresztül érjük el. Az ismertető lap tartalmazza a webes felület segítségével igénybe vehető szolgáltatások rövid összefoglalását. 
+Amennyiben a felhasználói dokumentáció utasításait követtük a programcsomag felkonfigurálása során, az ismertetőt tartalmazó weboldalt a következő URL-en keresztül érjük el \texttt{http://localhost/szakdolgozat/www/szd/about.php}. Az ismertető lap tartalmazza a webes felület segítségével igénybe vehető szolgáltatások rövid összefoglalását. 
 
 \begin{figure}[H]
 \begin{center}
@@ -411,15 +410,15 @@ Amennyiben a felhasználói dokumentáció utasításait követtük a programcso
 
 \subsection*{Az animáció oldal használata}
 
-Az ismertető oldalról legegyszerűbben úgy juthatunk az aimációs oldalra, ha az ismertető oldal tetjén található horizontális navigációs sáv "Animáció" feliratú menüpontjára kattintunk. A böngésző ekkor betölti a \texttt{http://localhost/szakdolgozat/www/szd/animation.php} URL címen elérhető weboldalt. Az animációs oldal célja, hogy bemutassa egy optimalizált szívütés tömörítés menetét. Az animációt a megjelenő grafikonok közül a legnagyobbra történő kattintással indíthatjuk el. Ekkor a weboldal frissül, és elkezdődik az animáció. A legnagyobb grafikon az animáció futása alatt mindig az éppen aktuális szívütés szegmens (QRS, T, P) tömörítése látható. A grafikonban kékkel látható az eredeti szívütésből aktuálisan visszamaradó reziduum jel, pirossal pedig az approximáció az aktuális dilatációs és transzlációs paraméterek mellett. Amikor egy szegmens tömörítése befejeződik, a Nelder-Mead algoritmus által talált legjobb közelítés, illetve a hozzá tartozó reziduum jel átkerül a táblázat egy kisebb cellájába, a legnagyobb grafikonon pedig a következő szegmens tömörítése, vagyis a Matching Pursuit algoritmus újabb lépésének menete lesz látható. Miután az összes szegmens (és ezáltal a teljes szívütés) tömörítése befejeződött, a legnagyobb grafikonon megjelenik az eredeti szívütés kék színkóddal, az egyes szegmensekhez tartozó approximációk pedig egyszerre, de különböző színekkel ábrázolva válnak láthatóvá. Az animációs weboldalon a grafikonokon kívül még egy speciális cella található. Ez a cella tartalmazza a legnagyobb grafikonon ábrázolt approximáció hibáját (PRD), tömörítési rátát (CR), illetve a hiba és a tömörítési ráta arányát (QS). Ezekről az értékekről részletesebb leírás található a \ref{ott ahol van} fejezetben.
+Az ismertető oldalról legegyszerűbben úgy juthatunk az aimációs oldalra, ha az ismertető oldal tetjén található horizontális navigációs sáv "Animáció" feliratú menüpontjára kattintunk. Ekkor a \texttt{http://localhost/szakdolgozat/www/szd/animation.php} URL címen elérhető weboldalt tölti be a böngésző. Az animációs oldal célja, hogy bemutassa egy optimalizált szívütés tömörítés menetét. Az animációt a megjelenő grafikonok közül a legnagyobbra történő kattintással indíthatjuk el. Ekkor a weboldal frissül, és elkezdődik az animáció. A legnagyobb grafikon az animáció futása alatt mindig az éppen aktuális szívütés szegmens (QRS, T, P) tömörítése látható. A grafikonban kékkel látható az eredeti szívütésből aktuálisan visszamaradó reziduum jel, pirossal pedig az approximáció az aktuális dilatációs és transzlációs paraméterek mellett. Amikor egy szegmens tömörítése befejeződik, a Nelder-Mead algoritmus által talált legjobb közelítés, illetve a hozzá tartozó reziduum jel átkerül a táblázat egy kisebb cellájába, a legnagyobb grafikonon pedig a következő szegmens tömörítése, vagyis a Matching Pursuit algoritmus újabb lépésének menete lesz látható. Miután az összes szegmens (és ezáltal a teljes szívütés) tömörítése befejeződött, a legnagyobb grafikonon megjelenik az eredeti szívütés kék színkóddal, az egyes szegmensekhez tartozó approximációk pedig egyszerre, de különböző színekkel ábrázolva válnak láthatóvá. Az animációs weboldalon a grafikonokon kívül még egy speciális cella található. Ez a cella tartalmazza a legnagyobb grafikonon ábrázolt approximáció hibáját (PRD), tömörítési rátát (CR), illetve a hiba és a tömörítési ráta arányát (QS). Ezekről az értékekről részletesebb leírás található a \ref{sec:methodtest} fejezetben.
 
 \subsection*{A tömörítés oldal használata}
 
-A tömörítés oldalra legegyszerűbben úgy juthatunk le, ha az ismertető oldal tetjén található horizontális navigációs sáv "Tömörítés" feliratú menüpontjára kattintunk. A böngésző ekkor betölti a \texttt{http://localhost/szakdolgozat/www/szd/compresion\_normal.php} URL címen elérhető weboldalt. A weboldalon egy táblázat látható üres cellákkal, leszámítva a "Jelek" és a "Tömörítés" feliratú cellákat. A "Jelek" cellára kattintva a táblázatban megjelennek a tömöríthető MIT-BIH adtbázisbeli mérések sorszámai. Ezek közül bármelyikre kattintva a többi eltűnik, ezzel kiválasztottuk az adott mérést. Kiválasztás után a "Tömörítés" cellára kattintva elkezdődhet a mérés első három szívütésének tömörítése. Először a betöltődik a \texttt{http://localhost/szakdolgozat/www/szd/compresion\_loading.php} URL-en keresztül elérhető weboldal. Ezt követően a tömörítés időtartama alatt egy animációt látunk. A tömörítés befejeztével az animációt egy üzenet váltja fel, amelyre kattintva letölthetjük a tömörítés eredményét.
+A tömörítés oldalra legegyszerűbben úgy juthatunk le, ha az ismertető oldal tetjén található horizontális navigációs sáv "Tömörítés" feliratú menüpontjára kattintunk. Ekkor a \texttt{http://localhost/szakdolgozat/www/szd/compresion\_normal.php} URL címen elérhető weboldal töltődik be. A weboldalon egy táblázat látható üres cellákkal, leszámítva a "Jelek" és a "Tömörítés" feliratú cellákat. A "Jelek" cellára kattintva a táblázatban megjelennek a tömöríthető MIT-BIH adtbázisbeli mérések sorszámai. Ezek közül bármelyikre kattintva a többi eltűnik, ezzel kiválasztottuk az adott mérést. Kiválasztás után a "Tömörítés" cellára kattintva elkezdődhet a szívütések tömörítése. Először a \texttt{http://localhost/szakdolgozat/www/szd/compresion\_loading.php} \linebreak URL-en keresztül elérhető weboldalra jutunk. Ezt követően a tömörítés időtartama alatt egy animációt látunk. A tömörítés befejeztével az animációt egy üzenet váltja fel, amelyre kattintva letölthetjük a tömörítés eredményét.
 
 \subsection*{A kitömörítés oldal használata}
 
-A kitömörítés oldalra legegyszerűbben úgy juthatunk le, ha az ismertető oldal tetjén található horizontális navigációs sáv "Kiömörítés" feliratú menüpontjára kattintunk. A böngésző ekkor betölti a \texttt{http://localhost/szakdolgozat/www/szd/decompresion\_normal.php} URL címen elérhető weboldalt. A weboldalon egy táblázat látható üres cellákkal, leszámítva a "Keresés" és a "Feltöltés" feliratú cellákat. A "Keresés" cellára kattintva egy felugró ablak jelenik meg, melynek segítségével kiválaszthatjuk a kitömöríteni kívánt .cmp állományt. Kiválasztás után a "Feltöltés" cellára kattintva elkezdődhet a .cmp állomány kitömörítése. Először a betöltődik a \texttt{http://localhost/szakdolgozat/www/szd/decompresion\_loading.php} URL-en keresztül elérhető weboldal. Ezt követően a kitömörítés időtartama alatt egy animációt látunk. A kitömörítés befejeztével az animációt egy üzenet váltja fel, amelyre kattintva letölthetjük az approximáció mintáinak értékeit tartalmazó .txt kiterjesztésű állományt.
+A kitömörítés oldalra legegyszerűbben úgy juthatunk le, ha az ismertető oldal tetjén található horizontális navigációs sáv "Kiömörítés" feliratú menüpontjára kattintunk. Ekkor a \texttt{http://localhost/szakdolgozat/www/szd/decompresion\_normal.php} \linebreak URL címen elérhető weboldalt tölti be a böngésző. A weboldalon egy táblázat látható üres cellákkal, leszámítva a "Keresés" és a "Feltöltés" feliratú cellákat. A "Keresés" cellára kattintva egy felugró ablak jelenik meg, melynek segítségével kiválaszthatjuk a kitömöríteni kívánt .cmp állományt. Kiválasztás után a "Feltöltés" cellára kattintva elkezdődhet a .cmp állomány kitömörítése. Először a betöltődik a \texttt{http://localhost/szakdolgozat/www/szd/decompresion\_loading.php} URL-en \linebreak keresztül elérhető weboldal. Ezt követően a kitömörítés időtartama alatt egy animációt látunk. A kitömörítés befejeztével az animációt egy üzenet váltja fel, amelyre kattintva letölthetjük az approximáció mintáinak értékeit tartalmazó .txt kiterjesztésű állományt.
 
 \subsection*{A főprogram parancssorból történő használata}
 
