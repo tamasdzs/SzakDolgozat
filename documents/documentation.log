@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  6 MAY 2017 19:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  7 MAY 2017 14:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1228,21 +1228,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 773--774
  []
 
 [44] [45] [46]
-Overfull \hbox (41.51134pt too wide) in paragraph at lines 814--815
-\T1/cmr/m/n/12 A tö-mö-rí-té-si funk-ció we-bes fe-lü-let-hez köt-he-t® ré-szé-
-ért a \T1/cmtt/m/n/12 /www/szd/compression_normal.php\T1/cmr/m/n/12 ,
+Underfull \hbox (badness 10000) in paragraph at lines 821--822
+\T1/cmr/m/n/12 lasz-tá-sa és tö-mö-rí-té-se. An-nak el-len-®r-zé-se, hogy az in
+-ter-fész a
  []
 
 
-Overfull \hbox (43.24063pt too wide) in paragraph at lines 821--822
+Underfull \hbox (badness 10000) in paragraph at lines 823--824
 \T1/cmr/m/n/12 lasz-tá-sa és tö-mö-rí-té-se. An-nak el-len-®r-zé-se, hogy az in
--ter-fész a \T1/cmtt/m/n/12 compression_loading.php
- []
-
-
-Overfull \hbox (43.24063pt too wide) in paragraph at lines 823--824
-\T1/cmr/m/n/12 lasz-tá-sa és tö-mö-rí-té-se. An-nak el-len-®r-zé-se, hogy az in
--ter-fész a \T1/cmtt/m/n/12 compression_loading.php
+-ter-fész a
  []
 
 [47]
@@ -1340,111 +1334,66 @@ Underfull \hbox (badness 10000) in paragraph at lines 948--949
 e-ne-tét a
  []
 
+[51] [52]
+<./Abrak/Eredeti_Hermite/abra1.pdf, id=275, 597.23125pt x 845.1575pt>
+File: ./Abrak/Eredeti_Hermite/abra1.pdf Graphic file (type pdf)
 
-LaTeX Warning: Reference `sajat cikk' on page 51 undefined on input line 969.
+<use ./Abrak/Eredeti_Hermite/abra1.pdf>
+Package pdftex.def Info: ./Abrak/Eredeti_Hermite/abra1.pdf used on input line 1
+001.
+(pdftex.def)             Requested size: 198.23988pt x 141.52773pt.
 
-[51]
+<Abrak/Sajat_Hermite_Nelder_Mead/abra1.pdf, id=277, 597.23125pt x 845.1575pt>
+File: Abrak/Sajat_Hermite_Nelder_Mead/abra1.pdf Graphic file (type pdf)
 
-LaTeX Warning: Reference `' on page 52 undefined on input line 970.
-
-
-LaTeX Warning: Citation `hexp3' on page 52 undefined on input line 970.
-
-
-LaTeX Warning: Citation `pkselect' on page 52 undefined on input line 975.
-
-
-LaTeX Warning: Citation `hexp1' on page 52 undefined on input line 997.
-
-
-LaTeX Warning: Reference `fig:eredetiVSsajat' on page 52 undefined on input lin
-e 997.
-
-[52] [53]
+<use Abrak/Sajat_Hermite_Nelder_Mead/abra1.pdf>
+Package pdftex.def Info: Abrak/Sajat_Hermite_Nelder_Mead/abra1.pdf used on inpu
+t line 1002.
+(pdftex.def)             Requested size: 198.23988pt x 141.52773pt.
+ [53 <./Abrak/Eredeti_Hermite/abra1.pdf> <./Abrak/Sajat_Hermite_Nelder_Mead/abr
+a1.pdf>]
 4. fejezet.
 
-LaTeX Warning: Reference `Bevezet\IeC {\'e}s' on page 54 undefined on input lin
-e 1001.
-
-
-LaTeX Warning: Citation `hexp3' on page 54 undefined on input line 1005.
-
-
-LaTeX Warning: Citation `hexp5' on page 54 undefined on input line 1005.
-
-
-LaTeX Warning: Reference `f\IeC {\"u}ggel\IeC {\'e}k' on page 54 undefined on i
-nput line 1005.
-
-
-LaTeX Warning: Citation `hexp3' on page 54 undefined on input line 1005.
-
-
-LaTeX Warning: Citation `hexp5' on page 54 undefined on input line 1005.
-
-
-LaTeX Warning: Citation `jpeg2000ECG' on page 54 undefined on input line 1005.
-
-
-Overfull \hbox (3.89479pt too wide) in paragraph at lines 1005--1006
+Overfull \hbox (3.89479pt too wide) in paragraph at lines 1013--1014
 \T1/cmr/m/n/12 tö-mö-rí-t® el-já-rás konst-ruk-ci-ó-ja ke-rült be-mu-ta-tás-ra.
  A mód-szer adap-tív, amit a Hermite-
  []
 
 
-Overfull \hbox (0.16557pt too wide) in paragraph at lines 1005--1006
+Overfull \hbox (0.16557pt too wide) in paragraph at lines 1013--1014
 \T1/cmr/m/n/12 függvények ar-gu-men-tum transz-for-má-ci-ó-já-val ér-tünk el. A
  rep-re-zen-tá-ció sza-bad $\U/euf/m/n/12 (\U/eur/m/n/12 a[]; ^^U[]\U/euf/m/n/1
 2 )$
  []
 
-
-LaTeX Warning: Citation `bpurs' on page 54 undefined on input line 1007.
-
 [54
 
-] <./Abrak/Kitekintes/abra762_bad.pdf, id=282, 597.23125pt x 845.1575pt>
+] <./Abrak/Kitekintes/abra762_bad.pdf, id=296, 597.23125pt x 845.1575pt>
 File: ./Abrak/Kitekintes/abra762_bad.pdf Graphic file (type pdf)
 
 <use ./Abrak/Kitekintes/abra762_bad.pdf>
 Package pdftex.def Info: ./Abrak/Kitekintes/abra762_bad.pdf used on input line 
-1011.
+1019.
 (pdftex.def)             Requested size: 198.23988pt x 141.52773pt.
 
-<./Abrak/Kitekintes/abra762_good.pdf, id=284, 597.23125pt x 845.1575pt>
+<./Abrak/Kitekintes/abra762_good.pdf, id=298, 597.23125pt x 845.1575pt>
 File: ./Abrak/Kitekintes/abra762_good.pdf Graphic file (type pdf)
 
 <use ./Abrak/Kitekintes/abra762_good.pdf>
 Package pdftex.def Info: ./Abrak/Kitekintes/abra762_good.pdf used on input line
- 1012.
+ 1020.
 (pdftex.def)             Requested size: 198.23988pt x 141.52773pt.
-
-
-LaTeX Warning: Reference `bevezetes:dolgozatspec' on page 55 undefined on input
- line 1019.
-
-
-LaTeX Warning: Reference `eljaras tesztek' on page 55 undefined on input line 1
-028.
-
-[55 <./Abrak/Kitekintes/abra762_bad.pdf> <./Abrak/Kitekintes/abra762_good.pdf>]
-
-LaTeX Warning: Reference `modul tesztek' on page 56 undefined on input line 103
-6.
-
-[56]
+ [55 <./Abrak/Kitekintes/abra762_bad.pdf> <./Abrak/Kitekintes/abra762_good.pdf>
+] [56]
 5. fejezet.
-
-LaTeX Warning: Citation `szoke' on page 57 undefined on input line 1044.
-
-
-LaTeX Warning: Reference `bevezetes transz dilat' on page 57 undefined on input
- line 1044.
-
 [57
 
-] [58] [59] [60]
-Overfull \hbox (0.96092pt too wide) in paragraph at lines 1286--1291
+]
+6. fejezet.
+[58
+
+] [59] [60] [61]
+Overfull \hbox (0.96092pt too wide) in paragraph at lines 1294--1299
 []\T1/cmr/m/n/12 Az in-de-xek ren-de-zé-sé-nél $\U/eur/m/n/12 y[] \OMS/cmsy/m/n
 /12 ^^T \U/eur/m/n/12 y[] \OMS/cmsy/m/n/12 ^^T \U/eur/m/n/12 y[]$ \T1/cmr/m/n/1
 2 tel-je-sül. Az $\U/eur/m/n/12 IterLepes\U/euf/m/n/12 (\U/eur/m/n/12 5\U/euf/m
@@ -1452,18 +1401,18 @@ Overfull \hbox (0.96092pt too wide) in paragraph at lines 1286--1291
 /euf/m/n/12 )$
  []
 
-[61] [62
+[62] [63
 
-] [63] (./documentation.aux)
+] [64] (./documentation.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6338 strings out of 493029
- 93198 string characters out of 6136234
- 174575 words of memory out of 5000000
- 9624 multiletter control sequences out of 15000+600000
+ 6336 strings out of 493029
+ 93453 string characters out of 6136234
+ 174606 words of memory out of 5000000
+ 9619 multiletter control sequences out of 15000+600000
  34850 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,17n,37p,3294b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1490,10 +1439,10 @@ r/sfcc1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr
 ype1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super
 /sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/
 share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on documentation.pdf (65 pages, 726302 bytes).
+Output written on documentation.pdf (66 pages, 737161 bytes).
 PDF statistics:
- 412 PDF objects out of 1000 (max. 8388607)
- 280 compressed objects within 3 object streams
+ 429 PDF objects out of 1000 (max. 8388607)
+ 292 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 191 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 213 words of extra memory for PDF output out of 10000 (max. 10000000)
 

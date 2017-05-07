@@ -50,16 +50,16 @@
 \select@language {magyar} \contentsline {chapter}{\numberline {4}Tapasztalatok \IeC {\'e}s Kitekint\IeC {\'e}s}{54}
 \select@language {magyar} \contentsline {section}{\numberline {4.1}Az elj\IeC {\'a}r\IeC {\'a}ssal kapcsolatos tapasztalatok}{54}
 \select@language {magyar} \contentsline {section}{\numberline {4.2}Eredm\IeC {\'e}nyek a feladat specifik\IeC {\'a}ci\IeC {\'o}j\IeC {\'a}hoz k\IeC {\'e}pest}{55}
-\select@language {magyar} \contentsline {section}{\numberline {4.3}K\IeC {\"o}sz\IeC {\"o}netnyilv\IeC {\'a}n\IeC {\'\i }t\IeC {\'a}s}{56}
-\select@language {magyar} \contentsline {chapter}{\numberline {5}F\IeC {\"u}ggel\IeC {\'e}k}{57}
-\select@language {magyar} \contentsline {section}{\numberline {5.1}Hermite polinomok, Hermite f\IeC {\"u}ggv\IeC {\'e}nyek}{57}
-\select@language {magyar} \contentsline {subsubsection}{Stirling formula}{57}
-\select@language {magyar} \contentsline {subsubsection}{\itshape Rodrigues formula}{57}
-\select@language {magyar} \contentsline {subsubsection}{\itshape Ortogonalit\IeC {\'a}s, norm\IeC {\'a}lt rendszer}{57}
-\select@language {magyar} \contentsline {subsubsection}{\itshape Rekurzi\IeC {\'o}k}{58}
-\select@language {magyar} \contentsline {subsubsection}{\itshape F\IeC {\"u}ggv\IeC {\'e}ny\IeC {\'e}rt\IeC {\'e}kek a $0$ helyen}{58}
-\select@language {magyar} \contentsline {subsubsection}{\itshape Kvadrat\IeC {\'u}ra formula}{58}
-\select@language {magyar} \contentsline {section}{\numberline {5.2}Approxim\IeC {\'a}ci\IeC {\'o} afffin transzform\IeC {\'a}ltakkal}{58}
-\select@language {magyar} \contentsline {subsubsection}{\itshape Alt\IeC {\'e}rt\IeC {\H o}l vett t\IeC {\'a}vols\IeC {\'a}g}{59}
-\select@language {magyar} \contentsline {subsubsection}{\itshape Becsl\IeC {\'e}sek az $F_n$ f\IeC {\"u}ggv\IeC {\'e}nyre}{59}
-\select@language {magyar} \contentsline {section}{\numberline {5.3}Algoritmusok}{60}
+\select@language {magyar} \contentsline {chapter}{\numberline {5}K\IeC {\"o}sz\IeC {\"o}netnyilv\IeC {\'a}n\IeC {\'\i }t\IeC {\'a}s}{57}
+\select@language {magyar} \contentsline {chapter}{\numberline {6}F\IeC {\"u}ggel\IeC {\'e}k}{58}
+\select@language {magyar} \contentsline {section}{\numberline {6.1}Hermite polinomok, Hermite f\IeC {\"u}ggv\IeC {\'e}nyek}{58}
+\select@language {magyar} \contentsline {subsubsection}{Stirling formula}{58}
+\select@language {magyar} \contentsline {subsubsection}{\itshape Rodrigues formula}{58}
+\select@language {magyar} \contentsline {subsubsection}{\itshape Ortogonalit\IeC {\'a}s, norm\IeC {\'a}lt rendszer}{58}
+\select@language {magyar} \contentsline {subsubsection}{\itshape Rekurzi\IeC {\'o}k}{59}
+\select@language {magyar} \contentsline {subsubsection}{\itshape F\IeC {\"u}ggv\IeC {\'e}ny\IeC {\'e}rt\IeC {\'e}kek a $0$ helyen}{59}
+\select@language {magyar} \contentsline {subsubsection}{\itshape Kvadrat\IeC {\'u}ra formula}{59}
+\select@language {magyar} \contentsline {section}{\numberline {6.2}Approxim\IeC {\'a}ci\IeC {\'o} afffin transzform\IeC {\'a}ltakkal}{59}
+\select@language {magyar} \contentsline {subsubsection}{\itshape Alt\IeC {\'e}rt\IeC {\H o}l vett t\IeC {\'a}vols\IeC {\'a}g}{60}
+\select@language {magyar} \contentsline {subsubsection}{\itshape Becsl\IeC {\'e}sek az $F_n$ f\IeC {\"u}ggv\IeC {\'e}nyre}{60}
+\select@language {magyar} \contentsline {section}{\numberline {6.3}Algoritmusok}{61}
