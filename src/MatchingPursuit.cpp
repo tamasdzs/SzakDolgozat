@@ -137,6 +137,8 @@ OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg, bool a
 					t_qs_ofs.clear();
 					t_qs_ofs<< ( (double)s.cols() / (double)a_compression.compressed_sig.rows() ) / ( ret * (double)100.0)  <<std::endl;
 					t_qs_ofs.close();
+					
+					usleep(CN_SLEEP_FOR_ANIMATION); 
 				}
 				else {
 					ret = OC.getPRD( &a_compression, osig);

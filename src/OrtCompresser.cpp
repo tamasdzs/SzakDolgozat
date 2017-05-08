@@ -10,7 +10,9 @@ OrtCompresser::OrtCompresser(OrtFunSys& H, const int dim) {
 			
 			for ( int i = 0; i < dim; ++i ) {
 				Herm_sys->col(i) = H.get_ort_fun_sys()->col(i);
-			}				
+			}	
+			
+			CrisDarb = big_ort_sys->get_ort_fun_lamb()->inverse();			
 }
 
 OrtCompresser::~OrtCompresser() {
@@ -23,7 +25,7 @@ OrtCompresser::~OrtCompresser() {
  *   opjects together (MatchingPursuit::CompressBeat()) should create the new OrtCompressed object.
 */
 Eigen::MatrixXd OrtCompresser::compressBeat( Eigen::MatrixXd& signal ) {
-	return  (Herm_sys->transpose()*(big_ort_sys->get_ort_fun_lamb()->inverse()*signal.transpose())); 
+	return  (Herm_sys->transpose()*(CrisDarb*signal.transpose())); 
 }
 
 const Eigen::MatrixXd OrtCompresser::decompress( const OrtCompressed* compr ) {

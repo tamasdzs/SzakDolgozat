@@ -15,6 +15,7 @@ class OrtCompresser: public Compresser {
 	protected:
 		OrtFunSys* big_ort_sys;
 		Eigen::MatrixXd* Herm_sys;
+		Eigen::MatrixXd CrisDarb;
 		
 	public:
 		OrtCompresser(OrtFunSys& H, const int dim);
