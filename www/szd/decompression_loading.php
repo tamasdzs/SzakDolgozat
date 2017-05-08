@@ -47,6 +47,17 @@ if($FileType != "cmp" ) {
     echo "<script>alert(\"only .cmp allowed, not " . $FileType. "\")</script>";
     $uploadOk = 0;
 }
+
+$validIds = array("101", "117", "118", "119", "201", "213", "103");
+$resultId = str_replace( ".cmp", "", basename($_FILES["fileToUpload"]["name"]) );
+
+if ( in_array($resultId, $validIds) ) {
+	
+}
+else {
+	$uploadOk = 0;
+}	
+
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
     echo "<script>alert(\"File upload failed\");</script>";
@@ -54,9 +65,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         
-        $resultId = str_replace( ".cmp", "", basename($_FILES["fileToUpload"]["name"]) );
-        
-        echo "<script> alert(\"". $resultId ."\") </script>";
+        //$resultId = str_replace( ".cmp", "", basename($_FILES["fileToUpload"]["name"]) );
         
         echo '<script>
 			  document.getElementById("mainImage").src = "./resources/images/Loading_Icon.gif";
@@ -89,7 +98,7 @@ if ($uploadOk == 0) {
 <script>
 	
 	function createLinkForDownload(res_url) {
-		document.getElementById("Main").innerHTML = "<a href= \""+res_url+"\" download><img id=\"mainImage\" src=\"./resources/images/success.jpg\"></a>";
+		document.getElementById("Main").innerHTML = "<a href= \""+res_url+"\" download><img id=\"mainImage\" src=\"./resources/images/Letolto_Uzenet.png\"></a>";
 	}
 	
 	function hoverChangeImg(obj, path) {

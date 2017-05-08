@@ -22,59 +22,59 @@
 <table id="graphHolder">
 	
 	<tr>
-		<td  class="blueCell" id="00"  onclick="showRecords()">
-		
+		<td  class="blueCell" id="00" onclick="showRecords()">
+			<img id="Recbutton" src="./resources/images/jelek.png" alt="Records">
 		</td>
 		<td class="redCell" id="01" onclick="hideRecords('01')" >
-		
+			<img class="recImage" id="01_img" src="" >
 		</td>
 		<td class="redCell" id="02" onclick="hideRecords('02')">
-		
+			<img class="recImage" id="02_img" src="" >
 		</td>
 		<td class="redCell" id="03" onclick="hideRecords('03')">
-		
+			<img class="recImage" id="03_img" src="" >
 		</td>
 	</tr>
 	<tr>
 		<td  class="redCell" id="10" onclick="hideRecords('10')">
-		
+			<img class="recImage" id="10_img" src="" >
 		</td>
 		<td  class="redCell" id="11" onclick="hideRecords('11')">
-		
+			<img class="recImage" id="11_img" src="" >
 		</td>
 		<td  class="redCell" id="12" onclick="hideRecords('12')">
-		
+			<img class="recImage" id="12_img" src="" >
 		</td>
 		<td  class="redCell" id="13" onclick="hideRecords('13')">
-		
+			<img class="recImage" id="13_img" src="" >
 		</td>
 	</tr>
 	<tr>
 		<td  class="redCell" id="20" onclick="hideRecords('20')">
-		
+			<img class="recImage" id="20_img" src="" >
 		</td>
 		<td  class="redCell" id="21" onclick="hideRecords('21')">
-		
+			<img class="recImage" id="21_img" src="" >
 		</td>
 		<td  class="redCell" id="22" onclick="hideRecords('22')">
-		
+			<img class="recImage" id="22_img" src="" >
 		</td>
 		<td  class="blueCell" id="23" onclick="beginCompression()">
-		ENTER
+			<img id="Enterbutton" src="./resources/images/tomorites.png" >
 		</td>
 	</tr>
 	<tr>
 		<td  class="redCell" id="30" onclick="hideRecords('30')">
-		
+			<img class="recImage" id="30_img" src="" >
 		</td>
 		<td  class="redCell" id="31" onclick="hideRecords('31')">
-		
+			<img class="recImage" id="31_img" src="" >
 		</td>
 		<td  class="redCell" id="32" onclick="hideRecords('32')">
-		
+			<img class="recImage" id="32_img" src="" >
 		</td>
 		<td  class="noBorderCell" id="33">
-		
+			
 		</td>
 	</tr>
 	
@@ -115,10 +115,12 @@
 						 
 					if ( coord == selectedSig) {
 						isShowingSigs = true;
+						//sigId = document.getElementById(coord+"_img").alt;
 					}
 					
 					document.getElementById(coord).className = "redCell";	 
-					document.getElementById(coord).innerHTML = "";
+					//document.getElementById(coord).innerHTML = "";
+					document.getElementById(coord+"_img").style.display = 'none';
 				}
 			}
 		}
@@ -148,7 +150,9 @@
 					
 					if ( idx != -1 ) {
 						document.getElementById(availableCoords[idx]).className = "blueCell";
-						document.getElementById(availableCoords[idx]).innerHTML = recordNames[i];
+						document.getElementById(availableCoords[idx].toString() +"_img").alt = recordNames[i];
+						document.getElementById(availableCoords[idx].toString() +"_img").src = "./resources/images/"+recordNames[i].toString()+".png";
+						document.getElementById(availableCoords[idx].toString() +"_img").style.display = 'block';
 						availableCoords.splice(idx, 1);
 					}
 				}
@@ -196,7 +200,8 @@
 		else 
 		{
 			document.getElementById("33").innerHTML = "";
-			signalId = document.getElementById(idx).innerHTML; 
+			//signalId = document.getElementById(idx).innerHTML; 
+			signalId = document.getElementById(idx+"_img").alt;
 			window.location.href = "compression_loading.php?sigID=" + signalId; //use $_GET['sigID'] in compression_loading.php
 		}
 	}

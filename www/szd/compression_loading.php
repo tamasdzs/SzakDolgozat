@@ -34,7 +34,7 @@
 	}
 	
 	function createLinkForDownload(res_url) {
-		document.getElementById("Main").innerHTML = "<a href= \""+res_url+"\" download><img id=\"mainImage\" src=\"./resources/images/success.jpg\"></a>";
+		document.getElementById("Main").innerHTML = "<a href= \""+res_url+"\" download><img id=\"mainImage\" src=\"./resources/images/Letolto_Uzenet.png\"></a>";
 	}
 	
 </script>

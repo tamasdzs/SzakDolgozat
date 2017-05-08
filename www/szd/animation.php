@@ -2,10 +2,15 @@
 <html>
 
 <head>
+	<meta http-equiv='cache-control' content='no-cache'>
+	<meta http-equiv='expires' content='0'>
+	<meta http-equiv='pragma' content='no-cache'>
+	
 	<link rel="stylesheet" href="./css/animation.css">
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="./javascript/plot_functions.js"></script>
+	<script type="text/javascript" src="@string.Format("/Scripts/foo.js?v={0}", DateTime.Now.Ticks)"></script>
 </head>
 
 <body>
@@ -46,10 +51,10 @@
 	</tr>
 </table>
 
-
 <script language="javascript" type="text/javascript">
 function launch_animation()
 {
+	
     $.ajax(
         {
                type: "POST",
@@ -61,6 +66,8 @@ function launch_animation()
 		
                }
          });
+    window.location.reload(true);
+    
 }
 </script>
 
