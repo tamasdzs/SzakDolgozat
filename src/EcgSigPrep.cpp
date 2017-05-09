@@ -62,8 +62,10 @@ const Eigen::MatrixXd* EcgSigPrep::getNextSegment() {
 	
 	int end_of_segment = Curr_annot.time + 150;
 	
-	if(end_of_segment >= entire_signal->cols()) end_of_segment = entire_signal->cols()-1;
-	
+	if(end_of_segment >= entire_signal->cols()) {
+		(*signal)(0,0) = -1;
+		return signal;
+	}
 	*signal = entire_signal->block(0, curr_pos, 1, abs(end_of_segment-curr_pos));
 	
 	

@@ -10,6 +10,7 @@
 const int ANIMATION_MODE     = 1;
 const int COMPRESSION_MODE   = 2;
 const int DECOMPRESSION_MODE = 3;
+const int MANUAL_MODE 		 = 4;
 
 const unsigned int NUM_OF_LEADS = 2;
 const unsigned int NUM_OF_SAMPS = 3000;
@@ -22,16 +23,18 @@ const int P_DEG   = 2;
 
 
 /* DEFINES */
-#define ANIMATION_SIGNAL_ID "signals/103/103"
+#define ANIMATION_SIGNAL_ID "signals/119/119"
 
 /* METHODS */
 void showAnimation(unsigned int num_of_leads, unsigned int num_of_samples);
 void compressSignal( char* signal_id, char* output_dir, unsigned int num_of_leads, unsigned int num_of_samples, unsigned int num_of_beats );
+void compressSignalManually( char* signal_id, char* output_dir, unsigned int num_of_leads, unsigned int num_of_beats );
 void decompressSignal(char* input_path, char* output_path);
 
 int main( int argc, char* argv[] ) {
 
 	int mode = -1;
+	int beats_to_cmpr;
 	char* output_dir;
 	char* input_dir;
 	
@@ -43,10 +46,16 @@ int main( int argc, char* argv[] ) {
 	else if ( argc == 2 ) {
 		mode = 1;
 	}
+	else if ( argc == 4 ) {
+		mode = atoi(argv[1]);
+		input_dir = argv[2];
+		output_dir = argv[3];
+	}
 	else {
 		mode = atoi(argv[1]);
 		input_dir = argv[2];
 		output_dir = argv[3];
+		beats_to_cmpr = atoi(argv[4]);
 	}
 	
 	switch(mode) {
@@ -61,18 +70,73 @@ int main( int argc, char* argv[] ) {
 		case DECOMPRESSION_MODE:
 			decompressSignal(input_dir, output_dir);
 			break;
-			
+		
+		case MANUAL_MODE:
+			compressSignalManually(input_dir, output_dir, NUM_OF_LEADS, beats_to_cmpr);
+			break;
 		default:
 			std::cout<<"Not a valid mode"<<std::endl;
+			return 1;
 			break;
 	}
 	
 	return 0;
 }
 
+void compressSignalManually( char* signal_id, char* output_dir, unsigned int num_of_leads, unsigned int num_of_beats ) {
+	
+	unsigned int num_of_samples = num_of_beats * 350;
+	bool segment_ok = true;
+	
+	EcgSigPrep* signal_handler = new EcgSigPrep(signal_id, num_of_leads, num_of_samples);
+	
+	MatchingPursuit MP(signal_handler);
+		
+	std::ofstream cmp_ofs (output_dir);
+	
+	std::vector<int> rounds_deg;
+	rounds_deg.push_back(7);
+	rounds_deg.push_back(6);
+	rounds_deg.push_back(2);
+	
+	for ( unsigned int i = 0; (i < num_of_beats) && (segment_ok != false); ++i ) {
+		
+		signal_handler->getNextSegment();
+		
+		if (  (*(signal_handler->getSignal()))(0,0) != -1 ) {
+			
+			OrtCompressed* res;
+			res = MP.CompressBeat(rounds_deg, false);
+			
+			OrtCompressed* del_res = 0;
+			for (int j = 0; j < 3; ++j) {
+				
+				cmp_ofs<<res->dilat<<" "<<res->trans<<" "<<signal_handler->getSignal()->cols()<<" "<<res->compressed_sig.rows()<<" "<<res->compressed_sig.transpose()<<std::endl;
+				
+				if ( del_res == 0 ) {
+					del_res = res;
+				} 
+				else 
+				{
+					delete del_res;
+					del_res = res;
+				}
+				
+				res = res->next;
+			}
+			delete del_res;
+		}
+		else {
+			segment_ok = false;
+		}
+	}
+	cmp_ofs.close();
+}
+
 void showAnimation(unsigned int num_of_leads, unsigned int num_of_samples ) {
 	
 	EcgSigPrep signal_handler(ANIMATION_SIGNAL_ID, num_of_leads, num_of_samples);
+	signal_handler.getNextSegment();
 	signal_handler.getNextSegment();
 	std::vector<int> rounds_deg = { QRS_DEG, T_DEG, P_DEG };
 	
@@ -107,7 +171,7 @@ void compressSignal ( char* signal_id, char* output_dir, unsigned int num_of_lea
 	rounds_deg.push_back(6);
 	rounds_deg.push_back(2);
 	
-	for ( int i = 0; i < NUM_OF_BEATS_TO_COMPRESS; ++i ) {
+	for ( unsigned int i = 0; i < NUM_OF_BEATS_TO_COMPRESS; ++i ) {
 	
 		signal_handler->getNextSegment();
 		

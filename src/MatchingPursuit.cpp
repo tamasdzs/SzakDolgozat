@@ -40,7 +40,7 @@ std::vector<Coord> MatchingPursuit::set_optimizer_init_values(Eigen::MatrixXd cu
 OrtCompressed* MatchingPursuit::CompressBeat(std::vector<int> rounds_deg, bool animation ) {
 	OrtCompressed* ret;
 	
-	Eigen::MatrixXd sig = *(sig_handler->getNextSegment());
+	Eigen::MatrixXd sig = *(sig_handler->getSignal());
 	Eigen::MatrixXd osig = sig;
 	Eigen::MatrixXd original_signal = sig;
 	Hermite Herm(sig.cols());

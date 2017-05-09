@@ -1,6 +1,7 @@
 #ifndef __MATCHING_PURSUIT_INCLUDED__
 #define __MATHCING_PURSUIT_INCLUDED__
 
+#include <unistd.h>
 #include <functional>
 #include <iostream>
 #include <fstream>
@@ -35,6 +36,8 @@
 #define CN_MATHCING_PURSUIT_COMBINED_SIG_STR "../results/combined/s.csv"
 #define CN_MATHCING_PURSUIT_COMBINED_APR_STR "../results/combined/a.csv"
 
+const unsigned int CN_SLEEP_FOR_ANIMATION = 20000;
+
 /* END DEFINES FOR ANIMATION OUTPUT */
 
 /* DEFINES FOR OPTIMIZATION INITIALIZATION */
@@ -44,7 +47,7 @@
 
 #define CN_MATCHING_PURSUIT_POPULATION_SIZE_INT (unsigned int)3
 
-#define CN_MATCHING_PURSUIT_NELDER_ROUNDS_INT (int)20
+#define CN_MATCHING_PURSUIT_NELDER_ROUNDS_INT (int)30
 #define CN_MATCHING_PURSUIT_NELDER_MAXERR_DB  (double)0.2
 
 /* END DEFINES FOR OPTIMIZATION INITIALIZATION */
