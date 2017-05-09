@@ -387,7 +387,7 @@ Az előző alfejezetben felsorolt dependeciák feltelepítése után a programcs
 
 \begin{figure}[H]
 \begin{center}
-   \includegraphics[width=150mm]{./Abrak/web/buildDone.jpg}
+   \includegraphics[width=150mm]{./Abrak/WWW/buildDone.jpg}
 \end{center}
 \end{figure}
 
@@ -401,13 +401,6 @@ A webes felhasználói felület használatáról szóló alfejezet a megtekinthe
 
 Amennyiben a felhasználói dokumentáció utasításait követtük a programcsomag felkonfigurálása során, az ismertetőt tartalmazó weboldalt a következő URL-en keresztül érjük el \texttt{http://localhost/szakdolgozat/www/szd/about.php}. Az ismertető lap tartalmazza a webes felület segítségével igénybe vehető szolgáltatások rövid összefoglalását. 
 
-\begin{figure}[H]
-\begin{center}
-   \includegraphics[width=100mm]{./Abrak/Ereszkedo1/F_2sz.png}
-  \caption{Az $F_n$ szí nkódos ábrázolása}
-\end{center}
-\end{figure}
-
 \subsection*{Az animáció oldal használata}
 
 Az ismertető oldalról legegyszerűbben úgy juthatunk az aimációs oldalra, ha az ismertető oldal tetjén található horizontális navigációs sáv "Animáció" feliratú menüpontjára kattintunk. Ekkor a \texttt{http://localhost/szakdolgozat/www/szd/animation.php} URL címen elérhető weboldalt tölti be a böngésző. Az animációs oldal célja, hogy bemutassa egy optimalizált szívütés tömörítés menetét. Az animációt a megjelenő grafikonok közül a legnagyobbra történő kattintással indíthatjuk el. Ekkor a weboldal frissül, és elkezdődik az animáció. A legnagyobb grafikon az animáció futása alatt mindig az éppen aktuális szívütés szegmens (QRS, T, P) tömörítése látható. A grafikonban kékkel látható az eredeti szívütésből aktuálisan visszamaradó reziduum jel, pirossal pedig az approximáció az aktuális dilatációs és transzlációs paraméterek mellett. Amikor egy szegmens tömörítése befejeződik, a Nelder-Mead algoritmus által talált legjobb közelítés, illetve a hozzá tartozó reziduum jel átkerül a táblázat egy kisebb cellájába, a legnagyobb grafikonon pedig a következő szegmens tömörítése, vagyis a Matching Pursuit algoritmus újabb lépésének menete lesz látható. Miután az összes szegmens (és ezáltal a teljes szívütés) tömörítése befejeződött, a legnagyobb grafikonon megjelenik az eredeti szívütés kék színkóddal, az egyes szegmensekhez tartozó approximációk pedig egyszerre, de különböző színekkel ábrázolva válnak láthatóvá. Az animációs weboldalon a grafikonokon kívül még egy speciális cella található. Ez a cella tartalmazza a legnagyobb grafikonon ábrázolt approximáció hibáját (PRD), tömörítési rátát (CR), illetve a hiba és a tömörítési ráta arányát (QS). Ezekről az értékekről részletesebb leírás található a \ref{sec:methodtest} fejezetben.
@@ -416,18 +409,32 @@ Az ismertető oldalról legegyszerűbben úgy juthatunk az aimációs oldalra, h
 
 A tömörítés oldalra legegyszerűbben úgy juthatunk le, ha az ismertető oldal tetjén található horizontális navigációs sáv "Tömörítés" feliratú menüpontjára kattintunk. Ekkor a \texttt{http://localhost/szakdolgozat/www/szd/compresion\_normal.php} URL címen elérhető weboldal töltődik be. A weboldalon egy táblázat látható üres cellákkal, leszámítva a "Jelek" és a "Tömörítés" feliratú cellákat. A "Jelek" cellára kattintva a táblázatban megjelennek a tömöríthető MIT-BIH adtbázisbeli mérések sorszámai. Ezek közül bármelyikre kattintva a többi eltűnik, ezzel kiválasztottuk az adott mérést. Kiválasztás után a "Tömörítés" cellára kattintva elkezdődhet a szívütések tömörítése. Először a \texttt{http://localhost/szakdolgozat/www/szd/compresion\_loading.php} \linebreak URL-en keresztül elérhető weboldalra jutunk. Ezt követően a tömörítés időtartama alatt egy animációt látunk. A tömörítés befejeztével az animációt egy üzenet váltja fel, amelyre kattintva letölthetjük a tömörítés eredményét.
 
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[width=150mm]{./Abrak/WWW/tom_alap.png}
+  \caption{A compression\_normal.php oldal kezdő nézete}
+\end{center}
+\end{figure}
+
 \subsection*{A kitömörítés oldal használata}
 
 A kitömörítés oldalra legegyszerűbben úgy juthatunk le, ha az ismertető oldal tetjén található horizontális navigációs sáv "Kiömörítés" feliratú menüpontjára kattintunk. Ekkor a \texttt{http://localhost/szakdolgozat/www/szd/decompresion\_normal.php} \linebreak URL címen elérhető weboldalt tölti be a böngésző. A weboldalon egy táblázat látható üres cellákkal, leszámítva a "Keresés" és a "Feltöltés" feliratú cellákat. A "Keresés" cellára kattintva egy felugró ablak jelenik meg, melynek segítségével kiválaszthatjuk a kitömöríteni kívánt .cmp állományt. Kiválasztás után a "Feltöltés" cellára kattintva elkezdődhet a .cmp állomány kitömörítése. Először a betöltődik a \texttt{http://localhost/szakdolgozat/www/szd/decompresion\_loading.php} URL-en \linebreak keresztül elérhető weboldal. Ezt követően a kitömörítés időtartama alatt egy animációt látunk. A kitömörítés befejeztével az animációt egy üzenet váltja fel, amelyre kattintva letölthetjük az approximáció mintáinak értékeit tartalmazó .txt kiterjesztésű állományt.
 
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[width=150mm]{./Abrak/WWW/kitom_alap.png}
+  \caption{A decompression\_normal.php oldal kezdő nézete}
+\end{center}
+\end{figure}
+
 \subsection*{A főprogram parancssorból történő használata} \label{sec:hosszu}
 
-Ahogyan ezt a tömörítési oldal használatáról szóló bekezdés említette, a webes felületen keresztül a felajánlott mérések első hérom szívütése kerül csak tömörítésre. Ez a megszorítás azért került bevezetésre, mert a webes felület első sorban a módszer helyességét hivatott bemutatni, és ízelítőt adni a programcsomag képességeiből. Természetesen előfordulhat, hogy az MIT-BIH adatbázis egyéb jeleit szeretnénk tömöríteni, illetve a méréseknek egy hosszabb szakaszán kívánjuk tesztelni az algoritmust. Ilyen esetekben nyissunk meg egy terminált a \texttt{/src}  mappában, és adjuk ki a következő parancsot: \texttt{./main 4 [a mérés állományaihoz vezető útvonal] [A generált .cmp elérési útvonala]}. Az első paraméter azt mondja meg a főprogramnak, hogy milyen üzemmódban kívánjuk futtatni. A 4 érték jelzi az "egyéni tömörítés" üzemmódot. A maradék két paraméter segítségével megadjuk a programnak, hogy hol keresse a tömöríteni kívánt méréshez  tartozó állományokat, illetve azt az útvonalat ahová az eredményt tartalmazó .cmp állományt szeretnénk generálni. Ezen útvonalak megadásakor ügyeljünk rá, hogy legyen írási illetve olvasási jogunk a megadott útvonalakon. Az alábbi ábra egy parancssorból történő egyéni tömörítés indítását ábrázolja.
+Ahogyan ezt a tömörítési oldal használatáról szóló bekezdés említette, a webes felületen keresztül a felajánlott mérések első hérom szívütése kerül csak tömörítésre. Ez a megszorítás azért került bevezetésre, mert a webes felület első sorban a módszer helyességét hivatott bemutatni, és ízelítőt adni a programcsomag képességeiből. Természetesen előfordulhat, hogy az MIT-BIH adatbázis egyéb jeleit szeretnénk tömöríteni, illetve a méréseknek egy hosszabb szakaszán kívánjuk tesztelni az algoritmust. Ilyen esetekben nyissunk meg egy terminált a \texttt{/www/szd/cpp}  mappában, és adjuk ki a következő parancsot: \texttt{./main 4 [a mérés állományaihoz vezető útvonal] [A generált .cmp elérési útvonala] [A tömöríteni kívánt szívütések száma]}. Az első paraméter azt mondja meg a főprogramnak, hogy milyen üzemmódban kívánjuk futtatni. A 4 érték jelzi az "egyéni tömörítés" üzemmódot. A következő két paraméter segítségével megadjuk a programnak, hogy hol keresse a tömöríteni kívánt méréshez  tartozó állományokat, illetve azt az útvonalat ahová az eredményt tartalmazó .cmp állományt szeretnénk generálni. Végül a tömöríteni kívánt szívütések számát adhatjuk meg. Amennyiben a rekord nem tartamaz elég mintát, akkor az összes szívütés tömörítésre kerül. Ezen útvonalak megadásakor ügyeljünk rá, hogy legyen írási illetve olvasási jogunk a megadott útvonalakon. Megfontolandó továbbá, hogy a program nem vállal felelősséget a tömörítendő rekordok után. A felhasználó felelőssége meggyőződni arról, hogy a tömörítendő rekord valóban megfelelő. Sajnos az MIT-BiH adatbázisban is előfordulnak korruptált adatok. Az alábbi ábra egy parancssorból történő egyéni tömörítés indítását ábrázolja.
 
 \begin{figure}[H]
 \begin{center}
-   \includegraphics[width=100mm]{./Abrak/Ereszkedo1/F_2sz.png}
-  \caption{Az $F_n$ szí nkódos ábrázolása}
+   \includegraphics[width=150mm]{./Abrak/WWW/manualis_tom.jpg}
+  \caption{Egy 1000 szívütést tömörítő, manuális tömörítés indítása}
 \end{center}
 \end{figure}
 
@@ -477,6 +484,13 @@ Az \texttt{compression\_normal.php} script a \texttt{/www/szd/compression\_norma
 A \texttt{compression\_loading.php} script a \texttt{/www/szd/compression\_loading.php} útvonalon érhető el. A \texttt{compression\_loading.php} scriptnek több feladata is van. Egyrészt implementálnia kell azokat a HTML elemeket amelyek a felhasználó a tömörítés alatt, illetve annak végeztével lát. Ezt követően meg kell hívnia a főprogramot \linebreak rendszerhíváson keresztül invokáló \texttt{launch\_compression.php} scriptet. \linebreak A \texttt{compression\_loading.php} weboldal nem érhető el a navigációs menün keresztül, ide a felhasználó csak egy tömöríthető jel kiválasztásával juthat. 
 \par A \texttt{compression\_loading.php} script először ellenőrzi a tömöríteni kívánt jel azonosítóját. Amennyiben az azonosító nem található az általa ismert tömöríthető mérések tömbjében, a script megjelenít egy erre figyelmeztető képet, és nem kezdi el a tömörítés folyamatát. Ha \texttt{\$\_GET['sigID']} változóban kapott azonosító benne van a listában, a \texttt{compression\_loading.php} először megjeleníti a tömörítés időtartama alatt látható animációt, majd létrehoz egy Ajax hívást a \texttt{launch\_compression.php} scripthez. Az Ajax hívás paramétereként a tömörítendő jel azonosítóját adja meg. 
 \par Amikor a tömörítés befejeződött, az Ajax hívásból sikeres visszatérés esetén a \texttt{compression\_loading.php} script lecseréli a várakozást jelző animációt egy olyan képre amely a tömörítés befejezését jelzi. A képre kattintva a felhasználó letöltheti a tömörített jelet tartalmazó .cmp állományt. Ezt a folyamatot a \texttt{compression\_loading.php} állományban definiált \texttt{createLinkForDownload()} javascript függvény végzi. Amennyiben az Ajax hívás valamilyen oknál fogva sikertelen volt (vagyis a jeltömörítés nem ért véget hiba nélkül), a \texttt{compression\_loading.php} script ezt egy felugró hibaüzenettel jelzi a felhasználó felé.
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[width=150mm]{./Abrak/WWW/comp_loading.png}
+  \caption{A compression\_loading.php oldal a tömörítés vége után}
+\end{center}
+\end{figure}
 
 \subsection{A decompression-normal.php implementációja}
 
