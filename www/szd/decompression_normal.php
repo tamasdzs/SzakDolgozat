@@ -27,7 +27,9 @@
 				<input type="file" id="fileToUpload" name="fileToUpload" class="hidden" accept=".cmp" >
 				<input type="submit" name="fileSubmit" value="upload" id="submitButton" class="hidden">  
 			</form>
-			<label for="fileToUpload">Browse</label>
+			<label for="fileToUpload">
+				<img id="Browser" src="./resources/images/kereses.png">
+			</label>
 		</td>
 		<td class="redCell" id="01" >
 		
@@ -64,7 +66,9 @@
 		
 		</td>
 		<td  class="blueCell" id="23">
-			<label for="submitButton">Upload</label>
+			<label for="submitButton">
+				<img id="Uploader" src="./resources/images/feltoltes.png">
+			</label>
 		</td>
 	</tr>
 	<tr>

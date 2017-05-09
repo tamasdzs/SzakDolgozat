@@ -132,7 +132,7 @@
 			
 			isShowingSigs = true;
 			
-			var recordNames     = ['101', '117', '118', '119', '201', '213', '103'];
+			var recordNames     = ['117', '118', '119', '201', '103'];
 			var availableCoords = ['01', '02', '03', '10', '11', '12', '13', '20', '21', '22', '30', '31', '32'];
 			
 			var N = recordNames.length;
@@ -151,7 +151,7 @@
 					if ( idx != -1 ) {
 						document.getElementById(availableCoords[idx]).className = "blueCell";
 						document.getElementById(availableCoords[idx].toString() +"_img").alt = recordNames[i];
-						document.getElementById(availableCoords[idx].toString() +"_img").src = "./resources/images/"+recordNames[i].toString()+".png";
+						document.getElementById(availableCoords[idx].toString() +"_img").src = "./resources/images/"+recordNames[i].toString()+"_2.png";
 						document.getElementById(availableCoords[idx].toString() +"_img").style.display = 'block';
 						availableCoords.splice(idx, 1);
 					}

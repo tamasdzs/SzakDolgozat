@@ -133,6 +133,24 @@ li {
 	display: none;
 }
 
+#Browser {
+	max-width : 196px;
+	max-height: 100px;
+	width: auto;
+	height: auto;
+	padding-left: 8px;
+	padding-top: 4px;
+}
+
+#Uploader {
+	max-width : 196px;
+	max-height: 100px;
+	width: auto;
+	height: auto;
+	padding-left: 8px;
+	padding-top: 4px;
+}
+
 @-webkit-keyframes fadein {
   0% { opacity: 0; }
   100% { opacity: 1; }

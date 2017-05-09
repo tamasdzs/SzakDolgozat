@@ -48,16 +48,17 @@ if($FileType != "cmp" ) {
     $uploadOk = 0;
 }
 
-$validIds = array("101", "117", "118", "119", "201", "213", "103");
+//$validIds = array("101", "117", "118", "119", "201", "213", "103");
 $resultId = str_replace( ".cmp", "", basename($_FILES["fileToUpload"]["name"]) );
 
+/*
 if ( in_array($resultId, $validIds) ) {
 	
 }
 else {
 	$uploadOk = 0;
 }	
-
+*/
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
     echo "<script>alert(\"File upload failed\");</script>";
@@ -72,7 +73,7 @@ if ($uploadOk == 0) {
 			  $.ajax({
                 type: "POST",
                 url: "launch_decompression.php",
-                data: { resultID: '. $resultId .' },
+                data: { resultID: "'. $resultId .'" },
                 success: function(data) {
 					if ( data.includes("success") ) {
 						createLinkForDownload("results/'.$resultId.'.txt");
@@ -98,7 +99,7 @@ if ($uploadOk == 0) {
 <script>
 	
 	function createLinkForDownload(res_url) {
-		document.getElementById("Main").innerHTML = "<a href= \""+res_url+"\" download><img id=\"mainImage\" src=\"./resources/images/Letolto_Uzenet.png\"></a>";
+		document.getElementById("Main").innerHTML = "<a href= \""+res_url+"\" download><img id=\"finalImage\" src=\"./resources/images/Letolto_Uzenet.png\"></a>";
 	}
 	
 	function hoverChangeImg(obj, path) {

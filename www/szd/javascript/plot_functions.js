@@ -129,11 +129,11 @@ function getResultsAndPublish(prdLocation, qsLocation, crLocation, prevDatas) {
 $(document).ready(function () {
 	isCompressing = true;
     
-    intervalIDs.push(setInterval(function() { getResultsAndDraw(filesToCheck[0], filesToCheck[1], lastAprStr, "noClear", 0, 'in_build_chart', 'ECG Compression', ['Time', 'Signal', 'Approximation']); } , 1000 * checkInterval));
-    intervalIDs.push(setInterval(function() { getResultsAndDraw(filesToCheck[2], filesToCheck[3], lastQRS, intervalIDs, 1, 'QRS_chart', 'Approximation of QRS', ['Time', 'Signal', 'QRS']); } , 5000 * checkInterval));
-    intervalIDs.push(setInterval(function() { getResultsAndDraw(filesToCheck[4], filesToCheck[5], lastT, intervalIDs, 2, 'T_chart', 'Approximation of T segment', ['Time', 'Signal','T']); }, 5000 * checkInterval));
-    intervalIDs.push(setInterval(function() { getResultsAndDraw(filesToCheck[6], filesToCheck[7], lastP, intervalIDs, 3, 'P_chart', 'Approximation of P segment', ['Time', 'Signal','P']); }, 5000 * checkInterval));
-    intervalIDs.push(setInterval(function() { getResultsAndPublish(filesToCheck_results[0], filesToCheck_results[1], filesToCheck_results[2], prevDatas); }, 1000 * checkInterval));
+    intervalIDs.push(setInterval(function() { getResultsAndDraw(filesToCheck[0], filesToCheck[1], lastAprStr, "noClear", 0, 'in_build_chart', 'ECG Compression', ['Time', 'Signal', 'Approximation']); } , 200* checkInterval));
+    intervalIDs.push(setInterval(function() { getResultsAndDraw(filesToCheck[2], filesToCheck[3], lastQRS, intervalIDs, 1, 'QRS_chart', 'Approximation of QRS', ['Time', 'Signal', 'QRS']); } , 200 * checkInterval));
+    intervalIDs.push(setInterval(function() { getResultsAndDraw(filesToCheck[4], filesToCheck[5], lastT, intervalIDs, 2, 'T_chart', 'Approximation of T segment', ['Time', 'Signal','T']); }, 200 * checkInterval));
+    intervalIDs.push(setInterval(function() { getResultsAndDraw(filesToCheck[6], filesToCheck[7], lastP, intervalIDs, 3, 'P_chart', 'Approximation of P segment', ['Time', 'Signal','P']); }, 200 * checkInterval));
+    intervalIDs.push(setInterval(function() { getResultsAndPublish(filesToCheck_results[0], filesToCheck_results[1], filesToCheck_results[2], prevDatas); }, 200 * checkInterval));
     
 });
 

@@ -102,8 +102,8 @@ li {
 .blueCell {
 	width : 196px;
 	height: 100px;
-	border:2px solid rgb(226, 0, 0);
-	background-color: blue;
+	border:2px solid rgb(0, 0, 226);
+	background-color: rgb(0,0,210);
 	-webkit-animation: fadein 1s linear forwards;
     animation: fadein 1s linear forwards;
 }

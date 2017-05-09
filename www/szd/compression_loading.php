@@ -34,14 +34,14 @@
 	}
 	
 	function createLinkForDownload(res_url) {
-		document.getElementById("Main").innerHTML = "<a href= \""+res_url+"\" download><img id=\"mainImage\" src=\"./resources/images/Letolto_Uzenet.png\"></a>";
+		document.getElementById("Main").innerHTML = "<a href= \""+res_url+"\" download><img id=\"finalImage\" src=\"./resources/images/Letolto_Uzenet.png\"></a>";
 	}
 	
 </script>
 
 <?php
 	
-	$validIds = array("101", "117", "118", "119", "201", "213", "103");
+	$validIds = array("117", "118", "119", "201", "103");
 	$sigId = $_GET['sigID'];
 	
 	if ( in_array($sigId, $validIds) ) {
