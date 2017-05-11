@@ -17,29 +17,7 @@
 </ul> 
 </div>
 
-<div id="aboutText">
-Lórum ipse azsug a bomos gorpirát ellen... Sot amikor az emlo elgetett, a
-pékék és a huszi arkók közül sokan a mozójukba masztottak sodnak és fesítménynek.
-Ezeket arra halkolázták, hogy peresztjenek ki a kölcserhedés
-pencesében. A bunös tétítéten csaknem az egész ganság legetett, hogy fujtsa
-a kölcserhedés iromát. Amikor a pékék futatogták a szirátlan nyaftatást,
-tarasztop fogta el oket, s hanságokat szórva vasztották sodik iromait varálnia.
-Amikor a kályhok ezt szenemkedték, pókoztak, és dudálódták a kölcserhedés
-iromát, s moztak is mind, akik a keli pálámlásra voltak rendelve. Nézo
-a kedvény iroma az egész árdán. A pékék azonban kozás az érdemetlen vidás
-szerényeket meg a ganság huszás tatag, és herot szítva sodik és fesítmény
-ellen, szemkesítették oket a feledésrol.
-
-Körözés zagyancsot hibárott csartatan sozetté, fonán néletét pedig hetleveden
-kumussá loncoldták. Már ez a hantat fuvodás is jól pordulja, milyen lehetett
-az átum vagyló. És ekkor, ilyen kölemetek között a kérlo szend neméhber rombot
-émezett. A vigyás passzió tanságai fonán 8-án hadt küszkén zakoztak meg rombjuk
-gikatának záci dolcsáról. Omágos ugyan, hogy koltást nem csak vászág
-között lehet áskodnia és érgetetnie, de egészen más a feddo héti, mint a beto
-hutlensége koltás zsugatában. A neméhber tanságai 1942-ben vadozták el, hogy
-rombot émeznek. A diki szfinnre végül 1943 sütojén felodt malás.
-</div>
-
+<img id="aboutText" src="./resources/images/Ismerteto.png" alt="Ismerteto szoveg" >
 
 <footer id="pageFooter">
 	<img id="pageFooterImage" src="./resources/images/FOOTER.png" alt="tamasdzs@gmail.com" >

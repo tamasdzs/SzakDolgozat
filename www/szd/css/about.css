@@ -105,9 +105,17 @@ li {
     float: left;
 }
 
+#aboutText {
+	margin-top: 80px;
+	margin-left: 200px;
+	max-height: 1000px;
+	max-width: 650px;
+	width: auto;
+	height: auto;
+}
 
 #pageFooterImage {
-   margin-top: 30px; 
+   margin-top: 113px; 
    width:800px;
    height: auto;   /* Height of the footer */
    margin-left: 100px;
