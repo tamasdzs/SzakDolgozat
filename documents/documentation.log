@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  10 MAY 2017 00:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.8)  12 MAY 2017 00:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -848,7 +848,7 @@ Package pdftex.def Info: ./Abrak/Egyeb/elte_logo.jpg used on input line 91.
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Abrak/Egyeb/elte_logo.jp
-g>] [2] (./documentation.toc
+g>] (./documentation.toc
 LaTeX Font Info:    Try loading font information for U+eur on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueur.fd
@@ -900,7 +900,7 @@ pdfTeX warning: pdflatex: pop empty color page stack 0
 
 LaTeX Warning: Command \' invalid in math mode on input line 121.
 
-[4] <./Abrak/Egyeb/ecg_wiki.png, id=31, 610.28pt x 602.25pt>
+[4] <./Abrak/Egyeb/ecg_wiki.png, id=28, 610.28pt x 602.25pt>
 File: ./Abrak/Egyeb/ecg_wiki.png Graphic file (type png)
 
 <use ./Abrak/Egyeb/ecg_wiki.png>
@@ -911,28 +911,28 @@ Package pdftex.def Info: ./Abrak/Egyeb/ecg_wiki.png used on input line 126.
 Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
  on input line 141.
 
-<./Abrak/Egyeb/phi0.pdf, id=38, 597.23125pt x 845.1575pt>
+<./Abrak/Egyeb/phi0.pdf, id=34, 597.23125pt x 845.1575pt>
 File: ./Abrak/Egyeb/phi0.pdf Graphic file (type pdf)
 
 <use ./Abrak/Egyeb/phi0.pdf>
 Package pdftex.def Info: ./Abrak/Egyeb/phi0.pdf used on input line 158.
 (pdftex.def)             Requested size: 100.67453pt x 96.23781pt.
 
-<./Abrak/Egyeb/phi1.pdf, id=40, 597.23125pt x 845.1575pt>
+<./Abrak/Egyeb/phi1.pdf, id=36, 597.23125pt x 845.1575pt>
 File: ./Abrak/Egyeb/phi1.pdf Graphic file (type pdf)
 
 <use ./Abrak/Egyeb/phi1.pdf>
 Package pdftex.def Info: ./Abrak/Egyeb/phi1.pdf used on input line 159.
 (pdftex.def)             Requested size: 100.67453pt x 96.23781pt.
 
-<./Abrak/Egyeb/phi2.pdf, id=42, 597.23125pt x 845.1575pt>
+<./Abrak/Egyeb/phi2.pdf, id=38, 597.23125pt x 845.1575pt>
 File: ./Abrak/Egyeb/phi2.pdf Graphic file (type pdf)
 
 <use ./Abrak/Egyeb/phi2.pdf>
 Package pdftex.def Info: ./Abrak/Egyeb/phi2.pdf used on input line 160.
 (pdftex.def)             Requested size: 100.67453pt x 96.23781pt.
 
-<./Abrak/Egyeb/phi3.pdf, id=44, 597.23125pt x 845.1575pt>
+<./Abrak/Egyeb/phi3.pdf, id=40, 597.23125pt x 845.1575pt>
 File: ./Abrak/Egyeb/phi3.pdf Graphic file (type pdf)
 
 <use ./Abrak/Egyeb/phi3.pdf>
@@ -975,49 +975,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 201--205
 
 [7 <./Abrak/Egyeb/phi0.pdf> <./Abrak/Egyeb/phi1.pdf> <./Abrak/Egyeb/phi2.pdf> <
 ./Abrak/Egyeb/phi3.pdf>]
-<./Abrak/Ereszkedo1/F_2sz.png, id=83, 259.56975pt x 262.581pt>
+<./Abrak/Ereszkedo1/F_2sz.png, id=80, 259.56975pt x 262.581pt>
 File: ./Abrak/Ereszkedo1/F_2sz.png Graphic file (type png)
 
 <use ./Abrak/Ereszkedo1/F_2sz.png>
 Package pdftex.def Info: ./Abrak/Ereszkedo1/F_2sz.png used on input line 246.
 (pdftex.def)             Requested size: 284.52756pt x 287.83429pt.
  [8]
-<./Abrak/Ereszkedo1/Er36.png, id=87, 1313.90875pt x 441.65pt>
+<./Abrak/Ereszkedo1/Er36.png, id=84, 1313.90875pt x 441.65pt>
 File: ./Abrak/Ereszkedo1/Er36.png Graphic file (type png)
 
 <use ./Abrak/Ereszkedo1/Er36.png>
 Package pdftex.def Info: ./Abrak/Ereszkedo1/Er36.png used on input line 253.
 (pdftex.def)             Requested size: 398.33858pt x 133.89774pt.
  [9 <./Abrak/Ereszkedo1/F_2sz.png> <./Abrak/Ereszkedo1/Er36.png>] <./Abrak/Egye
-b/NMT1.PNG, id=91, 501.875pt x 451.6875pt>
+b/NMT1.PNG, id=88, 501.875pt x 451.6875pt>
 File: ./Abrak/Egyeb/NMT1.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT1.PNG>
 Package pdftex.def Info: ./Abrak/Egyeb/NMT1.PNG used on input line 285.
 (pdftex.def)             Requested size: 125.26503pt x 103.60458pt.
 
-<./Abrak/Egyeb/NMT2.PNG, id=93, 552.0625pt x 451.6875pt>
+<./Abrak/Egyeb/NMT2.PNG, id=90, 552.0625pt x 451.6875pt>
 File: ./Abrak/Egyeb/NMT2.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT2.PNG>
 Package pdftex.def Info: ./Abrak/Egyeb/NMT2.PNG used on input line 286.
 (pdftex.def)             Requested size: 138.31348pt x 103.60458pt.
 
-<./Abrak/Egyeb/NMT3.PNG, id=95, 602.25pt x 451.6875pt>
+<./Abrak/Egyeb/NMT3.PNG, id=92, 602.25pt x 451.6875pt>
 File: ./Abrak/Egyeb/NMT3.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT3.PNG>
 Package pdftex.def Info: ./Abrak/Egyeb/NMT3.PNG used on input line 287.
 (pdftex.def)             Requested size: 151.36191pt x 103.60458pt.
 
-<./Abrak/Egyeb/NMT4.PNG, id=97, 702.625pt x 437.635pt>
+<./Abrak/Egyeb/NMT4.PNG, id=94, 702.625pt x 437.635pt>
 File: ./Abrak/Egyeb/NMT4.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT4.PNG>
 Package pdftex.def Info: ./Abrak/Egyeb/NMT4.PNG used on input line 288.
 (pdftex.def)             Requested size: 177.4588pt x 65.50305pt.
 
-<./Abrak/Egyeb/NMT5.PNG, id=99, 702.625pt x 435.6275pt>
+<./Abrak/Egyeb/NMT5.PNG, id=96, 702.625pt x 435.6275pt>
 File: ./Abrak/Egyeb/NMT5.PNG Graphic file (type png)
 
 <use ./Abrak/Egyeb/NMT5.PNG>
@@ -1025,14 +1025,11 @@ Package pdftex.def Info: ./Abrak/Egyeb/NMT5.PNG used on input line 289.
 (pdftex.def)             Requested size: 177.4588pt x 64.98111pt.
  [10 <./Abrak/Egyeb/NMT1.PNG> <./Abrak/Egyeb/NMT2.PNG> <./Abrak/Egyeb/NMT3.PNG>
  <./Abrak/Egyeb/NMT4.PNG> <./Abrak/Egyeb/NMT5.PNG>] [11]
-
-LaTeX Warning: Reference `sec:kvad' on page 12 undefined on input line 331.
-
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 335.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 335.
-<./Abrak/Lepesek/abra_lepes0.pdf, id=113, 597.23125pt x 845.1575pt>
+ <./Abrak/Lepesek/abra_lepes0.pdf, id=109, 597.23125pt x 845.1575pt>
 File: ./Abrak/Lepesek/abra_lepes0.pdf Graphic file (type pdf)
 
 <use ./Abrak/Lepesek/abra_lepes0.pdf>
@@ -1040,7 +1037,7 @@ Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes0.pdf used on input line 349
 .
 (pdftex.def)             Requested size: 188.2024pt x 141.52773pt.
 
-<./Abrak/Lepesek/abra_lepes1.pdf, id=115, 597.23125pt x 845.1575pt>
+<./Abrak/Lepesek/abra_lepes1.pdf, id=111, 597.23125pt x 845.1575pt>
 File: ./Abrak/Lepesek/abra_lepes1.pdf Graphic file (type pdf)
 
 <use ./Abrak/Lepesek/abra_lepes1.pdf>
@@ -1048,7 +1045,7 @@ Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes1.pdf used on input line 350
 .
 (pdftex.def)             Requested size: 188.2024pt x 141.52773pt.
 
-<./Abrak/Lepesek/abra_lepes2.pdf, id=117, 597.23125pt x 845.1575pt>
+<./Abrak/Lepesek/abra_lepes2.pdf, id=113, 597.23125pt x 845.1575pt>
 File: ./Abrak/Lepesek/abra_lepes2.pdf Graphic file (type pdf)
 
 <use ./Abrak/Lepesek/abra_lepes2.pdf>
@@ -1056,7 +1053,7 @@ Package pdftex.def Info: ./Abrak/Lepesek/abra_lepes2.pdf used on input line 351
 .
 (pdftex.def)             Requested size: 188.2024pt x 141.52773pt.
 
-<./Abrak/Lepesek/abra_lepes3.pdf, id=119, 597.23125pt x 845.1575pt>
+<./Abrak/Lepesek/abra_lepes3.pdf, id=115, 597.23125pt x 845.1575pt>
 File: ./Abrak/Lepesek/abra_lepes3.pdf Graphic file (type pdf)
 
 <use ./Abrak/Lepesek/abra_lepes3.pdf>
@@ -1081,7 +1078,7 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [14
 
 ]
-<./Abrak/WWW/buildDone.jpg, id=153, 900.36375pt x 64.24pt>
+<./Abrak/WWW/buildDone.jpg, id=150, 900.36375pt x 64.24pt>
 File: ./Abrak/WWW/buildDone.jpg Graphic file (type jpg)
 
 <use ./Abrak/WWW/buildDone.jpg>
@@ -1093,7 +1090,7 @@ Underfull \hbox (badness 2932) in paragraph at lines 410--411
 /compresion_loading.php
  []
 
-<./Abrak/WWW/tom_alap.png, id=157, 1371.1225pt x 770.88pt>
+<./Abrak/WWW/tom_alap.png, id=154, 1371.1225pt x 770.88pt>
 File: ./Abrak/WWW/tom_alap.png Graphic file (type png)
 
 <use ./Abrak/WWW/tom_alap.png>
@@ -1111,7 +1108,7 @@ Underfull \hbox (badness 3646) in paragraph at lines 421--422
 \T1/cmr/m/n/12 URL-en
  []
 
-<./Abrak/WWW/kitom_alap.png, id=161, 1371.1225pt x 770.88pt>
+<./Abrak/WWW/kitom_alap.png, id=158, 1371.1225pt x 770.88pt>
 File: ./Abrak/WWW/kitom_alap.png Graphic file (type png)
 
 <use ./Abrak/WWW/kitom_alap.png>
@@ -1123,7 +1120,7 @@ Overfull \hbox (1.78755pt too wide) in paragraph at lines 432--433
  száma]\T1/cmr/m/n/12 .
  []
 
-<./Abrak/WWW/manualis_tom.jpg, id=166, 1074.0125pt x 178.6675pt>
+<./Abrak/WWW/manualis_tom.jpg, id=162, 1074.0125pt x 178.6675pt>
 File: ./Abrak/WWW/manualis_tom.jpg Graphic file (type jpg)
 
 <use ./Abrak/WWW/manualis_tom.jpg>
@@ -1145,7 +1142,7 @@ Overfull \hbox (4.40155pt too wide) in paragraph at lines 486--487
 d() \T1/cmr/m/n/12 ja-vascript függ-vény vég-zi. Amennyi-
  []
 
-<./Abrak/WWW/comp_loading.png, id=189, 1371.1225pt x 770.88pt>
+<./Abrak/WWW/comp_loading.png, id=186, 1371.1225pt x 770.88pt>
 File: ./Abrak/WWW/comp_loading.png Graphic file (type png)
 
 <use ./Abrak/WWW/comp_loading.png>
@@ -1212,9 +1209,9 @@ men-tá-ci-ói a \T1/cmtt/m/n/12 /src/OrtFunSys.cpp
  []
 
 [35] [36] [37] [38]
-Underfull \hbox (badness 1354) in paragraph at lines 678--679
-[]\T1/cmr/m/n/12 Az osz-tály négy pub-li-kus függ-vénnyel ren-del-ke-zik. Az el
--s® ezek kö-zül az
+Underfull \hbox (badness 2884) in paragraph at lines 678--679
+[]\T1/cmr/m/n/12 Az osz-tály öt pub-li-kus függ-vénnyel ren-del-ke-zik. Az el-s
+® ezek kö-zül az
  []
 
 [39] [40] [41]
@@ -1229,14 +1226,8 @@ Overfull \hbox (1.3626pt too wide) in paragraph at lines 759--760
 T1/cmr/m/n/12 , és a \T1/cmtt/m/n/12 /src/MatchingPursuit.cpp
  []
 
-
-Underfull \hbox (badness 1194) in paragraph at lines 771--772
-\T1/cmtt/m/n/12 std::map<std::string, std::string> \T1/cmr/m/n/12 tí-pu-sú, \T1
-/cmtt/m/n/12 files_dir \T1/cmr/m/n/12 azo-no-sí-tó-val el-lá-tott
- []
-
 [43]
-Overfull \hbox (2.64621pt too wide) in paragraph at lines 772--782
+Overfull \hbox (2.64621pt too wide) in paragraph at lines 773--782
 \T1/cmr/m/n/12 kí-vül csu-pán egy pub-li-kus hoz-zá-fér-he-t®-sé-g¶ függ-vényt 
 de-fi-ni-ál, amely \T1/cmtt/m/n/12 OrtCompressed*
  []
@@ -1246,153 +1237,153 @@ Underfull \hbox (badness 10000) in paragraph at lines 787--788
 \T1/cmr/m/n/12 a
  []
 
-[46] [47] [48]
-Underfull \hbox (badness 10000) in paragraph at lines 835--836
+[46] [47] [48] [49]
+Underfull \hbox (badness 10000) in paragraph at lines 836--837
 \T1/cmr/m/n/12 lasz-tá-sa és tö-mö-rí-té-se. An-nak el-len-®r-zé-se, hogy az in
 -ter-fész a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 837--838
+Underfull \hbox (badness 10000) in paragraph at lines 838--839
 \T1/cmr/m/n/12 lasz-tá-sa és tö-mö-rí-té-se. An-nak el-len-®r-zé-se, hogy az in
 -ter-fész a
  []
 
-[49]
-Overfull \hbox (7.75983pt too wide) in paragraph at lines 848--849
+
+Overfull \hbox (7.75983pt too wide) in paragraph at lines 849--850
 \T1/cmr/m/n/12 A ki-tö-mö-rí-té-si funk-ció we-bes fe-lü-let-hez köt-he-t® ré-s
 zé-ért a \T1/cmtt/m/n/12 decompression_normal.php\T1/cmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 853--854
+Underfull \hbox (badness 10000) in paragraph at lines 854--855
 \T1/cmr/m/n/12 vá-lasz-tá-sa és ki-tö-mö-rí-té-se. An-nak el-len-®r-zé-se, hogy
  az in-ter-fész a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 855--856
+Underfull \hbox (badness 10000) in paragraph at lines 856--857
 \T1/cmr/m/n/12 vá-lasz-tá-sa és ki-tö-mö-rí-té-se. An-nak el-len-®r-zé-se, hogy
  az in-ter-fész a
  []
 
-
-Overfull \hbox (2.85905pt too wide) in paragraph at lines 864--865
+[50]
+Overfull \hbox (2.85905pt too wide) in paragraph at lines 865--866
 \T1/cmtt/m/n/12 /src/mt/[az aktuális modul neve] \T1/cmr/m/n/12 út-vo-nal men-t
 én ér-he-t®k el. Min-den mo-dul tesz-
  []
 
-[50]
-Overfull \hbox (1.79735pt too wide) in paragraph at lines 869--870
+
+Overfull \hbox (1.79735pt too wide) in paragraph at lines 870--871
 \T1/cmr/m/n/12 A Sig-Prep il-let-ve az Ecg-Sig-Prep mo-du-lok-hoz tar-to-zó mo-
 dul teszt a \T1/cmtt/m/n/12 /src/mt/sigPrepE
  []
 
 
-Overfull \hbox (4.31003pt too wide) in paragraph at lines 869--870
+Overfull \hbox (4.31003pt too wide) in paragraph at lines 870--871
 \T1/cmr/m/n/12 tesz-te-se-tek de-fi-ní-ci-ó-i-val. Az egyes tesz-te-se-tek ki-m
 e-ne-tét a \T1/cmtt/m/n/12 /src/mt/sigPrepEcgSigPre
  []
 
-
-Overfull \hbox (4.31003pt too wide) in paragraph at lines 893--894
+[51]
+Overfull \hbox (4.31003pt too wide) in paragraph at lines 894--895
 \T1/cmr/m/n/12 tesz-te-se-tek de-fi-ní-ci-ó-i-val. Az egyes tesz-te-se-tek ki-m
 e-ne-tét a \T1/cmtt/m/n/12 /src/mt/ortFunSysHermite
  []
 
-[51]
-Underfull \hbox (badness 1590) in paragraph at lines 918--919
+
+Underfull \hbox (badness 1590) in paragraph at lines 919--920
 \T1/cmr/m/n/12 Az Comp-res-ser il-let-ve az Ort-Comp-res-ser mo-du-lok-hoz tar-
 to-zó mo-dul teszt a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 918--919
+Underfull \hbox (badness 10000) in paragraph at lines 919--920
 \T1/cmtt/m/n/12 /src/mt/compresserOrt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 918--919
+Underfull \hbox (badness 10000) in paragraph at lines 919--920
 \T1/cmr/m/n/12 mé-te-re-it ad-ja meg mak-rók se-gít-sé-gé-vel, eze-ket pe-dig a
  \T1/cmtt/m/n/12 main \T1/cmr/m/n/12 függ-vény
  []
 
 
-Underfull \hbox (badness 3668) in paragraph at lines 918--919
+Underfull \hbox (badness 3668) in paragraph at lines 919--920
 \T1/cmr/m/n/12 kö-ve-ti az egyes tesz-te-se-tek de-fi-ní-ci-ó-i-val. Az egyes t
 esz-te-se-tek ki-me-ne-tét a
  []
 
 
-Overfull \hbox (8.89275pt too wide) in paragraph at lines 918--919
+Overfull \hbox (8.89275pt too wide) in paragraph at lines 919--920
 \T1/cmtt/m/n/12 /src/mt/compresserOrtCompresser/output/mt_results.txt \T1/cmr/m
 /n/12 szö-ve-ges ál-lo-mány tar-
  []
 
-
-Overfull \hbox (46.23222pt too wide) in paragraph at lines 941--942
+[52]
+Overfull \hbox (46.23222pt too wide) in paragraph at lines 942--943
 \T1/cmr/m/n/12 Az Op-ti-mi-zer il-let-ve az Nel-der-Me-ad mo-du-lok-hoz tar-to-
 zó mo-dul teszt a \T1/cmtt/m/n/12 /src/mt/optimizerNel
  []
 
 
-Overfull \hbox (4.31003pt too wide) in paragraph at lines 941--942
+Overfull \hbox (4.31003pt too wide) in paragraph at lines 942--943
 \T1/cmr/m/n/12 tesz-te-se-tek de-fi-ní-ci-ó-i-val. Az egyes tesz-te-se-tek ki-m
 e-ne-tét a \T1/cmtt/m/n/12 /src/mt/ortFunSysHermite
  []
 
-[52]
-Underfull \hbox (badness 4505) in paragraph at lines 962--963
+
+Underfull \hbox (badness 4505) in paragraph at lines 963--964
 \T1/cmr/m/n/12 meg mak-rók se-gít-sé-gé-vel, eze-ket pe-dig a \T1/cmtt/m/n/12 m
 ain \T1/cmr/m/n/12 függ-vény kö-ve-ti az egyes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 962--963
+Underfull \hbox (badness 10000) in paragraph at lines 963--964
 \T1/cmr/m/n/12 tesz-te-se-tek de-fi-ní-ci-ó-i-val. Az egyes tesz-te-se-tek ki-m
 e-ne-tét a
  []
 
 [53] [54]
-<./Abrak/Eredeti_Hermite/abra1.pdf, id=286, 597.23125pt x 845.1575pt>
+<./Abrak/Eredeti_Hermite/abra1.pdf, id=283, 597.23125pt x 845.1575pt>
 File: ./Abrak/Eredeti_Hermite/abra1.pdf Graphic file (type pdf)
 
 <use ./Abrak/Eredeti_Hermite/abra1.pdf>
 Package pdftex.def Info: ./Abrak/Eredeti_Hermite/abra1.pdf used on input line 1
-015.
+016.
 (pdftex.def)             Requested size: 198.23988pt x 141.52773pt.
 
-<Abrak/Sajat_Hermite_Nelder_Mead/abra1.pdf, id=288, 597.23125pt x 845.1575pt>
+<Abrak/Sajat_Hermite_Nelder_Mead/abra1.pdf, id=285, 597.23125pt x 845.1575pt>
 File: Abrak/Sajat_Hermite_Nelder_Mead/abra1.pdf Graphic file (type pdf)
 
 <use Abrak/Sajat_Hermite_Nelder_Mead/abra1.pdf>
 Package pdftex.def Info: Abrak/Sajat_Hermite_Nelder_Mead/abra1.pdf used on inpu
-t line 1016.
+t line 1017.
 (pdftex.def)             Requested size: 198.23988pt x 141.52773pt.
- [55 <./Abrak/Eredeti_Hermite/abra1.pdf> <./Abrak/Sajat_Hermite_Nelder_Mead/abr
-a1.pdf>]
+ [55] [56 <./Abrak/Eredeti_Hermite/abra1.pdf> <./Abrak/Sajat_Hermite_Nelder_Mea
+d/abra1.pdf>]
 4. fejezet.
 
-Overfull \hbox (3.89479pt too wide) in paragraph at lines 1027--1028
+Overfull \hbox (3.89479pt too wide) in paragraph at lines 1028--1029
 \T1/cmr/m/n/12 tö-mö-rí-t® el-já-rás konst-ruk-ci-ó-ja ke-rült be-mu-ta-tás-ra.
  A mód-szer adap-tív, amit a Hermite-
  []
 
 
-Overfull \hbox (0.16557pt too wide) in paragraph at lines 1027--1028
+Overfull \hbox (0.16557pt too wide) in paragraph at lines 1028--1029
 \T1/cmr/m/n/12 függvények ar-gu-men-tum transz-for-má-ci-ó-já-val ér-tünk el. A
  rep-re-zen-tá-ció sza-bad $\U/euf/m/n/12 (\U/eur/m/n/12 a[]; ^^U[]\U/euf/m/n/1
 2 )$
  []
 
-[56
+[57
 
 ] <./Abrak/Kitekintes/abra762_bad.pdf, id=306, 597.23125pt x 845.1575pt>
 File: ./Abrak/Kitekintes/abra762_bad.pdf Graphic file (type pdf)
 
 <use ./Abrak/Kitekintes/abra762_bad.pdf>
 Package pdftex.def Info: ./Abrak/Kitekintes/abra762_bad.pdf used on input line 
-1033.
+1034.
 (pdftex.def)             Requested size: 198.23988pt x 141.52773pt.
 
 <./Abrak/Kitekintes/abra762_good.pdf, id=308, 597.23125pt x 845.1575pt>
@@ -1400,68 +1391,53 @@ File: ./Abrak/Kitekintes/abra762_good.pdf Graphic file (type pdf)
 
 <use ./Abrak/Kitekintes/abra762_good.pdf>
 Package pdftex.def Info: ./Abrak/Kitekintes/abra762_good.pdf used on input line
- 1034.
+ 1035.
 (pdftex.def)             Requested size: 198.23988pt x 141.52773pt.
- [57 <./Abrak/Kitekintes/abra762_bad.pdf> <./Abrak/Kitekintes/abra762_good.pdf>
-] [58]
+ [58 <./Abrak/Kitekintes/abra762_bad.pdf> <./Abrak/Kitekintes/abra762_good.pdf>
+] [59]
 5. fejezet.
-[59
+[60
 
 ]
 6. fejezet.
-[60
+[61
 
-] [61] [62] [63]
-Overfull \hbox (0.96092pt too wide) in paragraph at lines 1308--1313
-[]\T1/cmr/m/n/12 Az in-de-xek ren-de-zé-sé-nél $\U/eur/m/n/12 y[] \OMS/cmsy/m/n
-/12 ^^T \U/eur/m/n/12 y[] \OMS/cmsy/m/n/12 ^^T \U/eur/m/n/12 y[]$ \T1/cmr/m/n/1
-2 tel-je-sül. Az $\U/eur/m/n/12 IterLepes\U/euf/m/n/12 (\U/eur/m/n/12 5\U/euf/m
-/n/12 )$ \T1/cmr/m/n/12 ru-tin az $\U/euf/m/n/12 (\U/eur/m/n/12 x[]; x[]; x[]\U
-/euf/m/n/12 )$
- []
+] [62] [63] [64] [65] [66
 
-[64] [65
-
-] [66] (./documentation.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] [67] (./documentation.aux) ) 
 Here is how much of TeX's memory you used:
- 6356 strings out of 493029
- 94011 string characters out of 6136234
- 173606 words of memory out of 5000000
- 9635 multiletter control sequences out of 15000+600000
+ 6357 strings out of 493029
+ 94027 string characters out of 6136234
+ 175626 words of memory out of 5000000
+ 9636 multiletter control sequences out of 15000+600000
  34850 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,17n,37p,3294b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/euler/euex10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/euler/euex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/euler/eurb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/euler/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/s
-ymbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sy
-mbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbi1200.pfb></u
-sr/share/texmf/fonts/type1/public/cm-super/sfbx0800.pfb></usr/share/texmf/fonts
-/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-sup
-er/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></us
-r/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/
-type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/type1/public/cm-supe
-r/sfcc1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr
-/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/t
-ype1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super
-/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/
-share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on documentation.pdf (68 pages, 1319319 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-sup
+er-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/euex10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/euler/euex8.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/publ
+ic/cm-super/sfbi1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx0800
+.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/tex
+mf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/publi
+c/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.
+pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/texm
+f/fonts/type1/public/cm-super/sfcc1440.pfb></usr/share/texmf/fonts/type1/public
+/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.p
+fb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf
+/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/
+cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pf
+b>
+Output written on documentation.pdf (68 pages, 1321118 bytes).
 PDF statistics:
  440 PDF objects out of 1000 (max. 8388607)
  297 compressed objects within 3 object streams
