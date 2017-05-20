@@ -365,7 +365,7 @@ A programcsomag UNIX alapú operációs rendszeren (Ubuntu 16.04) lett fejlesztv
 \item HTML 5 parsolásra alkalmas web böngésző. 
 \end{itemize}
 
-\subsection*{A C++ jelfeldolgozó program dependenciái}
+\subsection*{A c++ jelfeldolgozó program dependenciái}
 
 \begin{itemize}
 \item GNU G++ fordító. A fejlesztés során a ... verzió lett alkalmazva.
@@ -585,7 +585,14 @@ Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölv
 
 \subsection*{A modul interfésze}
 
-\par Az EcgSigPrep modult a \texttt{/src/headers/EcgSigPrep.h} állományban deklarált \linebreak \texttt{EcgSigPrep} osztály alkotja. Az \texttt{EcgSigPrep} osztály a \texttt{SigPrep} osztályból lett származtatva, így birtokolja annak minden protected, illetve publikus hozzáférhetőségű adattagját és függvényét. Ez egyben úgy is értelmezhető, hogy az EcgSigPrep modul közvetlenül igénybe veszi a SigPrep modul szolgáltatásait. Az EcgSigPrep modul a feladatának megfelelően az MIT-BIH EKG adatbázisban található jelek ábrázolásához és manipulálásához biztosít szolgáltatásokat. Ezeket közvetlenül a MatchingPursuit modul veszi igénybe, a MatchingPursuit modulon keresztül pedig az EcgSigPrep osztályból példányosított objektumok által kiszámított jel értékekre támaszkodnak az OrtCompresser és NelderMead osztályok szolgáltatásai. 
+\par Az EcgSigPrep modult a \texttt{/src/headers/EcgSigPrep.h} állományban deklarált \linebreak \texttt{EcgSigPrep} osztály alkotja. Az \texttt{EcgSigPrep} osztály a \texttt{SigPrep} osztályból lett származtatva, így birtokolja annak minden protected, illetve publikus hozzáférhetőségű adattagját és függvényét. Ez egyben úgy is értelmezhető, hogy az EcgSigPrep modul közvetlenül igénybe veszi a SigPrep modul szolgáltatásait. Az EcgSigPrep modul a feladatának megfelelően az MIT-BIH EKG adatbázisban található jelek ábrázolásához és manipulálásához biztosít szolgáltatásokat. Ezeket közvetlenül a MatchingPursuit modul veszi igénybe, a MatchingPursuit modulon keresztül pedig az EcgSigPrep osztályból példányosított objektumok által kiszámított jel értékekre támaszkodnak az OrtCompresser és NelderMead osztályok szolgáltatásai. Az alábbi diagram szemlélteti az osztály felépítését, és helyét a programcsomagban.
+
+\begin{figure}[H] \label{ecgSigPrepUML}
+\begin{center}
+  \includegraphics[width=150mm]{./Abrak/UML/EcgSigPrep.png}
+  \caption{Az EcgSigPrep modul}
+\end{center}
+\end{figure} 
 
 \subsection*{A modul implementációja}
 
@@ -645,7 +652,15 @@ Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölv
 
 \subsection*{A modul interfésze}
 
-\par Az Hermite modul interfésze két részre bontható. Az Hermite osztály bemenetét a tömöríteni kívánt jel méréseinek száma jelenti. Ez az információ az EcgSigPrep modul által ismert, és biztosított. Az Hermite osztályból létrehozott objektum adattagként a MatchingPursuit modul ugyanilyen nevű osztályában található. Szolgáltatásait a Matching Pursuit modulon kívül az OrtCompresser, és az EcgSigPrep modulok veszik igénybe. Az OrtCompresser modul a jel a függvényrendszer által kifeszített altérre vett ortogonális projekcióját hivatott kiszámítani, ehhez szükséges számára az Hermite rendszer ismerete. Az EcgSigPrep modul pedig a jel dilatációja és transzlációja során használja fel az Hermite modul által biztosított magas fokú Hermite függvény gyökeit.   
+\par Az Hermite modul interfésze két részre bontható. Az Hermite osztály bemenetét a tömöríteni kívánt jel méréseinek száma jelenti. Ez az információ az EcgSigPrep modul által ismert, és biztosított. Az Hermite osztályból létrehozott objektum adattagként a MatchingPursuit modul ugyanilyen nevű osztályában található. Szolgáltatásait a Matching Pursuit modulon kívül az OrtCompresser, és az EcgSigPrep modulok veszik igénybe. Az OrtCompresser modul a jel a függvényrendszer által kifeszített altérre vett ortogonális projekcióját hivatott kiszámítani, ehhez szükséges számára az Hermite rendszer ismerete. Az EcgSigPrep modul pedig a jel dilatációja és transzlációja során használja fel az Hermite modul által biztosított magas fokú Hermite függvény gyökeit.  AAz alábbi diagram szemlélteti a modul felépítését, és helyét a programcsomagban.
+
+\begin{figure}[H] \label{HermiteUML}
+\begin{center}
+  \includegraphics[width=150mm]{./Abrak/UML/Hermite.png}
+  \caption{Az Hermite modul}
+\end{center}
+\end{figure} 
+ 
 
 \subsection*{A modul implementációja}
 
@@ -686,7 +701,14 @@ Az OrtCompresser modul feladata, hogy megvalósítsa azokat a függvényeket és
 
 \subsection*{A modul interfésze}
 
-\par Az OrtCompresser modul, amely az OrtCompresser osztályból áll, igénybe veszi az OrtFunSys, és az ebből származtatott Hermite modulok által nyújtott szolgáltatásokat. A program által, az adott szívütés tömörítéséhez kiszámított ortogonális függvényrendszer elemeit, valamint az ehhez kapcsolódó kvadratúra formulához szükséges számokat egy \texttt{OrtFunSys} típusú objektumra mutató pointeren keresztül éri el. Az osztály adattagjai között szerepel továbbá egy \texttt{Eigen::MatrixXd} típusú objektumra mutató pointer. Az osztályból származtatott objektumok, ennek a pointernek a segítségével képesek a jel helyreállításához szükséges Hermite függvényrendszerek elérésére. Az OrtCompresser osztály szolgáltatásait a MatchingPursuit modul veszi igénybe a közelítés optimalizálásának időtartama alatt, illetve az optimális dilatációs és transzlációs paraméterek megtalálása után, az utolsó tömörítéskor.  
+\par Az OrtCompresser modul, amely az OrtCompresser osztályból áll, igénybe veszi az OrtFunSys, és az ebből származtatott Hermite modulok által nyújtott szolgáltatásokat. A program által, az adott szívütés tömörítéséhez kiszámított ortogonális függvényrendszer elemeit, valamint az ehhez kapcsolódó kvadratúra formulához szükséges számokat egy \texttt{OrtFunSys} típusú objektumra mutató pointeren keresztül éri el. Az osztály adattagjai között szerepel továbbá egy \texttt{Eigen::MatrixXd} típusú objektumra mutató pointer. Az osztályból származtatott objektumok, ennek a pointernek a segítségével képesek a jel helyreállításához szükséges Hermite függvényrendszerek elérésére. Az OrtCompresser osztály szolgáltatásait a MatchingPursuit modul veszi igénybe a közelítés optimalizálásának időtartama alatt, illetve az optimális dilatációs és transzlációs paraméterek megtalálása után, az utolsó tömörítéskor. Az alábbi diagram szemlélteti a modul felépítését, és helyét a programcsomagban.
+
+\begin{figure}[H] \label{OrtCompresserUML}
+\begin{center}
+  \includegraphics[width=150mm]{./Abrak/UML/OrtCompresser.png}
+  \caption{Az OrtCompresser modul}
+\end{center}
+\end{figure}  
 
 \subsection*{A modul implementációja}
 
@@ -722,7 +744,14 @@ Az implementációt tartalmazó mappaszerkezet gyökerét \texttt{/}-vel jelölv
 
 \subsection*{A modul interfésze}
 
-\par A NelderMead modul az Optimizer osztályból származtatott osztályból áll, és igénybe veszi szolgáltatásként az Optimizer modulban definiált \texttt{Coord} struktúrát. A NelderMead osztályból példányosított objektumok szolgáltatásait a MatchingPursuit modul veszi igénybe, az aktuális tömörítendő szívütés szegmenshez tartozó optimális dilatációs és transzlációs paraméterek megtalálásának érdekében.
+\par A NelderMead modul az Optimizer osztályból származtatott osztályból áll, és igénybe veszi szolgáltatásként az Optimizer modulban definiált \texttt{Coord} struktúrát. A NelderMead osztályból példányosított objektumok szolgáltatásait a MatchingPursuit modul veszi igénybe, az aktuális tömörítendő szívütés szegmenshez tartozó optimális dilatációs és transzlációs paraméterek megtalálásának érdekében. Az alábbi diagram szemlélteti a modul felépítését, és helyét a programcsomagban.
+
+\begin{figure}[H] \label{NelderMeadUML}
+\begin{center}
+  \includegraphics[width=150mm]{./Abrak/UML/NelderMead.png}
+  \caption{A NelderMead modul}
+\end{center}
+\end{figure} 
 
 \subsection*{A modul implementációja}
 
@@ -809,7 +838,7 @@ Nagy terjedelmű szoftverek fejlesztése külső erőforrások igénybevétele n
 
 \subsection*{Az Eigen könyvtár}
 
-Az Eigen könyvtár egy C++ sablon könyvtár amelyet lineáris algebrai feladatok megoldásához fejlesztettek ki. Gazdag választékát biztosítja mátrixok, vektorok és egyéb hasznos tömbön alapuló adatszerkezetek könnyen kezelhető reprezentációinak, illetve különböző numerikus feladatokat megoldó osztályoknak. A könyvtár fejlesztését önkéntesek biztosítják. A legtöbbet hozzájáruló önkénetesek nevei, illetve a könyvtár dokumentációja megtalálhatóak a projekt weboldalán, amely a \cite{eigenEler} címen érhető el.
+Az Eigen könyvtár egy c++ sablon könyvtár amelyet lineáris algebrai feladatok megoldásához fejlesztettek ki. Gazdag választékát biztosítja mátrixok, vektorok és egyéb hasznos tömbön alapuló adatszerkezetek könnyen kezelhető reprezentációinak, illetve különböző numerikus feladatokat megoldó osztályoknak. A könyvtár fejlesztését önkéntesek biztosítják. A legtöbbet hozzájáruló önkénetesek nevei, illetve a könyvtár dokumentációja megtalálhatóak a projekt weboldalán, amely a \cite{eigenEler} címen érhető el.
 \par A könyvtár legnagyobb erőssége, hogy a MATLAB nyelvben megszokott felületet biztosít mátrixok illetve vektorok kezeléséhez. Mivel a tömörítő eljárás megvalósításánál számos ilyen feladattal kell szembenézni, ezért ideális választásnak mondható a könyvtár alkalmazása. Az Eigen könyvtár által nyújtott szolgálatatásokat gyakorlatilag az implementáció minden modulja igénybe veszi. A program a tömörítendő jelet az Eigen::MatrixXd dinamikusan változtatható méretű mátrixban tárolja, csakúgy mint a tömörítéshez felhasznált Hermite függvényrendszer értékeit. A pontokat melyek fölött az Hermite függvények értékeit kiszámítja a program az Eigen programcsomag egy saját érték probléma megoldó objektumának segítségével kerülnek meghatározásra. A tömörítő eljárás implementációja soran a könyvtár megbízható, gyors és könnyen alkalmazható tulajdonságairól tett tanúbizonyságot.
 
 \subsection*{A wfdb könyvtár} 
