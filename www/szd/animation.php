@@ -7,6 +7,7 @@
 	<meta http-equiv='pragma' content='no-cache'>
 	
 	<link rel="stylesheet" href="./css/animation.css">
+	<link href='//fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="./javascript/plot_functions.js"></script>

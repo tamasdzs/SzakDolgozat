@@ -149,15 +149,23 @@ li {
 }
 
 #prd {
-	font-family: inconsolata;
+	padding-left: 20px;
+	font-family: 'Inconsolata';
+	font-size: 22px;
 }
 
 
 #qs {
-	font-family: inconsolata;
+	padding-top: 5px;
+	padding-left: 20px;
+	font-family: 'Inconsolata';
+	font-size: 22px;
 }
 
 
 #cr {
-	font-family: inconsolata;
+	padding-top: 5px;
+	padding-left: 20px;
+	font-family: 'Inconsolata';
+	font-size: 22px;
 }

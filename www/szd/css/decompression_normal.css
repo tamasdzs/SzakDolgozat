@@ -2,6 +2,10 @@ body {
 	width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
+	background-image: url('../resources/images/Kitomorites_Hatter.png');
+	background-size: 2000px 570px; 
+	background-repeat: no-repeat;
+	background-position: center bottom;
 }
 
 #AnimMenu {

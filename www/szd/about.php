@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="./css/about.css">
 </head>
 
-<body background="./resources/images/Ismerteto_Hatter.png">
+<body>
 
 <div id="whiteTop">	
 <ul>
